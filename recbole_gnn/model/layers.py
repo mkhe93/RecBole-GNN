@@ -1,8 +1,9 @@
 import numpy as np
 import torch
 import torch.nn as nn
-from torch_geometric.nn import MessagePassing
+from torch_geometric.nn import MessagePassing, GCNConv, SAGEConv, GATConv
 from torch_sparse import matmul
+from recbole.model.loss import BPRLoss
 
 
 class LightGCNConv(MessagePassing):
@@ -21,6 +22,62 @@ class LightGCNConv(MessagePassing):
 
     def __repr__(self):
         return '{}({})'.format(self.__class__.__name__, self.dim)
+
+class BaseForwardLayer(nn.Module):
+    def forward_train(self, x, theta,**kwargs,):
+        raise NotImplementedError
+
+    def forward_predict(self, x, edge_index, edge_label_index, theta):
+        raise NotImplementedError
+
+    @property
+    def requires_training(self):
+        return True
+
+class GCNForwardLayer(BaseForwardLayer):
+    def __init__(self, hidden_channels, out_channels):
+        super(GCNForwardLayer, self).__init__()
+        #self.gnn_layer = SAGEConv(in_channels=hidden_channels, out_channels=out_channels, aggr="mean")
+        self.gnn_layer = GATConv(in_channels=hidden_channels, out_channels=out_channels // 4, heads=4)
+        #self.gnn_layer = GCNConv(in_channels=hidden_channels, out_channels=out_channels)
+        #self.gnn_layer = LightGCNConv(dim=hidden_channels)
+        self.criterion_no_reduction = BPRLoss()
+
+    def forward(self, x, edge_index, edge_weight = None):
+        return self.gnn_layer(x, edge_index, edge_weight)
+
+    @staticmethod
+    def link_predict(u_embeddings, i_embeddings):
+        return torch.mul(u_embeddings, i_embeddings).sum(dim=1)
+
+    def forwardlearn_loss(self, pos_scores, neg_scores):
+        loss = self.criterion_no_reduction(pos_scores, neg_scores)  # shape=(# pos and neg edges,)
+        loss_mean = loss.mean()
+
+        with torch.no_grad():
+            cumulated_logits_pos = pos_scores.exp().mean().item()
+            cumulated_logits_neg = (1 - neg_scores.exp()).mean().item()
+
+        return loss_mean, (cumulated_logits_pos, cumulated_logits_neg)
+
+    def forward_train(self, embeddings, u_embeddings, pos_embeddings, neg_embeddings, edge_index, edge_weight, theta, **kwargs):
+        x = embeddings
+        x = self.forward(x, edge_index, edge_weight)
+        out_pos = self.link_predict(u_embeddings, pos_embeddings)  # shape=(# pos and neg edges, node-emb-dim)
+        out_neg = self.link_predict(u_embeddings, neg_embeddings)
+        loss, logit_tuple = self.forwardlearn_loss(out_pos, out_neg)
+
+        return loss, logit_tuple
+
+    @torch.no_grad()
+    def forward_predict(self, x, edge_index, edge_label_index, theta,):
+        """Evaluate the layer with the given input and theta."""
+        node_emb = self.forward(x, edge_index)
+        out = self.link_predict(node_emb, edge_label_index)
+
+        edge_score = out.sum(dim=1).sigmoid()
+
+        return node_emb, edge_score
 
 
 class BipartiteGCNConv(MessagePassing):

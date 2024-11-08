@@ -88,8 +88,14 @@ def get_model(model_name):
 def _get_customized_dataloader(config, phase):
     if phase == 'train':
         return CustomizedTrainDataLoader
-    else:
-        eval_mode = config["eval_args"]["mode"]
+    elif phase == 'test':
+        eval_mode = config["eval_args"]["mode"]['test']
+        if eval_mode == 'full':
+            return CustomizedFullSortEvalDataLoader
+        else:
+            return CustomizedNegSampleEvalDataLoader
+    elif phase == 'valid':
+        eval_mode = config["eval_args"]["mode"]['valid']
         if eval_mode == 'full':
             return CustomizedFullSortEvalDataLoader
         else:
@@ -121,8 +127,8 @@ def data_preparation(config, dataset):
             train_sampler, valid_sampler, test_sampler = create_samplers(config, dataset, built_datasets)
 
             train_data = _get_customized_dataloader(config, 'train')(config, train_dataset, train_sampler, shuffle=True)
-            valid_data = _get_customized_dataloader(config, 'evaluation')(config, valid_dataset, valid_sampler, shuffle=False)
-            test_data = _get_customized_dataloader(config, 'evaluation')(config, test_dataset, test_sampler, shuffle=False)
+            valid_data = _get_customized_dataloader(config, 'valid')(config, valid_dataset, valid_sampler, shuffle=False)
+            test_data = _get_customized_dataloader(config, 'test')(config, test_dataset, test_sampler, shuffle=False)
             if config['save_dataloaders']:
                 save_split_dataloaders(config, dataloaders=(train_data, valid_data, test_data))
 
