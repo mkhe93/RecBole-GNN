@@ -22,7 +22,6 @@ from recbole.utils import InputType
 from recbole_gnn.model.abstract_recommender import GeneralGraphRecommender
 from recbole_gnn.model.layers import LightGCNConv, GNNForwardLayer
 
-
 class ForwardLightGCN(GeneralGraphRecommender):
     r"""LightGCN is a GCN-based recommender model, implemented via PyG.
     LightGCN includes only the most essential component in GCN — neighborhood aggregation — for
@@ -34,7 +33,7 @@ class ForwardLightGCN(GeneralGraphRecommender):
     input_type = InputType.PAIRWISE
 
     def __init__(self, config, dataset):
-        super(ForwardGNN, self).__init__(config, dataset)
+        super(ForwardLightGCN, self).__init__(config, dataset)
 
         # load parameters info
         self.latent_dim = config['embedding_size']  # int type:the embedding size of lightGCN
@@ -48,7 +47,12 @@ class ForwardLightGCN(GeneralGraphRecommender):
         # define layers and loss
         self.user_embedding = torch.nn.Embedding(num_embeddings=self.n_users, embedding_dim=self.latent_dim)
         self.item_embedding = torch.nn.Embedding(num_embeddings=self.n_items, embedding_dim=self.latent_dim)
-        self.forward_convs = torch.nn.ModuleList([GNNForwardLayer(hidden_channels=self.latent_dim, out_channels=self.out_channels) for _ in range(self.n_layers)])
+        self.forward_convs = torch.nn.ModuleList(
+            [GNNForwardLayer(
+                GNNConv("LightGCN",
+                        in_channels=self.latent_dim,
+                        out_channels=self.out_channels))
+                for _ in range(self.n_layers)])
         self.mf_loss = BPRLoss()
         self.reg_loss = EmbLoss()
 

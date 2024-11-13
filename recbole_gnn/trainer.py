@@ -1,6 +1,7 @@
 from time import time
 import math
 import torch
+import numpy as np
 from torch.nn.utils.clip_grad import clip_grad_norm_
 from recbole.data.dataloader import FullSortEvalDataLoader
 from tqdm import tqdm
@@ -69,8 +70,8 @@ class ForwardGNNTrainer(Trainer):
                     sync_loss = self.sync_grad_loss()
 
                 with torch.autocast(device_type=self.device.type, enabled=self.enable_amp):
-                    embeddings, u_embeddings, pos_embeddings, neg_embeddings = self.model.get_layer_train_data(interaction)
-                    losses, logits = layer.forward_train(embeddings, u_embeddings, pos_embeddings, neg_embeddings, self.model.edge_index, self.model.edge_weight, self.config["theta"])
+                    embeddings, user, pos_item, neg_items = self.model.get_layer_train_data(interaction)
+                    losses, logits = layer.forward_train(embeddings, user, pos_item, neg_items, self.model.edge_index, self.model.edge_weight, self.config["theta"])
 
                 separation = logits[0] - logits[1]
                 iter_data.set_description(
@@ -311,10 +312,26 @@ class ForwardGNNTrainer(Trainer):
         self.wandblogger.log_eval_metrics(result, head="eval")
         return result
 
+    def _full_sort_batch_eval_per_layer(self, batched_data):
+        interaction, history_index, positive_u, positive_i = batched_data
+        try:
+            # Note: interaction without item ids
+            scores = self.model.full_sort_predict_per_layer(interaction.to(self.device))
+        except NotImplementedError:
+            inter_len = len(interaction)
+            new_inter = interaction.to(self.device).repeat_interleave(self.tot_item_num)
+            batch_size = len(new_inter)
+            new_inter.update(self.item_tensor.repeat(inter_len))
+            if batch_size <= self.test_batch_size:
+                scores = self.model.predict_per_layer(new_inter)
+            else:
+                scores = self._spilt_predict(new_inter, batch_size)
 
-
-
-
+        scores = scores.view(-1, self.tot_item_num)
+        scores[:, 0] = -np.inf
+        if history_index is not None:
+            scores[history_index] = -np.inf
+        return interaction, scores, positive_u, positive_i
 
 class NCLTrainer(Trainer):
     def __init__(self, config, model):

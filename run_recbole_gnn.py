@@ -45,7 +45,8 @@ if __name__ == '__main__':
 
 
 
-
+# 'precision@10': 0.2828, 'hit@10': 0.9347, 'mrr@10': 0.6058, 'ndcg@10': 0.3136,
+# 'map@10': 0.1699, 'itemcoverage@10': 0.2719, 'averagepopularity@10': 95.8584, 'tailpercentage@10': 0.0002
 
 
 # The Following has to perform almost the same, since they are the same!

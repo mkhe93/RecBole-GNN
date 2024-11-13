@@ -50,9 +50,10 @@ class ForwardGNN(GeneralGraphRecommender):
         self.item_embedding = torch.nn.Embedding(num_embeddings=self.n_items, embedding_dim=self.latent_dim)
         self.forward_convs = torch.nn.ModuleList(
             [GNNForwardLayer(
-                GNNConv(self.gnn_type,
-                        in_channels=self.latent_dim,
-                        out_channels=self.out_channels))
+                GNNConv(self.gnn_type, in_channels=self.latent_dim, out_channels=self.out_channels),
+                config['forward_learning_type'],
+                self.n_users,
+                self.n_items)
                 for _ in range(self.n_layers)])
         self.mf_loss = BPRLoss()
         self.reg_loss = EmbLoss()
@@ -105,15 +106,16 @@ class ForwardGNN(GeneralGraphRecommender):
         user = interaction[self.USER_ID]
         pos_item = interaction[self.ITEM_ID]
         neg_item = interaction[self.NEG_ITEM_ID]
+        embeddings = self.get_ego_embeddings()
 
         # FIXME: currently pass here the plain embeddings, self.forward() before
         user_all_embeddings, item_all_embeddings = self.get_splitted_embeddings()
-        embeddings = self.get_ego_embeddings()
+        user_all_embeddings, item_all_embeddings = self.forward()
         u_embeddings = user_all_embeddings[user]
         pos_embeddings = item_all_embeddings[pos_item]
         neg_embeddings = item_all_embeddings[neg_item]
 
-        return embeddings, u_embeddings, pos_embeddings, neg_embeddings
+        return embeddings, user, pos_item, neg_item
 
     def calculate_loss(self, interaction):
         # clear the storage variable when training
@@ -166,3 +168,39 @@ class ForwardGNN(GeneralGraphRecommender):
         scores = torch.matmul(u_embeddings, self.restore_item_e.transpose(0, 1))
 
         return scores.view(-1)
+
+    def predict_per_layer(self, interaction):
+        """Evaluate the layer with the given input and theta."""
+        user = interaction[self.USER_ID]
+        item = interaction[self.ITEM_ID]
+        accumulated_goodness_list = []
+
+        for layer in self.forward_convs:
+            user_all_embeddings, item_all_embeddings = layer.get_embeddings(self.get_ego_embeddings(), self.edge_index, self.edge_weight)
+            u_embeddings = user_all_embeddings[user]
+            i_embeddings = item_all_embeddings[item]
+            scores = self.link_predict(u_embeddings, i_embeddings).sum(dim=1)
+            edge_score = scores.sigmoid()
+
+            accumulated_goodness_list.append(edge_score)
+
+        return accumulated_goodness_list
+
+    def full_sort_predict_per_layer(self, interaction):
+        """Evaluate the layer with the given input and theta."""
+        user = interaction[self.USER_ID]
+        accumulated_goodness_list = []
+
+        for layer in self.forward_convs:
+            if self.restore_user_e is None or self.restore_item_e is None:
+                self.restore_user_e, self.restore_item_e = layer.get_embeddings(self.get_ego_embeddings(), self.edge_index, self.edge_weight)
+
+            # get user embedding from storage variable
+            u_embeddings = self.restore_user_e[user]
+
+            # dot with all item embedding to accelerate
+            scores = torch.matmul(u_embeddings, self.restore_item_e.transpose(0, 1)).view(-1)
+
+            accumulated_goodness_list.append(scores)
+
+        return accumulated_goodness_list

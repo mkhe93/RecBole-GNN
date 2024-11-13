@@ -3,7 +3,7 @@ import torch
 import torch.nn as nn
 from torch_geometric.nn import MessagePassing, GCNConv, SAGEConv, GATConv
 from torch_sparse import matmul
-from recbole.model.loss import BPRLoss
+from recbole.model.loss import BPRLoss, forwardforward_loss_fn, EmbLoss
 
 class LightGCNConv(MessagePassing):
     def __init__(self, dim):
@@ -45,9 +45,8 @@ class GNNConv(torch.nn.Module):
         self.relu = torch.nn.ReLU()
 
     def forward(self, x, edge_index, edge_weight):
-        return self.gnn(x, edge_index, edge_weight)
-
-        #return self.relu(self.gnn(x, edge_index))
+        #return self.gnn(x, edge_index, edge_weight)
+        return self.relu(self.gnn(x, edge_index, edge_weight))
 
 class BaseForwardLayer(nn.Module):
     def forward_train(self, x, theta,**kwargs,):
@@ -61,24 +60,39 @@ class BaseForwardLayer(nn.Module):
         return True
 
 class GNNForwardLayer(BaseForwardLayer):
-    def __init__(self, gnn_layer):
+    def __init__(self, gnn_layer: str, forward_learning_type: str, n_user: int, n_items: int):
         super(GNNForwardLayer, self).__init__()
-        #self.gnn_layer = SAGEConv(in_channels=hidden_channels, out_channels=out_channels, aggr="mean")
-        #self.gnn_layer = GATConv(in_channels=hidden_channels, out_channels=out_channels // 4, heads=4)
-        #self.gnn_layer = GCNConv(in_channels=hidden_channels, out_channels=out_channels)
-        #self.gnn_layer = LightGCNConv(dim=hidden_channels)
         self.gnn_layer = gnn_layer
-        self.criterion_no_reduction = BPRLoss()
+        self.forward_learning_type = forward_learning_type
+        self.n_users = n_user
+        self.n_items = n_items
+        self.bce_with_logits_loss = nn.BCEWithLogitsLoss(reduction='none')
+        self.bpr_loss = BPRLoss()
+        self.relu = torch.nn.ReLU()
+        self.reg_loss = EmbLoss()
 
     def forward(self, x, edge_index, edge_weight = None):
         return self.gnn_layer(x, edge_index, edge_weight)
 
+    def get_embeddings(self, embeddings, edge_index, edge_weight = None):
+        embeddings_list = [embeddings]
+
+        all_embeddings =  self.forward(embeddings, edge_index, edge_weight)
+
+        embeddings_list.append(all_embeddings)
+        all_embeddings = torch.stack(embeddings_list, dim=1)
+        all_embeddings = torch.mean(all_embeddings, dim=1)
+
+        user_all_embeddings, item_all_embeddings = torch.split(all_embeddings, [self.n_users, self.n_items])
+
+        return user_all_embeddings, item_all_embeddings
+
     @staticmethod
     def link_predict(u_embeddings, i_embeddings):
-        return torch.mul(u_embeddings, i_embeddings).sum(dim=1)
+        return torch.mul(u_embeddings, i_embeddings)
 
-    def forwardlearn_loss(self, pos_scores, neg_scores):
-        loss = self.criterion_no_reduction(pos_scores, neg_scores)  # shape=(# pos and neg edges,)
+    def forwardlearn_bpr_loss(self, pos_scores, neg_scores):
+        loss = self.bpr_loss(pos_scores, neg_scores)  # shape=(# pos and neg edges,)
         loss_mean = loss.mean()
 
         with torch.no_grad():
@@ -87,12 +101,51 @@ class GNNForwardLayer(BaseForwardLayer):
 
         return loss_mean, (cumulated_logits_pos, cumulated_logits_neg)
 
-    def forward_train(self, embeddings, u_embeddings, pos_embeddings, neg_embeddings, edge_index, edge_weight, theta, **kwargs):
-        x = embeddings
-        x = self.forward(x, edge_index, edge_weight)
+    def forwardlearn_bce_loss(self, pos_scores, neg_scores):
+        stacked_out = torch.stack([pos_scores, neg_scores], dim=0)
+        stacked_target = torch.stack([torch.ones_like(pos_scores), torch.zeros_like(neg_scores)], dim=0)
+        loss = self.bce_with_logits_loss(stacked_out, stacked_target)  # shape=(# pos and neg edges,)
+        loss_mean = loss.mean()
+
+        pos_loss, neg_loss = torch.split(loss, loss.size(0) // 2, dim=0)
+
+        with torch.no_grad():
+            cumulated_logits_pos = pos_loss.exp().mean().item()
+            cumulated_logits_neg = (1 - neg_loss.exp()).mean().item()
+
+        return loss_mean, (cumulated_logits_pos, cumulated_logits_neg)
+
+    @classmethod
+    def ff_loss(cls, pos_scores, neg_scores, theta):
+        loss_pos, cumulated_logits_pos = forwardforward_loss_fn(pos_scores, theta, target=1.0)
+        loss_neg, cumulated_logits_neg = forwardforward_loss_fn(neg_scores, theta, target=0.0)
+        loss = loss_pos + loss_neg
+
+        return loss, (cumulated_logits_pos, cumulated_logits_neg)
+
+    def forward_train(self, embeddings, user, pos_item, neg_item, edge_index, edge_weight, theta, **kwargs):
+
+        user_all_embeddings, item_all_embeddings = self.get_embeddings(embeddings, edge_index, edge_weight)
+
+        u_embeddings = user_all_embeddings[user]
+        pos_embeddings = item_all_embeddings[pos_item]
+        neg_embeddings = item_all_embeddings[neg_item]
+
         out_pos = self.link_predict(u_embeddings, pos_embeddings)  # shape=(# pos and neg edges, node-emb-dim)
         out_neg = self.link_predict(u_embeddings, neg_embeddings)
-        loss, logit_tuple = self.forwardlearn_loss(out_pos, out_neg)
+
+        if self.forward_learning_type == "FL-BPR":
+            loss, logit_tuple = self.forwardlearn_bpr_loss(out_pos, out_neg)
+        elif self.forward_learning_type == "FL-BCE":
+            loss, logit_tuple = self.forwardlearn_bce_loss(out_pos, out_neg)
+        elif self.forward_learning_type == "FF":
+            loss, logit_tuple = self.ff_loss(out_pos, out_neg, theta)
+        else:
+            raise ValueError(f"Undefined: {self.forward_learning_type}")
+
+        reg_loss = self.reg_loss(u_embeddings, pos_embeddings, neg_embeddings)
+
+        loss = loss #+ reg_loss
 
         return loss, logit_tuple
 
@@ -100,11 +153,12 @@ class GNNForwardLayer(BaseForwardLayer):
     def forward_predict(self, x, edge_index, edge_label_index, theta,):
         """Evaluate the layer with the given input and theta."""
         node_emb = self.forward(x, edge_index)
-        out = self.link_predict(node_emb, edge_label_index)
+        out = self.link_predict(node_emb, edge_label_index).sum(dim=1)
 
-        edge_score = out.sum(dim=1).sigmoid()
+        edge_score = out.sigmoid()
 
         return node_emb, edge_score
+
 
 class BipartiteGCNConv(MessagePassing):
     def __init__(self, dim):
