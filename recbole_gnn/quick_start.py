@@ -52,8 +52,16 @@ def run_recbole_gnn(model=None, dataset=None, config_file_list=None, config_dict
     # model evaluation
     test_result = trainer.evaluate(test_data, load_best_model=saved, show_progress=config['show_progress'])
 
+    #for param in model.parameters():
+    #    print(param, param.size())
+
     logger.info(set_color('best valid ', 'yellow') + f': {best_valid_result}')
-    logger.info(set_color('test result', 'yellow') + f': {test_result}')
+
+    if config["layer_evaluation"]:
+        for i, result in enumerate(test_result):
+            logger.info(set_color(f'test result layer {i+1}', 'yellow') + f': {result}')
+    else:
+        logger.info(set_color('test result', 'yellow') + f': {test_result}')
 
     return {
         'best_valid_score': best_valid_score,

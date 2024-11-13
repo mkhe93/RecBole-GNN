@@ -48,13 +48,30 @@ class ForwardGNN(GeneralGraphRecommender):
         # define layers and loss
         self.user_embedding = torch.nn.Embedding(num_embeddings=self.n_users, embedding_dim=self.latent_dim)
         self.item_embedding = torch.nn.Embedding(num_embeddings=self.n_items, embedding_dim=self.latent_dim)
-        self.forward_convs = torch.nn.ModuleList(
+
+        # FIXME: allow differing channel sizes dynamically!
+        """        self.forward_convs = torch.nn.ModuleList(
             [GNNForwardLayer(
                 GNNConv(self.gnn_type, in_channels=self.latent_dim, out_channels=self.out_channels),
                 config['forward_learning_type'],
                 self.n_users,
                 self.n_items)
-                for _ in range(self.n_layers)])
+                for _ in range(self.n_layers)])"""
+
+
+        self.forward_convs = torch.nn.ModuleList(
+        [GNNForwardLayer(
+        GNNConv(self.gnn_type, in_channels=128, out_channels=128),
+        config['forward_learning_type'],
+        self.n_users,
+        self.n_items),
+        GNNForwardLayer(
+            GNNConv(self.gnn_type, in_channels=128, out_channels=128),
+            config['forward_learning_type'],
+            self.n_users,
+            self.n_items)
+        ])
+
         self.mf_loss = BPRLoss()
         self.reg_loss = EmbLoss()
 
@@ -89,6 +106,7 @@ class ForwardGNN(GeneralGraphRecommender):
         all_embeddings = self.get_ego_embeddings()
         embeddings_list = [all_embeddings]
 
+        # FIXME: torch.stack only for same dimensional layers such as in LightGCN
         for layer in self.forward_convs:
             all_embeddings = layer(all_embeddings, self.edge_index, self.edge_weight)
             embeddings_list.append(all_embeddings)
@@ -108,43 +126,10 @@ class ForwardGNN(GeneralGraphRecommender):
         neg_item = interaction[self.NEG_ITEM_ID]
         embeddings = self.get_ego_embeddings()
 
-        # FIXME: currently pass here the plain embeddings, self.forward() before
-        user_all_embeddings, item_all_embeddings = self.get_splitted_embeddings()
-        user_all_embeddings, item_all_embeddings = self.forward()
-        u_embeddings = user_all_embeddings[user]
-        pos_embeddings = item_all_embeddings[pos_item]
-        neg_embeddings = item_all_embeddings[neg_item]
-
         return embeddings, user, pos_item, neg_item
 
     def calculate_loss(self, interaction):
-        # clear the storage variable when training
-        if self.restore_user_e is not None or self.restore_item_e is not None:
-            self.restore_user_e, self.restore_item_e = None, None
-
-        user = interaction[self.USER_ID]
-        pos_item = interaction[self.ITEM_ID]
-        neg_item = interaction[self.NEG_ITEM_ID]
-
-        user_all_embeddings, item_all_embeddings = self.forward()
-        u_embeddings = user_all_embeddings[user]
-        pos_embeddings = item_all_embeddings[pos_item]
-        neg_embeddings = item_all_embeddings[neg_item]
-
-        # calculate BPR Loss
-        pos_scores = torch.mul(u_embeddings, pos_embeddings).sum(dim=1)
-        neg_scores = torch.mul(u_embeddings, neg_embeddings).sum(dim=1)
-        mf_loss = self.mf_loss(pos_scores, neg_scores)
-
-        # calculate regularization Loss
-        u_ego_embeddings = self.user_embedding(user)
-        pos_ego_embeddings = self.item_embedding(pos_item)
-        neg_ego_embeddings = self.item_embedding(neg_item)
-
-        reg_loss = self.reg_loss(u_ego_embeddings, pos_ego_embeddings, neg_ego_embeddings, require_pow=self.require_pow)
-        loss = mf_loss + self.reg_weight * reg_loss
-
-        return loss
+        pass
 
     def predict(self, interaction):
         user = interaction[self.USER_ID]
@@ -169,38 +154,33 @@ class ForwardGNN(GeneralGraphRecommender):
 
         return scores.view(-1)
 
-    def predict_per_layer(self, interaction):
+    def predict_per_layer(self, interaction, layer_num):
         """Evaluate the layer with the given input and theta."""
         user = interaction[self.USER_ID]
         item = interaction[self.ITEM_ID]
-        accumulated_goodness_list = []
 
-        for layer in self.forward_convs:
-            user_all_embeddings, item_all_embeddings = layer.get_embeddings(self.get_ego_embeddings(), self.edge_index, self.edge_weight)
-            u_embeddings = user_all_embeddings[user]
-            i_embeddings = item_all_embeddings[item]
-            scores = self.link_predict(u_embeddings, i_embeddings).sum(dim=1)
-            edge_score = scores.sigmoid()
+        user_all_embeddings, item_all_embeddings = self.forward_convs[layer_num].get_embeddings(self.get_ego_embeddings(), self.edge_index, self.edge_weight)
+        u_embeddings = user_all_embeddings[user]
+        i_embeddings = item_all_embeddings[item]
+        scores = self.link_predict(u_embeddings, i_embeddings).sum(dim=1)
+        edge_score = scores
 
-            accumulated_goodness_list.append(edge_score)
+        return edge_score
 
-        return accumulated_goodness_list
-
-    def full_sort_predict_per_layer(self, interaction):
+    def full_sort_predict_per_layer(self, interaction, layer_num):
         """Evaluate the layer with the given input and theta."""
         user = interaction[self.USER_ID]
-        accumulated_goodness_list = []
 
-        for layer in self.forward_convs:
-            if self.restore_user_e is None or self.restore_item_e is None:
-                self.restore_user_e, self.restore_item_e = layer.get_embeddings(self.get_ego_embeddings(), self.edge_index, self.edge_weight)
+        #if self.restore_user_e is None or self.restore_item_e is None:
+        self.restore_user_e, self.restore_item_e = self.forward_convs[layer_num].get_embeddings(self.get_ego_embeddings(), self.edge_index, self.edge_weight)
 
-            # get user embedding from storage variable
-            u_embeddings = self.restore_user_e[user]
+        # TOOD: print the weights of each layer here!
+        #print(self.forward_convs[layer_num].gnn_layer.gnn.weight)
 
-            # dot with all item embedding to accelerate
-            scores = torch.matmul(u_embeddings, self.restore_item_e.transpose(0, 1)).view(-1)
+        # get user embedding from storage variable
+        u_embeddings = self.restore_user_e[user]
 
-            accumulated_goodness_list.append(scores)
+        # dot with all item embedding to accelerate
+        scores = torch.matmul(u_embeddings, self.restore_item_e.transpose(0, 1)).view(-1)
 
-        return accumulated_goodness_list
+        return scores

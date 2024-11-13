@@ -1,9 +1,11 @@
 from time import time
 import math
+import os
 import torch
 import numpy as np
 from torch.nn.utils.clip_grad import clip_grad_norm_
 from recbole.data.dataloader import FullSortEvalDataLoader
+from recbole.evaluator import Evaluator, Collector
 from tqdm import tqdm
 from recbole.trainer import Trainer
 from recbole.utils import early_stopping, dict2str, set_color, get_gpu_usage
@@ -45,22 +47,25 @@ class ForwardGNNTrainer(Trainer):
         """
         self.model.train()
         total_loss = None
-        iter_data = (
-            tqdm(
-                train_data,
-                total=len(train_data),
-                ncols=100,
-                desc=set_color(f"Train {epoch_idx:>5}", "pink"),
+
+        for i, layer in enumerate(self.model.forward_convs):
+            layer_desc = f"Layer {i + 1}/{self.config["n_layers"]}"
+
+            iter_data = (
+                tqdm(
+                    train_data,
+                    total=len(train_data),
+                    ncols=100,
+                    desc=set_color(f"Train {epoch_idx:>5} | {layer_desc}", "pink"),
+                )
+                if show_progress
+                else train_data
             )
-            if show_progress
-            else train_data
-        )
 
-        if not self.config["single_spec"] and train_data.shuffle:
-            train_data.sampler.set_epoch(epoch_idx)
+            if not self.config["single_spec"] and train_data.shuffle:
+                train_data.sampler.set_epoch(epoch_idx)
 
-        for batch_idx, interaction in enumerate(iter_data):
-            for i, layer in enumerate(self.model.forward_convs):
+            for batch_idx, interaction in enumerate(iter_data):
                 interaction = interaction.to(self.device)
 
                 self.optimizer.zero_grad()
@@ -75,7 +80,7 @@ class ForwardGNNTrainer(Trainer):
 
                 separation = logits[0] - logits[1]
                 iter_data.set_description(
-                    f"[Layer {i}: Epoch-{epoch_idx}] | "
+                    f"[Layer {i+1}: Epoch-{epoch_idx}] | "
                     f"Goodness: pos={logits[0]:.4f}, neg={logits[1]:.4f} | "
                     f"Separation: {separation:.4f} | "
                 )
@@ -274,7 +279,10 @@ class ForwardGNNTrainer(Trainer):
         self.model.eval()
 
         if isinstance(eval_data, FullSortEvalDataLoader):
-            eval_func = self._full_sort_batch_eval
+            if self.config["layer_evaluation"]:
+                eval_func = self._full_sort_batch_eval_per_layer
+            else:
+                eval_func = self._full_sort_batch_eval
             if self.item_tensor is None:
                 self.item_tensor = eval_data._dataset.get_item_feature().to(self.device)
         else:
@@ -282,41 +290,76 @@ class ForwardGNNTrainer(Trainer):
         if self.config["eval_type"] == EvaluatorType.RANKING:
             self.tot_item_num = eval_data._dataset.item_num
 
-        iter_data = (
-            tqdm(
-                eval_data,
-                total=len(eval_data),
-                ncols=100,
-                desc=set_color(f"Evaluate   ", "pink"),
-            )
-            if show_progress
-            else eval_data
-        )
-
         num_sample = 0
-        for batch_idx, batched_data in enumerate(iter_data):
-            num_sample += len(batched_data)
-            interaction, scores, positive_u, positive_i = eval_func(batched_data)
-            if self.gpu_available and show_progress:
-                iter_data.set_postfix_str(
-                    set_color("GPU RAM: " + get_gpu_usage(self.device), "yellow")
+        if self.config["layer_evaluation"]:
+            result = []
+
+            for layer_num in range(self.config["n_layers"]):
+                layer_desc = f"layer {layer_num + 1}/{self.config["n_layers"]}"
+                iter_data = (
+                    tqdm(
+                        eval_data,
+                        total=len(eval_data),
+                        ncols=100,
+                        desc=set_color(f"Evaluate {layer_desc}  ", "pink"),
+                    )
+                    if show_progress
+                    else eval_data
                 )
-            self.eval_collector.eval_batch_collect(
-                scores, interaction, positive_u, positive_i
+
+                for batch_idx, batched_data in enumerate(iter_data):
+                    num_sample += len(batched_data)
+                    interaction, scores, positive_u, positive_i = eval_func(batched_data, layer_num)
+                    if self.gpu_available and show_progress:
+                        iter_data.set_postfix_str(
+                            set_color("GPU RAM: " + get_gpu_usage(self.device), "yellow")
+                        )
+                    self.eval_collector.eval_batch_collect(
+                        scores, interaction, positive_u, positive_i
+                    )
+                self.eval_collector.model_collect(self.model)
+                struct = self.eval_collector.get_data_struct()
+                result_tmp = self.evaluator.evaluate(struct)
+                if not self.config["single_spec"]:
+                    result = self._map_reduce(result_tmp, num_sample)
+                self.wandblogger.log_eval_metrics(result_tmp, head="eval")
+                result.append(result_tmp)
+        else:
+            iter_data = (
+                tqdm(
+                    eval_data,
+                    total=len(eval_data),
+                    ncols=100,
+                    desc=set_color(f"Evaluate   ", "pink"),
+                )
+                if show_progress
+                else eval_data
             )
-        self.eval_collector.model_collect(self.model)
-        struct = self.eval_collector.get_data_struct()
-        result = self.evaluator.evaluate(struct)
-        if not self.config["single_spec"]:
-            result = self._map_reduce(result, num_sample)
-        self.wandblogger.log_eval_metrics(result, head="eval")
+
+            for batch_idx, batched_data in enumerate(iter_data):
+                num_sample += len(batched_data)
+                interaction, scores, positive_u, positive_i = eval_func(batched_data)
+                if self.gpu_available and show_progress:
+                    iter_data.set_postfix_str(
+                        set_color("GPU RAM: " + get_gpu_usage(self.device), "yellow")
+                    )
+                self.eval_collector.eval_batch_collect(
+                    scores, interaction, positive_u, positive_i
+                )
+            self.eval_collector.model_collect(self.model)
+            struct = self.eval_collector.get_data_struct()
+            result = self.evaluator.evaluate(struct)
+            if not self.config["single_spec"]:
+                result = self._map_reduce(result, num_sample)
+            self.wandblogger.log_eval_metrics(result, head="eval")
+
         return result
 
-    def _full_sort_batch_eval_per_layer(self, batched_data):
+    def _full_sort_batch_eval_per_layer(self, batched_data, layer_num):
         interaction, history_index, positive_u, positive_i = batched_data
         try:
             # Note: interaction without item ids
-            scores = self.model.full_sort_predict_per_layer(interaction.to(self.device))
+            scores = self.model.full_sort_predict_per_layer(interaction.to(self.device), layer_num)
         except NotImplementedError:
             inter_len = len(interaction)
             new_inter = interaction.to(self.device).repeat_interleave(self.tot_item_num)

@@ -24,7 +24,7 @@ class LightGCNConv(MessagePassing):
 
 # Via Namyong Park out of forwardgnn
 class GNNConv(torch.nn.Module):
-    def __init__(self, gnn_type, in_channels, out_channels):
+    def __init__(self, gnn_type: str, in_channels: int, out_channels: int):
         super().__init__()
         self.in_channels = in_channels
         self.out_channels = out_channels
@@ -33,6 +33,8 @@ class GNNConv(torch.nn.Module):
                 self.gnn = SAGEConv(in_channels=in_channels, out_channels=out_channels, aggr="mean")
         elif "GCN".lower() == gnn_type.lower():
                 self.gnn = GCNConv(in_channels=in_channels, out_channels=out_channels)
+        elif "BiGNNConv".lower() == gnn_type.lower():
+                self.gnn = BiGNNConv(in_channels=in_channels, out_channels=out_channels)
         elif "LightGCN".lower() == gnn_type.lower():
                 self.gnn = LightGCNConv(dim=in_channels)
         elif "GAT".lower() == gnn_type.lower():
@@ -60,7 +62,7 @@ class BaseForwardLayer(nn.Module):
         return True
 
 class GNNForwardLayer(BaseForwardLayer):
-    def __init__(self, gnn_layer: str, forward_learning_type: str, n_user: int, n_items: int):
+    def __init__(self, gnn_layer: torch.nn.Module, forward_learning_type: str, n_user: int, n_items: int):
         super(GNNForwardLayer, self).__init__()
         self.gnn_layer = gnn_layer
         self.forward_learning_type = forward_learning_type
@@ -79,6 +81,7 @@ class GNNForwardLayer(BaseForwardLayer):
 
         all_embeddings =  self.forward(embeddings, edge_index, edge_weight)
 
+        # FIXME: torch.stack only for same dimensional layers such as in LightGCN
         embeddings_list.append(all_embeddings)
         all_embeddings = torch.stack(embeddings_list, dim=1)
         all_embeddings = torch.mean(all_embeddings, dim=1)
