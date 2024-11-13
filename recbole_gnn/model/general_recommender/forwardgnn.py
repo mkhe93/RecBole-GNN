@@ -20,7 +20,7 @@ from recbole.model.loss import BPRLoss, EmbLoss
 from recbole.utils import InputType
 
 from recbole_gnn.model.abstract_recommender import GeneralGraphRecommender
-from recbole_gnn.model.layers import LightGCNConv, GCNForwardLayer
+from recbole_gnn.model.layers import LightGCNConv, GNNForwardLayer, GNNConv
 
 
 class ForwardGNN(GeneralGraphRecommender):
@@ -42,12 +42,18 @@ class ForwardGNN(GeneralGraphRecommender):
         self.n_layers = config['n_layers']  # int type:the layer num of lightGCN
         self.reg_weight = config['reg_weight']  # float32 type: the weight decay for l2 normalization
         self.require_pow = config['require_pow']  # bool type: whether to require pow when regularization
+        self.gnn_type = config['gnn_type']  # str type: which kind of gnn to use as layer
         self.optimizer = config
 
         # define layers and loss
         self.user_embedding = torch.nn.Embedding(num_embeddings=self.n_users, embedding_dim=self.latent_dim)
         self.item_embedding = torch.nn.Embedding(num_embeddings=self.n_items, embedding_dim=self.latent_dim)
-        self.forward_convs = torch.nn.ModuleList([GCNForwardLayer(hidden_channels=self.latent_dim, out_channels=self.out_channels) for _ in range(self.n_layers)])
+        self.forward_convs = torch.nn.ModuleList(
+            [GNNForwardLayer(
+                GNNConv(self.gnn_type,
+                        in_channels=self.latent_dim,
+                        out_channels=self.out_channels))
+                for _ in range(self.n_layers)])
         self.mf_loss = BPRLoss()
         self.reg_loss = EmbLoss()
 

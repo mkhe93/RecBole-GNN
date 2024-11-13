@@ -5,23 +5,35 @@ from torch_geometric.nn import MessagePassing, GCNConv, SAGEConv, GATConv
 from torch_sparse import matmul
 from recbole.model.loss import BPRLoss
 
+# Via Namyong Park out of forwardgnn
+class GNNConv(torch.nn.Module):
+    def __init__(self, gnn_type, in_channels, out_channels):
+        super().__init__()
+        self.in_channels = in_channels
+        self.out_channels = out_channels
 
-class LightGCNConv(MessagePassing):
-    def __init__(self, dim):
-        super(LightGCNConv, self).__init__(aggr='add')
-        self.dim = dim
+        if "SAGE".lower() in gnn_type.lower():
+                self.gnn = SAGEConv(in_channels=in_channels, out_channels=out_channels, aggr="mean")
+        elif "GCN".lower() in gnn_type.lower():
+                self.gnn = GCNConv(in_channels=in_channels, out_channels=out_channels)
+        elif "LightGCN".lower() in gnn_type.lower():
+                self.gnn = LightGCNConv(dim=in_channels)
+        elif "GAT".lower() in gnn_type.lower():
+            heads = 4
+            assert out_channels % heads == 0, (out_channels, heads)
+            self.gnn = GATConv(in_channels=in_channels, out_channels=out_channels // heads, heads=heads)
+        else:
+            raise ValueError(f"Unavailable gnn: {gnn_type}")
+
+        self.relu = torch.nn.ReLU()
 
     def forward(self, x, edge_index, edge_weight):
-        return self.propagate(edge_index, x=x, edge_weight=edge_weight)
+        return self.gnn(x, edge_index, edge_weight)
 
-    def message(self, x_j, edge_weight):
-        return edge_weight.view(-1, 1) * x_j
+        #return self.relu(self.gnn(x, edge_index))
 
-    def message_and_aggregate(self, adj_t, x):
-        return matmul(adj_t, x, reduce=self.aggr)
 
-    def __repr__(self):
-        return '{}({})'.format(self.__class__.__name__, self.dim)
+
 
 class BaseForwardLayer(nn.Module):
     def forward_train(self, x, theta,**kwargs,):
@@ -34,13 +46,14 @@ class BaseForwardLayer(nn.Module):
     def requires_training(self):
         return True
 
-class GCNForwardLayer(BaseForwardLayer):
-    def __init__(self, hidden_channels, out_channels):
-        super(GCNForwardLayer, self).__init__()
+class GNNForwardLayer(BaseForwardLayer):
+    def __init__(self, gnn_layer):
+        super(GNNForwardLayer, self).__init__()
         #self.gnn_layer = SAGEConv(in_channels=hidden_channels, out_channels=out_channels, aggr="mean")
-        self.gnn_layer = GATConv(in_channels=hidden_channels, out_channels=out_channels // 4, heads=4)
+        #self.gnn_layer = GATConv(in_channels=hidden_channels, out_channels=out_channels // 4, heads=4)
         #self.gnn_layer = GCNConv(in_channels=hidden_channels, out_channels=out_channels)
         #self.gnn_layer = LightGCNConv(dim=hidden_channels)
+        self.gnn_layer = gnn_layer
         self.criterion_no_reduction = BPRLoss()
 
     def forward(self, x, edge_index, edge_weight = None):
@@ -79,6 +92,24 @@ class GCNForwardLayer(BaseForwardLayer):
 
         return node_emb, edge_score
 
+
+
+class LightGCNConv(MessagePassing):
+    def __init__(self, dim):
+        super(LightGCNConv, self).__init__(aggr='add')
+        self.dim = dim
+
+    def forward(self, x, edge_index, edge_weight):
+        return self.propagate(edge_index, x=x, edge_weight=edge_weight)
+
+    def message(self, x_j, edge_weight):
+        return edge_weight.view(-1, 1) * x_j
+
+    def message_and_aggregate(self, adj_t, x):
+        return matmul(adj_t, x, reduce=self.aggr)
+
+    def __repr__(self):
+        return '{}({})'.format(self.__class__.__name__, self.dim)
 
 class BipartiteGCNConv(MessagePassing):
     def __init__(self, dim):
