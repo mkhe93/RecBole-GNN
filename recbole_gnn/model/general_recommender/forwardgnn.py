@@ -18,6 +18,8 @@ import torch
 from recbole.model.init import xavier_uniform_initialization
 from recbole.model.loss import BPRLoss, EmbLoss
 from recbole.utils import InputType
+from torch_geometric.nn import Sequential, Linear
+from torch_geometric.nn.aggr import MeanAggregation, SoftmaxAggregation, LSTMAggregation, AttentionalAggregation, GRUAggregation
 
 from recbole_gnn.model.abstract_recommender import GeneralGraphRecommender
 from recbole_gnn.model.layers import LightGCNConv, GNNForwardLayer, GNNConv
@@ -43,7 +45,7 @@ class ForwardGNN(GeneralGraphRecommender):
         self.reg_weight = config['reg_weight']  # float32 type: the weight decay for l2 normalization
         self.require_pow = config['require_pow']  # bool type: whether to require pow when regularization
         self.gnn_type = config['gnn_type']  # str type: which kind of gnn to use as layer
-        self.optimizer = config
+        self.pre_model_path = config['pre_model_path'] # needed for finetune
 
         # define layers and loss
         self.user_embedding = torch.nn.Embedding(num_embeddings=self.n_users, embedding_dim=self.latent_dim)
@@ -61,16 +63,37 @@ class ForwardGNN(GeneralGraphRecommender):
 
         self.forward_convs = torch.nn.ModuleList(
         [GNNForwardLayer(
-        GNNConv(self.gnn_type, in_channels=128, out_channels=128),
-        config['forward_learning_type'],
-        self.n_users,
-        self.n_items),
+            GNNConv(self.gnn_type, in_channels=128, out_channels=128),
+            MeanAggregation(),
+            config['forward_learning_type'],
+            self.n_users,
+            self.n_items),
         GNNForwardLayer(
             GNNConv(self.gnn_type, in_channels=128, out_channels=128),
+            MeanAggregation(),
             config['forward_learning_type'],
             self.n_users,
             self.n_items)
         ])
+
+        gate_nn = torch.nn.Sequential(
+            Linear(128, 64),
+            torch.nn.ReLU(),
+            Linear(64, 1)
+        )
+
+        # Define nn to transform embeddings to the output dimension
+        feature_nn = torch.nn.Sequential(
+            Linear(128, 128),
+            torch.nn.ReLU()
+        )
+
+        #self.aggregation = MeanAggregation()
+        #self.aggregation = SoftmaxAggregation(learn=True, channels=1)
+        self.aggregation = AttentionalAggregation(gate_nn=gate_nn, nn=feature_nn)
+        #self.aggregation = GRUAggregation(in_channels=128, out_channels=128)
+        #self.aggregation = LSTMAggregation(in_channels=128, out_channels=128)
+
 
         self.mf_loss = BPRLoss()
         self.reg_loss = EmbLoss()
@@ -79,8 +102,19 @@ class ForwardGNN(GeneralGraphRecommender):
         self.restore_user_e = None
         self.restore_item_e = None
 
+        self.train_stage = config["train_stage"]
+
         # parameters initialization
-        self.apply(xavier_uniform_initialization)
+        assert self.train_stage in ["pretrain", "finetune"]
+        if self.train_stage == "pretrain":
+            self.apply(xavier_uniform_initialization)
+            # self.aggregation.reset_parameters()
+        else:
+            # load pretrained model for finetune
+            pretrained = torch.load(self.pre_model_path)
+            self.logger.info(f"Load pretrained model from {self.pre_model_path}")
+            self.load_state_dict(pretrained["state_dict"])
+
         self.other_parameter_name = ['restore_user_e', 'restore_item_e']
 
     def get_ego_embeddings(self):
@@ -106,12 +140,23 @@ class ForwardGNN(GeneralGraphRecommender):
         all_embeddings = self.get_ego_embeddings()
         embeddings_list = [all_embeddings]
 
-        # FIXME: torch.stack only for same dimensional layers such as in LightGCN
         for layer in self.forward_convs:
             all_embeddings = layer(all_embeddings, self.edge_index, self.edge_weight)
             embeddings_list.append(all_embeddings)
+
         lightgcn_all_embeddings = torch.stack(embeddings_list, dim=1)
-        lightgcn_all_embeddings = torch.mean(lightgcn_all_embeddings, dim=1)
+
+        if isinstance(self.aggregation, GRUAggregation) or isinstance(self.aggregation, LSTMAggregation):
+            aggregated_embeddings = []
+            # Final Aggregation of layer outputs
+            for node_embeddings in lightgcn_all_embeddings:  # Each `node_embeddings` is [3, 128]
+                node_embedding_aggregated = self.aggregation(node_embeddings)  # Output shape: [64]
+                aggregated_embeddings.append(node_embedding_aggregated)
+
+            lightgcn_all_embeddings = torch.cat(aggregated_embeddings, dim=0)
+        else:
+            lightgcn_all_embeddings = self.aggregation(lightgcn_all_embeddings)
+            lightgcn_all_embeddings = torch.squeeze(lightgcn_all_embeddings, dim=1)
 
         user_all_embeddings, item_all_embeddings = torch.split(lightgcn_all_embeddings, [self.n_users, self.n_items])
         return user_all_embeddings, item_all_embeddings
@@ -129,7 +174,33 @@ class ForwardGNN(GeneralGraphRecommender):
         return embeddings, user, pos_item, neg_item
 
     def calculate_loss(self, interaction):
-        pass
+        # clear the storage variable when training
+        if self.restore_user_e is not None or self.restore_item_e is not None:
+            self.restore_user_e, self.restore_item_e = None, None
+
+        user = interaction[self.USER_ID]
+        pos_item = interaction[self.ITEM_ID]
+        neg_item = interaction[self.NEG_ITEM_ID]
+
+        user_all_embeddings, item_all_embeddings = self.forward()
+        u_embeddings = user_all_embeddings[user]
+        pos_embeddings = item_all_embeddings[pos_item]
+        neg_embeddings = item_all_embeddings[neg_item]
+
+        # calculate BPR Loss
+        pos_scores = torch.mul(u_embeddings, pos_embeddings).sum(dim=1)
+        neg_scores = torch.mul(u_embeddings, neg_embeddings).sum(dim=1)
+        mf_loss = self.mf_loss(pos_scores, neg_scores)
+
+        # calculate regularization Loss
+        u_ego_embeddings = self.user_embedding(user)
+        pos_ego_embeddings = self.item_embedding(pos_item)
+        neg_ego_embeddings = self.item_embedding(neg_item)
+
+        reg_loss = self.reg_loss(u_ego_embeddings, pos_ego_embeddings, neg_ego_embeddings, require_pow=self.require_pow)
+        loss = mf_loss + self.reg_weight * reg_loss
+
+        return loss
 
     def predict(self, interaction):
         user = interaction[self.USER_ID]

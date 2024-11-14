@@ -27,11 +27,14 @@ def run_recbole_gnn(model=None, dataset=None, config_file_list=None, config_dict
     init_logger(config)
     logger = getLogger()
 
-    logger.info(config)
+    if config['train_stage'] == "pretrain":
+        logger.info(config)
 
     # dataset filtering
     dataset = create_dataset(config)
-    logger.info(dataset)
+
+    if config['train_stage'] == "pretrain":
+        logger.info(dataset)
 
     # dataset splitting
     train_data, valid_data, test_data = data_preparation(config, dataset)
@@ -39,7 +42,9 @@ def run_recbole_gnn(model=None, dataset=None, config_file_list=None, config_dict
     # model loading and initialization
     init_seed(config['seed'], config['reproducibility'])
     model = get_model(config['model'])(config, train_data.dataset).to(config['device'])
-    logger.info(model)
+
+    if config['train_stage'] == "pretrain":
+        logger.info(model)
 
     # trainer loading and initialization
     trainer = get_trainer(config['MODEL_TYPE'], config['model'])(config, model)
@@ -51,9 +56,6 @@ def run_recbole_gnn(model=None, dataset=None, config_file_list=None, config_dict
 
     # model evaluation
     test_result = trainer.evaluate(test_data, load_best_model=saved, show_progress=config['show_progress'])
-
-    #for param in model.parameters():
-    #    print(param, param.size())
 
     logger.info(set_color('best valid ', 'yellow') + f': {best_valid_result}')
 

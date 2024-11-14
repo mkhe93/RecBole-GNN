@@ -2,6 +2,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 from torch_geometric.nn import MessagePassing, GCNConv, SAGEConv, GATConv
+from torch_geometric.nn.aggr import Aggregation
 from torch_sparse import matmul
 from recbole.model.loss import BPRLoss, forwardforward_loss_fn, EmbLoss
 
@@ -62,9 +63,10 @@ class BaseForwardLayer(nn.Module):
         return True
 
 class GNNForwardLayer(BaseForwardLayer):
-    def __init__(self, gnn_layer: torch.nn.Module, forward_learning_type: str, n_user: int, n_items: int):
+    def __init__(self, gnn_layer: torch.nn.Module, aggr: Aggregation, forward_learning_type: str, n_user: int, n_items: int):
         super(GNNForwardLayer, self).__init__()
         self.gnn_layer = gnn_layer
+        self.layer_aggregation = aggr
         self.forward_learning_type = forward_learning_type
         self.n_users = n_user
         self.n_items = n_items
@@ -84,7 +86,8 @@ class GNNForwardLayer(BaseForwardLayer):
         # FIXME: torch.stack only for same dimensional layers such as in LightGCN
         embeddings_list.append(all_embeddings)
         all_embeddings = torch.stack(embeddings_list, dim=1)
-        all_embeddings = torch.mean(all_embeddings, dim=1)
+        all_embeddings = self.layer_aggregation(all_embeddings, dim=1)
+        all_embeddings = torch.squeeze(all_embeddings, dim=1)
 
         user_all_embeddings, item_all_embeddings = torch.split(all_embeddings, [self.n_users, self.n_items])
 
