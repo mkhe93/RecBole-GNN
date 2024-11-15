@@ -17,7 +17,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--dataset", "-d", type=str, default="ml-100k", help="name of datasets"
     )
-    parser.add_argument("--config_files", type=str, default="test.yaml", help="config files")
+    parser.add_argument("--config_files", type=str, default="hyper.yaml", help="config files")
     parser.add_argument(
         "--group_offset",
         type=int,
