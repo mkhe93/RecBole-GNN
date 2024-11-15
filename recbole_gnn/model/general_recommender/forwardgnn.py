@@ -18,8 +18,16 @@ import torch
 from recbole.model.init import xavier_uniform_initialization
 from recbole.model.loss import BPRLoss, EmbLoss
 from recbole.utils import InputType
-from torch_geometric.nn import Sequential, Linear
-from torch_geometric.nn.aggr import MeanAggregation, SoftmaxAggregation, LSTMAggregation, AttentionalAggregation, GRUAggregation
+from torch_geometric.nn import Linear
+from torch_geometric.nn.aggr import (
+    MeanAggregation,
+    SoftmaxAggregation,
+    MultiAggregation,
+    AttentionalAggregation,
+    MedianAggregation,
+    MaxAggregation,
+    StdAggregation,
+    MinAggregation)
 
 from recbole_gnn.model.abstract_recommender import GeneralGraphRecommender
 from recbole_gnn.model.layers import LightGCNConv, GNNForwardLayer, GNNConv
@@ -39,61 +47,77 @@ class ForwardGNN(GeneralGraphRecommender):
         super(ForwardGNN, self).__init__(config, dataset)
 
         # load parameters info
-        self.latent_dim = config['embedding_size']  # int type:the embedding size of lightGCN
-        self.out_channels = config['out_channels']
-        self.n_layers = config['n_layers']  # int type:the layer num of lightGCN
+        self.embedding_size = config['embedding_size']  # int type:the embedding size of lightGCN
+        self.lgcn_dim = config['lgcn_dim']
+        self.n_layers = config['n_layers']
+
+        self.final_aggregation = config['final_aggregation']
+        self.layer_aggregation = config['layer_aggregation']
+
         self.reg_weight = config['reg_weight']  # float32 type: the weight decay for l2 normalization
         self.require_pow = config['require_pow']  # bool type: whether to require pow when regularization
         self.gnn_type = config['gnn_type']  # str type: which kind of gnn to use as layer
+        self.train_stage = config["train_stage"]
         self.pre_model_path = config['pre_model_path'] # needed for finetune
 
         # define layers and loss
-        self.user_embedding = torch.nn.Embedding(num_embeddings=self.n_users, embedding_dim=self.latent_dim)
-        self.item_embedding = torch.nn.Embedding(num_embeddings=self.n_items, embedding_dim=self.latent_dim)
+        self.user_embedding = torch.nn.Embedding(num_embeddings=self.n_users, embedding_dim=self.embedding_size)
+        self.item_embedding = torch.nn.Embedding(num_embeddings=self.n_items, embedding_dim=self.embedding_size)
 
-        # FIXME: allow differing channel sizes dynamically!
-        """        self.forward_convs = torch.nn.ModuleList(
-            [GNNForwardLayer(
-                GNNConv(self.gnn_type, in_channels=self.latent_dim, out_channels=self.out_channels),
-                config['forward_learning_type'],
-                self.n_users,
-                self.n_items)
-                for _ in range(self.n_layers)])"""
+        if self.layer_aggregation == 'mean':
+            self.layer_aggregation = MeanAggregation()
+        elif self.layer_aggregation == 'median':
+            self.layer_aggregation = MedianAggregation()
+        elif self.layer_aggregation == 'min':
+            self.layer_aggregation = MinAggregation()
+        elif self.layer_aggregation == 'max':
+            self.layer_aggregation = MaxAggregation()
+        elif self.layer_aggregation == 'std':
+            self.layer_aggregation = StdAggregation()
+        elif self.layer_aggregation == 'softmax':
+            self.layer_aggregation = SoftmaxAggregation(learn=True, channels=1)
+        elif self.layer_aggregation == 'attention':
+            gate_nn = torch.nn.Sequential(
+                Linear(self.embedding_size, self.embedding_size // 2),
+                torch.nn.ReLU(),
+                Linear(self.embedding_size // 2, 1)
+            )
+            feature_nn = torch.nn.Sequential(
+                Linear(self.embedding_size, self.embedding_size),
+                torch.nn.ReLU()
+            )
+            self.layer_aggregation = AttentionalAggregation(gate_nn=gate_nn, nn=feature_nn)
+        else:
+            raise ValueError(
+                f"'layer_aggregation' = {self.layer_aggregation} is not implemented!"
+            )
 
-
-        self.forward_convs = torch.nn.ModuleList(
-        [GNNForwardLayer(
-            GNNConv(self.gnn_type, in_channels=128, out_channels=128),
-            MeanAggregation(),
-            config['forward_learning_type'],
-            self.n_users,
-            self.n_items),
-        GNNForwardLayer(
-            GNNConv(self.gnn_type, in_channels=128, out_channels=128),
-            MeanAggregation(),
-            config['forward_learning_type'],
-            self.n_users,
-            self.n_items)
-        ])
-
-        gate_nn = torch.nn.Sequential(
-            Linear(128, 64),
-            torch.nn.ReLU(),
-            Linear(64, 1)
-        )
-
-        # Define nn to transform embeddings to the output dimension
-        feature_nn = torch.nn.Sequential(
-            Linear(128, 128),
-            torch.nn.ReLU()
-        )
-
-        #self.aggregation = MeanAggregation()
-        #self.aggregation = SoftmaxAggregation(learn=True, channels=1)
-        self.aggregation = AttentionalAggregation(gate_nn=gate_nn, nn=feature_nn)
-        #self.aggregation = GRUAggregation(in_channels=128, out_channels=128)
-        #self.aggregation = LSTMAggregation(in_channels=128, out_channels=128)
-
+        if self.gnn_type in ['GCN', 'SAGE', 'GAT']:
+            self.forward_convs = torch.nn.ModuleList(
+                [GNNForwardLayer(
+                    'Adam', # FIXME
+                    {'lr': config['learning_rate'], 'weight_decay': config['weight_decay']},
+                    self.user_embedding,
+                    self.item_embedding,
+                    GNNConv(self.gnn_type, in_channels=self.embedding_size, out_channels=self.embedding_size),
+                    self.layer_aggregation,
+                    config['forward_learning_type'],
+                    self.n_users,
+                    self.n_items)
+                    for _ in range(self.n_layers)])
+        elif self.gnn_type in ['LightGCN']:
+            self.forward_convs = torch.nn.ModuleList(
+                [GNNForwardLayer(
+                    'Adam', # FIXME
+                    {'lr': config['learning_rate'], 'weight_decay': config['weight_decay']},
+                    self.user_embedding,
+                    self.item_embedding,
+                    GNNConv(self.gnn_type, in_channels=self.lgcn_dim, out_channels=self.lgcn_dim),
+                    self.layer_aggregation,
+                    config['forward_learning_type'],
+                    self.n_users,
+                    self.n_items)
+                    for _ in range(self.n_layers)])
 
         self.mf_loss = BPRLoss()
         self.reg_loss = EmbLoss()
@@ -102,13 +126,50 @@ class ForwardGNN(GeneralGraphRecommender):
         self.restore_user_e = None
         self.restore_item_e = None
 
-        self.train_stage = config["train_stage"]
+        ########### For finetunting ##########
+        # set final aggregation type
+        if isinstance(self.final_aggregation, list):
+            self.final_aggregation = MultiAggregation(
+                aggrs=self.final_aggregation,
+                mode='mean',
+                mode_kwargs=dict(in_channels=self.embedding_size, out_channels=64, num_heads=4),
+            )
+        else:
+            if self.final_aggregation in ['mean', 'median', 'min', 'max', 'std']:
+                if self.final_aggregation == 'mean':
+                    self.final_aggregation = MeanAggregation()
+                elif self.final_aggregation == 'median':
+                    self.final_aggregation = MedianAggregation()
+                elif self.final_aggregation == 'min':
+                    self.final_aggregation = MinAggregation()
+                elif self.final_aggregation == 'max':
+                    self.final_aggregation = MaxAggregation()
+                elif self.final_aggregation == 'std':
+                    self.final_aggregation = StdAggregation()
+            else:
+                if self.final_aggregation == 'softmax':
+                    self.final_aggregation = SoftmaxAggregation(learn=True, channels=1)
+                elif self.final_aggregation == 'attention':
+                    gate_nn = torch.nn.Sequential(
+                        Linear(128, 64),
+                        torch.nn.ReLU(),
+                        Linear(64, 1)
+                    )
+                    feature_nn = torch.nn.Sequential(
+                        Linear(128, 128),
+                        torch.nn.ReLU()
+                    )
+                    self.final_aggregation = AttentionalAggregation(gate_nn=gate_nn, nn=feature_nn)
+                else:
+                    raise ValueError(
+                        f"'final_aggregation' = {self.final_aggregation} is not implemented!"
+                    )
+        ########### For finetunting ##########
 
         # parameters initialization
         assert self.train_stage in ["pretrain", "finetune"]
         if self.train_stage == "pretrain":
             self.apply(xavier_uniform_initialization)
-            # self.aggregation.reset_parameters()
         else:
             # load pretrained model for finetune
             pretrained = torch.load(self.pre_model_path)
@@ -145,18 +206,8 @@ class ForwardGNN(GeneralGraphRecommender):
             embeddings_list.append(all_embeddings)
 
         lightgcn_all_embeddings = torch.stack(embeddings_list, dim=1)
-
-        if isinstance(self.aggregation, GRUAggregation) or isinstance(self.aggregation, LSTMAggregation):
-            aggregated_embeddings = []
-            # Final Aggregation of layer outputs
-            for node_embeddings in lightgcn_all_embeddings:  # Each `node_embeddings` is [3, 128]
-                node_embedding_aggregated = self.aggregation(node_embeddings)  # Output shape: [64]
-                aggregated_embeddings.append(node_embedding_aggregated)
-
-            lightgcn_all_embeddings = torch.cat(aggregated_embeddings, dim=0)
-        else:
-            lightgcn_all_embeddings = self.aggregation(lightgcn_all_embeddings)
-            lightgcn_all_embeddings = torch.squeeze(lightgcn_all_embeddings, dim=1)
+        lightgcn_all_embeddings = self.final_aggregation(lightgcn_all_embeddings, dim=1)
+        lightgcn_all_embeddings = torch.squeeze(lightgcn_all_embeddings, dim=1)
 
         user_all_embeddings, item_all_embeddings = torch.split(lightgcn_all_embeddings, [self.n_users, self.n_items])
         return user_all_embeddings, item_all_embeddings

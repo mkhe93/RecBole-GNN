@@ -30,162 +30,6 @@ class ForwardGNNTrainer(PretrainTrainer):
     def __init__(self, config, model):
         super(ForwardGNNTrainer, self).__init__(config, model)
 
-    def _train_epoch(self, train_data, epoch_idx, loss_func=None, show_progress=False, parameters=None):
-        r"""Train the model in an epoch
-
-        Args:
-            train_data (DataLoader): The train data.
-            epoch_idx (int): The current epoch id.
-            loss_func (function): The loss function of :attr:`model`. If it is ``None``, the loss function will be
-                :attr:`self.model.calculate_loss`. Defaults to ``None``.
-            show_progress (bool): Show the progress of training epoch. Defaults to ``False``.
-
-        Returns:
-            float/tuple: The sum of loss returned by all batches in this epoch. If the loss in each batch contains
-            multiple parts and the model return these multiple parts loss instead of the sum of loss, it will return a
-            tuple which includes the sum of loss in each part.
-        """
-        self.model.train()
-
-        for name, param in self.model.named_parameters():
-            print(name)
-
-        params = [param for name, param in self.model.named_parameters() if "aggregation" in name]
-
-        self.optimizer = self._build_optimizer(params=params)
-        loss_func = loss_func or self.model.calculate_loss
-        total_loss = None
-        iter_data = (
-            tqdm(
-                train_data,
-                total=len(train_data),
-                ncols=100,
-                desc=set_color(f"Train {epoch_idx:>5}", "pink"),
-            )
-            if show_progress
-            else train_data
-        )
-
-        if not self.config["single_spec"] and train_data.shuffle:
-            train_data.sampler.set_epoch(epoch_idx)
-
-        for batch_idx, interaction in enumerate(iter_data):
-            interaction = interaction.to(self.device)
-            self.optimizer.zero_grad()
-            sync_loss = 0
-            if not self.config["single_spec"]:
-                self.set_reduce_hook()
-                sync_loss = self.sync_grad_loss()
-
-            with torch.autocast(device_type=self.device.type, enabled=self.enable_amp):
-                losses = loss_func(interaction)
-
-            if isinstance(losses, tuple):
-                loss = sum(losses)
-                loss_tuple = tuple(per_loss.item() for per_loss in losses)
-                total_loss = (
-                    loss_tuple
-                    if total_loss is None
-                    else tuple(map(sum, zip(total_loss, loss_tuple)))
-                )
-            else:
-                loss = losses
-                total_loss = (
-                    losses.item() if total_loss is None else total_loss + losses.item()
-                )
-            self._check_nan(loss)
-            loss = loss + sync_loss
-            loss.backward()
-            if self.clip_grad_norm:
-                clip_grad_norm_(self.model.parameters(), **self.clip_grad_norm)
-            self.optimizer.step()
-            if self.gpu_available and show_progress:
-                iter_data.set_postfix_str(
-                    set_color("GPU RAM: " + get_gpu_usage(self.device), "yellow")
-                )
-        return total_loss
-
-    def _train_epoch_layerwise(self, train_data, epoch_idx, loss_func=None, show_progress=False):
-        r"""Train the model in an epoch
-
-        Args:
-            train_data (DataLoader): The train data.
-            epoch_idx (int): The current epoch id.
-            loss_func (function): The loss function of :attr:`model`. If it is ``None``, the loss function will be
-                :attr:`self.model.calculate_loss`. Defaults to ``None``.
-            show_progress (bool): Show the progress of training epoch. Defaults to ``False``.
-
-        Returns:
-            float/tuple: The sum of loss returned by all batches in this epoch. If the loss in each batch contains
-            multiple parts and the model return these multiple parts loss instead of the sum of loss, it will return a
-            tuple which includes the sum of loss in each part.
-        """
-        self.model.train()
-        total_loss = None
-
-        for i, layer in enumerate(self.model.forward_convs):
-            layer_desc = f"Layer {i + 1}/{self.config["n_layers"]}"
-
-            iter_data = (
-                tqdm(
-                    train_data,
-                    total=len(train_data),
-                    ncols=100,
-                    desc=set_color(f"Train {epoch_idx:>5} | {layer_desc}", "pink"),
-                )
-                if show_progress
-                else train_data
-            )
-
-            if not self.config["single_spec"] and train_data.shuffle:
-                train_data.sampler.set_epoch(epoch_idx)
-
-            for batch_idx, interaction in enumerate(iter_data):
-                interaction = interaction.to(self.device)
-
-                self.optimizer.zero_grad()
-                sync_loss = 0
-                if not self.config["single_spec"]:
-                    self.set_reduce_hook()
-                    sync_loss = self.sync_grad_loss()
-
-                with torch.autocast(device_type=self.device.type, enabled=self.enable_amp):
-                    embeddings, user, pos_item, neg_items = self.model.get_layer_train_data(interaction)
-                    losses, logits = layer.forward_train(embeddings, user, pos_item, neg_items, self.model.edge_index, self.model.edge_weight, self.config["theta"])
-
-                separation = logits[0] - logits[1]
-                iter_data.set_description(
-                    f"[Layer {i+1}: Epoch-{epoch_idx}] | "
-                    f"Goodness: pos={logits[0]:.4f}, neg={logits[1]:.4f} | "
-                    f"Separation: {separation:.4f} | "
-                )
-
-                if isinstance(losses, tuple):
-                    loss = sum(losses)
-                    loss_tuple = tuple(per_loss.item() for per_loss in losses)
-                    total_loss = (
-                        loss_tuple
-                        if total_loss is None
-                        else tuple(map(sum, zip(total_loss, loss_tuple)))
-                    )
-                else:
-                    loss = losses
-                    total_loss = (
-                        losses.item() if total_loss is None else total_loss + losses.item()
-                    )
-                self._check_nan(loss)
-                loss = loss + sync_loss
-                loss.backward()
-                if self.clip_grad_norm:
-                    clip_grad_norm_(self.model.parameters(), **self.clip_grad_norm)
-                self.optimizer.step()
-
-                if self.gpu_available and show_progress:
-                    iter_data.set_postfix_str(
-                        set_color("GPU RAM: " + get_gpu_usage(self.device), "yellow")
-                    )
-        return total_loss
-
     def fit(
         self,
         train_data,
@@ -211,7 +55,7 @@ class ForwardGNNTrainer(PretrainTrainer):
              (float, dict): best valid score and best valid result. If valid_data is None, it returns (-1, None)
         """
         if self.model.train_stage == "pretrain":
-            return self.pretrain(train_data, verbose, show_progress)
+            return self.pretrain(train_data, valid_data, saved, verbose, show_progress)
         elif self.model.train_stage == "finetune":
             return self.finetune(
                 train_data, valid_data, verbose, saved, show_progress, callback_fn
@@ -221,8 +65,17 @@ class ForwardGNNTrainer(PretrainTrainer):
                 "Please make sure that the 'train_stage' is 'pretrain' or 'finetune'!"
             )
 
-    def pretrain(self, train_data, verbose=True, show_progress=False):
+    def pretrain(self, train_data, valid_data=None, saved=True, verbose=True, show_progress=False):
+
+        if saved and self.start_epoch >= self.epochs:
+            self._save_checkpoint(-1, verbose=verbose)
+
         self.eval_collector.data_collect(train_data)  # needed for metrics such as ItemCoverage
+
+        if self.config["train_neg_sample_args"].get("dynamic", False):
+            train_data.get_model(self.model)
+
+        valid_step = 0
         for epoch_idx in range(self.start_epoch, self.pretrain_epochs):
             # train
             training_start_time = time()
@@ -240,6 +93,65 @@ class ForwardGNNTrainer(PretrainTrainer):
                 self.logger.info(train_loss_output)
             self._add_train_loss_to_tensorboard(epoch_idx, train_loss)
 
+            # eval
+            if self.eval_step <= 0 or not valid_data:
+                if saved:
+                    self._save_checkpoint(epoch_idx, verbose=verbose)
+                continue
+            if (epoch_idx + 1) % self.eval_step == 0:
+                valid_start_time = time()
+                valid_score, valid_result = self._valid_epoch(
+                    valid_data, show_progress=show_progress
+                )
+
+                (
+                    self.best_valid_score,
+                    self.cur_step,
+                    stop_flag,
+                    update_flag,
+                ) = early_stopping(
+                    valid_score,
+                    self.best_valid_score,
+                    self.cur_step,
+                    max_step=self.stopping_step,
+                    bigger=self.valid_metric_bigger,
+                )
+                valid_end_time = time()
+                valid_score_output = (
+                    set_color("epoch %d evaluating", "green")
+                    + " ["
+                    + set_color("time", "blue")
+                    + ": %.2fs, "
+                    + set_color("valid_score", "blue")
+                    + ": %f]"
+                ) % (epoch_idx, valid_end_time - valid_start_time, valid_score)
+                valid_result_output = (
+                    set_color("valid result", "blue") + ": \n" + dict2str(valid_result)
+                )
+                if verbose:
+                    self.logger.info(valid_score_output)
+                    self.logger.info(valid_result_output)
+                self.tensorboard.add_scalar("Vaild_score", valid_score, epoch_idx)
+                self.wandblogger.log_metrics(
+                    {**valid_result, "valid_step": valid_step}, head="valid"
+                )
+
+                if update_flag:
+                    if saved:
+                        self._save_checkpoint(epoch_idx, verbose=verbose)
+                    self.best_valid_result = valid_result
+
+                if stop_flag:
+                    stop_output = "Finished training, best eval result in epoch %d" % (
+                        epoch_idx - self.cur_step * self.eval_step
+                    )
+                    if verbose:
+                        self.logger.info(stop_output)
+                    break
+
+                valid_step += 1
+
+            # save pretrained model
             if (epoch_idx + 1) % self.save_step == 0:
                 saved_model_file = os.path.join(
                     self.checkpoint_dir,
@@ -254,6 +166,9 @@ class ForwardGNNTrainer(PretrainTrainer):
                 if verbose:
                     self.logger.info(update_output)
 
+        # add best valid_score, only if validation has been done
+        if valid_data:
+            self._add_hparam_to_tensorboard(self.best_valid_score)
         return self.best_valid_score, self.best_valid_result
 
     def finetune(
@@ -291,7 +206,7 @@ class ForwardGNNTrainer(PretrainTrainer):
         for epoch_idx in range(self.start_epoch, self.epochs):
             # train
             training_start_time = time()
-            train_loss = self._train_epoch(
+            train_loss = self._train_epoch_finetuning(
                 train_data, epoch_idx, show_progress=show_progress
             )
             self.train_loss_dict[epoch_idx] = (
@@ -370,8 +285,187 @@ class ForwardGNNTrainer(PretrainTrainer):
 
                 valid_step += 1
 
-        self._add_hparam_to_tensorboard(self.best_valid_score)
+        # add best valid_score, only if validation has been done
+        if valid_data:
+            self._add_hparam_to_tensorboard(self.best_valid_score)
         return self.best_valid_score, self.best_valid_result
+
+    def _train_epoch_finetuning(self, train_data, epoch_idx, loss_func=None, show_progress=False, parameters=None):
+        r"""Train the model in an epoch
+
+        Args:
+            train_data (DataLoader): The train data.
+            epoch_idx (int): The current epoch id.
+            loss_func (function): The loss function of :attr:`model`. If it is ``None``, the loss function will be
+                :attr:`self.model.calculate_loss`. Defaults to ``None``.
+            show_progress (bool): Show the progress of training epoch. Defaults to ``False``.
+
+        Returns:
+            float/tuple: The sum of loss returned by all batches in this epoch. If the loss in each batch contains
+            multiple parts and the model return these multiple parts loss instead of the sum of loss, it will return a
+            tuple which includes the sum of loss in each part.
+        """
+        self.model.train()
+
+        params = [param for name, param in self.model.named_parameters() if "final_aggregation" in name]
+
+        self.optimizer = self._build_optimizer(params=params)
+        loss_func = loss_func or self.model.calculate_loss
+        total_loss = None
+        iter_data = (
+            tqdm(
+                train_data,
+                total=len(train_data),
+                ncols=100,
+                desc=set_color(f"Train {epoch_idx:>5}", "pink"),
+            )
+            if show_progress
+            else train_data
+        )
+
+        if not self.config["single_spec"] and train_data.shuffle:
+            train_data.sampler.set_epoch(epoch_idx)
+
+        for batch_idx, interaction in enumerate(iter_data):
+            interaction = interaction.to(self.device)
+            self.optimizer.zero_grad()
+            sync_loss = 0
+            if not self.config["single_spec"]:
+                self.set_reduce_hook()
+                sync_loss = self.sync_grad_loss()
+
+            with torch.autocast(device_type=self.device.type, enabled=self.enable_amp):
+                losses = loss_func(interaction)
+
+            if isinstance(losses, tuple):
+                loss = sum(losses)
+                loss_tuple = tuple(per_loss.item() for per_loss in losses)
+                total_loss = (
+                    loss_tuple
+                    if total_loss is None
+                    else tuple(map(sum, zip(total_loss, loss_tuple)))
+                )
+            else:
+                loss = losses
+                total_loss = (
+                    losses.item() if total_loss is None else total_loss + losses.item()
+                )
+            self._check_nan(loss)
+            loss = loss + sync_loss
+            loss.backward()
+            if self.clip_grad_norm:
+                clip_grad_norm_(self.model.parameters(), **self.clip_grad_norm)
+            self.optimizer.step()
+            if self.gpu_available and show_progress:
+                iter_data.set_postfix_str(
+                    set_color("GPU RAM: " + get_gpu_usage(self.device), "yellow")
+                )
+        return total_loss
+
+    def _train_epoch_layerwise(self, train_data, epoch_idx, loss_func=None, show_progress=False):
+        r"""Train the model in an epoch
+
+        Args:
+            train_data (DataLoader): The train data.
+            epoch_idx (int): The current epoch id.
+            loss_func (function): The loss function of :attr:`model`. If it is ``None``, the loss function will be
+                :attr:`self.model.calculate_loss`. Defaults to ``None``.
+            show_progress (bool): Show the progress of training epoch. Defaults to ``False``.
+
+        Returns:
+            float/tuple: The sum of loss returned by all batches in this epoch. If the loss in each batch contains
+            multiple parts and the model return these multiple parts loss instead of the sum of loss, it will return a
+            tuple which includes the sum of loss in each part.
+        """
+        self.model.train()
+        total_loss = None
+
+        for i, layer in enumerate(self.model.forward_convs):
+            layer_desc = f"Layer {i + 1}/{self.config["n_layers"]}"
+
+            for name, param in self.model.named_parameters():
+                if (
+                        "user_embedding.weight" in name
+                        or "item_embedding.weight" in name
+                        or f"forward_convs.{i}" in name
+                ):
+                    param.requires_grad = True
+                else:
+                    param.requires_grad = False
+            params = [
+                param
+                for name, param in self.model.named_parameters()
+                if (
+                    "item_embedding.weight" in name
+                    or "user_embedding.weight" in name
+                    or f"forward_convs.{i}" in name
+                )
+            ]
+            #self.layer_optimizer = self._build_optimizer(params=params)
+
+            iter_data = (
+                tqdm(
+                    train_data,
+                    total=len(train_data),
+                    ncols=100,
+                    desc=set_color(f"Train {epoch_idx:>5} | {layer_desc}", "pink"),
+                )
+                if show_progress
+                else train_data
+            )
+
+            if not self.config["single_spec"] and train_data.shuffle:
+                train_data.sampler.set_epoch(epoch_idx)
+
+            for batch_idx, interaction in enumerate(iter_data):
+                interaction = interaction.to(self.device)
+
+                #self.layer_optimizer.zero_grad()
+                #self.optimizer.zero_grad()
+                sync_loss = 0
+                #if not self.config["single_spec"]:
+                #    self.set_reduce_hook()
+                #    sync_loss = self.sync_grad_loss()
+
+                with torch.autocast(device_type=self.device.type, enabled=self.enable_amp):
+                    embeddings, user, pos_item, neg_items = self.model.get_layer_train_data(interaction)
+                    losses, logits = layer.forward_train(embeddings, user, pos_item, neg_items, self.model.edge_index, self.model.edge_weight, self.config["theta"])
+
+                if show_progress:
+                    separation = logits[0] - logits[1]
+                    iter_data.set_description(
+                        f"[Layer {i+1}: Epoch-{epoch_idx}] | "
+                        f"Goodness: pos={logits[0]:.4f}, neg={logits[1]:.4f} | "
+                        f"Separation: {separation:.4f} | "
+                    )
+
+                if isinstance(losses, tuple):
+                    loss = sum(losses)
+                    loss_tuple = tuple(per_loss.item() for per_loss in losses)
+                    total_loss = (
+                        loss_tuple
+                        if total_loss is None
+                        else tuple(map(sum, zip(total_loss, loss_tuple)))
+                    )
+                else:
+                    loss = losses
+                    total_loss = (
+                        losses.item() if total_loss is None else total_loss + losses.item()
+                    )
+                self._check_nan(loss)
+                loss = loss + sync_loss
+                #loss.backward()
+                if self.clip_grad_norm:
+                    clip_grad_norm_(params, **self.clip_grad_norm)
+
+                #self.layer_optimizer.step()
+                #self.optimizer.step()
+
+                if self.gpu_available and show_progress:
+                    iter_data.set_postfix_str(
+                        set_color("GPU RAM: " + get_gpu_usage(self.device), "yellow")
+                    )
+        return total_loss
 
     def _valid_epoch(self, valid_data, show_progress=False):
         r"""Valid the model with valid data
@@ -389,7 +483,6 @@ class ForwardGNNTrainer(PretrainTrainer):
         )
         valid_score = calculate_valid_score(valid_result, self.valid_metric)
         return valid_score, valid_result
-
 
     @torch.no_grad()
     def evaluate(
@@ -498,6 +591,9 @@ class ForwardGNNTrainer(PretrainTrainer):
                 result = self._map_reduce(result, num_sample)
             self.wandblogger.log_eval_metrics(result, head="eval")
 
+            # safe best score + parameters to tensorboard
+            score = calculate_valid_score(result, self.valid_metric)
+            self._add_hparam_to_tensorboard(score)
         return result
 
     def _full_sort_batch_eval_per_layer(self, batched_data, layer_num):

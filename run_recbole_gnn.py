@@ -4,54 +4,60 @@ import torch
 
 from recbole_gnn.quick_start import run_recbole_gnn
 
+# Current Best: ItemKNN
+# 'precision@10': 0.2419, 'hit@10': 0.9003, 'mrr@10': 0.582, 'ndcg@10': 0.2774, 'map@10': 0.1438,
+# 'itemcoverage@10': 0.2782, 'averagepopularity@10': 96.5034, 'tailpercentage@10': 0.007
+
+# Current Best: UserKNN
+# 'precision@10': 0.218, 'hit@10': 0.89, 'mrr@10': 0.5233, 'ndcg@10': 0.2441, 'map@10': 0.1191,
+# 'itemcoverage@10': 0.2955, 'averagepopularity@10': 98.3856, 'tailpercentage@10': 0.0})
+
 
 if __name__ == '__main__':
     model = 'ForwardGNN'
     dataset = 'ml-100k'
-    pre_train_epochs = 5
-    save_step = 5
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--model', '-m', type=str, default=model, help='name of models')
     parser.add_argument('--dataset', '-d', type=str, default=dataset, help='name of datasets')
     parser.add_argument('--config_files', type=str, default='test.yaml', help='config files')
 
-    print(torch.get_num_threads())
-    torch.set_num_threads(24)
-    print(torch.get_num_threads())
+    layer_aggregation = 'mean'
+    final_aggregation = 'mean'
 
     args, _ = parser.parse_known_args()
 
-    config_dict = {
-        'train_stage': 'pretrain',
-        'pretrain_epochs': pre_train_epochs,
-        'save_step': save_step
-    }
+    if final_aggregation not in ['softmax', 'attention']:
+        config_dict = {
+            'train_stage': 'pretrain',
+            'layer_aggregation': layer_aggregation,
+            'final_aggregation': final_aggregation
+        }
+        config_file_list = args.config_files.strip().split(' ') if args.config_files else None
+        run_recbole_gnn(model=args.model, dataset=args.dataset, config_file_list=config_file_list, config_dict=config_dict, saved=True)
 
-    config_file_list = args.config_files.strip().split(' ') if args.config_files else None
-    run_recbole_gnn(model=args.model, dataset=args.dataset, config_file_list=config_file_list, config_dict=config_dict, saved=False)
+    else:
+        pre_train_epochs = 5
+        save_step = 5
 
-    config_dict = {
-        'train_stage': 'finetune',
-        'epochs': 5,
-        'pre_model_path': f'./saved/{model}-{dataset}-{pre_train_epochs}.pth'
-    }
+        config_dict = {
+            'train_stage': 'pretrain',
+            'layer_aggregation': layer_aggregation,
+            'final_aggregation': final_aggregation,
+            'pretrain_epochs': pre_train_epochs,
+            'save_step': save_step
+        }
+        config_file_list = args.config_files.strip().split(' ') if args.config_files else None
+        run_recbole_gnn(model=args.model, dataset=args.dataset, config_file_list=config_file_list,
+                        config_dict=config_dict, saved=False)
 
-    run_recbole_gnn(model=args.model, dataset=args.dataset, config_file_list=config_file_list, config_dict=config_dict)
-
-# Number of Parameters for GCN
-# 287488
-# 270976
-# 254464
-
-
-
-
-# SASRec 0.2385
-# LightGCN 0.1857
-# BPR 0.1537
-# UserKNN 0.
-# ItemKNN 0.1974
+        config_dict = {
+            'train_stage': 'finetune',
+            'epochs': 5,
+            'pre_model_path': f'./saved/{model}-{dataset}-{pre_train_epochs}.pth'
+        }
+        run_recbole_gnn(model=args.model, dataset=args.dataset, config_file_list=config_file_list,
+                        config_dict=config_dict)
 
 # On Random Split!
 ### ForwardGNN, 20 Epochs, train loss: 1.0954

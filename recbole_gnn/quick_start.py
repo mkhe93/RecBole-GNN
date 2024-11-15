@@ -1,9 +1,11 @@
 import logging
 from logging import getLogger
 from recbole.utils import init_logger, init_seed, set_color
+import torch
 
 from recbole_gnn.config import Config
 from recbole_gnn.utils import create_dataset, data_preparation, get_model, get_trainer
+from recbole.utils.utils import calculate_valid_score
 
 
 def run_recbole_gnn(model=None, dataset=None, config_file_list=None, config_dict=None, saved=True):
@@ -17,6 +19,7 @@ def run_recbole_gnn(model=None, dataset=None, config_file_list=None, config_dict
         saved (bool, optional): Whether to save the model. Defaults to ``True``.
     """
     # configurations initialization
+    torch.set_num_threads(24)
     config = Config(model=model, dataset=dataset, config_file_list=config_file_list, config_dict=config_dict)
     try:
         assert config["enable_sparse"] in [True, False, None]
@@ -94,12 +97,16 @@ def objective_function(config_dict=None, config_file_list=None, saved=True):
     init_seed(config['seed'], config['reproducibility'])
     model = get_model(config['model'])(config, train_data.dataset).to(config['device'])
     trainer = get_trainer(config['MODEL_TYPE'], config['model'])(config, model)
-    best_valid_score, best_valid_result = trainer.fit(train_data, valid_data, verbose=False, saved=saved)
+    best_valid_score, best_valid_result = trainer.fit(train_data, valid_data, verbose=True, saved=saved)
     test_result = trainer.evaluate(test_data, load_best_model=saved)
+
+    # override valid results with test results
+    best_valid_result = test_result
+    valid_score = calculate_valid_score(test_result, config['valid_metric'])
 
     return {
         'model': config['model'],
-        'best_valid_score': best_valid_score,
+        'best_valid_score': valid_score,
         'valid_score_bigger': config['valid_metric_bigger'],
         'best_valid_result': best_valid_result,
         'test_result': test_result

@@ -27,29 +27,33 @@ class LightGCNConv(MessagePassing):
 class GNNConv(torch.nn.Module):
     def __init__(self, gnn_type: str, in_channels: int, out_channels: int):
         super().__init__()
+        self.gnn_type = gnn_type
         self.in_channels = in_channels
         self.out_channels = out_channels
 
-        if "SAGE".lower() == gnn_type.lower():
+        if "SAGE".lower() == self.gnn_type.lower():
                 self.gnn = SAGEConv(in_channels=in_channels, out_channels=out_channels, aggr="mean")
-        elif "GCN".lower() == gnn_type.lower():
+        elif "GCN".lower() == self.gnn_type.lower():
                 self.gnn = GCNConv(in_channels=in_channels, out_channels=out_channels)
-        elif "BiGNNConv".lower() == gnn_type.lower():
+        elif "BiConv".lower() == self.gnn_type.lower():
                 self.gnn = BiGNNConv(in_channels=in_channels, out_channels=out_channels)
-        elif "LightGCN".lower() == gnn_type.lower():
+        elif "LightGCN".lower() == self.gnn_type.lower():
                 self.gnn = LightGCNConv(dim=in_channels)
-        elif "GAT".lower() == gnn_type.lower():
+        elif "GAT".lower() == self.gnn_type.lower():
             heads = 4
             assert out_channels % heads == 0, (out_channels, heads)
             self.gnn = GATConv(in_channels=in_channels, out_channels=out_channels // heads, heads=heads)
         else:
-            raise ValueError(f"Unavailable gnn: {gnn_type}")
+            raise ValueError(f"Unavailable gnn: {self.gnn_type}")
 
         self.relu = torch.nn.ReLU()
 
-    def forward(self, x, edge_index, edge_weight):
+    def forward(self, x, edge_index, edge_weight=None):
         #return self.gnn(x, edge_index, edge_weight)
-        return self.relu(self.gnn(x, edge_index, edge_weight))
+        if self.gnn_type == "SAGE":
+            return self.relu(self.gnn(x, edge_index))
+        else:
+            return self.relu(self.gnn(x, edge_index, edge_weight))
 
 class BaseForwardLayer(nn.Module):
     def forward_train(self, x, theta,**kwargs,):
@@ -63,7 +67,7 @@ class BaseForwardLayer(nn.Module):
         return True
 
 class GNNForwardLayer(BaseForwardLayer):
-    def __init__(self, gnn_layer: torch.nn.Module, aggr: Aggregation, forward_learning_type: str, n_user: int, n_items: int):
+    def __init__(self, optimizer_name: str, optimizer_kwargs: dict, user_embedding, item_embedding, gnn_layer: torch.nn.Module, aggr: Aggregation, forward_learning_type: str, n_user: int, n_items: int):
         super(GNNForwardLayer, self).__init__()
         self.gnn_layer = gnn_layer
         self.layer_aggregation = aggr
@@ -74,6 +78,11 @@ class GNNForwardLayer(BaseForwardLayer):
         self.bpr_loss = BPRLoss()
         self.relu = torch.nn.ReLU()
         self.reg_loss = EmbLoss()
+        self.optimizer = getattr(torch.optim, optimizer_name)(
+            [user_embedding.weight, item_embedding.weight], **optimizer_kwargs
+        )
+        if not isinstance(self.gnn_layer, LightGCNConv):
+            self.optimizer.add_param_group({'params': gnn_layer.parameters(), 'lr': optimizer_kwargs['lr']})
 
     def forward(self, x, edge_index, edge_weight = None):
         return self.gnn_layer(x, edge_index, edge_weight)
@@ -83,7 +92,6 @@ class GNNForwardLayer(BaseForwardLayer):
 
         all_embeddings =  self.forward(embeddings, edge_index, edge_weight)
 
-        # FIXME: torch.stack only for same dimensional layers such as in LightGCN
         embeddings_list.append(all_embeddings)
         all_embeddings = torch.stack(embeddings_list, dim=1)
         all_embeddings = self.layer_aggregation(all_embeddings, dim=1)
@@ -131,6 +139,8 @@ class GNNForwardLayer(BaseForwardLayer):
 
     def forward_train(self, embeddings, user, pos_item, neg_item, edge_index, edge_weight, theta, **kwargs):
 
+        self.optimizer.zero_grad()
+
         user_all_embeddings, item_all_embeddings = self.get_embeddings(embeddings, edge_index, edge_weight)
 
         u_embeddings = user_all_embeddings[user]
@@ -152,6 +162,9 @@ class GNNForwardLayer(BaseForwardLayer):
         reg_loss = self.reg_loss(u_embeddings, pos_embeddings, neg_embeddings)
 
         loss = loss #+ reg_loss
+
+        loss.backward()
+        self.optimizer.step()
 
         return loss, logit_tuple
 
