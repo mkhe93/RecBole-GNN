@@ -30,7 +30,7 @@ from torch_geometric.nn.aggr import (
     MinAggregation)
 
 from recbole_gnn.model.abstract_recommender import GeneralGraphRecommender
-from recbole_gnn.model.layers import LightGCNConv, GNNForwardLayer, GNNConv
+from recbole_gnn.model.layers import LightGCNConv, GNNForwardLayer, GNNConv, LayerNormalization
 
 
 class ForwardGNN(GeneralGraphRecommender):
@@ -48,7 +48,7 @@ class ForwardGNN(GeneralGraphRecommender):
 
         # load parameters info
         self.embedding_size = config['embedding_size']  # int type:the embedding size of lightGCN
-        self.lgcn_dim = config['lgcn_dim']
+        #self.lgcn_dim = config['lgcn_dim']
         self.n_layers = config['n_layers']
 
         self.final_aggregation = config['final_aggregation']
@@ -63,6 +63,8 @@ class ForwardGNN(GeneralGraphRecommender):
         # define layers and loss
         self.user_embedding = torch.nn.Embedding(num_embeddings=self.n_users, embedding_dim=self.embedding_size)
         self.item_embedding = torch.nn.Embedding(num_embeddings=self.n_items, embedding_dim=self.embedding_size)
+
+        # print(self.user_embedding.weight)
 
         if self.layer_aggregation == 'mean':
             self.layer_aggregation = MeanAggregation()
@@ -87,46 +89,36 @@ class ForwardGNN(GeneralGraphRecommender):
                 torch.nn.ReLU()
             )
             self.layer_aggregation = AttentionalAggregation(gate_nn=gate_nn, nn=feature_nn)
-        else:
-            raise ValueError(
-                f"'layer_aggregation' = {self.layer_aggregation} is not implemented!"
-            )
 
-        if self.gnn_type in ['GCN', 'SAGE', 'GAT']:
-            self.forward_convs = torch.nn.ModuleList(
-                [GNNForwardLayer(
-                    'Adam', # FIXME
-                    {'lr': config['learning_rate'], 'weight_decay': config['weight_decay']},
-                    self.user_embedding,
-                    self.item_embedding,
-                    GNNConv(self.gnn_type, in_channels=self.embedding_size, out_channels=self.embedding_size),
-                    self.layer_aggregation,
-                    config['forward_learning_type'],
-                    self.n_users,
-                    self.n_items)
-                    for _ in range(self.n_layers)])
-        elif self.gnn_type in ['LightGCN']:
-            self.forward_convs = torch.nn.ModuleList(
-                [GNNForwardLayer(
-                    'Adam', # FIXME
-                    {'lr': config['learning_rate'], 'weight_decay': config['weight_decay']},
-                    self.user_embedding,
-                    self.item_embedding,
-                    GNNConv(self.gnn_type, in_channels=self.lgcn_dim, out_channels=self.lgcn_dim),
-                    self.layer_aggregation,
-                    config['forward_learning_type'],
-                    self.n_users,
-                    self.n_items)
-                    for _ in range(self.n_layers)])
+        # FIXME: add LayerNormalisation between all layers here!
+        self.forward_convs = torch.nn.ModuleList()
+        for _ in range(self.n_layers):
+            if self.gnn_type in ['GCN', 'SAGE', 'GAT']:
+                #self.forward_convs.append(LayerNormalization())
+                self.forward_convs.append(GNNForwardLayer(
+                        'Adam', # FIXME
+                        {'lr': config['learning_rate'], 'weight_decay': config['weight_decay']},
+                        self.user_embedding,
+                        self.item_embedding,
+                        GNNConv(self.gnn_type, in_channels=self.embedding_size, out_channels=self.embedding_size),
+                        self.layer_aggregation,
+                        config['forward_learning_type'],
+                        self.n_users,
+                        self.n_items))
+            elif self.gnn_type in ['LightGCN']:
+                #self.forward_convs.append(LayerNormalization())
+                self.forward_convs.append(GNNForwardLayer(
+                        'Adam', # FIXME
+                        {'lr': config['learning_rate'], 'weight_decay': config['weight_decay']},
+                        self.user_embedding,
+                        self.item_embedding,
+                        GNNConv(self.gnn_type, in_channels=self.embedding_size, out_channels=self.embedding_size),
+                        self.layer_aggregation,
+                        config['forward_learning_type'],
+                        self.n_users,
+                        self.n_items))
 
-        self.mf_loss = BPRLoss()
-        self.reg_loss = EmbLoss()
-
-        # storage variables for full sort evaluation acceleration
-        self.restore_user_e = None
-        self.restore_item_e = None
-
-        ########### For finetunting ##########
+        ########### -> For finetunting ##########
         # set final aggregation type
         if isinstance(self.final_aggregation, list):
             self.final_aggregation = MultiAggregation(
@@ -164,18 +156,23 @@ class ForwardGNN(GeneralGraphRecommender):
                     raise ValueError(
                         f"'final_aggregation' = {self.final_aggregation} is not implemented!"
                     )
-        ########### For finetunting ##########
+        ########### For finetunting <- ##########
 
         # parameters initialization
         assert self.train_stage in ["pretrain", "finetune"]
         if self.train_stage == "pretrain":
             self.apply(xavier_uniform_initialization)
         else:
-            # load pretrained model for finetune
+            # load pretrained model for finetune the entire model
             pretrained = torch.load(self.pre_model_path)
             self.logger.info(f"Load pretrained model from {self.pre_model_path}")
             self.load_state_dict(pretrained["state_dict"])
 
+        # storage variables for full sort evaluation acceleration
+        self.restore_user_e = None
+        self.restore_item_e = None
+
+        # print(self.user_embedding.weight)
         self.other_parameter_name = ['restore_user_e', 'restore_item_e']
 
     def get_ego_embeddings(self):

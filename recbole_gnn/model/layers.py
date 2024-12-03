@@ -51,9 +51,9 @@ class GNNConv(torch.nn.Module):
     def forward(self, x, edge_index, edge_weight=None):
         #return self.gnn(x, edge_index, edge_weight)
         if self.gnn_type == "SAGE":
-            return self.relu(self.gnn(x, edge_index))
+            return self.gnn(x, edge_index)
         else:
-            return self.relu(self.gnn(x, edge_index, edge_weight))
+            return self.gnn(x, edge_index, edge_weight)
 
 class BaseForwardLayer(nn.Module):
     def forward_train(self, x, theta,**kwargs,):
@@ -65,6 +65,28 @@ class BaseForwardLayer(nn.Module):
     @property
     def requires_training(self):
         return True
+
+class LayerNormalization(BaseForwardLayer):
+    """Applies row wise normalization"""
+    def __init__(self):
+        super().__init__()
+
+    # noinspection PyMethodMayBeStatic,PyUnusedLocal
+    def forward(self, x, edge_index = None, edge_weight = None):
+        l2_norm = (
+            torch.norm(x.reshape(x.shape[0], -1), p=2, dim=1, keepdim=True)
+            + 1e-8
+        )
+        return x / l2_norm
+
+    def forward_train(self, embeddings, user, pos_item, neg_item, edge_index, edge_weight, theta, **kwargs):
+        with torch.no_grad():
+            output = self(embeddings)
+        return output, None
+
+    @property
+    def requires_training(self):
+        return False
 
 class GNNForwardLayer(BaseForwardLayer):
     def __init__(self, optimizer_name: str, optimizer_kwargs: dict, user_embedding, item_embedding, gnn_layer: torch.nn.Module, aggr: Aggregation, forward_learning_type: str, n_user: int, n_items: int):
@@ -78,6 +100,7 @@ class GNNForwardLayer(BaseForwardLayer):
         self.bpr_loss = BPRLoss()
         self.relu = torch.nn.ReLU()
         self.reg_loss = EmbLoss()
+        self.relu = torch.nn.ReLU()
         self.optimizer = getattr(torch.optim, optimizer_name)(
             [user_embedding.weight, item_embedding.weight], **optimizer_kwargs
         )
@@ -85,17 +108,18 @@ class GNNForwardLayer(BaseForwardLayer):
             self.optimizer.add_param_group({'params': gnn_layer.parameters(), 'lr': optimizer_kwargs['lr']})
 
     def forward(self, x, edge_index, edge_weight = None):
-        return self.gnn_layer(x, edge_index, edge_weight)
+        return self.relu(self.gnn_layer(x, edge_index, edge_weight))
 
     def get_embeddings(self, embeddings, edge_index, edge_weight = None):
-        embeddings_list = [embeddings]
 
         all_embeddings =  self.forward(embeddings, edge_index, edge_weight)
 
-        embeddings_list.append(all_embeddings)
-        all_embeddings = torch.stack(embeddings_list, dim=1)
-        all_embeddings = self.layer_aggregation(all_embeddings, dim=1)
-        all_embeddings = torch.squeeze(all_embeddings, dim=1)
+        if self.layer_aggregation:
+            embeddings_list = [embeddings]
+            embeddings_list.append(all_embeddings)
+            all_embeddings = torch.stack(embeddings_list, dim=1)
+            all_embeddings = self.layer_aggregation(all_embeddings, dim=1)
+            all_embeddings = torch.squeeze(all_embeddings, dim=1)
 
         user_all_embeddings, item_all_embeddings = torch.split(all_embeddings, [self.n_users, self.n_items])
 
@@ -147,8 +171,8 @@ class GNNForwardLayer(BaseForwardLayer):
         pos_embeddings = item_all_embeddings[pos_item]
         neg_embeddings = item_all_embeddings[neg_item]
 
-        out_pos = self.link_predict(u_embeddings, pos_embeddings)  # shape=(# pos and neg edges, node-emb-dim)
-        out_neg = self.link_predict(u_embeddings, neg_embeddings)
+        out_pos = self.link_predict(u_embeddings, pos_embeddings) # shape=(# pos and neg edges, node-emb-dim)
+        out_neg = self.link_predict(u_embeddings, neg_embeddings) # shape=(# pos and neg edges, node-emb-dim)
 
         if self.forward_learning_type == "FL-BPR":
             loss, logit_tuple = self.forwardlearn_bpr_loss(out_pos, out_neg)

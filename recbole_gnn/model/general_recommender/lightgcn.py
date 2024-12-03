@@ -45,8 +45,7 @@ class LightGCN(GeneralGraphRecommender):
         # define layers and loss
         self.user_embedding = torch.nn.Embedding(num_embeddings=self.n_users, embedding_dim=self.latent_dim)
         self.item_embedding = torch.nn.Embedding(num_embeddings=self.n_items, embedding_dim=self.latent_dim)
-        #self.gcn_conv = LightGCNConv(dim=self.latent_dim)
-        self.gcn_conv = torch.nn.ModuleList([LightGCNConv(dim=self.latent_dim) for _ in range(self.n_layers)])
+        self.gcn_conv = LightGCNConv(dim=self.latent_dim)
         self.mf_loss = BPRLoss()
         self.reg_loss = EmbLoss()
 
@@ -72,9 +71,8 @@ class LightGCN(GeneralGraphRecommender):
         all_embeddings = self.get_ego_embeddings()
         embeddings_list = [all_embeddings]
 
-        # FIXME: iterating through same layer?
-        for layer_idx in range(self.n_layers):
-            all_embeddings = self.gcn_conv[layer_idx](all_embeddings, self.edge_index, self.edge_weight)
+        for _ in range(self.n_layers):
+            all_embeddings = self.gcn_conv(all_embeddings, self.edge_index, self.edge_weight)
             embeddings_list.append(all_embeddings)
         lightgcn_all_embeddings = torch.stack(embeddings_list, dim=1)
         lightgcn_all_embeddings = torch.mean(lightgcn_all_embeddings, dim=1)

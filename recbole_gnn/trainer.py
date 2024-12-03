@@ -55,11 +55,13 @@ class ForwardGNNTrainer(PretrainTrainer):
              (float, dict): best valid score and best valid result. If valid_data is None, it returns (-1, None)
         """
         if self.model.train_stage == "pretrain":
-            return self.pretrain(train_data, valid_data, saved, verbose, show_progress)
+            best_valid_score, best_valid_result = self.pretrain(train_data, valid_data, saved, verbose, show_progress)
+
+            self._add_hparam_to_tensorboard(self.best_valid_score)
+
+            return best_valid_score, best_valid_result
         elif self.model.train_stage == "finetune":
-            return self.finetune(
-                train_data, valid_data, verbose, saved, show_progress, callback_fn
-            )
+            return self.finetune(train_data, valid_data, verbose, saved, show_progress, callback_fn)
         else:
             raise ValueError(
                 "Please make sure that the 'train_stage' is 'pretrain' or 'finetune'!"
@@ -76,11 +78,12 @@ class ForwardGNNTrainer(PretrainTrainer):
             train_data.get_model(self.model)
 
         valid_step = 0
+        # FIXME: iterate here over the different layers
         for epoch_idx in range(self.start_epoch, self.pretrain_epochs):
             # train
             training_start_time = time()
             train_loss = self._train_epoch_layerwise(
-                train_data, epoch_idx, show_progress=show_progress
+                train_data, epoch_idx, verbose=verbose, show_progress=show_progress
             )
             self.train_loss_dict[epoch_idx] = (
                 sum(train_loss) if isinstance(train_loss, tuple) else train_loss
@@ -167,8 +170,6 @@ class ForwardGNNTrainer(PretrainTrainer):
                     self.logger.info(update_output)
 
         # add best valid_score, only if validation has been done
-        if valid_data:
-            self._add_hparam_to_tensorboard(self.best_valid_score)
         return self.best_valid_score, self.best_valid_result
 
     def finetune(
@@ -285,9 +286,6 @@ class ForwardGNNTrainer(PretrainTrainer):
 
                 valid_step += 1
 
-        # add best valid_score, only if validation has been done
-        if valid_data:
-            self._add_hparam_to_tensorboard(self.best_valid_score)
         return self.best_valid_score, self.best_valid_result
 
     def _train_epoch_finetuning(self, train_data, epoch_idx, loss_func=None, show_progress=False, parameters=None):
@@ -362,7 +360,7 @@ class ForwardGNNTrainer(PretrainTrainer):
                 )
         return total_loss
 
-    def _train_epoch_layerwise(self, train_data, epoch_idx, loss_func=None, show_progress=False):
+    def _train_epoch_layerwise(self, train_data, epoch_idx, loss_func=None, verbose=False, show_progress=False):
         r"""Train the model in an epoch
 
         Args:
@@ -378,93 +376,117 @@ class ForwardGNNTrainer(PretrainTrainer):
             tuple which includes the sum of loss in each part.
         """
         self.model.train()
-        total_loss = None
+        total_loss = None # FIXME: where to inizialize the total_loss?
 
         for i, layer in enumerate(self.model.forward_convs):
-            layer_desc = f"Layer {i + 1}/{self.config["n_layers"]}"
 
-            for name, param in self.model.named_parameters():
-                if (
-                        "user_embedding.weight" in name
-                        or "item_embedding.weight" in name
+            for layer_epoch_idx in range(0, 1):
+                # train each layer for certain amount of epochs
+                training_start_time = time()
+
+                layer_desc = f"Layer {i + 1}/{self.config["n_layers"]}"
+
+                for name, param in self.model.named_parameters():
+                    if (
+                            "user_embedding.weight" in name
+                            or "item_embedding.weight" in name
+                            or f"forward_convs.{i}" in name
+                    ):
+                        param.requires_grad = True
+                    else:
+                        param.requires_grad = False
+                params = [
+                    param
+                    for name, param in self.model.named_parameters()
+                    if (
+                        "item_embedding.weight" in name
+                        or "user_embedding.weight" in name
                         or f"forward_convs.{i}" in name
-                ):
-                    param.requires_grad = True
-                else:
-                    param.requires_grad = False
-            params = [
-                param
-                for name, param in self.model.named_parameters()
-                if (
-                    "item_embedding.weight" in name
-                    or "user_embedding.weight" in name
-                    or f"forward_convs.{i}" in name
+                    )
+                ]
+                #self.layer_optimizer = self._build_optimizer(params=params)
+
+                iter_data = (
+                    tqdm(
+                        train_data,
+                        total=len(train_data),
+                        ncols=100,
+                        desc=set_color(f"Train {epoch_idx:>5} | {layer_desc}", "pink"),
+                    )
+                    if show_progress
+                    else train_data
                 )
-            ]
-            #self.layer_optimizer = self._build_optimizer(params=params)
 
-            iter_data = (
-                tqdm(
-                    train_data,
-                    total=len(train_data),
-                    ncols=100,
-                    desc=set_color(f"Train {epoch_idx:>5} | {layer_desc}", "pink"),
-                )
-                if show_progress
-                else train_data
-            )
+                if not self.config["single_spec"] and train_data.shuffle:
+                    train_data.sampler.set_epoch(epoch_idx)
 
-            if not self.config["single_spec"] and train_data.shuffle:
-                train_data.sampler.set_epoch(epoch_idx)
+                for batch_idx, interaction in enumerate(iter_data):
+                    interaction = interaction.to(self.device)
 
-            for batch_idx, interaction in enumerate(iter_data):
-                interaction = interaction.to(self.device)
+                    #self.layer_optimizer.zero_grad()
+                    #self.optimizer.zero_grad()
+                    sync_loss = 0
+                    #if not self.config["single_spec"]:
+                    #    self.set_reduce_hook()
+                    #    sync_loss = self.sync_grad_loss()
 
-                #self.layer_optimizer.zero_grad()
-                #self.optimizer.zero_grad()
-                sync_loss = 0
-                #if not self.config["single_spec"]:
-                #    self.set_reduce_hook()
-                #    sync_loss = self.sync_grad_loss()
+                    with torch.autocast(device_type=self.device.type, enabled=self.enable_amp):
+                        if layer.requires_training:
+                            embeddings, user, pos_item, neg_items = self.model.get_layer_train_data(interaction)
+                            losses, logits = layer.forward_train(embeddings, user, pos_item, neg_items, self.model.edge_index, self.model.edge_weight, self.config["theta"])
+                        else:
+                            continue
 
-                with torch.autocast(device_type=self.device.type, enabled=self.enable_amp):
-                    embeddings, user, pos_item, neg_items = self.model.get_layer_train_data(interaction)
-                    losses, logits = layer.forward_train(embeddings, user, pos_item, neg_items, self.model.edge_index, self.model.edge_weight, self.config["theta"])
+                    if show_progress:
+                        if logits:
+                            separation = logits[0] - logits[1]
+                            iter_data.set_description(
+                                f"[Layer {i+1}: Epoch-{epoch_idx}] | "
+                                f"Goodness: pos={logits[0]:.4f}, neg={logits[1]:.4f} | "
+                                f"Separation: {separation:.4f} | "
+                            )
 
-                if show_progress:
-                    separation = logits[0] - logits[1]
-                    iter_data.set_description(
-                        f"[Layer {i+1}: Epoch-{epoch_idx}] | "
-                        f"Goodness: pos={logits[0]:.4f}, neg={logits[1]:.4f} | "
-                        f"Separation: {separation:.4f} | "
-                    )
+                    if isinstance(losses, tuple):
+                        loss = sum(losses)
+                        loss_tuple = tuple(per_loss.item() for per_loss in losses)
+                        total_loss = (
+                            loss_tuple
+                            if total_loss is None
+                            else tuple(map(sum, zip(total_loss, loss_tuple)))
+                        )
+                    else:
+                        loss = losses
+                        total_loss = (
+                            losses.item() if total_loss is None else total_loss + losses.item()
+                        )
+                    self._check_nan(loss)
+                    loss = loss + sync_loss
+                    #loss.backward()
+                    if self.clip_grad_norm:
+                        clip_grad_norm_(params, **self.clip_grad_norm)
 
-                if isinstance(losses, tuple):
-                    loss = sum(losses)
-                    loss_tuple = tuple(per_loss.item() for per_loss in losses)
-                    total_loss = (
-                        loss_tuple
-                        if total_loss is None
-                        else tuple(map(sum, zip(total_loss, loss_tuple)))
-                    )
-                else:
-                    loss = losses
-                    total_loss = (
-                        losses.item() if total_loss is None else total_loss + losses.item()
-                    )
-                self._check_nan(loss)
-                loss = loss + sync_loss
-                #loss.backward()
-                if self.clip_grad_norm:
-                    clip_grad_norm_(params, **self.clip_grad_norm)
+                    #self.layer_optimizer.step()
+                    #self.optimizer.step()
 
-                #self.layer_optimizer.step()
-                #self.optimizer.step()
+                    if self.gpu_available and show_progress:
+                        iter_data.set_postfix_str(
+                            set_color("GPU RAM: " + get_gpu_usage(self.device), "yellow")
+                        )
 
-                if self.gpu_available and show_progress:
-                    iter_data.set_postfix_str(
-                        set_color("GPU RAM: " + get_gpu_usage(self.device), "yellow")
-                    )
+
+                    # For layer-wise training
+                    #self.train_loss_dict[layer_epoch_idx] = (
+                    #    sum(total_loss) if isinstance(total_loss, tuple) else total_loss
+                    #)
+                    training_end_time = time()
+                    #train_loss_output = self._generate_train_loss_output(
+                    #    layer_epoch_idx, training_start_time, training_end_time, total_loss
+                    #)
+                    #if verbose:
+                    #    self.logger.info(train_loss_output)
+                    #self._add_train_loss_to_tensorboard(layer_epoch_idx, total_loss)
+
+
         return total_loss
 
     def _valid_epoch(self, valid_data, show_progress=False):
@@ -590,10 +612,6 @@ class ForwardGNNTrainer(PretrainTrainer):
             if not self.config["single_spec"]:
                 result = self._map_reduce(result, num_sample)
             self.wandblogger.log_eval_metrics(result, head="eval")
-
-            # safe best score + parameters to tensorboard
-            score = calculate_valid_score(result, self.valid_metric)
-            self._add_hparam_to_tensorboard(score)
         return result
 
     def _full_sort_batch_eval_per_layer(self, batched_data, layer_num):
