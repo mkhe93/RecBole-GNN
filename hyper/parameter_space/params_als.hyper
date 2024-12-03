@@ -1,0 +1,4 @@
+regularization choice [0.005, 0.01, 0.015, 0.05, 0.08, 0.1]
+embedding_size choice [64, 96, 128, 196, 300]
+alpha choice [0.6, 0.8, 1.0, 1.2, 1.4]
+epochs choice [20, 30, 50]

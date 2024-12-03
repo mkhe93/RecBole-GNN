@@ -1,0 +1,30 @@
+# Model and Dataset
+model: "ALS"
+dataset: "real-life-atomic-100000"
+data_path: "C:/Users/s8347434/Documents/RecBole-GNN/asset/data"
+
+field_separator: "\t"
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+TIME_FIELD: timestamp
+user_inter_num_interval: "[20,inf)"
+load_col:
+    inter: [user_id, item_id, timestamp]
+normalize_all: false
+
+# Evaluation
+eval_args:                            # (dict) 4 keys: group_by, order, split, and mode
+  split: {'LK': ['test_only', 10]}    # (dict) The splitting strategy ranging in ['RS','LS'].{'RS':[0.8,0.1,0.1]}, valid_and_test, test_only, valid_only
+  group_by: user                      # (str) The grouping strategy ranging in ['user', 'none'].
+  order: TO                           # (str) The ordering strategy ranging in ['RO', 'TO'].
+  mode: full
+
+# permanent
+shuffle: False
+num_threads: 12
+learner: adam                   # (str) The name of used optimizer.
+show_progress: False
+valid_metric: "ndcg@10"
+eval_step: 100
+
+train_neg_sample_args: ~
