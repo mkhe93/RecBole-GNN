@@ -7,16 +7,16 @@ from recbole_gnn.quick_start import objective_function
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config_files', type=str, default='hyper/hyper.yaml', help='fixed config files')
-    parser.add_argument('--params_file', type=str, default='hyper/params.hyper', help='parameters file')
-    parser.add_argument('--output_file', type=str, default='forwardGNN-hyper-small.result', help='output file')
+    parser.add_argument('--config_files', type=str, default='hyper/parameter_fixed/hyper_lightgcn_ml100.yaml', help='fixed config files')
+    parser.add_argument('--params_file', type=str, default='hyper/parameter_space/params_lightgcn.hyper', help='parameters file')
+    parser.add_argument('--output_file', type=str, default='hyper/results/lightgcn-hyper-large-ml100.result', help='output file')
     args, _ = parser.parse_known_args()
 
     # plz set algo='exhaustive' to use exhaustive search, in this case, max_evals is auto set. Others: 'bayes','random'
     config_file_list = args.config_files.strip().split(' ') if args.config_files else None
-    hp = HyperTuning(objective_function, algo='bayes', max_evals=100,
+    hp = HyperTuning(objective_function, algo='bayes', max_evals=200, early_stop=200,
                      params_file=args.params_file, fixed_config_file_list=config_file_list)
-    torch.set_num_threads(24)
+    torch.set_num_threads(8)
     hp.run()
     hp.export_result(output_file=args.output_file)
     print('best params: ', hp.best_params)

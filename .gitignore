@@ -132,3 +132,6 @@ dmypy.json
 log_tensorboard/
 saved/
 dataset/
+asset/data
+asset/processed
+asset/raw

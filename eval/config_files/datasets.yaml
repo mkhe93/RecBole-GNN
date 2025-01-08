@@ -1,0 +1,11 @@
+# Model and Dataset
+data_path: "C:/Users/s8347434/Documents/RecBole-GNN/asset/data/real-life-atomic-splits"
+
+field_separator: "\t"
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+TIME_FIELD: timestamp
+user_inter_num_interval: "[20,inf)"
+load_col:
+    inter: [userID, itemID, user_id, item_id]
+normalize_all: false

@@ -1,0 +1,8 @@
+learning_rate choice [0.002]
+n_layers choice [3]
+reg_weight choice [1e-4]
+ssl_tau choice [0.1, 0.5]
+drop_ratio choice [0.1, 0.3]
+ssl_weight choice [1e-5, 1e-6, 1e-7, 0.005, 0.01, 0.05]
+embedding_size choice [32, 64]
+epochs choice [100]

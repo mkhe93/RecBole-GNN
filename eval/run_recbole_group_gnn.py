@@ -11,17 +11,12 @@ from recbole.utils import list_to_latex
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--model_list", "-m", type=str, default="AsymKNN,AsymKNN,ALS,BPR,NGCF,LightGCN", help="name of models"
+        "--model_list", "-m", type=str, default="AsymKNN", help="name of models"
     )
     parser.add_argument(
-        "--dataset", "-d", type=str, default="ml-100k", help="name of datasets"
+        "--dataset", "-d", type=str, default="real-life-atomic-500000", help="name of datasets"
     )
-    parser.add_argument("--config_files", type=str, default="config_files/user_asym.yaml,"
-                                                            "config_files/item_asym.yaml,"
-                                                            "config_files/als.yaml,"
-                                                            "config_files/bpr.yaml,"
-                                                            "config_files/ngcf.yaml,"
-                                                            "config_files/lightgcn.yaml", help="config files")
+    parser.add_argument("--config_files", type=str, default="config_files/item_asym.yaml", help="config files")
     parser.add_argument(
         "--valid_latex", type=str, default="./latex/valid.tex", help="config files"
     )
@@ -86,6 +81,8 @@ if __name__ == "__main__":
 
         valid_result_list.append(valid_res_dict)
         test_result_list.append(test_res_dict)
+
+    print(test_result_list)
 
     df_valid, tex_valid = list_to_latex(
         convert_list=valid_result_list,
