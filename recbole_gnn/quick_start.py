@@ -6,7 +6,7 @@ import torch
 from recbole_gnn.config import Config
 from recbole_gnn.utils import create_dataset, data_preparation, get_model, get_trainer
 from recbole.utils.utils import calculate_valid_score
-
+from recbole_gnn.data.dataset_metrics import GraphDatasetEvaluator
 
 def run(
     model,
@@ -53,7 +53,7 @@ def run(
         }
 
         mp.spawn(
-            run_recboles,
+            run_recbole,
             args=(model, dataset, config_file_list, kwargs),
             nprocs=nproc,
             join=True,
@@ -109,13 +109,20 @@ def run_recbole_gnn(model=None, dataset=None, config_file_list=None, config_dict
 
     # model training
     best_valid_score, best_valid_result = trainer.fit(
-        train_data, test_data, saved=saved, show_progress=config['show_progress']
+        train_data, valid_data, saved=saved, show_progress=config['show_progress']
     )
 
     # model evaluation
     test_result = trainer.evaluate(test_data, load_best_model=saved, show_progress=config['show_progress'])
 
+    # user evaluation
+    best_user_evaluation = trainer.evaluate_user(mode='best')
+    worst_user_evaluation = trainer.evaluate_user(mode='worst')
+
     logger.info(set_color('best valid ', 'yellow') + f': {best_valid_result}')
+    #logger.info(set_color("best user evaluation ", "yellow") + f": {best_user_evaluation}")
+    #logger.info(set_color("worst user evaluation ", "yellow") + f": {worst_user_evaluation}")
+
 
     if config["layer_evaluation"]:
         for i, result in enumerate(test_result):
@@ -127,7 +134,9 @@ def run_recbole_gnn(model=None, dataset=None, config_file_list=None, config_dict
         'best_valid_score': best_valid_score,
         'valid_score_bigger': config['valid_metric_bigger'],
         'best_valid_result': best_valid_result,
-        'test_result': test_result
+        'test_result': test_result,
+        'best_user_evaluation': best_user_evaluation,
+        'worst_user_evaluation': worst_user_evaluation
     }
 
 
@@ -151,7 +160,7 @@ def objective_function(config_dict=None, config_file_list=None, saved=False):
     init_seed(config['seed'], config['reproducibility'])
     model = get_model(config['model'])(config, train_data.dataset).to(config['device'])
     trainer = get_trainer(config['MODEL_TYPE'], config['model'])(config, model)
-    best_valid_score, best_valid_result = trainer.fit(train_data, test_data, verbose=True, saved=saved)
+    best_valid_score, best_valid_result = trainer.fit(train_data, valid_data, verbose=True, saved=saved)
     test_result = trainer.evaluate(test_data, load_best_model=saved)
 
     # override valid results with test results

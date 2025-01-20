@@ -4,17 +4,16 @@ import torch
 from recbole.trainer import HyperTuning
 from recbole_gnn.quick_start import objective_function
 
-
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--config_files', type=str, default='../parameter_fixed/hyper_lightgcl_djc100000.yaml', help='fixed config files')
-    parser.add_argument('--params_file', type=str, default='../parameter_space/params_lightgcl.hyper', help='parameters file')
-    parser.add_argument('--output_file', type=str, default='../results/lightgcl-hyper-djc100000.result', help='output file')
+    parser.add_argument('--config_files', type=str, default='../parameter_fixed/hyper_sgl_djc100000.yaml', help='fixed config files')
+    parser.add_argument('--params_file', type=str, default='../parameter_space/params_sgl.hyper', help='parameters file')
+    parser.add_argument('--output_file', type=str, default='../results/sgl-hyper-djc100000-leave-k.result', help='output file')
     args, _ = parser.parse_known_args()
 
     # plz set algo='exhaustive' to use exhaustive search, in this case, max_evals is auto set. Others: 'bayes','random'
     config_file_list = args.config_files.strip().split(' ') if args.config_files else None
-    hp = HyperTuning(objective_function, algo='bayes', max_evals=200, early_stop=200,
+    hp = HyperTuning(objective_function, algo='bayes', max_evals=200, early_stop=50,
                      params_file=args.params_file, fixed_config_file_list=config_file_list)
     torch.set_num_threads(8)
     hp.run()

@@ -8,7 +8,7 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--config_files', type=str, default='../parameter_fixed/hyper_asymitemknn_djc100000.yaml', help='fixed config files')
     parser.add_argument('--params_file', type=str, default='../parameter_space/params_asymitemknn.hyper', help='parameters file')
-    parser.add_argument('--output_file', type=str, default='../results/asymitemknn-hyper-djc100000.result', help='output file')
+    parser.add_argument('--output_file', type=str, default='../results/asymitemknn-hyper-djc100000-valid-split.result', help='output file')
     args, _ = parser.parse_known_args()
 
     # plz set algo='exhaustive' to use exhaustive search, in this case, max_evals is auto set. Others: 'bayes','random'

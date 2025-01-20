@@ -15,6 +15,7 @@ import numpy as np
 from recbole_gnn.quick_start import objective_function
 import ray
 from ray import tune
+from ray.train import RunConfig
 from ray.tune.schedulers import ASHAScheduler
 import math
 
@@ -22,7 +23,7 @@ def short_dirname(trial):
     return "trial_" + str(trial.trial_id)
 
 def ray_tune(args):
-    local_dir = r"/ray_log"
+    local_dir = r"C:\Users\s8347434\Documents\RecBole-GNN\ray_log"
     config_file_list = (
         args.config_files.strip().split(" ") if args.config_files else None
     )
@@ -70,16 +71,18 @@ def ray_tune(args):
         metric="best_valid_score", mode="max", max_t=100, grace_period=1, reduction_factor=2
     )
 
-    log_dir = r"/ray_log"
+    resume_config = RunConfig("objective_function_2024-11-15-18-11-56")
     result = tune.run(
         tune.with_parameters(objective_function, config_file_list=config_file_list),
         config=config,
-        num_samples=5,
+        num_samples=100,
         log_to_file=args.output_file,
         scheduler=scheduler,
-        storage_path=log_dir,
+        storage_path=local_dir,
         resources_per_trial={"cpu": 2},
-        trial_dirname_creator=short_dirname
+        trial_dirname_creator=short_dirname,
+        resume=True,
+        resume_config=resume_config
     )
 
     best_trial = result.get_best_trial("ndcg@10", "max", "last")
@@ -90,9 +93,9 @@ def ray_tune(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
-        "--config_files", type=str, default="hyper.yaml", help="fixed config files"
+        "--config_files", type=str, default="hyper/hyper_lightgcn_ml100.yaml", help="fixed config files"
     )
-    parser.add_argument("--params_file", type=str, default="params.hyper", help="parameters file")
+    parser.add_argument("--params_file", type=str, default="hyper/params_forwardgnn.hyper", help="parameters file")
     parser.add_argument(
         "--output_file", type=str, default="forwardGNN-hyper-ray.result", help="output file"
     )

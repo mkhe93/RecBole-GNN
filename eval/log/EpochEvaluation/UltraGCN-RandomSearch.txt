@@ -1,0 +1,1759 @@
+Sun 19 Jan 2025 20:13:44 INFO  [Training]: train_batch_size = [128] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Sun 19 Jan 2025 20:13:44 INFO  [Evaluation]: eval_batch_size = [256] eval_args: [{'split': {'RS': [0.7, 0.1, 0.2]}, 'order': 'RO', 'group_by': 'None', 'mode': {'valid': 'full', 'test': 'full'}}]
+Sun 19 Jan 2025 20:14:14 INFO  epoch 0 training [time: 14.65s, train loss: 291901.6353]
+Sun 19 Jan 2025 20:14:29 INFO  epoch 1 training [time: 14.32s, train loss: 37918.4475]
+Sun 19 Jan 2025 20:14:43 INFO  epoch 2 training [time: 14.37s, train loss: 25082.4529]
+Sun 19 Jan 2025 20:14:57 INFO  epoch 3 training [time: 13.97s, train loss: 22779.2358]
+Sun 19 Jan 2025 20:15:11 INFO  epoch 4 training [time: 14.43s, train loss: 21881.6648]
+Sun 19 Jan 2025 20:15:13 INFO  epoch 4 evaluating [time: 1.65s, valid_score: 0.041400]
+Sun 19 Jan 2025 20:15:13 INFO  valid result: 
+precision@10 : 0.024    hit@10 : 0.1873    mrr@10 : 0.0692    ndcg@10 : 0.0414    map@10 : 0.02    itemcoverage@10 : 0.0017    averagepopularity@10 : 138.8387    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 20:15:13 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-14-00.pth
+Sun 19 Jan 2025 20:15:27 INFO  epoch 5 training [time: 13.92s, train loss: 21327.0569]
+Sun 19 Jan 2025 20:15:42 INFO  epoch 6 training [time: 15.19s, train loss: 20878.2588]
+Sun 19 Jan 2025 20:15:57 INFO  epoch 7 training [time: 14.70s, train loss: 20468.7053]
+Sun 19 Jan 2025 20:16:12 INFO  epoch 8 training [time: 15.38s, train loss: 20079.7284]
+Sun 19 Jan 2025 20:16:27 INFO  epoch 9 training [time: 14.67s, train loss: 19712.4840]
+Sun 19 Jan 2025 20:16:29 INFO  epoch 9 evaluating [time: 1.72s, valid_score: 0.041400]
+Sun 19 Jan 2025 20:16:29 INFO  valid result: 
+precision@10 : 0.0236    hit@10 : 0.1807    mrr@10 : 0.0678    ndcg@10 : 0.0414    map@10 : 0.0202    itemcoverage@10 : 0.0019    averagepopularity@10 : 136.4463    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 20:16:29 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-14-00.pth
+Sun 19 Jan 2025 20:16:43 INFO  epoch 10 training [time: 14.22s, train loss: 19363.2836]
+Sun 19 Jan 2025 20:16:57 INFO  epoch 11 training [time: 14.25s, train loss: 19037.4208]
+Sun 19 Jan 2025 20:17:12 INFO  epoch 12 training [time: 14.47s, train loss: 18733.4173]
+Sun 19 Jan 2025 20:17:26 INFO  epoch 13 training [time: 14.82s, train loss: 18453.0380]
+Sun 19 Jan 2025 20:17:41 INFO  epoch 14 training [time: 14.84s, train loss: 18194.9450]
+Sun 19 Jan 2025 20:17:43 INFO  epoch 14 evaluating [time: 1.62s, valid_score: 0.041900]
+Sun 19 Jan 2025 20:17:43 INFO  valid result: 
+precision@10 : 0.0255    hit@10 : 0.1921    mrr@10 : 0.0668    ndcg@10 : 0.0419    map@10 : 0.0196    itemcoverage@10 : 0.0019    averagepopularity@10 : 136.8607    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 20:17:43 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-14-00.pth
+Sun 19 Jan 2025 20:17:57 INFO  epoch 15 training [time: 14.52s, train loss: 17956.4339]
+Sun 19 Jan 2025 20:18:13 INFO  epoch 16 training [time: 15.44s, train loss: 17741.1286]
+Sun 19 Jan 2025 20:18:28 INFO  epoch 17 training [time: 15.09s, train loss: 17544.3056]
+Sun 19 Jan 2025 20:18:43 INFO  epoch 18 training [time: 14.52s, train loss: 17365.6438]
+Sun 19 Jan 2025 20:18:57 INFO  epoch 19 training [time: 14.72s, train loss: 17203.7791]
+Sun 19 Jan 2025 20:18:59 INFO  epoch 19 evaluating [time: 1.75s, valid_score: 0.040200]
+Sun 19 Jan 2025 20:18:59 INFO  valid result: 
+precision@10 : 0.0237    hit@10 : 0.1788    mrr@10 : 0.0671    ndcg@10 : 0.0402    map@10 : 0.0197    itemcoverage@10 : 0.002    averagepopularity@10 : 134.4307    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 20:19:12 INFO  epoch 20 training [time: 13.15s, train loss: 17054.2237]
+Sun 19 Jan 2025 20:19:27 INFO  epoch 21 training [time: 14.89s, train loss: 16918.6024]
+Sun 19 Jan 2025 20:19:42 INFO  epoch 22 training [time: 14.72s, train loss: 16790.8877]
+Sun 19 Jan 2025 20:19:56 INFO  epoch 23 training [time: 14.42s, train loss: 16663.5353]
+Sun 19 Jan 2025 20:20:10 INFO  epoch 24 training [time: 14.28s, train loss: 16532.6767]
+Sun 19 Jan 2025 20:20:12 INFO  epoch 24 evaluating [time: 1.68s, valid_score: 0.042100]
+Sun 19 Jan 2025 20:20:12 INFO  valid result: 
+precision@10 : 0.0246    hit@10 : 0.1864    mrr@10 : 0.0688    ndcg@10 : 0.0421    map@10 : 0.0205    itemcoverage@10 : 0.002    averagepopularity@10 : 134.2494    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 20:20:12 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-14-00.pth
+Sun 19 Jan 2025 20:20:26 INFO  epoch 25 training [time: 14.12s, train loss: 16391.2982]
+Sun 19 Jan 2025 20:20:41 INFO  epoch 26 training [time: 15.11s, train loss: 16231.3110]
+Sun 19 Jan 2025 20:20:56 INFO  epoch 27 training [time: 14.76s, train loss: 16050.6369]
+Sun 19 Jan 2025 20:21:11 INFO  epoch 28 training [time: 15.11s, train loss: 15845.2895]
+Sun 19 Jan 2025 20:21:26 INFO  epoch 29 training [time: 14.42s, train loss: 15621.6913]
+Sun 19 Jan 2025 20:21:27 INFO  epoch 29 evaluating [time: 1.68s, valid_score: 0.045700]
+Sun 19 Jan 2025 20:21:27 INFO  valid result: 
+precision@10 : 0.0273    hit@10 : 0.2006    mrr@10 : 0.0716    ndcg@10 : 0.0457    map@10 : 0.0224    itemcoverage@10 : 0.0047    averagepopularity@10 : 134.9705    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 20:21:27 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-14-00.pth
+Sun 19 Jan 2025 20:21:42 INFO  epoch 30 training [time: 14.84s, train loss: 15375.2501]
+Sun 19 Jan 2025 20:21:57 INFO  epoch 31 training [time: 14.76s, train loss: 15109.4911]
+Sun 19 Jan 2025 20:22:11 INFO  epoch 32 training [time: 14.46s, train loss: 14824.1254]
+Sun 19 Jan 2025 20:22:26 INFO  epoch 33 training [time: 14.48s, train loss: 14520.7525]
+Sun 19 Jan 2025 20:22:40 INFO  epoch 34 training [time: 14.47s, train loss: 14200.4150]
+Sun 19 Jan 2025 20:22:42 INFO  epoch 34 evaluating [time: 1.96s, valid_score: 0.063200]
+Sun 19 Jan 2025 20:22:42 INFO  valid result: 
+precision@10 : 0.0387    hit@10 : 0.2602    mrr@10 : 0.1034    ndcg@10 : 0.0632    map@10 : 0.032    itemcoverage@10 : 0.0185    averagepopularity@10 : 122.8823    tailpercentage@10 : 0.0009
+Sun 19 Jan 2025 20:22:42 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-14-00.pth
+Sun 19 Jan 2025 20:22:57 INFO  epoch 35 training [time: 14.56s, train loss: 13862.3015]
+Sun 19 Jan 2025 20:23:12 INFO  epoch 36 training [time: 14.80s, train loss: 13509.0101]
+Sun 19 Jan 2025 20:23:26 INFO  epoch 37 training [time: 14.55s, train loss: 13148.1686]
+Sun 19 Jan 2025 20:23:41 INFO  epoch 38 training [time: 15.03s, train loss: 12776.5278]
+Sun 19 Jan 2025 20:23:56 INFO  epoch 39 training [time: 14.99s, train loss: 12410.0919]
+Sun 19 Jan 2025 20:23:58 INFO  epoch 39 evaluating [time: 1.80s, valid_score: 0.087000]
+Sun 19 Jan 2025 20:23:58 INFO  valid result: 
+precision@10 : 0.0523    hit@10 : 0.3236    mrr@10 : 0.1423    ndcg@10 : 0.087    map@10 : 0.0463    itemcoverage@10 : 0.0392    averagepopularity@10 : 103.8473    tailpercentage@10 : 0.001
+Sun 19 Jan 2025 20:23:58 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-14-00.pth
+Sun 19 Jan 2025 20:24:13 INFO  epoch 40 training [time: 14.70s, train loss: 12044.3390]
+Sun 19 Jan 2025 20:24:28 INFO  epoch 41 training [time: 14.76s, train loss: 11680.3901]
+Sun 19 Jan 2025 20:24:43 INFO  epoch 42 training [time: 15.18s, train loss: 11318.3088]
+Sun 19 Jan 2025 20:24:58 INFO  epoch 43 training [time: 15.38s, train loss: 10975.5468]
+Sun 19 Jan 2025 20:25:13 INFO  epoch 44 training [time: 14.64s, train loss: 10635.9375]
+Sun 19 Jan 2025 20:25:15 INFO  epoch 44 evaluating [time: 1.75s, valid_score: 0.096600]
+Sun 19 Jan 2025 20:25:15 INFO  valid result: 
+precision@10 : 0.0595    hit@10 : 0.368    mrr@10 : 0.1566    ndcg@10 : 0.0966    map@10 : 0.0507    itemcoverage@10 : 0.064    averagepopularity@10 : 86.804    tailpercentage@10 : 0.0014
+Sun 19 Jan 2025 20:25:15 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-14-00.pth
+Sun 19 Jan 2025 20:25:29 INFO  epoch 45 training [time: 14.42s, train loss: 10318.6129]
+Sun 19 Jan 2025 20:25:43 INFO  epoch 46 training [time: 14.28s, train loss: 10024.1245]
+Sun 19 Jan 2025 20:25:58 INFO  epoch 47 training [time: 14.55s, train loss: 9744.8832]
+Sun 19 Jan 2025 20:26:13 INFO  epoch 48 training [time: 14.83s, train loss: 9499.7054]
+Sun 19 Jan 2025 20:26:27 INFO  epoch 49 training [time: 14.79s, train loss: 9269.0742]
+Sun 19 Jan 2025 20:26:29 INFO  epoch 49 evaluating [time: 1.67s, valid_score: 0.105900]
+Sun 19 Jan 2025 20:26:29 INFO  valid result: 
+precision@10 : 0.063    hit@10 : 0.3907    mrr@10 : 0.1667    ndcg@10 : 0.1059    map@10 : 0.0572    itemcoverage@10 : 0.0822    averagepopularity@10 : 75.7753    tailpercentage@10 : 0.0021
+Sun 19 Jan 2025 20:26:29 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-14-00.pth
+Sun 19 Jan 2025 20:26:43 INFO  epoch 50 training [time: 14.35s, train loss: 9064.6941]
+Sun 19 Jan 2025 20:26:58 INFO  epoch 51 training [time: 14.34s, train loss: 8885.5593]
+Sun 19 Jan 2025 20:27:13 INFO  epoch 52 training [time: 14.99s, train loss: 8725.1107]
+Sun 19 Jan 2025 20:27:27 INFO  epoch 53 training [time: 14.66s, train loss: 8573.0153]
+Sun 19 Jan 2025 20:27:42 INFO  epoch 54 training [time: 14.77s, train loss: 8453.9977]
+Sun 19 Jan 2025 20:27:44 INFO  epoch 54 evaluating [time: 1.64s, valid_score: 0.106700]
+Sun 19 Jan 2025 20:27:44 INFO  valid result: 
+precision@10 : 0.0636    hit@10 : 0.3955    mrr@10 : 0.1702    ndcg@10 : 0.1067    map@10 : 0.0566    itemcoverage@10 : 0.0873    averagepopularity@10 : 70.6368    tailpercentage@10 : 0.0027
+Sun 19 Jan 2025 20:27:44 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-14-00.pth
+Sun 19 Jan 2025 20:27:58 INFO  epoch 55 training [time: 14.43s, train loss: 8340.5271]
+Sun 19 Jan 2025 20:28:14 INFO  epoch 56 training [time: 15.28s, train loss: 8242.1390]
+Sun 19 Jan 2025 20:28:28 INFO  epoch 57 training [time: 14.71s, train loss: 8147.5687]
+Sun 19 Jan 2025 20:28:43 INFO  epoch 58 training [time: 14.44s, train loss: 8078.1822]
+Sun 19 Jan 2025 20:28:57 INFO  epoch 59 training [time: 14.69s, train loss: 8005.9884]
+Sun 19 Jan 2025 20:28:59 INFO  epoch 59 evaluating [time: 1.69s, valid_score: 0.109200]
+Sun 19 Jan 2025 20:28:59 INFO  valid result: 
+precision@10 : 0.0638    hit@10 : 0.3955    mrr@10 : 0.174    ndcg@10 : 0.1092    map@10 : 0.0586    itemcoverage@10 : 0.0827    averagepopularity@10 : 70.5542    tailpercentage@10 : 0.0021
+Sun 19 Jan 2025 20:28:59 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-14-00.pth
+Sun 19 Jan 2025 20:29:13 INFO  epoch 60 training [time: 14.08s, train loss: 7946.5278]
+Sun 19 Jan 2025 20:29:28 INFO  epoch 61 training [time: 14.96s, train loss: 7900.8469]
+Sun 19 Jan 2025 20:29:43 INFO  epoch 62 training [time: 14.40s, train loss: 7845.0634]
+Sun 19 Jan 2025 20:29:57 INFO  epoch 63 training [time: 14.19s, train loss: 7809.8653]
+Sun 19 Jan 2025 20:30:12 INFO  epoch 64 training [time: 14.75s, train loss: 7770.7949]
+Sun 19 Jan 2025 20:30:13 INFO  epoch 64 evaluating [time: 1.71s, valid_score: 0.108100]
+Sun 19 Jan 2025 20:30:13 INFO  valid result: 
+precision@10 : 0.0632    hit@10 : 0.3917    mrr@10 : 0.1702    ndcg@10 : 0.1081    map@10 : 0.0575    itemcoverage@10 : 0.0752    averagepopularity@10 : 72.1132    tailpercentage@10 : 0.0015
+Sun 19 Jan 2025 20:30:28 INFO  epoch 65 training [time: 14.96s, train loss: 7731.3079]
+Sun 19 Jan 2025 20:30:42 INFO  epoch 66 training [time: 14.21s, train loss: 7701.7479]
+Sun 19 Jan 2025 20:30:57 INFO  epoch 67 training [time: 14.38s, train loss: 7679.8677]
+Sun 19 Jan 2025 20:31:12 INFO  epoch 68 training [time: 14.78s, train loss: 7654.1057]
+Sun 19 Jan 2025 20:31:26 INFO  epoch 69 training [time: 14.34s, train loss: 7639.2527]
+Sun 19 Jan 2025 20:31:28 INFO  epoch 69 evaluating [time: 1.95s, valid_score: 0.109400]
+Sun 19 Jan 2025 20:31:28 INFO  valid result: 
+precision@10 : 0.0628    hit@10 : 0.3936    mrr@10 : 0.1715    ndcg@10 : 0.1094    map@10 : 0.0589    itemcoverage@10 : 0.0673    averagepopularity@10 : 73.41    tailpercentage@10 : 0.0008
+Sun 19 Jan 2025 20:31:28 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-14-00.pth
+Sun 19 Jan 2025 20:31:42 INFO  epoch 70 training [time: 14.44s, train loss: 7610.8597]
+Sun 19 Jan 2025 20:31:57 INFO  epoch 71 training [time: 14.57s, train loss: 7594.8377]
+Sun 19 Jan 2025 20:32:12 INFO  epoch 72 training [time: 14.59s, train loss: 7585.6245]
+Sun 19 Jan 2025 20:32:26 INFO  epoch 73 training [time: 14.76s, train loss: 7564.1616]
+Sun 19 Jan 2025 20:32:42 INFO  epoch 74 training [time: 15.29s, train loss: 7552.7928]
+Sun 19 Jan 2025 20:32:43 INFO  epoch 74 evaluating [time: 1.68s, valid_score: 0.106900]
+Sun 19 Jan 2025 20:32:43 INFO  valid result: 
+precision@10 : 0.0616    hit@10 : 0.3813    mrr@10 : 0.1619    ndcg@10 : 0.1069    map@10 : 0.0577    itemcoverage@10 : 0.0625    averagepopularity@10 : 74.8526    tailpercentage@10 : 0.0005
+Sun 19 Jan 2025 20:32:58 INFO  epoch 75 training [time: 14.25s, train loss: 7535.1395]
+Sun 19 Jan 2025 20:33:11 INFO  epoch 76 training [time: 13.96s, train loss: 7520.8931]
+Sun 19 Jan 2025 20:33:26 INFO  epoch 77 training [time: 14.55s, train loss: 7518.4557]
+Sun 19 Jan 2025 20:33:41 INFO  epoch 78 training [time: 15.06s, train loss: 7504.3119]
+Sun 19 Jan 2025 20:33:56 INFO  epoch 79 training [time: 14.87s, train loss: 7485.2093]
+Sun 19 Jan 2025 20:33:58 INFO  epoch 79 evaluating [time: 1.63s, valid_score: 0.107000]
+Sun 19 Jan 2025 20:33:58 INFO  valid result: 
+precision@10 : 0.0606    hit@10 : 0.3832    mrr@10 : 0.1705    ndcg@10 : 0.107    map@10 : 0.0583    itemcoverage@10 : 0.0594    averagepopularity@10 : 75.9715    tailpercentage@10 : 0.0005
+Sun 19 Jan 2025 20:34:12 INFO  epoch 80 training [time: 14.17s, train loss: 7483.9605]
+Sun 19 Jan 2025 20:34:26 INFO  epoch 81 training [time: 14.63s, train loss: 7479.4966]
+Sun 19 Jan 2025 20:34:41 INFO  epoch 82 training [time: 14.34s, train loss: 7460.1004]
+Sun 19 Jan 2025 20:34:56 INFO  epoch 83 training [time: 15.29s, train loss: 7453.3801]
+Sun 19 Jan 2025 20:35:11 INFO  epoch 84 training [time: 14.64s, train loss: 7447.2426]
+Sun 19 Jan 2025 20:35:12 INFO  epoch 84 evaluating [time: 1.71s, valid_score: 0.109900]
+Sun 19 Jan 2025 20:35:12 INFO  valid result: 
+precision@10 : 0.0625    hit@10 : 0.3746    mrr@10 : 0.1717    ndcg@10 : 0.1099    map@10 : 0.0612    itemcoverage@10 : 0.0557    averagepopularity@10 : 77.1723    tailpercentage@10 : 0.0005
+Sun 19 Jan 2025 20:35:12 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-14-00.pth
+Sun 19 Jan 2025 20:35:26 INFO  epoch 85 training [time: 13.92s, train loss: 7439.6139]
+Sun 19 Jan 2025 20:35:41 INFO  epoch 86 training [time: 14.74s, train loss: 7435.8459]
+Sun 19 Jan 2025 20:35:57 INFO  epoch 87 training [time: 15.48s, train loss: 7426.3088]
+Sun 19 Jan 2025 20:36:11 INFO  epoch 88 training [time: 14.62s, train loss: 7424.9073]
+Sun 19 Jan 2025 20:36:26 INFO  epoch 89 training [time: 14.36s, train loss: 7414.5080]
+Sun 19 Jan 2025 20:36:27 INFO  epoch 89 evaluating [time: 1.73s, valid_score: 0.107900]
+Sun 19 Jan 2025 20:36:27 INFO  valid result: 
+precision@10 : 0.0618    hit@10 : 0.3784    mrr@10 : 0.1715    ndcg@10 : 0.1079    map@10 : 0.0588    itemcoverage@10 : 0.0524    averagepopularity@10 : 78.6566    tailpercentage@10 : 0.0006
+Sun 19 Jan 2025 20:36:42 INFO  epoch 90 training [time: 14.68s, train loss: 7410.2625]
+Sun 19 Jan 2025 20:36:57 INFO  epoch 91 training [time: 15.27s, train loss: 7408.9573]
+Sun 19 Jan 2025 20:37:12 INFO  epoch 92 training [time: 15.27s, train loss: 7412.0802]
+Sun 19 Jan 2025 20:37:27 INFO  epoch 93 training [time: 14.86s, train loss: 7389.4499]
+Sun 19 Jan 2025 20:37:42 INFO  epoch 94 training [time: 15.14s, train loss: 7395.6270]
+Sun 19 Jan 2025 20:37:44 INFO  epoch 94 evaluating [time: 1.71s, valid_score: 0.105400]
+Sun 19 Jan 2025 20:37:44 INFO  valid result: 
+precision@10 : 0.0598    hit@10 : 0.368    mrr@10 : 0.1649    ndcg@10 : 0.1054    map@10 : 0.0576    itemcoverage@10 : 0.0505    averagepopularity@10 : 79.1171    tailpercentage@10 : 0.0007
+Sun 19 Jan 2025 20:37:58 INFO  epoch 95 training [time: 14.19s, train loss: 7389.7179]
+Sun 19 Jan 2025 20:38:14 INFO  epoch 96 training [time: 15.18s, train loss: 7387.7404]
+Sun 19 Jan 2025 20:38:28 INFO  epoch 97 training [time: 14.35s, train loss: 7379.0608]
+Sun 19 Jan 2025 20:38:43 INFO  epoch 98 training [time: 14.70s, train loss: 7380.2244]
+Sun 19 Jan 2025 20:38:57 INFO  epoch 99 training [time: 14.48s, train loss: 7372.0041]
+Sun 19 Jan 2025 20:38:59 INFO  epoch 99 evaluating [time: 1.68s, valid_score: 0.105200]
+Sun 19 Jan 2025 20:38:59 INFO  valid result: 
+precision@10 : 0.0605    hit@10 : 0.3746    mrr@10 : 0.1656    ndcg@10 : 0.1052    map@10 : 0.058    itemcoverage@10 : 0.0485    averagepopularity@10 : 80.0181    tailpercentage@10 : 0.0006
+Sun 19 Jan 2025 20:38:59 INFO  Loading model structure and parameters from saved\UltraGCN-Jan-19-2025_20-14-00.pth
+Sun 19 Jan 2025 20:39:01 INFO  best valid : OrderedDict({'precision@10': 0.0625, 'hit@10': 0.3746, 'mrr@10': 0.1717, 'ndcg@10': 0.1099, 'map@10': 0.0612, 'itemcoverage@10': 0.0557, 'averagepopularity@10': 77.1723, 'tailpercentage@10': 0.0005})
+Sun 19 Jan 2025 20:39:01 INFO  test result: OrderedDict({'precision@10': 0.1391, 'hit@10': 0.5541, 'mrr@10': 0.2933, 'ndcg@10': 0.1784, 'map@10': 0.1111, 'itemcoverage@10': 0.0567, 'averagepopularity@10': 76.5523, 'tailpercentage@10': 0.0005})
+Sun 19 Jan 2025 20:39:02 INFO  [Training]: train_batch_size = [128] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Sun 19 Jan 2025 20:39:02 INFO  [Evaluation]: eval_batch_size = [256] eval_args: [{'split': {'RS': [0.7, 0.1, 0.2]}, 'order': 'RO', 'group_by': 'None', 'mode': {'valid': 'full', 'test': 'full'}}]
+Sun 19 Jan 2025 20:39:44 INFO  epoch 0 training [time: 16.21s, train loss: 266847.7148]
+Sun 19 Jan 2025 20:40:00 INFO  epoch 1 training [time: 16.10s, train loss: 36797.8380]
+Sun 19 Jan 2025 20:40:16 INFO  epoch 2 training [time: 16.18s, train loss: 25993.4386]
+Sun 19 Jan 2025 20:40:33 INFO  epoch 3 training [time: 16.36s, train loss: 23972.4493]
+Sun 19 Jan 2025 20:40:49 INFO  epoch 4 training [time: 16.13s, train loss: 23081.4334]
+Sun 19 Jan 2025 20:40:51 INFO  epoch 4 evaluating [time: 1.81s, valid_score: 0.027900]
+Sun 19 Jan 2025 20:40:51 INFO  valid result: 
+precision@10 : 0.0169    hit@10 : 0.1356    mrr@10 : 0.0492    ndcg@10 : 0.0279    map@10 : 0.0129    itemcoverage@10 : 0.0012    averagepopularity@10 : 96.8426    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 20:40:51 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-39-28.pth
+Sun 19 Jan 2025 20:41:06 INFO  epoch 5 training [time: 15.59s, train loss: 22444.4841]
+Sun 19 Jan 2025 20:41:23 INFO  epoch 6 training [time: 16.46s, train loss: 21887.1879]
+Sun 19 Jan 2025 20:41:38 INFO  epoch 7 training [time: 15.59s, train loss: 21365.9299]
+Sun 19 Jan 2025 20:41:55 INFO  epoch 8 training [time: 16.06s, train loss: 20881.9302]
+Sun 19 Jan 2025 20:42:10 INFO  epoch 9 training [time: 15.70s, train loss: 20426.9767]
+Sun 19 Jan 2025 20:42:12 INFO  epoch 9 evaluating [time: 1.82s, valid_score: 0.032100]
+Sun 19 Jan 2025 20:42:12 INFO  valid result: 
+precision@10 : 0.0193    hit@10 : 0.1512    mrr@10 : 0.0534    ndcg@10 : 0.0321    map@10 : 0.0149    itemcoverage@10 : 0.0012    averagepopularity@10 : 95.5246    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 20:42:12 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-39-28.pth
+Sun 19 Jan 2025 20:42:28 INFO  epoch 10 training [time: 16.02s, train loss: 20008.6765]
+Sun 19 Jan 2025 20:42:44 INFO  epoch 11 training [time: 15.99s, train loss: 19625.9584]
+Sun 19 Jan 2025 20:43:00 INFO  epoch 12 training [time: 15.44s, train loss: 19274.5483]
+Sun 19 Jan 2025 20:43:15 INFO  epoch 13 training [time: 15.77s, train loss: 18957.4162]
+Sun 19 Jan 2025 20:43:32 INFO  epoch 14 training [time: 16.45s, train loss: 18668.6855]
+Sun 19 Jan 2025 20:43:34 INFO  epoch 14 evaluating [time: 1.83s, valid_score: 0.031100]
+Sun 19 Jan 2025 20:43:34 INFO  valid result: 
+precision@10 : 0.0185    hit@10 : 0.147    mrr@10 : 0.0514    ndcg@10 : 0.0311    map@10 : 0.0149    itemcoverage@10 : 0.0014    averagepopularity@10 : 92.8509    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 20:43:50 INFO  epoch 15 training [time: 16.46s, train loss: 18409.4762]
+Sun 19 Jan 2025 20:44:06 INFO  epoch 16 training [time: 16.20s, train loss: 18174.6396]
+Sun 19 Jan 2025 20:44:22 INFO  epoch 17 training [time: 15.60s, train loss: 17963.6513]
+Sun 19 Jan 2025 20:44:38 INFO  epoch 18 training [time: 16.64s, train loss: 17775.7519]
+Sun 19 Jan 2025 20:44:54 INFO  epoch 19 training [time: 15.55s, train loss: 17601.2608]
+Sun 19 Jan 2025 20:44:56 INFO  epoch 19 evaluating [time: 1.69s, valid_score: 0.032600]
+Sun 19 Jan 2025 20:44:56 INFO  valid result: 
+precision@10 : 0.0179    hit@10 : 0.1429    mrr@10 : 0.0554    ndcg@10 : 0.0326    map@10 : 0.0163    itemcoverage@10 : 0.0013    averagepopularity@10 : 93.6605    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 20:44:56 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-39-28.pth
+Sun 19 Jan 2025 20:45:12 INFO  epoch 20 training [time: 15.94s, train loss: 17440.6966]
+Sun 19 Jan 2025 20:45:27 INFO  epoch 21 training [time: 15.80s, train loss: 17284.0524]
+Sun 19 Jan 2025 20:45:44 INFO  epoch 22 training [time: 16.05s, train loss: 17136.3067]
+Sun 19 Jan 2025 20:46:00 INFO  epoch 23 training [time: 16.03s, train loss: 16996.1534]
+Sun 19 Jan 2025 20:46:16 INFO  epoch 24 training [time: 16.16s, train loss: 16855.1901]
+Sun 19 Jan 2025 20:46:17 INFO  epoch 24 evaluating [time: 1.77s, valid_score: 0.032300]
+Sun 19 Jan 2025 20:46:17 INFO  valid result: 
+precision@10 : 0.0191    hit@10 : 0.1449    mrr@10 : 0.0536    ndcg@10 : 0.0323    map@10 : 0.0159    itemcoverage@10 : 0.0015    averagepopularity@10 : 91.0683    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 20:46:33 INFO  epoch 25 training [time: 15.53s, train loss: 16702.6533]
+Sun 19 Jan 2025 20:46:49 INFO  epoch 26 training [time: 16.41s, train loss: 16538.7436]
+Sun 19 Jan 2025 20:47:06 INFO  epoch 27 training [time: 16.35s, train loss: 16355.2552]
+Sun 19 Jan 2025 20:47:21 INFO  epoch 28 training [time: 15.62s, train loss: 16143.6295]
+Sun 19 Jan 2025 20:47:38 INFO  epoch 29 training [time: 16.29s, train loss: 15898.2451]
+Sun 19 Jan 2025 20:47:39 INFO  epoch 29 evaluating [time: 1.71s, valid_score: 0.039000]
+Sun 19 Jan 2025 20:47:39 INFO  valid result: 
+precision@10 : 0.0229    hit@10 : 0.1606    mrr@10 : 0.0611    ndcg@10 : 0.039    map@10 : 0.0204    itemcoverage@10 : 0.0044    averagepopularity@10 : 91.8025    tailpercentage@10 : 0.0005
+Sun 19 Jan 2025 20:47:39 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-39-28.pth
+Sun 19 Jan 2025 20:47:56 INFO  epoch 30 training [time: 16.68s, train loss: 15621.8044]
+Sun 19 Jan 2025 20:48:12 INFO  epoch 31 training [time: 16.11s, train loss: 15310.8611]
+Sun 19 Jan 2025 20:48:28 INFO  epoch 32 training [time: 15.86s, train loss: 14965.1556]
+Sun 19 Jan 2025 20:48:44 INFO  epoch 33 training [time: 15.73s, train loss: 14591.9585]
+Sun 19 Jan 2025 20:49:00 INFO  epoch 34 training [time: 16.66s, train loss: 14192.2173]
+Sun 19 Jan 2025 20:49:02 INFO  epoch 34 evaluating [time: 1.80s, valid_score: 0.055700]
+Sun 19 Jan 2025 20:49:02 INFO  valid result: 
+precision@10 : 0.0358    hit@10 : 0.2284    mrr@10 : 0.0859    ndcg@10 : 0.0557    map@10 : 0.0287    itemcoverage@10 : 0.0169    averagepopularity@10 : 87.1046    tailpercentage@10 : 0.001
+Sun 19 Jan 2025 20:49:02 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-39-28.pth
+Sun 19 Jan 2025 20:49:18 INFO  epoch 35 training [time: 15.83s, train loss: 13769.9749]
+Sun 19 Jan 2025 20:49:34 INFO  epoch 36 training [time: 15.57s, train loss: 13333.6061]
+Sun 19 Jan 2025 20:49:50 INFO  epoch 37 training [time: 15.85s, train loss: 12902.9285]
+Sun 19 Jan 2025 20:50:06 INFO  epoch 38 training [time: 16.67s, train loss: 12475.6021]
+Sun 19 Jan 2025 20:50:22 INFO  epoch 39 training [time: 16.22s, train loss: 12059.0403]
+Sun 19 Jan 2025 20:50:24 INFO  epoch 39 evaluating [time: 1.71s, valid_score: 0.078900]
+Sun 19 Jan 2025 20:50:24 INFO  valid result: 
+precision@10 : 0.0467    hit@10 : 0.293    mrr@10 : 0.1244    ndcg@10 : 0.0789    map@10 : 0.0429    itemcoverage@10 : 0.0455    averagepopularity@10 : 68.5059    tailpercentage@10 : 0.0021
+Sun 19 Jan 2025 20:50:24 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-39-28.pth
+Sun 19 Jan 2025 20:50:40 INFO  epoch 40 training [time: 15.76s, train loss: 11663.0217]
+Sun 19 Jan 2025 20:50:56 INFO  epoch 41 training [time: 16.41s, train loss: 11287.5946]
+Sun 19 Jan 2025 20:51:13 INFO  epoch 42 training [time: 16.43s, train loss: 10929.9494]
+Sun 19 Jan 2025 20:51:30 INFO  epoch 43 training [time: 17.29s, train loss: 10601.1848]
+Sun 19 Jan 2025 20:51:47 INFO  epoch 44 training [time: 16.57s, train loss: 10297.5643]
+Sun 19 Jan 2025 20:51:48 INFO  epoch 44 evaluating [time: 1.80s, valid_score: 0.092300]
+Sun 19 Jan 2025 20:51:48 INFO  valid result: 
+precision@10 : 0.0544    hit@10 : 0.3399    mrr@10 : 0.1391    ndcg@10 : 0.0923    map@10 : 0.051    itemcoverage@10 : 0.0677    averagepopularity@10 : 56.6637    tailpercentage@10 : 0.0022
+Sun 19 Jan 2025 20:51:48 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-39-28.pth
+Sun 19 Jan 2025 20:52:04 INFO  epoch 45 training [time: 15.72s, train loss: 10009.2081]
+Sun 19 Jan 2025 20:52:21 INFO  epoch 46 training [time: 16.56s, train loss: 9749.4409]
+Sun 19 Jan 2025 20:52:37 INFO  epoch 47 training [time: 16.08s, train loss: 9519.4321]
+Sun 19 Jan 2025 20:52:53 INFO  epoch 48 training [time: 16.56s, train loss: 9309.8976]
+Sun 19 Jan 2025 20:53:11 INFO  epoch 49 training [time: 17.29s, train loss: 9122.4769]
+Sun 19 Jan 2025 20:53:13 INFO  epoch 49 evaluating [time: 1.83s, valid_score: 0.099700]
+Sun 19 Jan 2025 20:53:13 INFO  valid result: 
+precision@10 : 0.0567    hit@10 : 0.3493    mrr@10 : 0.157    ndcg@10 : 0.0997    map@10 : 0.0556    itemcoverage@10 : 0.0781    averagepopularity@10 : 49.9015    tailpercentage@10 : 0.0028
+Sun 19 Jan 2025 20:53:13 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-39-28.pth
+Sun 19 Jan 2025 20:53:30 INFO  epoch 50 training [time: 17.17s, train loss: 8959.2211]
+Sun 19 Jan 2025 20:53:46 INFO  epoch 51 training [time: 16.45s, train loss: 8810.5875]
+Sun 19 Jan 2025 20:54:03 INFO  epoch 52 training [time: 16.86s, train loss: 8686.4458]
+Sun 19 Jan 2025 20:54:19 INFO  epoch 53 training [time: 16.28s, train loss: 8564.5166]
+Sun 19 Jan 2025 20:54:37 INFO  epoch 54 training [time: 17.36s, train loss: 8468.8086]
+Sun 19 Jan 2025 20:54:38 INFO  epoch 54 evaluating [time: 1.73s, valid_score: 0.103800]
+Sun 19 Jan 2025 20:54:38 INFO  valid result: 
+precision@10 : 0.0618    hit@10 : 0.3743    mrr@10 : 0.154    ndcg@10 : 0.1038    map@10 : 0.0572    itemcoverage@10 : 0.0791    averagepopularity@10 : 48.5529    tailpercentage@10 : 0.0024
+Sun 19 Jan 2025 20:54:38 INFO  Saving current: saved\UltraGCN-Jan-19-2025_20-39-28.pth
+Sun 19 Jan 2025 20:54:55 INFO  epoch 55 training [time: 16.97s, train loss: 8391.2443]
+Sun 19 Jan 2025 20:55:12 INFO  epoch 56 training [time: 16.16s, train loss: 8319.2321]
+Sun 19 Jan 2025 20:55:29 INFO  epoch 57 training [time: 17.20s, train loss: 8256.5444]
+Sun 19 Jan 2025 20:55:46 INFO  epoch 58 training [time: 17.11s, train loss: 8198.0228]
+Sun 19 Jan 2025 20:56:03 INFO  epoch 59 training [time: 16.92s, train loss: 8152.6707]
+Sun 19 Jan 2025 20:56:05 INFO  epoch 59 evaluating [time: 1.90s, valid_score: 0.103300]
+Sun 19 Jan 2025 20:56:05 INFO  valid result: 
+precision@10 : 0.0595    hit@10 : 0.3785    mrr@10 : 0.1588    ndcg@10 : 0.1033    map@10 : 0.0571    itemcoverage@10 : 0.0744    averagepopularity@10 : 49.6297    tailpercentage@10 : 0.0013
+Sun 19 Jan 2025 20:56:22 INFO  epoch 60 training [time: 17.04s, train loss: 8109.7127]
+Sun 19 Jan 2025 20:56:39 INFO  epoch 61 training [time: 16.79s, train loss: 8070.6412]
+Sun 19 Jan 2025 20:56:55 INFO  epoch 62 training [time: 16.69s, train loss: 8050.0184]
+Sun 19 Jan 2025 20:57:13 INFO  epoch 63 training [time: 17.56s, train loss: 8015.3529]
+Sun 19 Jan 2025 20:57:29 INFO  epoch 64 training [time: 16.56s, train loss: 7980.1783]
+Sun 19 Jan 2025 20:57:31 INFO  epoch 64 evaluating [time: 1.79s, valid_score: 0.101800]
+Sun 19 Jan 2025 20:57:31 INFO  valid result: 
+precision@10 : 0.0588    hit@10 : 0.3608    mrr@10 : 0.1536    ndcg@10 : 0.1018    map@10 : 0.0568    itemcoverage@10 : 0.069    averagepopularity@10 : 50.1343    tailpercentage@10 : 0.0007
+Sun 19 Jan 2025 20:57:48 INFO  epoch 65 training [time: 16.72s, train loss: 7950.6190]
+Sun 19 Jan 2025 20:58:05 INFO  epoch 66 training [time: 17.04s, train loss: 7945.3311]
+Sun 19 Jan 2025 20:58:21 INFO  epoch 67 training [time: 16.54s, train loss: 7916.4260]
+Sun 19 Jan 2025 20:58:38 INFO  epoch 68 training [time: 16.83s, train loss: 7902.8575]
+Sun 19 Jan 2025 20:58:56 INFO  epoch 69 training [time: 17.51s, train loss: 7875.8823]
+Sun 19 Jan 2025 20:58:58 INFO  epoch 69 evaluating [time: 1.81s, valid_score: 0.098900]
+Sun 19 Jan 2025 20:58:58 INFO  valid result: 
+precision@10 : 0.0561    hit@10 : 0.3462    mrr@10 : 0.1557    ndcg@10 : 0.0989    map@10 : 0.0555    itemcoverage@10 : 0.0626    averagepopularity@10 : 52.0585    tailpercentage@10 : 0.0009
+Sun 19 Jan 2025 20:59:15 INFO  epoch 70 training [time: 17.10s, train loss: 7867.2843]
+Sun 19 Jan 2025 20:59:31 INFO  epoch 71 training [time: 16.42s, train loss: 7845.8865]
+Sun 19 Jan 2025 20:59:48 INFO  epoch 72 training [time: 17.10s, train loss: 7832.2233]
+Sun 19 Jan 2025 21:00:05 INFO  epoch 73 training [time: 16.62s, train loss: 7826.7254]
+Sun 19 Jan 2025 21:00:21 INFO  epoch 74 training [time: 15.79s, train loss: 7809.7276]
+Sun 19 Jan 2025 21:00:22 INFO  epoch 74 evaluating [time: 1.79s, valid_score: 0.100200]
+Sun 19 Jan 2025 21:00:22 INFO  valid result: 
+precision@10 : 0.0566    hit@10 : 0.3441    mrr@10 : 0.1527    ndcg@10 : 0.1002    map@10 : 0.0571    itemcoverage@10 : 0.0581    averagepopularity@10 : 53.7581    tailpercentage@10 : 0.0008
+Sun 19 Jan 2025 21:00:39 INFO  epoch 75 training [time: 16.53s, train loss: 7792.9456]
+Sun 19 Jan 2025 21:00:55 INFO  epoch 76 training [time: 16.46s, train loss: 7803.1174]
+Sun 19 Jan 2025 21:01:12 INFO  epoch 77 training [time: 16.30s, train loss: 7780.6353]
+Sun 19 Jan 2025 21:01:28 INFO  epoch 78 training [time: 16.63s, train loss: 7783.5313]
+Sun 19 Jan 2025 21:01:45 INFO  epoch 79 training [time: 16.42s, train loss: 7762.9754]
+Sun 19 Jan 2025 21:01:46 INFO  epoch 79 evaluating [time: 1.69s, valid_score: 0.097000]
+Sun 19 Jan 2025 21:01:46 INFO  valid result: 
+precision@10 : 0.0553    hit@10 : 0.3379    mrr@10 : 0.1479    ndcg@10 : 0.097    map@10 : 0.0543    itemcoverage@10 : 0.0534    averagepopularity@10 : 55.6578    tailpercentage@10 : 0.0007
+Sun 19 Jan 2025 21:02:04 INFO  epoch 80 training [time: 17.59s, train loss: 7754.9352]
+Sun 19 Jan 2025 21:02:21 INFO  epoch 81 training [time: 16.98s, train loss: 7747.7151]
+Sun 19 Jan 2025 21:02:38 INFO  epoch 82 training [time: 17.21s, train loss: 7741.2068]
+Sun 19 Jan 2025 21:02:55 INFO  epoch 83 training [time: 17.00s, train loss: 7746.2057]
+Sun 19 Jan 2025 21:03:13 INFO  epoch 84 training [time: 17.38s, train loss: 7727.1412]
+Sun 19 Jan 2025 21:03:14 INFO  epoch 84 evaluating [time: 1.72s, valid_score: 0.099500]
+Sun 19 Jan 2025 21:03:14 INFO  valid result: 
+precision@10 : 0.0569    hit@10 : 0.3389    mrr@10 : 0.1537    ndcg@10 : 0.0995    map@10 : 0.0567    itemcoverage@10 : 0.0523    averagepopularity@10 : 56.1323    tailpercentage@10 : 0.0009
+Sun 19 Jan 2025 21:03:31 INFO  epoch 85 training [time: 16.50s, train loss: 7732.4389]
+Sun 19 Jan 2025 21:03:47 INFO  epoch 86 training [time: 16.43s, train loss: 7729.5104]
+Sun 19 Jan 2025 21:04:04 INFO  epoch 87 training [time: 16.51s, train loss: 7715.2824]
+Sun 19 Jan 2025 21:04:20 INFO  epoch 88 training [time: 16.22s, train loss: 7707.0463]
+Sun 19 Jan 2025 21:04:36 INFO  epoch 89 training [time: 16.31s, train loss: 7707.7194]
+Sun 19 Jan 2025 21:04:38 INFO  epoch 89 evaluating [time: 1.75s, valid_score: 0.097700]
+Sun 19 Jan 2025 21:04:38 INFO  valid result: 
+precision@10 : 0.0559    hit@10 : 0.3472    mrr@10 : 0.1504    ndcg@10 : 0.0977    map@10 : 0.0544    itemcoverage@10 : 0.0496    averagepopularity@10 : 56.7385    tailpercentage@10 : 0.0007
+Sun 19 Jan 2025 21:04:54 INFO  epoch 90 training [time: 16.24s, train loss: 7702.0788]
+Sun 19 Jan 2025 21:05:10 INFO  epoch 91 training [time: 15.72s, train loss: 7692.0877]
+Sun 19 Jan 2025 21:05:26 INFO  epoch 92 training [time: 16.41s, train loss: 7701.7112]
+Sun 19 Jan 2025 21:05:42 INFO  epoch 93 training [time: 15.86s, train loss: 7697.2691]
+Sun 19 Jan 2025 21:05:58 INFO  epoch 94 training [time: 15.84s, train loss: 7686.8849]
+Sun 19 Jan 2025 21:06:00 INFO  epoch 94 evaluating [time: 1.88s, valid_score: 0.096400]
+Sun 19 Jan 2025 21:06:00 INFO  valid result: 
+precision@10 : 0.0554    hit@10 : 0.3368    mrr@10 : 0.1487    ndcg@10 : 0.0964    map@10 : 0.0542    itemcoverage@10 : 0.0475    averagepopularity@10 : 57.2348    tailpercentage@10 : 0.0009
+Sun 19 Jan 2025 21:06:16 INFO  epoch 95 training [time: 16.21s, train loss: 7686.8567]
+Sun 19 Jan 2025 21:06:33 INFO  epoch 96 training [time: 16.46s, train loss: 7673.9160]
+Sun 19 Jan 2025 21:06:47 INFO  epoch 97 training [time: 14.68s, train loss: 7677.5216]
+Sun 19 Jan 2025 21:07:04 INFO  epoch 98 training [time: 16.32s, train loss: 7674.5858]
+Sun 19 Jan 2025 21:07:20 INFO  epoch 99 training [time: 16.68s, train loss: 7664.4074]
+Sun 19 Jan 2025 21:07:22 INFO  epoch 99 evaluating [time: 1.72s, valid_score: 0.094400]
+Sun 19 Jan 2025 21:07:22 INFO  valid result: 
+precision@10 : 0.0547    hit@10 : 0.3358    mrr@10 : 0.1439    ndcg@10 : 0.0944    map@10 : 0.052    itemcoverage@10 : 0.0473    averagepopularity@10 : 58.004    tailpercentage@10 : 0.0007
+Sun 19 Jan 2025 21:07:22 INFO  Loading model structure and parameters from saved\UltraGCN-Jan-19-2025_20-39-28.pth
+Sun 19 Jan 2025 21:07:24 INFO  best valid : OrderedDict({'precision@10': 0.0618, 'hit@10': 0.3743, 'mrr@10': 0.154, 'ndcg@10': 0.1038, 'map@10': 0.0572, 'itemcoverage@10': 0.0791, 'averagepopularity@10': 48.5529, 'tailpercentage@10': 0.0024})
+Sun 19 Jan 2025 21:07:24 INFO  test result: OrderedDict({'precision@10': 0.1298, 'hit@10': 0.5236, 'mrr@10': 0.282, 'ndcg@10': 0.166, 'map@10': 0.1035, 'itemcoverage@10': 0.0809, 'averagepopularity@10': 48.7459, 'tailpercentage@10': 0.0023})
+Sun 19 Jan 2025 21:07:25 INFO  [Training]: train_batch_size = [128] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Sun 19 Jan 2025 21:07:25 INFO  [Evaluation]: eval_batch_size = [256] eval_args: [{'split': {'RS': [0.7, 0.1, 0.2]}, 'order': 'RO', 'group_by': 'None', 'mode': {'valid': 'full', 'test': 'full'}}]
+Sun 19 Jan 2025 21:07:58 INFO  epoch 0 training [time: 15.19s, train loss: 292854.1638]
+Sun 19 Jan 2025 21:08:13 INFO  epoch 1 training [time: 15.01s, train loss: 38696.9686]
+Sun 19 Jan 2025 21:08:28 INFO  epoch 2 training [time: 15.02s, train loss: 26808.9180]
+Sun 19 Jan 2025 21:08:43 INFO  epoch 3 training [time: 15.11s, train loss: 24645.4072]
+Sun 19 Jan 2025 21:08:58 INFO  epoch 4 training [time: 15.02s, train loss: 23759.4987]
+Sun 19 Jan 2025 21:09:00 INFO  epoch 4 evaluating [time: 1.75s, valid_score: 0.038800]
+Sun 19 Jan 2025 21:09:00 INFO  valid result: 
+precision@10 : 0.0241    hit@10 : 0.1869    mrr@10 : 0.0729    ndcg@10 : 0.0388    map@10 : 0.0185    itemcoverage@10 : 0.0014    averagepopularity@10 : 129.7512    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 21:09:00 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-07-43.pth
+Sun 19 Jan 2025 21:09:14 INFO  epoch 5 training [time: 14.76s, train loss: 23176.6056]
+Sun 19 Jan 2025 21:09:30 INFO  epoch 6 training [time: 15.14s, train loss: 22684.3995]
+Sun 19 Jan 2025 21:09:45 INFO  epoch 7 training [time: 15.30s, train loss: 22229.2330]
+Sun 19 Jan 2025 21:10:00 INFO  epoch 8 training [time: 15.04s, train loss: 21799.8615]
+Sun 19 Jan 2025 21:10:15 INFO  epoch 9 training [time: 14.94s, train loss: 21392.8247]
+Sun 19 Jan 2025 21:10:17 INFO  epoch 9 evaluating [time: 1.91s, valid_score: 0.038900]
+Sun 19 Jan 2025 21:10:17 INFO  valid result: 
+precision@10 : 0.0234    hit@10 : 0.1812    mrr@10 : 0.0721    ndcg@10 : 0.0389    map@10 : 0.0193    itemcoverage@10 : 0.0014    averagepopularity@10 : 126.7421    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 21:10:17 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-07-43.pth
+Sun 19 Jan 2025 21:10:32 INFO  epoch 10 training [time: 14.93s, train loss: 21013.4985]
+Sun 19 Jan 2025 21:10:47 INFO  epoch 11 training [time: 14.67s, train loss: 20660.1955]
+Sun 19 Jan 2025 21:11:02 INFO  epoch 12 training [time: 15.43s, train loss: 20334.7105]
+Sun 19 Jan 2025 21:11:17 INFO  epoch 13 training [time: 14.92s, train loss: 20036.9290]
+Sun 19 Jan 2025 21:11:32 INFO  epoch 14 training [time: 15.18s, train loss: 19762.6360]
+Sun 19 Jan 2025 21:11:34 INFO  epoch 14 evaluating [time: 1.75s, valid_score: 0.038900]
+Sun 19 Jan 2025 21:11:34 INFO  valid result: 
+precision@10 : 0.0236    hit@10 : 0.185    mrr@10 : 0.0736    ndcg@10 : 0.0389    map@10 : 0.0184    itemcoverage@10 : 0.0014    averagepopularity@10 : 127.405    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 21:11:34 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-07-43.pth
+Sun 19 Jan 2025 21:11:49 INFO  epoch 15 training [time: 15.10s, train loss: 19515.5140]
+Sun 19 Jan 2025 21:12:05 INFO  epoch 16 training [time: 15.58s, train loss: 19288.7990]
+Sun 19 Jan 2025 21:12:20 INFO  epoch 17 training [time: 14.88s, train loss: 19085.2548]
+Sun 19 Jan 2025 21:12:35 INFO  epoch 18 training [time: 14.93s, train loss: 18901.7156]
+Sun 19 Jan 2025 21:12:50 INFO  epoch 19 training [time: 15.09s, train loss: 18733.3864]
+Sun 19 Jan 2025 21:12:51 INFO  epoch 19 evaluating [time: 1.81s, valid_score: 0.039000]
+Sun 19 Jan 2025 21:12:51 INFO  valid result: 
+precision@10 : 0.0234    hit@10 : 0.1812    mrr@10 : 0.0738    ndcg@10 : 0.039    map@10 : 0.0188    itemcoverage@10 : 0.0015    averagepopularity@10 : 126.0024    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 21:12:51 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-07-43.pth
+Sun 19 Jan 2025 21:13:07 INFO  epoch 20 training [time: 15.40s, train loss: 18574.1075]
+Sun 19 Jan 2025 21:13:22 INFO  epoch 21 training [time: 14.69s, train loss: 18423.7625]
+Sun 19 Jan 2025 21:13:36 INFO  epoch 22 training [time: 14.69s, train loss: 18275.8252]
+Sun 19 Jan 2025 21:13:51 INFO  epoch 23 training [time: 14.69s, train loss: 18122.4254]
+Sun 19 Jan 2025 21:14:06 INFO  epoch 24 training [time: 15.31s, train loss: 17966.5437]
+Sun 19 Jan 2025 21:14:08 INFO  epoch 24 evaluating [time: 1.90s, valid_score: 0.038400]
+Sun 19 Jan 2025 21:14:08 INFO  valid result: 
+precision@10 : 0.0231    hit@10 : 0.1774    mrr@10 : 0.074    ndcg@10 : 0.0384    map@10 : 0.0186    itemcoverage@10 : 0.0017    averagepopularity@10 : 124.295    tailpercentage@10 : 0.0003
+Sun 19 Jan 2025 21:14:23 INFO  epoch 25 training [time: 14.83s, train loss: 17803.9719]
+Sun 19 Jan 2025 21:14:38 INFO  epoch 26 training [time: 15.13s, train loss: 17627.7005]
+Sun 19 Jan 2025 21:14:53 INFO  epoch 27 training [time: 14.65s, train loss: 17431.4224]
+Sun 19 Jan 2025 21:15:07 INFO  epoch 28 training [time: 14.22s, train loss: 17211.0165]
+Sun 19 Jan 2025 21:15:23 INFO  epoch 29 training [time: 15.55s, train loss: 16966.1480]
+Sun 19 Jan 2025 21:15:24 INFO  epoch 29 evaluating [time: 1.71s, valid_score: 0.042300]
+Sun 19 Jan 2025 21:15:24 INFO  valid result: 
+precision@10 : 0.0259    hit@10 : 0.203    mrr@10 : 0.0804    ndcg@10 : 0.0423    map@10 : 0.0202    itemcoverage@10 : 0.0052    averagepopularity@10 : 122.7723    tailpercentage@10 : 0.0005
+Sun 19 Jan 2025 21:15:24 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-07-43.pth
+Sun 19 Jan 2025 21:15:39 INFO  epoch 30 training [time: 14.75s, train loss: 16690.8523]
+Sun 19 Jan 2025 21:15:54 INFO  epoch 31 training [time: 15.11s, train loss: 16392.1518]
+Sun 19 Jan 2025 21:16:09 INFO  epoch 32 training [time: 14.84s, train loss: 16060.2906]
+Sun 19 Jan 2025 21:16:25 INFO  epoch 33 training [time: 15.64s, train loss: 15687.1822]
+Sun 19 Jan 2025 21:16:39 INFO  epoch 34 training [time: 14.85s, train loss: 15278.5998]
+Sun 19 Jan 2025 21:16:41 INFO  epoch 34 evaluating [time: 1.81s, valid_score: 0.060800]
+Sun 19 Jan 2025 21:16:41 INFO  valid result: 
+precision@10 : 0.038    hit@10 : 0.2628    mrr@10 : 0.1063    ndcg@10 : 0.0608    map@10 : 0.0305    itemcoverage@10 : 0.0159    averagepopularity@10 : 111.8664    tailpercentage@10 : 0.0004
+Sun 19 Jan 2025 21:16:41 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-07-43.pth
+Sun 19 Jan 2025 21:16:56 INFO  epoch 35 training [time: 14.80s, train loss: 14844.4176]
+Sun 19 Jan 2025 21:17:11 INFO  epoch 36 training [time: 14.49s, train loss: 14392.1304]
+Sun 19 Jan 2025 21:17:26 INFO  epoch 37 training [time: 15.42s, train loss: 13930.8534]
+Sun 19 Jan 2025 21:17:41 INFO  epoch 38 training [time: 14.86s, train loss: 13469.3427]
+Sun 19 Jan 2025 21:17:56 INFO  epoch 39 training [time: 15.07s, train loss: 13012.3241]
+Sun 19 Jan 2025 21:17:58 INFO  epoch 39 evaluating [time: 1.75s, valid_score: 0.085300]
+Sun 19 Jan 2025 21:17:58 INFO  valid result: 
+precision@10 : 0.0522    hit@10 : 0.3378    mrr@10 : 0.1465    ndcg@10 : 0.0853    map@10 : 0.0442    itemcoverage@10 : 0.0408    averagepopularity@10 : 92.4644    tailpercentage@10 : 0.0018
+Sun 19 Jan 2025 21:17:58 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-07-43.pth
+Sun 19 Jan 2025 21:18:13 INFO  epoch 40 training [time: 15.21s, train loss: 12571.4768]
+Sun 19 Jan 2025 21:18:28 INFO  epoch 41 training [time: 15.42s, train loss: 12136.0523]
+Sun 19 Jan 2025 21:18:43 INFO  epoch 42 training [time: 15.11s, train loss: 11722.7602]
+Sun 19 Jan 2025 21:18:58 INFO  epoch 43 training [time: 14.68s, train loss: 11341.0337]
+Sun 19 Jan 2025 21:19:13 INFO  epoch 44 training [time: 15.02s, train loss: 10987.0959]
+Sun 19 Jan 2025 21:19:15 INFO  epoch 44 evaluating [time: 1.78s, valid_score: 0.099200]
+Sun 19 Jan 2025 21:19:15 INFO  valid result: 
+precision@10 : 0.0609    hit@10 : 0.3786    mrr@10 : 0.1571    ndcg@10 : 0.0992    map@10 : 0.0521    itemcoverage@10 : 0.0695    averagepopularity@10 : 73.7388    tailpercentage@10 : 0.0021
+Sun 19 Jan 2025 21:19:15 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-07-43.pth
+Sun 19 Jan 2025 21:19:30 INFO  epoch 45 training [time: 15.35s, train loss: 10648.1861]
+Sun 19 Jan 2025 21:19:46 INFO  epoch 46 training [time: 15.42s, train loss: 10348.3721]
+Sun 19 Jan 2025 21:20:01 INFO  epoch 47 training [time: 15.10s, train loss: 10075.9408]
+Sun 19 Jan 2025 21:20:16 INFO  epoch 48 training [time: 15.16s, train loss: 9831.5526]
+Sun 19 Jan 2025 21:20:31 INFO  epoch 49 training [time: 15.21s, train loss: 9610.4416]
+Sun 19 Jan 2025 21:20:33 INFO  epoch 49 evaluating [time: 1.85s, valid_score: 0.105900]
+Sun 19 Jan 2025 21:20:33 INFO  valid result: 
+precision@10 : 0.0628    hit@10 : 0.388    mrr@10 : 0.174    ndcg@10 : 0.1059    map@10 : 0.0565    itemcoverage@10 : 0.0868    averagepopularity@10 : 63.3729    tailpercentage@10 : 0.0019
+Sun 19 Jan 2025 21:20:33 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-07-43.pth
+Sun 19 Jan 2025 21:20:49 INFO  epoch 50 training [time: 15.69s, train loss: 9424.3679]
+Sun 19 Jan 2025 21:21:04 INFO  epoch 51 training [time: 15.23s, train loss: 9244.6326]
+Sun 19 Jan 2025 21:21:19 INFO  epoch 52 training [time: 15.09s, train loss: 9097.0055]
+Sun 19 Jan 2025 21:21:34 INFO  epoch 53 training [time: 14.92s, train loss: 8970.7267]
+Sun 19 Jan 2025 21:21:49 INFO  epoch 54 training [time: 15.37s, train loss: 8862.4593]
+Sun 19 Jan 2025 21:21:51 INFO  epoch 54 evaluating [time: 1.79s, valid_score: 0.105700]
+Sun 19 Jan 2025 21:21:51 INFO  valid result: 
+precision@10 : 0.0629    hit@10 : 0.3833    mrr@10 : 0.1727    ndcg@10 : 0.1057    map@10 : 0.0567    itemcoverage@10 : 0.0889    averagepopularity@10 : 60.9827    tailpercentage@10 : 0.0011
+Sun 19 Jan 2025 21:22:06 INFO  epoch 55 training [time: 15.03s, train loss: 8752.7876]
+Sun 19 Jan 2025 21:22:21 INFO  epoch 56 training [time: 14.89s, train loss: 8670.2707]
+Sun 19 Jan 2025 21:22:36 INFO  epoch 57 training [time: 14.67s, train loss: 8584.9562]
+Sun 19 Jan 2025 21:22:51 INFO  epoch 58 training [time: 15.16s, train loss: 8524.9599]
+Sun 19 Jan 2025 21:23:07 INFO  epoch 59 training [time: 15.66s, train loss: 8471.5434]
+Sun 19 Jan 2025 21:23:08 INFO  epoch 59 evaluating [time: 1.76s, valid_score: 0.106400]
+Sun 19 Jan 2025 21:23:08 INFO  valid result: 
+precision@10 : 0.0614    hit@10 : 0.3852    mrr@10 : 0.175    ndcg@10 : 0.1064    map@10 : 0.0578    itemcoverage@10 : 0.0828    averagepopularity@10 : 59.9413    tailpercentage@10 : 0.0009
+Sun 19 Jan 2025 21:23:08 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-07-43.pth
+Sun 19 Jan 2025 21:23:23 INFO  epoch 60 training [time: 14.89s, train loss: 8418.4882]
+Sun 19 Jan 2025 21:23:37 INFO  epoch 61 training [time: 14.12s, train loss: 8373.9856]
+Sun 19 Jan 2025 21:23:52 INFO  epoch 62 training [time: 14.74s, train loss: 8325.6191]
+Sun 19 Jan 2025 21:24:08 INFO  epoch 63 training [time: 15.63s, train loss: 8298.3269]
+Sun 19 Jan 2025 21:24:23 INFO  epoch 64 training [time: 15.13s, train loss: 8264.5076]
+Sun 19 Jan 2025 21:24:25 INFO  epoch 64 evaluating [time: 1.74s, valid_score: 0.106700]
+Sun 19 Jan 2025 21:24:25 INFO  valid result: 
+precision@10 : 0.0617    hit@10 : 0.388    mrr@10 : 0.1765    ndcg@10 : 0.1067    map@10 : 0.0573    itemcoverage@10 : 0.0746    averagepopularity@10 : 62.5608    tailpercentage@10 : 0.001
+Sun 19 Jan 2025 21:24:25 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-07-43.pth
+Sun 19 Jan 2025 21:24:39 INFO  epoch 65 training [time: 14.78s, train loss: 8242.4944]
+Sun 19 Jan 2025 21:24:55 INFO  epoch 66 training [time: 15.07s, train loss: 8216.3840]
+Sun 19 Jan 2025 21:25:10 INFO  epoch 67 training [time: 15.56s, train loss: 8187.3485]
+Sun 19 Jan 2025 21:25:25 INFO  epoch 68 training [time: 15.05s, train loss: 8166.5553]
+Sun 19 Jan 2025 21:25:39 INFO  epoch 69 training [time: 14.15s, train loss: 8157.8642]
+Sun 19 Jan 2025 21:25:41 INFO  epoch 69 evaluating [time: 1.76s, valid_score: 0.103700]
+Sun 19 Jan 2025 21:25:41 INFO  valid result: 
+precision@10 : 0.0613    hit@10 : 0.3833    mrr@10 : 0.1664    ndcg@10 : 0.1037    map@10 : 0.0555    itemcoverage@10 : 0.0689    averagepopularity@10 : 64.886    tailpercentage@10 : 0.0008
+Sun 19 Jan 2025 21:25:56 INFO  epoch 70 training [time: 14.64s, train loss: 8136.6751]
+Sun 19 Jan 2025 21:26:11 INFO  epoch 71 training [time: 15.32s, train loss: 8129.1236]
+Sun 19 Jan 2025 21:26:26 INFO  epoch 72 training [time: 15.03s, train loss: 8110.3606]
+Sun 19 Jan 2025 21:26:41 INFO  epoch 73 training [time: 15.11s, train loss: 8086.2076]
+Sun 19 Jan 2025 21:26:56 INFO  epoch 74 training [time: 14.87s, train loss: 8075.4100]
+Sun 19 Jan 2025 21:26:58 INFO  epoch 74 evaluating [time: 1.87s, valid_score: 0.107000]
+Sun 19 Jan 2025 21:26:58 INFO  valid result: 
+precision@10 : 0.0614    hit@10 : 0.3776    mrr@10 : 0.1711    ndcg@10 : 0.107    map@10 : 0.0586    itemcoverage@10 : 0.0648    averagepopularity@10 : 67.1654    tailpercentage@10 : 0.0006
+Sun 19 Jan 2025 21:26:58 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-07-43.pth
+Sun 19 Jan 2025 21:27:13 INFO  epoch 75 training [time: 15.24s, train loss: 8068.2176]
+Sun 19 Jan 2025 21:27:28 INFO  epoch 76 training [time: 15.22s, train loss: 8058.6554]
+Sun 19 Jan 2025 21:27:43 INFO  epoch 77 training [time: 14.54s, train loss: 8040.4340]
+Sun 19 Jan 2025 21:27:58 INFO  epoch 78 training [time: 15.20s, train loss: 8028.6445]
+Sun 19 Jan 2025 21:28:13 INFO  epoch 79 training [time: 15.14s, train loss: 8023.2124]
+Sun 19 Jan 2025 21:28:15 INFO  epoch 79 evaluating [time: 1.75s, valid_score: 0.104700]
+Sun 19 Jan 2025 21:28:15 INFO  valid result: 
+precision@10 : 0.0625    hit@10 : 0.3871    mrr@10 : 0.1629    ndcg@10 : 0.1047    map@10 : 0.056    itemcoverage@10 : 0.06    averagepopularity@10 : 67.7671    tailpercentage@10 : 0.0002
+Sun 19 Jan 2025 21:28:31 INFO  epoch 80 training [time: 16.03s, train loss: 8011.7735]
+Sun 19 Jan 2025 21:28:46 INFO  epoch 81 training [time: 15.40s, train loss: 8010.9250]
+Sun 19 Jan 2025 21:29:02 INFO  epoch 82 training [time: 15.55s, train loss: 7998.1052]
+Sun 19 Jan 2025 21:29:17 INFO  epoch 83 training [time: 15.39s, train loss: 7989.5847]
+Sun 19 Jan 2025 21:29:33 INFO  epoch 84 training [time: 15.62s, train loss: 7993.6936]
+Sun 19 Jan 2025 21:29:35 INFO  epoch 84 evaluating [time: 1.78s, valid_score: 0.105600]
+Sun 19 Jan 2025 21:29:35 INFO  valid result: 
+precision@10 : 0.0606    hit@10 : 0.3833    mrr@10 : 0.1681    ndcg@10 : 0.1056    map@10 : 0.0572    itemcoverage@10 : 0.0574    averagepopularity@10 : 68.4558    tailpercentage@10 : 0.0006
+Sun 19 Jan 2025 21:29:49 INFO  epoch 85 training [time: 14.61s, train loss: 7970.4836]
+Sun 19 Jan 2025 21:30:04 INFO  epoch 86 training [time: 15.05s, train loss: 7960.6135]
+Sun 19 Jan 2025 21:30:20 INFO  epoch 87 training [time: 15.19s, train loss: 7968.8607]
+Sun 19 Jan 2025 21:30:35 INFO  epoch 88 training [time: 15.55s, train loss: 7949.3276]
+Sun 19 Jan 2025 21:30:50 INFO  epoch 89 training [time: 15.32s, train loss: 7962.2928]
+Sun 19 Jan 2025 21:30:52 INFO  epoch 89 evaluating [time: 1.78s, valid_score: 0.107300]
+Sun 19 Jan 2025 21:30:52 INFO  valid result: 
+precision@10 : 0.0624    hit@10 : 0.3871    mrr@10 : 0.1735    ndcg@10 : 0.1073    map@10 : 0.0585    itemcoverage@10 : 0.0563    averagepopularity@10 : 69.4154    tailpercentage@10 : 0.0004
+Sun 19 Jan 2025 21:30:52 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-07-43.pth
+Sun 19 Jan 2025 21:31:08 INFO  epoch 90 training [time: 15.31s, train loss: 7946.3578]
+Sun 19 Jan 2025 21:31:23 INFO  epoch 91 training [time: 15.01s, train loss: 7933.6034]
+Sun 19 Jan 2025 21:31:39 INFO  epoch 92 training [time: 16.35s, train loss: 7937.8731]
+Sun 19 Jan 2025 21:31:55 INFO  epoch 93 training [time: 15.68s, train loss: 7941.5263]
+Sun 19 Jan 2025 21:32:09 INFO  epoch 94 training [time: 14.82s, train loss: 7928.8154]
+Sun 19 Jan 2025 21:32:12 INFO  epoch 94 evaluating [time: 2.06s, valid_score: 0.107800]
+Sun 19 Jan 2025 21:32:12 INFO  valid result: 
+precision@10 : 0.0621    hit@10 : 0.388    mrr@10 : 0.1727    ndcg@10 : 0.1078    map@10 : 0.0591    itemcoverage@10 : 0.0547    averagepopularity@10 : 70.0465    tailpercentage@10 : 0.0004
+Sun 19 Jan 2025 21:32:12 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-07-43.pth
+Sun 19 Jan 2025 21:32:27 INFO  epoch 95 training [time: 15.37s, train loss: 7927.1916]
+Sun 19 Jan 2025 21:32:43 INFO  epoch 96 training [time: 16.02s, train loss: 7929.6409]
+Sun 19 Jan 2025 21:32:58 INFO  epoch 97 training [time: 15.16s, train loss: 7921.1431]
+Sun 19 Jan 2025 21:33:14 INFO  epoch 98 training [time: 15.64s, train loss: 7911.8659]
+Sun 19 Jan 2025 21:33:29 INFO  epoch 99 training [time: 15.21s, train loss: 7904.5951]
+Sun 19 Jan 2025 21:33:31 INFO  epoch 99 evaluating [time: 1.91s, valid_score: 0.104000]
+Sun 19 Jan 2025 21:33:31 INFO  valid result: 
+precision@10 : 0.0607    hit@10 : 0.3748    mrr@10 : 0.168    ndcg@10 : 0.104    map@10 : 0.0563    itemcoverage@10 : 0.0539    averagepopularity@10 : 71.0993    tailpercentage@10 : 0.0004
+Sun 19 Jan 2025 21:33:31 INFO  Loading model structure and parameters from saved\UltraGCN-Jan-19-2025_21-07-43.pth
+Sun 19 Jan 2025 21:33:33 INFO  best valid : OrderedDict({'precision@10': 0.0621, 'hit@10': 0.388, 'mrr@10': 0.1727, 'ndcg@10': 0.1078, 'map@10': 0.0591, 'itemcoverage@10': 0.0547, 'averagepopularity@10': 70.0465, 'tailpercentage@10': 0.0004})
+Sun 19 Jan 2025 21:33:33 INFO  test result: OrderedDict({'precision@10': 0.128, 'hit@10': 0.5376, 'mrr@10': 0.2833, 'ndcg@10': 0.1647, 'map@10': 0.0984, 'itemcoverage@10': 0.0545, 'averagepopularity@10': 70.0002, 'tailpercentage@10': 0.0005})
+Sun 19 Jan 2025 21:33:34 INFO  [Training]: train_batch_size = [128] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Sun 19 Jan 2025 21:33:34 INFO  [Evaluation]: eval_batch_size = [256] eval_args: [{'split': {'RS': [0.7, 0.1, 0.2]}, 'order': 'RO', 'group_by': 'None', 'mode': {'valid': 'full', 'test': 'full'}}]
+Sun 19 Jan 2025 21:33:59 INFO  epoch 0 training [time: 13.05s, train loss: 345519.5043]
+Sun 19 Jan 2025 21:34:13 INFO  epoch 1 training [time: 13.55s, train loss: 42235.5980]
+Sun 19 Jan 2025 21:34:26 INFO  epoch 2 training [time: 13.56s, train loss: 25700.7487]
+Sun 19 Jan 2025 21:34:40 INFO  epoch 3 training [time: 13.82s, train loss: 22833.6215]
+Sun 19 Jan 2025 21:34:54 INFO  epoch 4 training [time: 13.84s, train loss: 21810.5675]
+Sun 19 Jan 2025 21:34:56 INFO  epoch 4 evaluating [time: 2.15s, valid_score: 0.062800]
+Sun 19 Jan 2025 21:34:56 INFO  valid result: 
+precision@10 : 0.0316    hit@10 : 0.2426    mrr@10 : 0.1098    ndcg@10 : 0.0628    map@10 : 0.0345    itemcoverage@10 : 0.002    averagepopularity@10 : 196.5163    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 21:34:56 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-33-46.pth
+Sun 19 Jan 2025 21:35:09 INFO  epoch 5 training [time: 13.14s, train loss: 21251.4745]
+Sun 19 Jan 2025 21:35:22 INFO  epoch 6 training [time: 13.30s, train loss: 20841.3996]
+Sun 19 Jan 2025 21:35:36 INFO  epoch 7 training [time: 13.19s, train loss: 20485.3263]
+Sun 19 Jan 2025 21:35:49 INFO  epoch 8 training [time: 13.25s, train loss: 20149.5039]
+Sun 19 Jan 2025 21:36:03 INFO  epoch 9 training [time: 13.72s, train loss: 19828.9946]
+Sun 19 Jan 2025 21:36:04 INFO  epoch 9 evaluating [time: 1.81s, valid_score: 0.062700]
+Sun 19 Jan 2025 21:36:04 INFO  valid result: 
+precision@10 : 0.0301    hit@10 : 0.2271    mrr@10 : 0.1085    ndcg@10 : 0.0627    map@10 : 0.0351    itemcoverage@10 : 0.0021    averagepopularity@10 : 193.9003    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 21:36:17 INFO  epoch 10 training [time: 12.65s, train loss: 19518.1635]
+Sun 19 Jan 2025 21:36:30 INFO  epoch 11 training [time: 13.09s, train loss: 19222.9572]
+Sun 19 Jan 2025 21:36:44 INFO  epoch 12 training [time: 13.93s, train loss: 18941.3134]
+Sun 19 Jan 2025 21:36:58 INFO  epoch 13 training [time: 13.94s, train loss: 18676.5327]
+Sun 19 Jan 2025 21:37:12 INFO  epoch 14 training [time: 13.69s, train loss: 18427.2321]
+Sun 19 Jan 2025 21:37:14 INFO  epoch 14 evaluating [time: 1.87s, valid_score: 0.062700]
+Sun 19 Jan 2025 21:37:14 INFO  valid result: 
+precision@10 : 0.0313    hit@10 : 0.2402    mrr@10 : 0.1114    ndcg@10 : 0.0627    map@10 : 0.0341    itemcoverage@10 : 0.002    averagepopularity@10 : 197.2556    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 21:37:27 INFO  epoch 15 training [time: 13.38s, train loss: 18196.9593]
+Sun 19 Jan 2025 21:37:40 INFO  epoch 16 training [time: 13.50s, train loss: 17983.0307]
+Sun 19 Jan 2025 21:37:54 INFO  epoch 17 training [time: 13.39s, train loss: 17784.8871]
+Sun 19 Jan 2025 21:38:07 INFO  epoch 18 training [time: 13.42s, train loss: 17601.3603]
+Sun 19 Jan 2025 21:38:21 INFO  epoch 19 training [time: 13.38s, train loss: 17432.9042]
+Sun 19 Jan 2025 21:38:22 INFO  epoch 19 evaluating [time: 1.82s, valid_score: 0.063100]
+Sun 19 Jan 2025 21:38:22 INFO  valid result: 
+precision@10 : 0.0315    hit@10 : 0.2426    mrr@10 : 0.1113    ndcg@10 : 0.0631    map@10 : 0.0342    itemcoverage@10 : 0.002    averagepopularity@10 : 195.741    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 21:38:23 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-33-46.pth
+Sun 19 Jan 2025 21:38:36 INFO  epoch 20 training [time: 13.54s, train loss: 17278.7188]
+Sun 19 Jan 2025 21:38:50 INFO  epoch 21 training [time: 13.54s, train loss: 17136.2661]
+Sun 19 Jan 2025 21:39:03 INFO  epoch 22 training [time: 13.35s, train loss: 17003.2652]
+Sun 19 Jan 2025 21:39:17 INFO  epoch 23 training [time: 14.09s, train loss: 16876.7122]
+Sun 19 Jan 2025 21:39:30 INFO  epoch 24 training [time: 13.32s, train loss: 16752.1310]
+Sun 19 Jan 2025 21:39:32 INFO  epoch 24 evaluating [time: 1.84s, valid_score: 0.063100]
+Sun 19 Jan 2025 21:39:32 INFO  valid result: 
+precision@10 : 0.0305    hit@10 : 0.2304    mrr@10 : 0.1099    ndcg@10 : 0.0631    map@10 : 0.0352    itemcoverage@10 : 0.002    averagepopularity@10 : 192.7111    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 21:39:32 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-33-46.pth
+Sun 19 Jan 2025 21:39:45 INFO  epoch 25 training [time: 13.13s, train loss: 16626.8819]
+Sun 19 Jan 2025 21:39:59 INFO  epoch 26 training [time: 13.37s, train loss: 16498.2889]
+Sun 19 Jan 2025 21:40:12 INFO  epoch 27 training [time: 13.32s, train loss: 16355.2209]
+Sun 19 Jan 2025 21:40:26 INFO  epoch 28 training [time: 13.60s, train loss: 16207.4835]
+Sun 19 Jan 2025 21:40:39 INFO  epoch 29 training [time: 13.31s, train loss: 16052.5942]
+Sun 19 Jan 2025 21:40:41 INFO  epoch 29 evaluating [time: 1.81s, valid_score: 0.065500]
+Sun 19 Jan 2025 21:40:41 INFO  valid result: 
+precision@10 : 0.0333    hit@10 : 0.2435    mrr@10 : 0.1132    ndcg@10 : 0.0655    map@10 : 0.036    itemcoverage@10 : 0.0031    averagepopularity@10 : 193.1609    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 21:40:41 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-33-46.pth
+Sun 19 Jan 2025 21:40:54 INFO  epoch 30 training [time: 13.45s, train loss: 15882.4700]
+Sun 19 Jan 2025 21:41:08 INFO  epoch 31 training [time: 13.27s, train loss: 15703.6829]
+Sun 19 Jan 2025 21:41:21 INFO  epoch 32 training [time: 13.72s, train loss: 15509.1541]
+Sun 19 Jan 2025 21:41:35 INFO  epoch 33 training [time: 14.00s, train loss: 15297.3643]
+Sun 19 Jan 2025 21:41:49 INFO  epoch 34 training [time: 13.46s, train loss: 15069.1693]
+Sun 19 Jan 2025 21:41:51 INFO  epoch 34 evaluating [time: 1.89s, valid_score: 0.073800]
+Sun 19 Jan 2025 21:41:51 INFO  valid result: 
+precision@10 : 0.0382    hit@10 : 0.2721    mrr@10 : 0.1232    ndcg@10 : 0.0738    map@10 : 0.0403    itemcoverage@10 : 0.0072    averagepopularity@10 : 185.1181    tailpercentage@10 : 0.001
+Sun 19 Jan 2025 21:41:51 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-33-46.pth
+Sun 19 Jan 2025 21:42:04 INFO  epoch 35 training [time: 13.34s, train loss: 14818.5873]
+Sun 19 Jan 2025 21:42:17 INFO  epoch 36 training [time: 13.49s, train loss: 14537.7604]
+Sun 19 Jan 2025 21:42:30 INFO  epoch 37 training [time: 13.02s, train loss: 14230.5844]
+Sun 19 Jan 2025 21:42:44 INFO  epoch 38 training [time: 13.52s, train loss: 13899.3425]
+Sun 19 Jan 2025 21:42:58 INFO  epoch 39 training [time: 13.62s, train loss: 13542.2935]
+Sun 19 Jan 2025 21:42:59 INFO  epoch 39 evaluating [time: 1.84s, valid_score: 0.089000]
+Sun 19 Jan 2025 21:42:59 INFO  valid result: 
+precision@10 : 0.0494    hit@10 : 0.3374    mrr@10 : 0.1445    ndcg@10 : 0.089    map@10 : 0.0475    itemcoverage@10 : 0.0233    averagepopularity@10 : 172.1168    tailpercentage@10 : 0.0023
+Sun 19 Jan 2025 21:42:59 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-33-46.pth
+Sun 19 Jan 2025 21:43:13 INFO  epoch 40 training [time: 13.22s, train loss: 13167.7014]
+Sun 19 Jan 2025 21:43:26 INFO  epoch 41 training [time: 13.37s, train loss: 12777.5783]
+Sun 19 Jan 2025 21:43:40 INFO  epoch 42 training [time: 13.91s, train loss: 12383.0119]
+Sun 19 Jan 2025 21:43:53 INFO  epoch 43 training [time: 13.27s, train loss: 11984.8197]
+Sun 19 Jan 2025 21:44:07 INFO  epoch 44 training [time: 13.50s, train loss: 11594.0316]
+Sun 19 Jan 2025 21:44:09 INFO  epoch 44 evaluating [time: 1.84s, valid_score: 0.109200]
+Sun 19 Jan 2025 21:44:09 INFO  valid result: 
+precision@10 : 0.0618    hit@10 : 0.4028    mrr@10 : 0.1645    ndcg@10 : 0.1092    map@10 : 0.059    itemcoverage@10 : 0.0456    averagepopularity@10 : 151.0039    tailpercentage@10 : 0.0016
+Sun 19 Jan 2025 21:44:09 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-33-46.pth
+Sun 19 Jan 2025 21:44:22 INFO  epoch 45 training [time: 13.01s, train loss: 11207.4284]
+Sun 19 Jan 2025 21:44:35 INFO  epoch 46 training [time: 13.15s, train loss: 10849.9449]
+Sun 19 Jan 2025 21:44:49 INFO  epoch 47 training [time: 13.96s, train loss: 10506.5513]
+Sun 19 Jan 2025 21:45:02 INFO  epoch 48 training [time: 13.17s, train loss: 10187.1782]
+Sun 19 Jan 2025 21:45:15 INFO  epoch 49 training [time: 13.38s, train loss: 9903.1360]
+Sun 19 Jan 2025 21:45:17 INFO  epoch 49 evaluating [time: 1.78s, valid_score: 0.118900]
+Sun 19 Jan 2025 21:45:17 INFO  valid result: 
+precision@10 : 0.0667    hit@10 : 0.4322    mrr@10 : 0.1774    ndcg@10 : 0.1189    map@10 : 0.0642    itemcoverage@10 : 0.0692    averagepopularity@10 : 130.4898    tailpercentage@10 : 0.0023
+Sun 19 Jan 2025 21:45:17 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-33-46.pth
+Sun 19 Jan 2025 21:45:31 INFO  epoch 50 training [time: 13.60s, train loss: 9628.3371]
+Sun 19 Jan 2025 21:45:44 INFO  epoch 51 training [time: 12.98s, train loss: 9387.5434]
+Sun 19 Jan 2025 21:45:58 INFO  epoch 52 training [time: 13.94s, train loss: 9166.6516]
+Sun 19 Jan 2025 21:46:11 INFO  epoch 53 training [time: 13.32s, train loss: 8970.5336]
+Sun 19 Jan 2025 21:46:24 INFO  epoch 54 training [time: 13.26s, train loss: 8776.6570]
+Sun 19 Jan 2025 21:46:26 INFO  epoch 54 evaluating [time: 1.80s, valid_score: 0.120700]
+Sun 19 Jan 2025 21:46:26 INFO  valid result: 
+precision@10 : 0.0681    hit@10 : 0.4273    mrr@10 : 0.1744    ndcg@10 : 0.1207    map@10 : 0.0658    itemcoverage@10 : 0.0823    averagepopularity@10 : 119.007    tailpercentage@10 : 0.0027
+Sun 19 Jan 2025 21:46:26 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-33-46.pth
+Sun 19 Jan 2025 21:46:39 INFO  epoch 55 training [time: 12.96s, train loss: 8621.8246]
+Sun 19 Jan 2025 21:46:52 INFO  epoch 56 training [time: 13.50s, train loss: 8479.0822]
+Sun 19 Jan 2025 21:47:06 INFO  epoch 57 training [time: 13.43s, train loss: 8343.5196]
+Sun 19 Jan 2025 21:47:19 INFO  epoch 58 training [time: 13.46s, train loss: 8227.0609]
+Sun 19 Jan 2025 21:47:32 INFO  epoch 59 training [time: 13.00s, train loss: 8131.9836]
+Sun 19 Jan 2025 21:47:34 INFO  epoch 59 evaluating [time: 1.78s, valid_score: 0.125300]
+Sun 19 Jan 2025 21:47:34 INFO  valid result: 
+precision@10 : 0.0692    hit@10 : 0.4306    mrr@10 : 0.1818    ndcg@10 : 0.1253    map@10 : 0.0693    itemcoverage@10 : 0.0825    averagepopularity@10 : 111.1565    tailpercentage@10 : 0.0016
+Sun 19 Jan 2025 21:47:34 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-33-46.pth
+Sun 19 Jan 2025 21:47:47 INFO  epoch 60 training [time: 13.14s, train loss: 8030.2600]
+Sun 19 Jan 2025 21:48:01 INFO  epoch 61 training [time: 13.71s, train loss: 7945.0960]
+Sun 19 Jan 2025 21:48:15 INFO  epoch 62 training [time: 13.55s, train loss: 7876.9088]
+Sun 19 Jan 2025 21:48:28 INFO  epoch 63 training [time: 13.58s, train loss: 7809.1982]
+Sun 19 Jan 2025 21:48:40 INFO  epoch 64 training [time: 11.93s, train loss: 7749.8538]
+Sun 19 Jan 2025 21:48:42 INFO  epoch 64 evaluating [time: 1.84s, valid_score: 0.128000]
+Sun 19 Jan 2025 21:48:42 INFO  valid result: 
+precision@10 : 0.0697    hit@10 : 0.4428    mrr@10 : 0.1836    ndcg@10 : 0.128    map@10 : 0.0712    itemcoverage@10 : 0.077    averagepopularity@10 : 113.1149    tailpercentage@10 : 0.0016
+Sun 19 Jan 2025 21:48:42 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-33-46.pth
+Sun 19 Jan 2025 21:48:55 INFO  epoch 65 training [time: 13.53s, train loss: 7687.9754]
+Sun 19 Jan 2025 21:49:09 INFO  epoch 66 training [time: 13.79s, train loss: 7645.8323]
+Sun 19 Jan 2025 21:49:23 INFO  epoch 67 training [time: 13.39s, train loss: 7597.4201]
+Sun 19 Jan 2025 21:49:36 INFO  epoch 68 training [time: 13.58s, train loss: 7557.3953]
+Sun 19 Jan 2025 21:49:50 INFO  epoch 69 training [time: 13.62s, train loss: 7523.7836]
+Sun 19 Jan 2025 21:49:52 INFO  epoch 69 evaluating [time: 1.70s, valid_score: 0.126500]
+Sun 19 Jan 2025 21:49:52 INFO  valid result: 
+precision@10 : 0.0681    hit@10 : 0.4338    mrr@10 : 0.1815    ndcg@10 : 0.1265    map@10 : 0.0707    itemcoverage@10 : 0.07    averagepopularity@10 : 112.8733    tailpercentage@10 : 0.0013
+Sun 19 Jan 2025 21:50:02 INFO  epoch 70 training [time: 10.10s, train loss: 7492.3287]
+Sun 19 Jan 2025 21:50:12 INFO  epoch 71 training [time: 10.68s, train loss: 7471.4848]
+Sun 19 Jan 2025 21:50:22 INFO  epoch 72 training [time: 9.95s, train loss: 7448.2239]
+Sun 19 Jan 2025 21:50:32 INFO  epoch 73 training [time: 10.03s, train loss: 7418.7890]
+Sun 19 Jan 2025 21:50:43 INFO  epoch 74 training [time: 10.81s, train loss: 7406.8777]
+Sun 19 Jan 2025 21:50:45 INFO  epoch 74 evaluating [time: 1.79s, valid_score: 0.127300]
+Sun 19 Jan 2025 21:50:45 INFO  valid result: 
+precision@10 : 0.0685    hit@10 : 0.4387    mrr@10 : 0.1844    ndcg@10 : 0.1273    map@10 : 0.0713    itemcoverage@10 : 0.0631    averagepopularity@10 : 116.2525    tailpercentage@10 : 0.0014
+Sun 19 Jan 2025 21:50:56 INFO  epoch 75 training [time: 10.68s, train loss: 7384.8391]
+Sun 19 Jan 2025 21:51:07 INFO  epoch 76 training [time: 11.10s, train loss: 7348.3082]
+Sun 19 Jan 2025 21:51:18 INFO  epoch 77 training [time: 11.59s, train loss: 7339.3823]
+Sun 19 Jan 2025 21:51:30 INFO  epoch 78 training [time: 11.25s, train loss: 7330.4487]
+Sun 19 Jan 2025 21:51:41 INFO  epoch 79 training [time: 11.35s, train loss: 7308.6129]
+Sun 19 Jan 2025 21:51:43 INFO  epoch 79 evaluating [time: 1.75s, valid_score: 0.124500]
+Sun 19 Jan 2025 21:51:43 INFO  valid result: 
+precision@10 : 0.0679    hit@10 : 0.4216    mrr@10 : 0.1783    ndcg@10 : 0.1245    map@10 : 0.0691    itemcoverage@10 : 0.058    averagepopularity@10 : 119.0101    tailpercentage@10 : 0.0011
+Sun 19 Jan 2025 21:51:54 INFO  epoch 80 training [time: 11.11s, train loss: 7298.1373]
+Sun 19 Jan 2025 21:52:05 INFO  epoch 81 training [time: 11.23s, train loss: 7274.6669]
+Sun 19 Jan 2025 21:52:16 INFO  epoch 82 training [time: 11.29s, train loss: 7275.5275]
+Sun 19 Jan 2025 21:52:28 INFO  epoch 83 training [time: 11.88s, train loss: 7268.0805]
+Sun 19 Jan 2025 21:52:40 INFO  epoch 84 training [time: 11.56s, train loss: 7257.3598]
+Sun 19 Jan 2025 21:52:42 INFO  epoch 84 evaluating [time: 1.83s, valid_score: 0.129600]
+Sun 19 Jan 2025 21:52:42 INFO  valid result: 
+precision@10 : 0.0697    hit@10 : 0.4428    mrr@10 : 0.1847    ndcg@10 : 0.1296    map@10 : 0.0729    itemcoverage@10 : 0.0547    averagepopularity@10 : 119.4534    tailpercentage@10 : 0.001
+Sun 19 Jan 2025 21:52:42 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-33-46.pth
+Sun 19 Jan 2025 21:52:52 INFO  epoch 85 training [time: 10.70s, train loss: 7246.9934]
+Sun 19 Jan 2025 21:53:03 INFO  epoch 86 training [time: 11.21s, train loss: 7226.7142]
+Sun 19 Jan 2025 21:53:15 INFO  epoch 87 training [time: 11.31s, train loss: 7234.7584]
+Sun 19 Jan 2025 21:53:27 INFO  epoch 88 training [time: 12.34s, train loss: 7225.6322]
+Sun 19 Jan 2025 21:53:38 INFO  epoch 89 training [time: 11.21s, train loss: 7208.9203]
+Sun 19 Jan 2025 21:53:40 INFO  epoch 89 evaluating [time: 1.81s, valid_score: 0.125900]
+Sun 19 Jan 2025 21:53:40 INFO  valid result: 
+precision@10 : 0.0685    hit@10 : 0.4338    mrr@10 : 0.1787    ndcg@10 : 0.1259    map@10 : 0.0702    itemcoverage@10 : 0.0521    averagepopularity@10 : 120.853    tailpercentage@10 : 0.0008
+Sun 19 Jan 2025 21:53:52 INFO  epoch 90 training [time: 11.58s, train loss: 7203.7507]
+Sun 19 Jan 2025 21:54:03 INFO  epoch 91 training [time: 11.33s, train loss: 7202.4167]
+Sun 19 Jan 2025 21:54:15 INFO  epoch 92 training [time: 11.60s, train loss: 7197.7753]
+Sun 19 Jan 2025 21:54:26 INFO  epoch 93 training [time: 11.31s, train loss: 7183.5676]
+Sun 19 Jan 2025 21:54:37 INFO  epoch 94 training [time: 11.43s, train loss: 7179.9024]
+Sun 19 Jan 2025 21:54:39 INFO  epoch 94 evaluating [time: 1.88s, valid_score: 0.125800]
+Sun 19 Jan 2025 21:54:39 INFO  valid result: 
+precision@10 : 0.0692    hit@10 : 0.4363    mrr@10 : 0.1739    ndcg@10 : 0.1258    map@10 : 0.0701    itemcoverage@10 : 0.0495    averagepopularity@10 : 123.0931    tailpercentage@10 : 0.0008
+Sun 19 Jan 2025 21:54:50 INFO  epoch 95 training [time: 11.08s, train loss: 7173.2343]
+Sun 19 Jan 2025 21:55:02 INFO  epoch 96 training [time: 11.36s, train loss: 7172.3694]
+Sun 19 Jan 2025 21:55:14 INFO  epoch 97 training [time: 12.16s, train loss: 7175.2626]
+Sun 19 Jan 2025 21:55:25 INFO  epoch 98 training [time: 11.19s, train loss: 7141.4556]
+Sun 19 Jan 2025 21:55:37 INFO  epoch 99 training [time: 11.61s, train loss: 7156.9341]
+Sun 19 Jan 2025 21:55:39 INFO  epoch 99 evaluating [time: 2.05s, valid_score: 0.127700]
+Sun 19 Jan 2025 21:55:39 INFO  valid result: 
+precision@10 : 0.0697    hit@10 : 0.4355    mrr@10 : 0.1776    ndcg@10 : 0.1277    map@10 : 0.0716    itemcoverage@10 : 0.0484    averagepopularity@10 : 123.1229    tailpercentage@10 : 0.0008
+Sun 19 Jan 2025 21:55:39 INFO  Loading model structure and parameters from saved\UltraGCN-Jan-19-2025_21-33-46.pth
+Sun 19 Jan 2025 21:55:41 INFO  best valid : OrderedDict({'precision@10': 0.0697, 'hit@10': 0.4428, 'mrr@10': 0.1847, 'ndcg@10': 0.1296, 'map@10': 0.0729, 'itemcoverage@10': 0.0547, 'averagepopularity@10': 119.4534, 'tailpercentage@10': 0.001})
+Sun 19 Jan 2025 21:55:41 INFO  test result: OrderedDict({'precision@10': 0.148, 'hit@10': 0.6002, 'mrr@10': 0.3381, 'ndcg@10': 0.2002, 'map@10': 0.1236, 'itemcoverage@10': 0.0556, 'averagepopularity@10': 117.7951, 'tailpercentage@10': 0.0009})
+Sun 19 Jan 2025 21:55:42 INFO  [Training]: train_batch_size = [128] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Sun 19 Jan 2025 21:55:42 INFO  [Evaluation]: eval_batch_size = [256] eval_args: [{'split': {'RS': [0.7, 0.1, 0.2]}, 'order': 'RO', 'group_by': 'None', 'mode': {'valid': 'full', 'test': 'full'}}]
+Sun 19 Jan 2025 21:56:09 INFO  epoch 0 training [time: 12.11s, train loss: 304679.4993]
+Sun 19 Jan 2025 21:56:20 INFO  epoch 1 training [time: 11.93s, train loss: 39633.5436]
+Sun 19 Jan 2025 21:56:32 INFO  epoch 2 training [time: 11.86s, train loss: 25557.6561]
+Sun 19 Jan 2025 21:56:44 INFO  epoch 3 training [time: 12.12s, train loss: 23070.6540]
+Sun 19 Jan 2025 21:56:57 INFO  epoch 4 training [time: 12.49s, train loss: 22142.1518]
+Sun 19 Jan 2025 21:56:59 INFO  epoch 4 evaluating [time: 1.92s, valid_score: 0.047700]
+Sun 19 Jan 2025 21:56:59 INFO  valid result: 
+precision@10 : 0.026    hit@10 : 0.2078    mrr@10 : 0.0793    ndcg@10 : 0.0477    map@10 : 0.0236    itemcoverage@10 : 0.0015    averagepopularity@10 : 147.9089    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 21:56:59 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-55-56.pth
+Sun 19 Jan 2025 21:57:10 INFO  epoch 5 training [time: 11.03s, train loss: 21598.0471]
+Sun 19 Jan 2025 21:57:22 INFO  epoch 6 training [time: 12.53s, train loss: 21175.4270]
+Sun 19 Jan 2025 21:57:34 INFO  epoch 7 training [time: 11.94s, train loss: 20796.9374]
+Sun 19 Jan 2025 21:57:47 INFO  epoch 8 training [time: 12.67s, train loss: 20437.7972]
+Sun 19 Jan 2025 21:58:00 INFO  epoch 9 training [time: 12.48s, train loss: 20097.8040]
+Sun 19 Jan 2025 21:58:01 INFO  epoch 9 evaluating [time: 1.62s, valid_score: 0.049700]
+Sun 19 Jan 2025 21:58:01 INFO  valid result: 
+precision@10 : 0.027    hit@10 : 0.2181    mrr@10 : 0.0813    ndcg@10 : 0.0497    map@10 : 0.0246    itemcoverage@10 : 0.0014    averagepopularity@10 : 148.7177    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 21:58:01 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-55-56.pth
+Sun 19 Jan 2025 21:58:13 INFO  epoch 10 training [time: 12.25s, train loss: 19771.3193]
+Sun 19 Jan 2025 21:58:25 INFO  epoch 11 training [time: 11.45s, train loss: 19463.2919]
+Sun 19 Jan 2025 21:58:37 INFO  epoch 12 training [time: 12.38s, train loss: 19173.8149]
+Sun 19 Jan 2025 21:58:49 INFO  epoch 13 training [time: 11.80s, train loss: 18906.1391]
+Sun 19 Jan 2025 21:59:02 INFO  epoch 14 training [time: 12.60s, train loss: 18657.7917]
+Sun 19 Jan 2025 21:59:03 INFO  epoch 14 evaluating [time: 1.64s, valid_score: 0.050900]
+Sun 19 Jan 2025 21:59:03 INFO  valid result: 
+precision@10 : 0.0279    hit@10 : 0.2218    mrr@10 : 0.0839    ndcg@10 : 0.0509    map@10 : 0.0253    itemcoverage@10 : 0.0014    averagepopularity@10 : 146.8993    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 21:59:03 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-55-56.pth
+Sun 19 Jan 2025 21:59:15 INFO  epoch 15 training [time: 12.00s, train loss: 18426.7355]
+Sun 19 Jan 2025 21:59:27 INFO  epoch 16 training [time: 11.91s, train loss: 18214.5429]
+Sun 19 Jan 2025 21:59:39 INFO  epoch 17 training [time: 11.58s, train loss: 18018.9772]
+Sun 19 Jan 2025 21:59:51 INFO  epoch 18 training [time: 11.95s, train loss: 17840.3549]
+Sun 19 Jan 2025 22:00:03 INFO  epoch 19 training [time: 12.22s, train loss: 17674.7401]
+Sun 19 Jan 2025 22:00:05 INFO  epoch 19 evaluating [time: 1.68s, valid_score: 0.048800]
+Sun 19 Jan 2025 22:00:05 INFO  valid result: 
+precision@10 : 0.0272    hit@10 : 0.2162    mrr@10 : 0.0797    ndcg@10 : 0.0488    map@10 : 0.0241    itemcoverage@10 : 0.0014    averagepopularity@10 : 147.4122    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:00:16 INFO  epoch 20 training [time: 11.74s, train loss: 17520.9515]
+Sun 19 Jan 2025 22:00:28 INFO  epoch 21 training [time: 11.78s, train loss: 17376.0057]
+Sun 19 Jan 2025 22:00:40 INFO  epoch 22 training [time: 11.72s, train loss: 17239.1776]
+Sun 19 Jan 2025 22:00:52 INFO  epoch 23 training [time: 11.95s, train loss: 17103.3824]
+Sun 19 Jan 2025 22:01:04 INFO  epoch 24 training [time: 12.26s, train loss: 16966.4580]
+Sun 19 Jan 2025 22:01:06 INFO  epoch 24 evaluating [time: 1.93s, valid_score: 0.049500]
+Sun 19 Jan 2025 22:01:06 INFO  valid result: 
+precision@10 : 0.0272    hit@10 : 0.2227    mrr@10 : 0.0821    ndcg@10 : 0.0495    map@10 : 0.0242    itemcoverage@10 : 0.0014    averagepopularity@10 : 146.0343    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:01:18 INFO  epoch 25 training [time: 12.08s, train loss: 16824.6619]
+Sun 19 Jan 2025 22:01:30 INFO  epoch 26 training [time: 11.87s, train loss: 16672.8073]
+Sun 19 Jan 2025 22:01:42 INFO  epoch 27 training [time: 11.79s, train loss: 16507.2400]
+Sun 19 Jan 2025 22:01:54 INFO  epoch 28 training [time: 12.24s, train loss: 16321.1421]
+Sun 19 Jan 2025 22:02:06 INFO  epoch 29 training [time: 12.00s, train loss: 16111.6284]
+Sun 19 Jan 2025 22:02:08 INFO  epoch 29 evaluating [time: 1.59s, valid_score: 0.053900]
+Sun 19 Jan 2025 22:02:08 INFO  valid result: 
+precision@10 : 0.0289    hit@10 : 0.2199    mrr@10 : 0.0876    ndcg@10 : 0.0539    map@10 : 0.0277    itemcoverage@10 : 0.0037    averagepopularity@10 : 145.4883    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:02:08 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-55-56.pth
+Sun 19 Jan 2025 22:02:20 INFO  epoch 30 training [time: 12.30s, train loss: 15878.6765]
+Sun 19 Jan 2025 22:02:32 INFO  epoch 31 training [time: 12.26s, train loss: 15623.8488]
+Sun 19 Jan 2025 22:02:44 INFO  epoch 32 training [time: 11.33s, train loss: 15344.7656]
+Sun 19 Jan 2025 22:02:55 INFO  epoch 33 training [time: 11.32s, train loss: 15043.3539]
+Sun 19 Jan 2025 22:03:07 INFO  epoch 34 training [time: 12.20s, train loss: 14722.8356]
+Sun 19 Jan 2025 22:03:09 INFO  epoch 34 evaluating [time: 1.69s, valid_score: 0.063800]
+Sun 19 Jan 2025 22:03:09 INFO  valid result: 
+precision@10 : 0.036    hit@10 : 0.2582    mrr@10 : 0.1072    ndcg@10 : 0.0638    map@10 : 0.0324    itemcoverage@10 : 0.0149    averagepopularity@10 : 137.6187    tailpercentage@10 : 0.0017
+Sun 19 Jan 2025 22:03:09 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-55-56.pth
+Sun 19 Jan 2025 22:03:21 INFO  epoch 35 training [time: 12.63s, train loss: 14381.5684]
+Sun 19 Jan 2025 22:03:33 INFO  epoch 36 training [time: 11.61s, train loss: 14021.4788]
+Sun 19 Jan 2025 22:03:45 INFO  epoch 37 training [time: 12.08s, train loss: 13651.3931]
+Sun 19 Jan 2025 22:03:56 INFO  epoch 38 training [time: 11.05s, train loss: 13269.5378]
+Sun 19 Jan 2025 22:04:08 INFO  epoch 39 training [time: 11.49s, train loss: 12872.0957]
+Sun 19 Jan 2025 22:04:09 INFO  epoch 39 evaluating [time: 1.71s, valid_score: 0.081800]
+Sun 19 Jan 2025 22:04:09 INFO  valid result: 
+precision@10 : 0.0456    hit@10 : 0.3141    mrr@10 : 0.1399    ndcg@10 : 0.0818    map@10 : 0.0427    itemcoverage@10 : 0.0347    averagepopularity@10 : 120.2287    tailpercentage@10 : 0.0015
+Sun 19 Jan 2025 22:04:09 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-55-56.pth
+Sun 19 Jan 2025 22:04:22 INFO  epoch 40 training [time: 12.18s, train loss: 12483.5076]
+Sun 19 Jan 2025 22:04:34 INFO  epoch 41 training [time: 12.21s, train loss: 12095.9149]
+Sun 19 Jan 2025 22:04:45 INFO  epoch 42 training [time: 11.48s, train loss: 11710.7237]
+Sun 19 Jan 2025 22:04:57 INFO  epoch 43 training [time: 11.58s, train loss: 11338.2172]
+Sun 19 Jan 2025 22:05:08 INFO  epoch 44 training [time: 11.13s, train loss: 10977.0986]
+Sun 19 Jan 2025 22:05:10 INFO  epoch 44 evaluating [time: 1.65s, valid_score: 0.092900]
+Sun 19 Jan 2025 22:05:10 INFO  valid result: 
+precision@10 : 0.0531    hit@10 : 0.3653    mrr@10 : 0.1507    ndcg@10 : 0.0929    map@10 : 0.0477    itemcoverage@10 : 0.0601    averagepopularity@10 : 100.7293    tailpercentage@10 : 0.0016
+Sun 19 Jan 2025 22:05:10 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-55-56.pth
+Sun 19 Jan 2025 22:05:21 INFO  epoch 45 training [time: 11.56s, train loss: 10640.4650]
+Sun 19 Jan 2025 22:05:34 INFO  epoch 46 training [time: 12.39s, train loss: 10325.0113]
+Sun 19 Jan 2025 22:05:45 INFO  epoch 47 training [time: 11.91s, train loss: 10030.0278]
+Sun 19 Jan 2025 22:05:57 INFO  epoch 48 training [time: 11.55s, train loss: 9759.9348]
+Sun 19 Jan 2025 22:06:08 INFO  epoch 49 training [time: 11.20s, train loss: 9515.2143]
+Sun 19 Jan 2025 22:06:10 INFO  epoch 49 evaluating [time: 1.64s, valid_score: 0.101900]
+Sun 19 Jan 2025 22:06:10 INFO  valid result: 
+precision@10 : 0.0566    hit@10 : 0.384    mrr@10 : 0.1649    ndcg@10 : 0.1019    map@10 : 0.0538    itemcoverage@10 : 0.0807    averagepopularity@10 : 85.7796    tailpercentage@10 : 0.0023
+Sun 19 Jan 2025 22:06:10 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-55-56.pth
+Sun 19 Jan 2025 22:06:21 INFO  epoch 50 training [time: 11.32s, train loss: 9291.9510]
+Sun 19 Jan 2025 22:06:33 INFO  epoch 51 training [time: 12.23s, train loss: 9096.5025]
+Sun 19 Jan 2025 22:06:45 INFO  epoch 52 training [time: 11.62s, train loss: 8908.2995]
+Sun 19 Jan 2025 22:06:57 INFO  epoch 53 training [time: 11.76s, train loss: 8749.0534]
+Sun 19 Jan 2025 22:07:09 INFO  epoch 54 training [time: 11.70s, train loss: 8599.5168]
+Sun 19 Jan 2025 22:07:10 INFO  epoch 54 evaluating [time: 1.63s, valid_score: 0.105300]
+Sun 19 Jan 2025 22:07:10 INFO  valid result: 
+precision@10 : 0.0582    hit@10 : 0.397    mrr@10 : 0.1676    ndcg@10 : 0.1053    map@10 : 0.0559    itemcoverage@10 : 0.086    averagepopularity@10 : 78.8798    tailpercentage@10 : 0.0018
+Sun 19 Jan 2025 22:07:10 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-55-56.pth
+Sun 19 Jan 2025 22:07:21 INFO  epoch 55 training [time: 11.29s, train loss: 8470.7933]
+Sun 19 Jan 2025 22:07:33 INFO  epoch 56 training [time: 11.85s, train loss: 8358.1179]
+Sun 19 Jan 2025 22:07:45 INFO  epoch 57 training [time: 12.15s, train loss: 8256.4238]
+Sun 19 Jan 2025 22:07:57 INFO  epoch 58 training [time: 11.50s, train loss: 8162.7492]
+Sun 19 Jan 2025 22:08:08 INFO  epoch 59 training [time: 11.49s, train loss: 8088.9281]
+Sun 19 Jan 2025 22:08:10 INFO  epoch 59 evaluating [time: 1.64s, valid_score: 0.106600]
+Sun 19 Jan 2025 22:08:10 INFO  valid result: 
+precision@10 : 0.0572    hit@10 : 0.3886    mrr@10 : 0.1694    ndcg@10 : 0.1066    map@10 : 0.0581    itemcoverage@10 : 0.0852    averagepopularity@10 : 75.92    tailpercentage@10 : 0.0015
+Sun 19 Jan 2025 22:08:10 INFO  Saving current: saved\UltraGCN-Jan-19-2025_21-55-56.pth
+Sun 19 Jan 2025 22:08:22 INFO  epoch 60 training [time: 11.61s, train loss: 8016.3415]
+Sun 19 Jan 2025 22:08:33 INFO  epoch 61 training [time: 11.74s, train loss: 7953.0372]
+Sun 19 Jan 2025 22:08:46 INFO  epoch 62 training [time: 12.36s, train loss: 7890.9070]
+Sun 19 Jan 2025 22:08:58 INFO  epoch 63 training [time: 11.67s, train loss: 7834.7983]
+Sun 19 Jan 2025 22:09:09 INFO  epoch 64 training [time: 11.72s, train loss: 7796.1320]
+Sun 19 Jan 2025 22:09:11 INFO  epoch 64 evaluating [time: 1.61s, valid_score: 0.102900]
+Sun 19 Jan 2025 22:09:11 INFO  valid result: 
+precision@10 : 0.0565    hit@10 : 0.383    mrr@10 : 0.162    ndcg@10 : 0.1029    map@10 : 0.0552    itemcoverage@10 : 0.0782    averagepopularity@10 : 75.965    tailpercentage@10 : 0.0011
+Sun 19 Jan 2025 22:09:23 INFO  epoch 65 training [time: 11.95s, train loss: 7756.0936]
+Sun 19 Jan 2025 22:09:35 INFO  epoch 66 training [time: 11.83s, train loss: 7717.2517]
+Sun 19 Jan 2025 22:09:47 INFO  epoch 67 training [time: 12.43s, train loss: 7703.0700]
+Sun 19 Jan 2025 22:09:59 INFO  epoch 68 training [time: 11.77s, train loss: 7654.7863]
+Sun 19 Jan 2025 22:10:11 INFO  epoch 69 training [time: 11.74s, train loss: 7637.9218]
+Sun 19 Jan 2025 22:10:12 INFO  epoch 69 evaluating [time: 1.60s, valid_score: 0.101100]
+Sun 19 Jan 2025 22:10:12 INFO  valid result: 
+precision@10 : 0.0559    hit@10 : 0.3858    mrr@10 : 0.1584    ndcg@10 : 0.1011    map@10 : 0.0534    itemcoverage@10 : 0.0719    averagepopularity@10 : 77.9298    tailpercentage@10 : 0.0007
+Sun 19 Jan 2025 22:10:24 INFO  epoch 70 training [time: 11.75s, train loss: 7611.9423]
+Sun 19 Jan 2025 22:10:36 INFO  epoch 71 training [time: 11.61s, train loss: 7579.2284]
+Sun 19 Jan 2025 22:10:48 INFO  epoch 72 training [time: 12.01s, train loss: 7578.0939]
+Sun 19 Jan 2025 22:11:00 INFO  epoch 73 training [time: 12.19s, train loss: 7547.3410]
+Sun 19 Jan 2025 22:11:12 INFO  epoch 74 training [time: 11.84s, train loss: 7534.6231]
+Sun 19 Jan 2025 22:11:13 INFO  epoch 74 evaluating [time: 1.62s, valid_score: 0.099800]
+Sun 19 Jan 2025 22:11:13 INFO  valid result: 
+precision@10 : 0.0553    hit@10 : 0.3765    mrr@10 : 0.1552    ndcg@10 : 0.0998    map@10 : 0.0531    itemcoverage@10 : 0.0669    averagepopularity@10 : 78.5142    tailpercentage@10 : 0.0013
+Sun 19 Jan 2025 22:11:25 INFO  epoch 75 training [time: 11.43s, train loss: 7514.0008]
+Sun 19 Jan 2025 22:11:36 INFO  epoch 76 training [time: 11.74s, train loss: 7502.5868]
+Sun 19 Jan 2025 22:11:48 INFO  epoch 77 training [time: 11.91s, train loss: 7486.1297]
+Sun 19 Jan 2025 22:12:00 INFO  epoch 78 training [time: 11.31s, train loss: 7481.0186]
+Sun 19 Jan 2025 22:12:12 INFO  epoch 79 training [time: 12.33s, train loss: 7463.0771]
+Sun 19 Jan 2025 22:12:14 INFO  epoch 79 evaluating [time: 1.68s, valid_score: 0.097800]
+Sun 19 Jan 2025 22:12:14 INFO  valid result: 
+precision@10 : 0.0551    hit@10 : 0.3681    mrr@10 : 0.1538    ndcg@10 : 0.0978    map@10 : 0.0512    itemcoverage@10 : 0.0628    averagepopularity@10 : 80.317    tailpercentage@10 : 0.001
+Sun 19 Jan 2025 22:12:25 INFO  epoch 80 training [time: 11.66s, train loss: 7457.1711]
+Sun 19 Jan 2025 22:12:37 INFO  epoch 81 training [time: 11.61s, train loss: 7448.0555]
+Sun 19 Jan 2025 22:12:49 INFO  epoch 82 training [time: 11.79s, train loss: 7428.5095]
+Sun 19 Jan 2025 22:13:00 INFO  epoch 83 training [time: 11.02s, train loss: 7422.3165]
+Sun 19 Jan 2025 22:13:12 INFO  epoch 84 training [time: 12.56s, train loss: 7426.6406]
+Sun 19 Jan 2025 22:13:14 INFO  epoch 84 evaluating [time: 1.62s, valid_score: 0.098600]
+Sun 19 Jan 2025 22:13:14 INFO  valid result: 
+precision@10 : 0.0551    hit@10 : 0.3625    mrr@10 : 0.151    ndcg@10 : 0.0986    map@10 : 0.0529    itemcoverage@10 : 0.0581    averagepopularity@10 : 81.4808    tailpercentage@10 : 0.0013
+Sun 19 Jan 2025 22:13:25 INFO  epoch 85 training [time: 11.51s, train loss: 7415.9715]
+Sun 19 Jan 2025 22:13:37 INFO  epoch 86 training [time: 11.84s, train loss: 7397.0518]
+Sun 19 Jan 2025 22:13:49 INFO  epoch 87 training [time: 12.27s, train loss: 7398.4447]
+Sun 19 Jan 2025 22:14:01 INFO  epoch 88 training [time: 11.28s, train loss: 7398.4206]
+Sun 19 Jan 2025 22:14:13 INFO  epoch 89 training [time: 11.95s, train loss: 7392.4383]
+Sun 19 Jan 2025 22:14:15 INFO  epoch 89 evaluating [time: 1.97s, valid_score: 0.097600]
+Sun 19 Jan 2025 22:14:15 INFO  valid result: 
+precision@10 : 0.0541    hit@10 : 0.3635    mrr@10 : 0.1507    ndcg@10 : 0.0976    map@10 : 0.0516    itemcoverage@10 : 0.055    averagepopularity@10 : 82.9259    tailpercentage@10 : 0.001
+Sun 19 Jan 2025 22:14:26 INFO  epoch 90 training [time: 11.73s, train loss: 7387.2135]
+Sun 19 Jan 2025 22:14:38 INFO  epoch 91 training [time: 11.86s, train loss: 7373.2295]
+Sun 19 Jan 2025 22:14:50 INFO  epoch 92 training [time: 11.61s, train loss: 7366.9316]
+Sun 19 Jan 2025 22:15:01 INFO  epoch 93 training [time: 11.16s, train loss: 7367.6297]
+Sun 19 Jan 2025 22:15:12 INFO  epoch 94 training [time: 11.39s, train loss: 7365.1735]
+Sun 19 Jan 2025 22:15:14 INFO  epoch 94 evaluating [time: 1.63s, valid_score: 0.097200]
+Sun 19 Jan 2025 22:15:14 INFO  valid result: 
+precision@10 : 0.0541    hit@10 : 0.3625    mrr@10 : 0.1509    ndcg@10 : 0.0972    map@10 : 0.0518    itemcoverage@10 : 0.0526    averagepopularity@10 : 85.7161    tailpercentage@10 : 0.001
+Sun 19 Jan 2025 22:15:27 INFO  epoch 95 training [time: 12.64s, train loss: 7355.4826]
+Sun 19 Jan 2025 22:15:38 INFO  epoch 96 training [time: 11.67s, train loss: 7349.8324]
+Sun 19 Jan 2025 22:15:50 INFO  epoch 97 training [time: 11.46s, train loss: 7339.4951]
+Sun 19 Jan 2025 22:16:01 INFO  epoch 98 training [time: 11.20s, train loss: 7334.7236]
+Sun 19 Jan 2025 22:16:13 INFO  epoch 99 training [time: 11.96s, train loss: 7323.1045]
+Sun 19 Jan 2025 22:16:15 INFO  epoch 99 evaluating [time: 1.63s, valid_score: 0.098800]
+Sun 19 Jan 2025 22:16:15 INFO  valid result: 
+precision@10 : 0.0541    hit@10 : 0.3653    mrr@10 : 0.1541    ndcg@10 : 0.0988    map@10 : 0.0529    itemcoverage@10 : 0.0526    averagepopularity@10 : 85.2176    tailpercentage@10 : 0.001
+Sun 19 Jan 2025 22:16:15 INFO  Loading model structure and parameters from saved\UltraGCN-Jan-19-2025_21-55-56.pth
+Sun 19 Jan 2025 22:16:16 INFO  best valid : OrderedDict({'precision@10': 0.0572, 'hit@10': 0.3886, 'mrr@10': 0.1694, 'ndcg@10': 0.1066, 'map@10': 0.0581, 'itemcoverage@10': 0.0852, 'averagepopularity@10': 75.92, 'tailpercentage@10': 0.0015})
+Sun 19 Jan 2025 22:16:16 INFO  test result: OrderedDict({'precision@10': 0.127, 'hit@10': 0.5633, 'mrr@10': 0.302, 'ndcg@10': 0.1677, 'map@10': 0.0971, 'itemcoverage@10': 0.0858, 'averagepopularity@10': 75.4073, 'tailpercentage@10': 0.0013})
+Sun 19 Jan 2025 22:16:17 INFO  [Training]: train_batch_size = [128] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Sun 19 Jan 2025 22:16:17 INFO  [Evaluation]: eval_batch_size = [256] eval_args: [{'split': {'RS': [0.7, 0.1, 0.2]}, 'order': 'RO', 'group_by': 'None', 'mode': {'valid': 'full', 'test': 'full'}}]
+Sun 19 Jan 2025 22:16:41 INFO  epoch 0 training [time: 11.45s, train loss: 330210.4049]
+Sun 19 Jan 2025 22:16:53 INFO  epoch 1 training [time: 11.75s, train loss: 41969.1271]
+Sun 19 Jan 2025 22:17:04 INFO  epoch 2 training [time: 11.93s, train loss: 26849.6845]
+Sun 19 Jan 2025 22:17:16 INFO  epoch 3 training [time: 11.15s, train loss: 24236.5165]
+Sun 19 Jan 2025 22:17:27 INFO  epoch 4 training [time: 11.67s, train loss: 23286.2111]
+Sun 19 Jan 2025 22:17:30 INFO  epoch 4 evaluating [time: 2.34s, valid_score: 0.039800]
+Sun 19 Jan 2025 22:17:30 INFO  valid result: 
+precision@10 : 0.0245    hit@10 : 0.1911    mrr@10 : 0.0618    ndcg@10 : 0.0398    map@10 : 0.0183    itemcoverage@10 : 0.0018    averagepopularity@10 : 148.2198    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:17:30 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-16-29.pth
+Sun 19 Jan 2025 22:17:41 INFO  epoch 5 training [time: 11.81s, train loss: 22750.9344]
+Sun 19 Jan 2025 22:17:52 INFO  epoch 6 training [time: 11.02s, train loss: 22347.0034]
+Sun 19 Jan 2025 22:18:04 INFO  epoch 7 training [time: 11.38s, train loss: 21994.0181]
+Sun 19 Jan 2025 22:18:15 INFO  epoch 8 training [time: 11.40s, train loss: 21661.2658]
+Sun 19 Jan 2025 22:18:27 INFO  epoch 9 training [time: 11.69s, train loss: 21341.9412]
+Sun 19 Jan 2025 22:18:29 INFO  epoch 9 evaluating [time: 1.74s, valid_score: 0.040100]
+Sun 19 Jan 2025 22:18:29 INFO  valid result: 
+precision@10 : 0.0243    hit@10 : 0.1894    mrr@10 : 0.0639    ndcg@10 : 0.0401    map@10 : 0.0183    itemcoverage@10 : 0.0018    averagepopularity@10 : 146.8019    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:18:29 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-16-29.pth
+Sun 19 Jan 2025 22:18:41 INFO  epoch 10 training [time: 12.51s, train loss: 21037.2049]
+Sun 19 Jan 2025 22:18:53 INFO  epoch 11 training [time: 11.70s, train loss: 20746.5439]
+Sun 19 Jan 2025 22:19:05 INFO  epoch 12 training [time: 12.29s, train loss: 20474.9146]
+Sun 19 Jan 2025 22:19:17 INFO  epoch 13 training [time: 11.86s, train loss: 20218.6408]
+Sun 19 Jan 2025 22:19:29 INFO  epoch 14 training [time: 11.75s, train loss: 19977.1511]
+Sun 19 Jan 2025 22:19:31 INFO  epoch 14 evaluating [time: 1.70s, valid_score: 0.039600]
+Sun 19 Jan 2025 22:19:31 INFO  valid result: 
+precision@10 : 0.0245    hit@10 : 0.1886    mrr@10 : 0.0603    ndcg@10 : 0.0396    map@10 : 0.0181    itemcoverage@10 : 0.0017    averagepopularity@10 : 145.4331    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:19:43 INFO  epoch 15 training [time: 12.15s, train loss: 19756.5455]
+Sun 19 Jan 2025 22:19:54 INFO  epoch 16 training [time: 11.39s, train loss: 19552.0609]
+Sun 19 Jan 2025 22:20:05 INFO  epoch 17 training [time: 11.38s, train loss: 19364.8709]
+Sun 19 Jan 2025 22:20:17 INFO  epoch 18 training [time: 11.39s, train loss: 19189.1139]
+Sun 19 Jan 2025 22:20:29 INFO  epoch 19 training [time: 11.76s, train loss: 19030.9873]
+Sun 19 Jan 2025 22:20:30 INFO  epoch 19 evaluating [time: 1.72s, valid_score: 0.039500]
+Sun 19 Jan 2025 22:20:30 INFO  valid result: 
+precision@10 : 0.0235    hit@10 : 0.1844    mrr@10 : 0.0609    ndcg@10 : 0.0395    map@10 : 0.0185    itemcoverage@10 : 0.0018    averagepopularity@10 : 144.2683    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:20:42 INFO  epoch 20 training [time: 11.55s, train loss: 18882.5911]
+Sun 19 Jan 2025 22:20:55 INFO  epoch 21 training [time: 12.67s, train loss: 18744.1960]
+Sun 19 Jan 2025 22:21:06 INFO  epoch 22 training [time: 11.55s, train loss: 18614.7568]
+Sun 19 Jan 2025 22:21:17 INFO  epoch 23 training [time: 10.93s, train loss: 18490.0862]
+Sun 19 Jan 2025 22:21:29 INFO  epoch 24 training [time: 11.62s, train loss: 18367.3242]
+Sun 19 Jan 2025 22:21:30 INFO  epoch 24 evaluating [time: 1.74s, valid_score: 0.039600]
+Sun 19 Jan 2025 22:21:30 INFO  valid result: 
+precision@10 : 0.0242    hit@10 : 0.1928    mrr@10 : 0.0597    ndcg@10 : 0.0396    map@10 : 0.018    itemcoverage@10 : 0.0017    averagepopularity@10 : 142.8336    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:21:42 INFO  epoch 25 training [time: 11.90s, train loss: 18245.8276]
+Sun 19 Jan 2025 22:21:54 INFO  epoch 26 training [time: 12.21s, train loss: 18117.8283]
+Sun 19 Jan 2025 22:22:06 INFO  epoch 27 training [time: 11.90s, train loss: 17976.2115]
+Sun 19 Jan 2025 22:22:18 INFO  epoch 28 training [time: 11.35s, train loss: 17815.2196]
+Sun 19 Jan 2025 22:22:30 INFO  epoch 29 training [time: 11.81s, train loss: 17631.5872]
+Sun 19 Jan 2025 22:22:31 INFO  epoch 29 evaluating [time: 1.75s, valid_score: 0.042900]
+Sun 19 Jan 2025 22:22:31 INFO  valid result: 
+precision@10 : 0.0256    hit@10 : 0.1945    mrr@10 : 0.0691    ndcg@10 : 0.0429    map@10 : 0.0202    itemcoverage@10 : 0.0031    averagepopularity@10 : 144.651    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:22:31 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-16-29.pth
+Sun 19 Jan 2025 22:22:42 INFO  epoch 30 training [time: 10.74s, train loss: 17420.3532]
+Sun 19 Jan 2025 22:22:52 INFO  epoch 31 training [time: 10.34s, train loss: 17181.2635]
+Sun 19 Jan 2025 22:23:03 INFO  epoch 32 training [time: 10.69s, train loss: 16908.4686]
+Sun 19 Jan 2025 22:23:14 INFO  epoch 33 training [time: 10.59s, train loss: 16604.8456]
+Sun 19 Jan 2025 22:23:24 INFO  epoch 34 training [time: 10.45s, train loss: 16271.1685]
+Sun 19 Jan 2025 22:23:26 INFO  epoch 34 evaluating [time: 1.69s, valid_score: 0.059600]
+Sun 19 Jan 2025 22:23:26 INFO  valid result: 
+precision@10 : 0.0355    hit@10 : 0.233    mrr@10 : 0.0924    ndcg@10 : 0.0596    map@10 : 0.0312    itemcoverage@10 : 0.0135    averagepopularity@10 : 135.2848    tailpercentage@10 : 0.0013
+Sun 19 Jan 2025 22:23:26 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-16-29.pth
+Sun 19 Jan 2025 22:23:37 INFO  epoch 35 training [time: 10.73s, train loss: 15906.9215]
+Sun 19 Jan 2025 22:23:47 INFO  epoch 36 training [time: 10.20s, train loss: 15520.9315]
+Sun 19 Jan 2025 22:23:57 INFO  epoch 37 training [time: 10.42s, train loss: 15118.0819]
+Sun 19 Jan 2025 22:24:08 INFO  epoch 38 training [time: 10.94s, train loss: 14693.3732]
+Sun 19 Jan 2025 22:24:19 INFO  epoch 39 training [time: 10.38s, train loss: 14268.5989]
+Sun 19 Jan 2025 22:24:20 INFO  epoch 39 evaluating [time: 1.68s, valid_score: 0.075600]
+Sun 19 Jan 2025 22:24:20 INFO  valid result: 
+precision@10 : 0.046    hit@10 : 0.2867    mrr@10 : 0.1199    ndcg@10 : 0.0756    map@10 : 0.0393    itemcoverage@10 : 0.0342    averagepopularity@10 : 121.7693    tailpercentage@10 : 0.0011
+Sun 19 Jan 2025 22:24:20 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-16-29.pth
+Sun 19 Jan 2025 22:24:31 INFO  epoch 40 training [time: 10.47s, train loss: 13840.3126]
+Sun 19 Jan 2025 22:24:41 INFO  epoch 41 training [time: 10.46s, train loss: 13413.6464]
+Sun 19 Jan 2025 22:24:52 INFO  epoch 42 training [time: 10.62s, train loss: 12986.1297]
+Sun 19 Jan 2025 22:25:02 INFO  epoch 43 training [time: 10.69s, train loss: 12563.6817]
+Sun 19 Jan 2025 22:25:14 INFO  epoch 44 training [time: 11.19s, train loss: 12150.2129]
+Sun 19 Jan 2025 22:25:15 INFO  epoch 44 evaluating [time: 1.67s, valid_score: 0.091600]
+Sun 19 Jan 2025 22:25:15 INFO  valid result: 
+precision@10 : 0.0558    hit@10 : 0.3412    mrr@10 : 0.1372    ndcg@10 : 0.0916    map@10 : 0.0483    itemcoverage@10 : 0.0657    averagepopularity@10 : 101.9775    tailpercentage@10 : 0.0026
+Sun 19 Jan 2025 22:25:15 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-16-29.pth
+Sun 19 Jan 2025 22:25:26 INFO  epoch 45 training [time: 10.73s, train loss: 11748.9007]
+Sun 19 Jan 2025 22:25:37 INFO  epoch 46 training [time: 10.94s, train loss: 11366.1421]
+Sun 19 Jan 2025 22:25:47 INFO  epoch 47 training [time: 10.35s, train loss: 11006.7045]
+Sun 19 Jan 2025 22:25:58 INFO  epoch 48 training [time: 10.40s, train loss: 10675.6623]
+Sun 19 Jan 2025 22:26:08 INFO  epoch 49 training [time: 10.60s, train loss: 10360.1727]
+Sun 19 Jan 2025 22:26:10 INFO  epoch 49 evaluating [time: 1.70s, valid_score: 0.101200]
+Sun 19 Jan 2025 22:26:10 INFO  valid result: 
+precision@10 : 0.0613    hit@10 : 0.3822    mrr@10 : 0.1492    ndcg@10 : 0.1012    map@10 : 0.0528    itemcoverage@10 : 0.0928    averagepopularity@10 : 87.0576    tailpercentage@10 : 0.0044
+Sun 19 Jan 2025 22:26:10 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-16-29.pth
+Sun 19 Jan 2025 22:26:21 INFO  epoch 50 training [time: 10.85s, train loss: 10065.6971]
+Sun 19 Jan 2025 22:26:31 INFO  epoch 51 training [time: 10.50s, train loss: 9810.9703]
+Sun 19 Jan 2025 22:26:42 INFO  epoch 52 training [time: 10.60s, train loss: 9573.5372]
+Sun 19 Jan 2025 22:26:53 INFO  epoch 53 training [time: 10.60s, train loss: 9373.2273]
+Sun 19 Jan 2025 22:27:03 INFO  epoch 54 training [time: 10.37s, train loss: 9177.2000]
+Sun 19 Jan 2025 22:27:05 INFO  epoch 54 evaluating [time: 1.68s, valid_score: 0.110100]
+Sun 19 Jan 2025 22:27:05 INFO  valid result: 
+precision@10 : 0.0635    hit@10 : 0.3973    mrr@10 : 0.1627    ndcg@10 : 0.1101    map@10 : 0.0599    itemcoverage@10 : 0.1067    averagepopularity@10 : 78.2461    tailpercentage@10 : 0.004
+Sun 19 Jan 2025 22:27:05 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-16-29.pth
+Sun 19 Jan 2025 22:27:15 INFO  epoch 55 training [time: 10.77s, train loss: 9017.8536]
+Sun 19 Jan 2025 22:27:26 INFO  epoch 56 training [time: 10.95s, train loss: 8876.5263]
+Sun 19 Jan 2025 22:27:37 INFO  epoch 57 training [time: 10.35s, train loss: 8747.9196]
+Sun 19 Jan 2025 22:27:47 INFO  epoch 58 training [time: 10.35s, train loss: 8633.0572]
+Sun 19 Jan 2025 22:27:57 INFO  epoch 59 training [time: 10.37s, train loss: 8530.8059]
+Sun 19 Jan 2025 22:27:59 INFO  epoch 59 evaluating [time: 1.69s, valid_score: 0.114200]
+Sun 19 Jan 2025 22:27:59 INFO  valid result: 
+precision@10 : 0.065    hit@10 : 0.4099    mrr@10 : 0.1711    ndcg@10 : 0.1142    map@10 : 0.0621    itemcoverage@10 : 0.1011    averagepopularity@10 : 76.1131    tailpercentage@10 : 0.0021
+Sun 19 Jan 2025 22:27:59 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-16-29.pth
+Sun 19 Jan 2025 22:28:10 INFO  epoch 60 training [time: 10.47s, train loss: 8434.4549]
+Sun 19 Jan 2025 22:28:20 INFO  epoch 61 training [time: 10.14s, train loss: 8359.8443]
+Sun 19 Jan 2025 22:28:31 INFO  epoch 62 training [time: 11.18s, train loss: 8301.5511]
+Sun 19 Jan 2025 22:28:42 INFO  epoch 63 training [time: 10.72s, train loss: 8233.9764]
+Sun 19 Jan 2025 22:28:52 INFO  epoch 64 training [time: 10.41s, train loss: 8190.9561]
+Sun 19 Jan 2025 22:28:54 INFO  epoch 64 evaluating [time: 1.71s, valid_score: 0.115500]
+Sun 19 Jan 2025 22:28:54 INFO  valid result: 
+precision@10 : 0.0655    hit@10 : 0.3956    mrr@10 : 0.1734    ndcg@10 : 0.1155    map@10 : 0.0641    itemcoverage@10 : 0.0945    averagepopularity@10 : 77.3102    tailpercentage@10 : 0.0018
+Sun 19 Jan 2025 22:28:54 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-16-29.pth
+Sun 19 Jan 2025 22:29:04 INFO  epoch 65 training [time: 10.16s, train loss: 8135.0459]
+Sun 19 Jan 2025 22:29:15 INFO  epoch 66 training [time: 10.55s, train loss: 8104.8455]
+Sun 19 Jan 2025 22:29:25 INFO  epoch 67 training [time: 10.67s, train loss: 8052.7074]
+Sun 19 Jan 2025 22:29:36 INFO  epoch 68 training [time: 10.73s, train loss: 8027.9004]
+Sun 19 Jan 2025 22:29:46 INFO  epoch 69 training [time: 10.33s, train loss: 7986.1112]
+Sun 19 Jan 2025 22:29:48 INFO  epoch 69 evaluating [time: 1.68s, valid_score: 0.113700]
+Sun 19 Jan 2025 22:29:48 INFO  valid result: 
+precision@10 : 0.0641    hit@10 : 0.3982    mrr@10 : 0.1709    ndcg@10 : 0.1137    map@10 : 0.0627    itemcoverage@10 : 0.0844    averagepopularity@10 : 77.7324    tailpercentage@10 : 0.0013
+Sun 19 Jan 2025 22:29:58 INFO  epoch 70 training [time: 10.37s, train loss: 7962.0424]
+Sun 19 Jan 2025 22:30:09 INFO  epoch 71 training [time: 10.51s, train loss: 7929.7588]
+Sun 19 Jan 2025 22:30:19 INFO  epoch 72 training [time: 10.27s, train loss: 7909.8170]
+Sun 19 Jan 2025 22:30:30 INFO  epoch 73 training [time: 10.56s, train loss: 7892.5916]
+Sun 19 Jan 2025 22:30:40 INFO  epoch 74 training [time: 10.79s, train loss: 7880.5817]
+Sun 19 Jan 2025 22:30:42 INFO  epoch 74 evaluating [time: 1.70s, valid_score: 0.115100]
+Sun 19 Jan 2025 22:30:42 INFO  valid result: 
+precision@10 : 0.0645    hit@10 : 0.4015    mrr@10 : 0.1741    ndcg@10 : 0.1151    map@10 : 0.0635    itemcoverage@10 : 0.0778    averagepopularity@10 : 80.2373    tailpercentage@10 : 0.0007
+Sun 19 Jan 2025 22:30:53 INFO  epoch 75 training [time: 10.68s, train loss: 7850.7694]
+Sun 19 Jan 2025 22:31:03 INFO  epoch 76 training [time: 10.34s, train loss: 7848.0512]
+Sun 19 Jan 2025 22:31:14 INFO  epoch 77 training [time: 10.50s, train loss: 7821.9273]
+Sun 19 Jan 2025 22:31:24 INFO  epoch 78 training [time: 10.63s, train loss: 7814.6691]
+Sun 19 Jan 2025 22:31:34 INFO  epoch 79 training [time: 10.19s, train loss: 7791.2372]
+Sun 19 Jan 2025 22:31:36 INFO  epoch 79 evaluating [time: 1.68s, valid_score: 0.114800]
+Sun 19 Jan 2025 22:31:36 INFO  valid result: 
+precision@10 : 0.0642    hit@10 : 0.399    mrr@10 : 0.1717    ndcg@10 : 0.1148    map@10 : 0.0633    itemcoverage@10 : 0.0726    averagepopularity@10 : 80.9401    tailpercentage@10 : 0.0013
+Sun 19 Jan 2025 22:31:47 INFO  epoch 80 training [time: 11.05s, train loss: 7779.6577]
+Sun 19 Jan 2025 22:31:58 INFO  epoch 81 training [time: 10.85s, train loss: 7758.7842]
+Sun 19 Jan 2025 22:32:09 INFO  epoch 82 training [time: 10.54s, train loss: 7757.7148]
+Sun 19 Jan 2025 22:32:19 INFO  epoch 83 training [time: 10.06s, train loss: 7747.2752]
+Sun 19 Jan 2025 22:32:29 INFO  epoch 84 training [time: 10.48s, train loss: 7744.8097]
+Sun 19 Jan 2025 22:32:31 INFO  epoch 84 evaluating [time: 1.69s, valid_score: 0.111700]
+Sun 19 Jan 2025 22:32:31 INFO  valid result: 
+precision@10 : 0.0629    hit@10 : 0.3864    mrr@10 : 0.1689    ndcg@10 : 0.1117    map@10 : 0.0621    itemcoverage@10 : 0.0668    averagepopularity@10 : 83.0962    tailpercentage@10 : 0.001
+Sun 19 Jan 2025 22:32:42 INFO  epoch 85 training [time: 10.78s, train loss: 7732.5582]
+Sun 19 Jan 2025 22:32:52 INFO  epoch 86 training [time: 10.53s, train loss: 7718.1875]
+Sun 19 Jan 2025 22:33:03 INFO  epoch 87 training [time: 10.36s, train loss: 7701.6065]
+Sun 19 Jan 2025 22:33:13 INFO  epoch 88 training [time: 10.48s, train loss: 7722.3789]
+Sun 19 Jan 2025 22:33:23 INFO  epoch 89 training [time: 10.49s, train loss: 7693.9814]
+Sun 19 Jan 2025 22:33:25 INFO  epoch 89 evaluating [time: 1.68s, valid_score: 0.112100]
+Sun 19 Jan 2025 22:33:25 INFO  valid result: 
+precision@10 : 0.0624    hit@10 : 0.3931    mrr@10 : 0.1712    ndcg@10 : 0.1121    map@10 : 0.0621    itemcoverage@10 : 0.0633    averagepopularity@10 : 84.2148    tailpercentage@10 : 0.0008
+Sun 19 Jan 2025 22:33:35 INFO  epoch 90 training [time: 10.30s, train loss: 7686.2130]
+Sun 19 Jan 2025 22:33:46 INFO  epoch 91 training [time: 10.45s, train loss: 7675.2830]
+Sun 19 Jan 2025 22:33:57 INFO  epoch 92 training [time: 11.02s, train loss: 7681.2654]
+Sun 19 Jan 2025 22:34:07 INFO  epoch 93 training [time: 10.33s, train loss: 7662.0742]
+Sun 19 Jan 2025 22:34:18 INFO  epoch 94 training [time: 10.44s, train loss: 7669.9518]
+Sun 19 Jan 2025 22:34:19 INFO  epoch 94 evaluating [time: 1.68s, valid_score: 0.112300]
+Sun 19 Jan 2025 22:34:19 INFO  valid result: 
+precision@10 : 0.0633    hit@10 : 0.3965    mrr@10 : 0.169    ndcg@10 : 0.1123    map@10 : 0.0619    itemcoverage@10 : 0.0634    averagepopularity@10 : 85.365    tailpercentage@10 : 0.0007
+Sun 19 Jan 2025 22:34:30 INFO  epoch 95 training [time: 10.29s, train loss: 7659.5441]
+Sun 19 Jan 2025 22:34:40 INFO  epoch 96 training [time: 10.29s, train loss: 7647.3434]
+Sun 19 Jan 2025 22:34:50 INFO  epoch 97 training [time: 10.18s, train loss: 7653.6113]
+Sun 19 Jan 2025 22:35:01 INFO  epoch 98 training [time: 10.76s, train loss: 7640.8035]
+Sun 19 Jan 2025 22:35:12 INFO  epoch 99 training [time: 10.59s, train loss: 7631.5181]
+Sun 19 Jan 2025 22:35:13 INFO  epoch 99 evaluating [time: 1.68s, valid_score: 0.112300]
+Sun 19 Jan 2025 22:35:13 INFO  valid result: 
+precision@10 : 0.0635    hit@10 : 0.3889    mrr@10 : 0.1641    ndcg@10 : 0.1123    map@10 : 0.062    itemcoverage@10 : 0.0595    averagepopularity@10 : 86.3731    tailpercentage@10 : 0.0009
+Sun 19 Jan 2025 22:35:13 INFO  Loading model structure and parameters from saved\UltraGCN-Jan-19-2025_22-16-29.pth
+Sun 19 Jan 2025 22:35:15 INFO  best valid : OrderedDict({'precision@10': 0.0655, 'hit@10': 0.3956, 'mrr@10': 0.1734, 'ndcg@10': 0.1155, 'map@10': 0.0641, 'itemcoverage@10': 0.0945, 'averagepopularity@10': 77.3102, 'tailpercentage@10': 0.0018})
+Sun 19 Jan 2025 22:35:15 INFO  test result: OrderedDict({'precision@10': 0.1382, 'hit@10': 0.5498, 'mrr@10': 0.2867, 'ndcg@10': 0.1755, 'map@10': 0.107, 'itemcoverage@10': 0.0956, 'averagepopularity@10': 76.8641, 'tailpercentage@10': 0.0018})
+Sun 19 Jan 2025 22:35:16 INFO  [Training]: train_batch_size = [128] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Sun 19 Jan 2025 22:35:16 INFO  [Evaluation]: eval_batch_size = [256] eval_args: [{'split': {'RS': [0.7, 0.1, 0.2]}, 'order': 'RO', 'group_by': 'None', 'mode': {'valid': 'full', 'test': 'full'}}]
+Sun 19 Jan 2025 22:35:43 INFO  epoch 0 training [time: 11.09s, train loss: 292660.5469]
+Sun 19 Jan 2025 22:35:53 INFO  epoch 1 training [time: 10.72s, train loss: 38360.1190]
+Sun 19 Jan 2025 22:36:05 INFO  epoch 2 training [time: 11.43s, train loss: 25878.6495]
+Sun 19 Jan 2025 22:36:16 INFO  epoch 3 training [time: 11.45s, train loss: 23623.4394]
+Sun 19 Jan 2025 22:36:27 INFO  epoch 4 training [time: 11.02s, train loss: 22731.3150]
+Sun 19 Jan 2025 22:36:29 INFO  epoch 4 evaluating [time: 1.87s, valid_score: 0.043500]
+Sun 19 Jan 2025 22:36:29 INFO  valid result: 
+precision@10 : 0.026    hit@10 : 0.1841    mrr@10 : 0.0709    ndcg@10 : 0.0435    map@10 : 0.0226    itemcoverage@10 : 0.0018    averagepopularity@10 : 136.9143    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:36:29 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-35-32.pth
+Sun 19 Jan 2025 22:36:40 INFO  epoch 5 training [time: 10.97s, train loss: 22167.5197]
+Sun 19 Jan 2025 22:36:51 INFO  epoch 6 training [time: 10.88s, train loss: 21706.2687]
+Sun 19 Jan 2025 22:37:02 INFO  epoch 7 training [time: 11.03s, train loss: 21283.9226]
+Sun 19 Jan 2025 22:37:14 INFO  epoch 8 training [time: 11.59s, train loss: 20883.4776]
+Sun 19 Jan 2025 22:37:25 INFO  epoch 9 training [time: 11.16s, train loss: 20505.1105]
+Sun 19 Jan 2025 22:37:26 INFO  epoch 9 evaluating [time: 1.58s, valid_score: 0.043700]
+Sun 19 Jan 2025 22:37:26 INFO  valid result: 
+precision@10 : 0.0256    hit@10 : 0.1822    mrr@10 : 0.0727    ndcg@10 : 0.0437    map@10 : 0.0226    itemcoverage@10 : 0.0017    averagepopularity@10 : 137.5468    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:37:27 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-35-32.pth
+Sun 19 Jan 2025 22:37:37 INFO  epoch 10 training [time: 10.93s, train loss: 20148.0048]
+Sun 19 Jan 2025 22:37:49 INFO  epoch 11 training [time: 11.14s, train loss: 19813.6413]
+Sun 19 Jan 2025 22:38:00 INFO  epoch 12 training [time: 11.05s, train loss: 19505.1323]
+Sun 19 Jan 2025 22:38:11 INFO  epoch 13 training [time: 11.08s, train loss: 19217.0769]
+Sun 19 Jan 2025 22:38:22 INFO  epoch 14 training [time: 11.27s, train loss: 18957.1283]
+Sun 19 Jan 2025 22:38:24 INFO  epoch 14 evaluating [time: 1.56s, valid_score: 0.043200]
+Sun 19 Jan 2025 22:38:24 INFO  valid result: 
+precision@10 : 0.0262    hit@10 : 0.186    mrr@10 : 0.0713    ndcg@10 : 0.0432    map@10 : 0.0219    itemcoverage@10 : 0.0018    averagepopularity@10 : 137.4694    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:38:35 INFO  epoch 15 training [time: 11.20s, train loss: 18716.4985]
+Sun 19 Jan 2025 22:38:46 INFO  epoch 16 training [time: 10.98s, train loss: 18497.9378]
+Sun 19 Jan 2025 22:38:57 INFO  epoch 17 training [time: 11.12s, train loss: 18298.0181]
+Sun 19 Jan 2025 22:39:08 INFO  epoch 18 training [time: 10.93s, train loss: 18118.6300]
+Sun 19 Jan 2025 22:39:19 INFO  epoch 19 training [time: 10.91s, train loss: 17954.0625]
+Sun 19 Jan 2025 22:39:20 INFO  epoch 19 evaluating [time: 1.57s, valid_score: 0.044300]
+Sun 19 Jan 2025 22:39:20 INFO  valid result: 
+precision@10 : 0.0267    hit@10 : 0.1879    mrr@10 : 0.0709    ndcg@10 : 0.0443    map@10 : 0.0232    itemcoverage@10 : 0.0017    averagepopularity@10 : 137.4568    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:39:20 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-35-32.pth
+Sun 19 Jan 2025 22:39:32 INFO  epoch 20 training [time: 11.60s, train loss: 17804.3246]
+Sun 19 Jan 2025 22:39:43 INFO  epoch 21 training [time: 10.91s, train loss: 17664.2313]
+Sun 19 Jan 2025 22:39:54 INFO  epoch 22 training [time: 10.74s, train loss: 17531.6900]
+Sun 19 Jan 2025 22:40:04 INFO  epoch 23 training [time: 10.95s, train loss: 17398.3772]
+Sun 19 Jan 2025 22:40:16 INFO  epoch 24 training [time: 11.06s, train loss: 17269.1926]
+Sun 19 Jan 2025 22:40:17 INFO  epoch 24 evaluating [time: 1.58s, valid_score: 0.043100]
+Sun 19 Jan 2025 22:40:17 INFO  valid result: 
+precision@10 : 0.0265    hit@10 : 0.1908    mrr@10 : 0.0696    ndcg@10 : 0.0431    map@10 : 0.0218    itemcoverage@10 : 0.0017    averagepopularity@10 : 137.4613    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:40:28 INFO  epoch 25 training [time: 11.33s, train loss: 17140.3109]
+Sun 19 Jan 2025 22:40:39 INFO  epoch 26 training [time: 11.02s, train loss: 17006.6948]
+Sun 19 Jan 2025 22:40:50 INFO  epoch 27 training [time: 11.01s, train loss: 16863.0546]
+Sun 19 Jan 2025 22:41:02 INFO  epoch 28 training [time: 11.21s, train loss: 16699.2667]
+Sun 19 Jan 2025 22:41:13 INFO  epoch 29 training [time: 10.95s, train loss: 16505.2912]
+Sun 19 Jan 2025 22:41:14 INFO  epoch 29 evaluating [time: 1.57s, valid_score: 0.046100]
+Sun 19 Jan 2025 22:41:14 INFO  valid result: 
+precision@10 : 0.0282    hit@10 : 0.1985    mrr@10 : 0.0752    ndcg@10 : 0.0461    map@10 : 0.0232    itemcoverage@10 : 0.0026    averagepopularity@10 : 137.5794    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:41:14 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-35-32.pth
+Sun 19 Jan 2025 22:41:25 INFO  epoch 30 training [time: 10.87s, train loss: 16284.5248]
+Sun 19 Jan 2025 22:41:37 INFO  epoch 31 training [time: 11.69s, train loss: 16024.5463]
+Sun 19 Jan 2025 22:41:48 INFO  epoch 32 training [time: 11.08s, train loss: 15728.7509]
+Sun 19 Jan 2025 22:41:59 INFO  epoch 33 training [time: 10.87s, train loss: 15396.1067]
+Sun 19 Jan 2025 22:42:10 INFO  epoch 34 training [time: 10.83s, train loss: 15021.7246]
+Sun 19 Jan 2025 22:42:11 INFO  epoch 34 evaluating [time: 1.66s, valid_score: 0.057000]
+Sun 19 Jan 2025 22:42:11 INFO  valid result: 
+precision@10 : 0.0345    hit@10 : 0.2311    mrr@10 : 0.095    ndcg@10 : 0.057    map@10 : 0.0296    itemcoverage@10 : 0.0137    averagepopularity@10 : 128.8815    tailpercentage@10 : 0.0003
+Sun 19 Jan 2025 22:42:11 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-35-32.pth
+Sun 19 Jan 2025 22:42:22 INFO  epoch 35 training [time: 10.80s, train loss: 14619.2590]
+Sun 19 Jan 2025 22:42:33 INFO  epoch 36 training [time: 11.24s, train loss: 14192.0427]
+Sun 19 Jan 2025 22:42:45 INFO  epoch 37 training [time: 11.60s, train loss: 13753.1683]
+Sun 19 Jan 2025 22:42:56 INFO  epoch 38 training [time: 10.86s, train loss: 13309.3132]
+Sun 19 Jan 2025 22:43:07 INFO  epoch 39 training [time: 10.96s, train loss: 12868.4828]
+Sun 19 Jan 2025 22:43:08 INFO  epoch 39 evaluating [time: 1.57s, valid_score: 0.078600]
+Sun 19 Jan 2025 22:43:08 INFO  valid result: 
+precision@10 : 0.049    hit@10 : 0.2963    mrr@10 : 0.1261    ndcg@10 : 0.0786    map@10 : 0.0422    itemcoverage@10 : 0.0384    averagepopularity@10 : 104.8938    tailpercentage@10 : 0.0004
+Sun 19 Jan 2025 22:43:08 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-35-32.pth
+Sun 19 Jan 2025 22:43:20 INFO  epoch 40 training [time: 11.19s, train loss: 12435.2194]
+Sun 19 Jan 2025 22:43:30 INFO  epoch 41 training [time: 10.95s, train loss: 12012.9043]
+Sun 19 Jan 2025 22:43:42 INFO  epoch 42 training [time: 11.02s, train loss: 11608.8069]
+Sun 19 Jan 2025 22:43:53 INFO  epoch 43 training [time: 11.50s, train loss: 11235.7430]
+Sun 19 Jan 2025 22:44:04 INFO  epoch 44 training [time: 11.06s, train loss: 10884.4342]
+Sun 19 Jan 2025 22:44:06 INFO  epoch 44 evaluating [time: 1.57s, valid_score: 0.099600]
+Sun 19 Jan 2025 22:44:06 INFO  valid result: 
+precision@10 : 0.06    hit@10 : 0.3682    mrr@10 : 0.1591    ndcg@10 : 0.0996    map@10 : 0.053    itemcoverage@10 : 0.0693    averagepopularity@10 : 84.7391    tailpercentage@10 : 0.0012
+Sun 19 Jan 2025 22:44:06 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-35-32.pth
+Sun 19 Jan 2025 22:44:17 INFO  epoch 45 training [time: 11.30s, train loss: 10549.0063]
+Sun 19 Jan 2025 22:44:28 INFO  epoch 46 training [time: 11.23s, train loss: 10236.3637]
+Sun 19 Jan 2025 22:44:39 INFO  epoch 47 training [time: 10.67s, train loss: 9957.1381]
+Sun 19 Jan 2025 22:44:50 INFO  epoch 48 training [time: 11.45s, train loss: 9696.1861]
+Sun 19 Jan 2025 22:45:01 INFO  epoch 49 training [time: 11.09s, train loss: 9457.8483]
+Sun 19 Jan 2025 22:45:03 INFO  epoch 49 evaluating [time: 1.57s, valid_score: 0.108100]
+Sun 19 Jan 2025 22:45:03 INFO  valid result: 
+precision@10 : 0.0633    hit@10 : 0.3893    mrr@10 : 0.1673    ndcg@10 : 0.1081    map@10 : 0.0584    itemcoverage@10 : 0.087    averagepopularity@10 : 73.0187    tailpercentage@10 : 0.0019
+Sun 19 Jan 2025 22:45:03 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-35-32.pth
+Sun 19 Jan 2025 22:45:14 INFO  epoch 50 training [time: 10.70s, train loss: 9245.0506]
+Sun 19 Jan 2025 22:45:24 INFO  epoch 51 training [time: 10.62s, train loss: 9066.4931]
+Sun 19 Jan 2025 22:45:35 INFO  epoch 52 training [time: 11.07s, train loss: 8902.7399]
+Sun 19 Jan 2025 22:45:46 INFO  epoch 53 training [time: 10.94s, train loss: 8751.7216]
+Sun 19 Jan 2025 22:45:57 INFO  epoch 54 training [time: 11.14s, train loss: 8618.4857]
+Sun 19 Jan 2025 22:45:59 INFO  epoch 54 evaluating [time: 1.60s, valid_score: 0.110800]
+Sun 19 Jan 2025 22:45:59 INFO  valid result: 
+precision@10 : 0.0644    hit@10 : 0.3902    mrr@10 : 0.1689    ndcg@10 : 0.1108    map@10 : 0.0607    itemcoverage@10 : 0.0922    averagepopularity@10 : 67.0388    tailpercentage@10 : 0.0024
+Sun 19 Jan 2025 22:45:59 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-35-32.pth
+Sun 19 Jan 2025 22:46:10 INFO  epoch 55 training [time: 10.56s, train loss: 8501.1919]
+Sun 19 Jan 2025 22:46:20 INFO  epoch 56 training [time: 10.84s, train loss: 8407.1827]
+Sun 19 Jan 2025 22:46:31 INFO  epoch 57 training [time: 10.84s, train loss: 8316.2407]
+Sun 19 Jan 2025 22:46:42 INFO  epoch 58 training [time: 10.71s, train loss: 8243.5159]
+Sun 19 Jan 2025 22:46:53 INFO  epoch 59 training [time: 10.71s, train loss: 8179.1839]
+Sun 19 Jan 2025 22:46:54 INFO  epoch 59 evaluating [time: 1.58s, valid_score: 0.110900]
+Sun 19 Jan 2025 22:46:54 INFO  valid result: 
+precision@10 : 0.0659    hit@10 : 0.3931    mrr@10 : 0.1628    ndcg@10 : 0.1109    map@10 : 0.0607    itemcoverage@10 : 0.0906    averagepopularity@10 : 65.7524    tailpercentage@10 : 0.002
+Sun 19 Jan 2025 22:46:54 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-35-32.pth
+Sun 19 Jan 2025 22:47:06 INFO  epoch 60 training [time: 11.31s, train loss: 8122.6825]
+Sun 19 Jan 2025 22:47:17 INFO  epoch 61 training [time: 10.97s, train loss: 8078.1926]
+Sun 19 Jan 2025 22:47:27 INFO  epoch 62 training [time: 10.72s, train loss: 8026.8852]
+Sun 19 Jan 2025 22:47:38 INFO  epoch 63 training [time: 10.65s, train loss: 7984.4412]
+Sun 19 Jan 2025 22:47:49 INFO  epoch 64 training [time: 10.73s, train loss: 7948.4317]
+Sun 19 Jan 2025 22:47:50 INFO  epoch 64 evaluating [time: 1.58s, valid_score: 0.113100]
+Sun 19 Jan 2025 22:47:50 INFO  valid result: 
+precision@10 : 0.0661    hit@10 : 0.4008    mrr@10 : 0.1656    ndcg@10 : 0.1131    map@10 : 0.0626    itemcoverage@10 : 0.0836    averagepopularity@10 : 67.3524    tailpercentage@10 : 0.0014
+Sun 19 Jan 2025 22:47:50 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-35-32.pth
+Sun 19 Jan 2025 22:48:01 INFO  epoch 65 training [time: 10.91s, train loss: 7926.6861]
+Sun 19 Jan 2025 22:48:12 INFO  epoch 66 training [time: 11.21s, train loss: 7888.2832]
+Sun 19 Jan 2025 22:48:23 INFO  epoch 67 training [time: 10.54s, train loss: 7859.8480]
+Sun 19 Jan 2025 22:48:34 INFO  epoch 68 training [time: 10.89s, train loss: 7833.1710]
+Sun 19 Jan 2025 22:48:45 INFO  epoch 69 training [time: 10.74s, train loss: 7826.8389]
+Sun 19 Jan 2025 22:48:46 INFO  epoch 69 evaluating [time: 1.58s, valid_score: 0.109600]
+Sun 19 Jan 2025 22:48:46 INFO  valid result: 
+precision@10 : 0.0641    hit@10 : 0.3826    mrr@10 : 0.1614    ndcg@10 : 0.1096    map@10 : 0.06    itemcoverage@10 : 0.0754    averagepopularity@10 : 67.5893    tailpercentage@10 : 0.0007
+Sun 19 Jan 2025 22:48:57 INFO  epoch 70 training [time: 10.67s, train loss: 7798.9288]
+Sun 19 Jan 2025 22:49:07 INFO  epoch 71 training [time: 10.62s, train loss: 7781.3218]
+Sun 19 Jan 2025 22:49:19 INFO  epoch 72 training [time: 11.15s, train loss: 7757.1030]
+Sun 19 Jan 2025 22:49:29 INFO  epoch 73 training [time: 10.74s, train loss: 7749.7205]
+Sun 19 Jan 2025 22:49:40 INFO  epoch 74 training [time: 10.82s, train loss: 7729.8798]
+Sun 19 Jan 2025 22:49:42 INFO  epoch 74 evaluating [time: 1.58s, valid_score: 0.108800]
+Sun 19 Jan 2025 22:49:42 INFO  valid result: 
+precision@10 : 0.0632    hit@10 : 0.3797    mrr@10 : 0.1586    ndcg@10 : 0.1088    map@10 : 0.0599    itemcoverage@10 : 0.0701    averagepopularity@10 : 69.8683    tailpercentage@10 : 0.0011
+Sun 19 Jan 2025 22:49:53 INFO  epoch 75 training [time: 10.84s, train loss: 7724.5520]
+Sun 19 Jan 2025 22:50:03 INFO  epoch 76 training [time: 10.70s, train loss: 7711.9513]
+Sun 19 Jan 2025 22:50:14 INFO  epoch 77 training [time: 10.88s, train loss: 7693.1784]
+Sun 19 Jan 2025 22:50:25 INFO  epoch 78 training [time: 11.12s, train loss: 7678.0714]
+Sun 19 Jan 2025 22:50:36 INFO  epoch 79 training [time: 10.68s, train loss: 7673.9977]
+Sun 19 Jan 2025 22:50:38 INFO  epoch 79 evaluating [time: 1.57s, valid_score: 0.108000]
+Sun 19 Jan 2025 22:50:38 INFO  valid result: 
+precision@10 : 0.064    hit@10 : 0.3826    mrr@10 : 0.1534    ndcg@10 : 0.108    map@10 : 0.0589    itemcoverage@10 : 0.0669    averagepopularity@10 : 72.3011    tailpercentage@10 : 0.0004
+Sun 19 Jan 2025 22:50:48 INFO  epoch 80 training [time: 10.71s, train loss: 7656.4075]
+Sun 19 Jan 2025 22:50:59 INFO  epoch 81 training [time: 10.67s, train loss: 7670.9626]
+Sun 19 Jan 2025 22:51:10 INFO  epoch 82 training [time: 10.76s, train loss: 7651.8922]
+Sun 19 Jan 2025 22:51:20 INFO  epoch 83 training [time: 10.76s, train loss: 7645.0920]
+Sun 19 Jan 2025 22:51:32 INFO  epoch 84 training [time: 11.42s, train loss: 7628.5626]
+Sun 19 Jan 2025 22:51:33 INFO  epoch 84 evaluating [time: 1.56s, valid_score: 0.106100]
+Sun 19 Jan 2025 22:51:33 INFO  valid result: 
+precision@10 : 0.0623    hit@10 : 0.3749    mrr@10 : 0.1507    ndcg@10 : 0.1061    map@10 : 0.0582    itemcoverage@10 : 0.0632    averagepopularity@10 : 73.0318    tailpercentage@10 : 0.0007
+Sun 19 Jan 2025 22:51:44 INFO  epoch 85 training [time: 10.78s, train loss: 7623.9953]
+Sun 19 Jan 2025 22:51:55 INFO  epoch 86 training [time: 10.83s, train loss: 7618.0680]
+Sun 19 Jan 2025 22:52:06 INFO  epoch 87 training [time: 10.84s, train loss: 7602.5183]
+Sun 19 Jan 2025 22:52:17 INFO  epoch 88 training [time: 10.92s, train loss: 7601.7832]
+Sun 19 Jan 2025 22:52:28 INFO  epoch 89 training [time: 10.73s, train loss: 7596.0804]
+Sun 19 Jan 2025 22:52:29 INFO  epoch 89 evaluating [time: 1.66s, valid_score: 0.104300]
+Sun 19 Jan 2025 22:52:29 INFO  valid result: 
+precision@10 : 0.061    hit@10 : 0.371    mrr@10 : 0.1507    ndcg@10 : 0.1043    map@10 : 0.0565    itemcoverage@10 : 0.0597    averagepopularity@10 : 74.122    tailpercentage@10 : 0.0007
+Sun 19 Jan 2025 22:52:40 INFO  epoch 90 training [time: 10.76s, train loss: 7587.7962]
+Sun 19 Jan 2025 22:52:51 INFO  epoch 91 training [time: 10.96s, train loss: 7590.4601]
+Sun 19 Jan 2025 22:53:02 INFO  epoch 92 training [time: 10.88s, train loss: 7577.9924]
+Sun 19 Jan 2025 22:53:13 INFO  epoch 93 training [time: 10.84s, train loss: 7586.1447]
+Sun 19 Jan 2025 22:53:23 INFO  epoch 94 training [time: 10.51s, train loss: 7579.0650]
+Sun 19 Jan 2025 22:53:25 INFO  epoch 94 evaluating [time: 1.58s, valid_score: 0.103900]
+Sun 19 Jan 2025 22:53:25 INFO  valid result: 
+precision@10 : 0.0599    hit@10 : 0.371    mrr@10 : 0.1539    ndcg@10 : 0.1039    map@10 : 0.0574    itemcoverage@10 : 0.0578    averagepopularity@10 : 75.6989    tailpercentage@10 : 0.0007
+Sun 19 Jan 2025 22:53:36 INFO  epoch 95 training [time: 11.34s, train loss: 7568.7698]
+Sun 19 Jan 2025 22:53:47 INFO  epoch 96 training [time: 11.09s, train loss: 7560.8501]
+Sun 19 Jan 2025 22:53:58 INFO  epoch 97 training [time: 10.84s, train loss: 7568.1922]
+Sun 19 Jan 2025 22:54:09 INFO  epoch 98 training [time: 10.77s, train loss: 7552.6126]
+Sun 19 Jan 2025 22:54:20 INFO  epoch 99 training [time: 10.89s, train loss: 7551.9026]
+Sun 19 Jan 2025 22:54:21 INFO  epoch 99 evaluating [time: 1.57s, valid_score: 0.102200]
+Sun 19 Jan 2025 22:54:21 INFO  valid result: 
+precision@10 : 0.0612    hit@10 : 0.3653    mrr@10 : 0.1453    ndcg@10 : 0.1022    map@10 : 0.0554    itemcoverage@10 : 0.057    averagepopularity@10 : 76.2133    tailpercentage@10 : 0.0005
+Sun 19 Jan 2025 22:54:21 INFO  Loading model structure and parameters from saved\UltraGCN-Jan-19-2025_22-35-32.pth
+Sun 19 Jan 2025 22:54:23 INFO  best valid : OrderedDict({'precision@10': 0.0661, 'hit@10': 0.4008, 'mrr@10': 0.1656, 'ndcg@10': 0.1131, 'map@10': 0.0626, 'itemcoverage@10': 0.0836, 'averagepopularity@10': 67.3524, 'tailpercentage@10': 0.0014})
+Sun 19 Jan 2025 22:54:23 INFO  test result: OrderedDict({'precision@10': 0.1421, 'hit@10': 0.5737, 'mrr@10': 0.3036, 'ndcg@10': 0.1808, 'map@10': 0.1099, 'itemcoverage@10': 0.0848, 'averagepopularity@10': 67.087, 'tailpercentage@10': 0.0012})
+Sun 19 Jan 2025 22:54:24 INFO  [Training]: train_batch_size = [128] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Sun 19 Jan 2025 22:54:24 INFO  [Evaluation]: eval_batch_size = [256] eval_args: [{'split': {'RS': [0.7, 0.1, 0.2]}, 'order': 'RO', 'group_by': 'None', 'mode': {'valid': 'full', 'test': 'full'}}]
+Sun 19 Jan 2025 22:55:08 INFO  epoch 0 training [time: 11.60s, train loss: 246691.3970]
+Sun 19 Jan 2025 22:55:19 INFO  epoch 1 training [time: 11.73s, train loss: 34442.8405]
+Sun 19 Jan 2025 22:55:31 INFO  epoch 2 training [time: 11.60s, train loss: 24357.1757]
+Sun 19 Jan 2025 22:55:43 INFO  epoch 3 training [time: 11.60s, train loss: 22439.2010]
+Sun 19 Jan 2025 22:55:55 INFO  epoch 4 training [time: 12.11s, train loss: 21566.3907]
+Sun 19 Jan 2025 22:55:57 INFO  epoch 4 evaluating [time: 1.76s, valid_score: 0.043200]
+Sun 19 Jan 2025 22:55:57 INFO  valid result: 
+precision@10 : 0.0252    hit@10 : 0.1775    mrr@10 : 0.0738    ndcg@10 : 0.0432    map@10 : 0.0228    itemcoverage@10 : 0.0015    averagepopularity@10 : 111.0218    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:55:57 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-54-56.pth
+Sun 19 Jan 2025 22:56:08 INFO  epoch 5 training [time: 11.70s, train loss: 20927.1924]
+Sun 19 Jan 2025 22:56:20 INFO  epoch 6 training [time: 11.94s, train loss: 20362.0180]
+Sun 19 Jan 2025 22:56:32 INFO  epoch 7 training [time: 11.84s, train loss: 19837.7134]
+Sun 19 Jan 2025 22:56:44 INFO  epoch 8 training [time: 11.87s, train loss: 19345.9001]
+Sun 19 Jan 2025 22:56:56 INFO  epoch 9 training [time: 12.00s, train loss: 18890.4984]
+Sun 19 Jan 2025 22:56:57 INFO  epoch 9 evaluating [time: 1.53s, valid_score: 0.043900]
+Sun 19 Jan 2025 22:56:57 INFO  valid result: 
+precision@10 : 0.0255    hit@10 : 0.182    mrr@10 : 0.0771    ndcg@10 : 0.0439    map@10 : 0.0228    itemcoverage@10 : 0.0015    averagepopularity@10 : 111.0903    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:56:57 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-54-56.pth
+Sun 19 Jan 2025 22:57:09 INFO  epoch 10 training [time: 11.64s, train loss: 18473.6147]
+Sun 19 Jan 2025 22:57:21 INFO  epoch 11 training [time: 11.71s, train loss: 18094.3837]
+Sun 19 Jan 2025 22:57:32 INFO  epoch 12 training [time: 11.65s, train loss: 17745.9628]
+Sun 19 Jan 2025 22:57:44 INFO  epoch 13 training [time: 11.74s, train loss: 17432.9813]
+Sun 19 Jan 2025 22:57:56 INFO  epoch 14 training [time: 11.82s, train loss: 17149.5346]
+Sun 19 Jan 2025 22:57:58 INFO  epoch 14 evaluating [time: 1.63s, valid_score: 0.044200]
+Sun 19 Jan 2025 22:57:58 INFO  valid result: 
+precision@10 : 0.0257    hit@10 : 0.1742    mrr@10 : 0.0765    ndcg@10 : 0.0442    map@10 : 0.0233    itemcoverage@10 : 0.0016    averagepopularity@10 : 110.228    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:57:58 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-54-56.pth
+Sun 19 Jan 2025 22:58:10 INFO  epoch 15 training [time: 11.88s, train loss: 16894.5164]
+Sun 19 Jan 2025 22:58:21 INFO  epoch 16 training [time: 11.76s, train loss: 16664.5335]
+Sun 19 Jan 2025 22:58:33 INFO  epoch 17 training [time: 11.71s, train loss: 16459.3383]
+Sun 19 Jan 2025 22:58:45 INFO  epoch 18 training [time: 11.80s, train loss: 16277.7629]
+Sun 19 Jan 2025 22:58:57 INFO  epoch 19 training [time: 11.66s, train loss: 16114.0351]
+Sun 19 Jan 2025 22:58:58 INFO  epoch 19 evaluating [time: 1.60s, valid_score: 0.042500]
+Sun 19 Jan 2025 22:58:58 INFO  valid result: 
+precision@10 : 0.0248    hit@10 : 0.1775    mrr@10 : 0.0738    ndcg@10 : 0.0425    map@10 : 0.022    itemcoverage@10 : 0.0015    averagepopularity@10 : 110.721    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 22:59:10 INFO  epoch 20 training [time: 12.13s, train loss: 15964.1902]
+Sun 19 Jan 2025 22:59:22 INFO  epoch 21 training [time: 11.90s, train loss: 15821.0373]
+Sun 19 Jan 2025 22:59:34 INFO  epoch 22 training [time: 11.84s, train loss: 15682.8704]
+Sun 19 Jan 2025 22:59:46 INFO  epoch 23 training [time: 11.68s, train loss: 15545.8785]
+Sun 19 Jan 2025 22:59:57 INFO  epoch 24 training [time: 11.71s, train loss: 15403.1419]
+Sun 19 Jan 2025 22:59:59 INFO  epoch 24 evaluating [time: 1.50s, valid_score: 0.041900]
+Sun 19 Jan 2025 22:59:59 INFO  valid result: 
+precision@10 : 0.0244    hit@10 : 0.1685    mrr@10 : 0.0695    ndcg@10 : 0.0419    map@10 : 0.0219    itemcoverage@10 : 0.0016    averagepopularity@10 : 112.8628    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 23:00:11 INFO  epoch 25 training [time: 11.83s, train loss: 15252.4526]
+Sun 19 Jan 2025 23:00:22 INFO  epoch 26 training [time: 11.78s, train loss: 15088.3928]
+Sun 19 Jan 2025 23:00:34 INFO  epoch 27 training [time: 11.77s, train loss: 14905.1639]
+Sun 19 Jan 2025 23:00:46 INFO  epoch 28 training [time: 11.69s, train loss: 14699.5314]
+Sun 19 Jan 2025 23:00:58 INFO  epoch 29 training [time: 11.78s, train loss: 14477.0647]
+Sun 19 Jan 2025 23:00:59 INFO  epoch 29 evaluating [time: 1.48s, valid_score: 0.045000]
+Sun 19 Jan 2025 23:00:59 INFO  valid result: 
+precision@10 : 0.0271    hit@10 : 0.1798    mrr@10 : 0.0782    ndcg@10 : 0.045    map@10 : 0.0233    itemcoverage@10 : 0.0051    averagepopularity@10 : 108.4128    tailpercentage@10 : 0.0001
+Sun 19 Jan 2025 23:00:59 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-54-56.pth
+Sun 19 Jan 2025 23:01:11 INFO  epoch 30 training [time: 11.53s, train loss: 14233.6862]
+Sun 19 Jan 2025 23:01:23 INFO  epoch 31 training [time: 12.32s, train loss: 13968.0373]
+Sun 19 Jan 2025 23:01:35 INFO  epoch 32 training [time: 11.68s, train loss: 13674.2486]
+Sun 19 Jan 2025 23:01:46 INFO  epoch 33 training [time: 11.59s, train loss: 13351.3741]
+Sun 19 Jan 2025 23:01:58 INFO  epoch 34 training [time: 11.80s, train loss: 13001.6050]
+Sun 19 Jan 2025 23:02:00 INFO  epoch 34 evaluating [time: 1.49s, valid_score: 0.055500]
+Sun 19 Jan 2025 23:02:00 INFO  valid result: 
+precision@10 : 0.0357    hit@10 : 0.236    mrr@10 : 0.0918    ndcg@10 : 0.0555    map@10 : 0.0278    itemcoverage@10 : 0.0147    averagepopularity@10 : 101.9792    tailpercentage@10 : 0.0015
+Sun 19 Jan 2025 23:02:00 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-54-56.pth
+Sun 19 Jan 2025 23:02:11 INFO  epoch 35 training [time: 11.60s, train loss: 12632.4002]
+Sun 19 Jan 2025 23:02:24 INFO  epoch 36 training [time: 12.40s, train loss: 12251.5250]
+Sun 19 Jan 2025 23:02:36 INFO  epoch 37 training [time: 11.90s, train loss: 11866.3477]
+Sun 19 Jan 2025 23:02:47 INFO  epoch 38 training [time: 11.78s, train loss: 11482.3994]
+Sun 19 Jan 2025 23:02:59 INFO  epoch 39 training [time: 11.79s, train loss: 11102.5943]
+Sun 19 Jan 2025 23:03:01 INFO  epoch 39 evaluating [time: 1.47s, valid_score: 0.071400]
+Sun 19 Jan 2025 23:03:01 INFO  valid result: 
+precision@10 : 0.0454    hit@10 : 0.3135    mrr@10 : 0.1175    ndcg@10 : 0.0714    map@10 : 0.0352    itemcoverage@10 : 0.0372    averagepopularity@10 : 81.6952    tailpercentage@10 : 0.003
+Sun 19 Jan 2025 23:03:01 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-54-56.pth
+Sun 19 Jan 2025 23:03:12 INFO  epoch 40 training [time: 11.65s, train loss: 10735.6527]
+Sun 19 Jan 2025 23:03:24 INFO  epoch 41 training [time: 11.79s, train loss: 10386.5372]
+Sun 19 Jan 2025 23:03:36 INFO  epoch 42 training [time: 12.14s, train loss: 10059.3896]
+Sun 19 Jan 2025 23:03:48 INFO  epoch 43 training [time: 11.73s, train loss: 9758.1701]
+Sun 19 Jan 2025 23:04:00 INFO  epoch 44 training [time: 11.80s, train loss: 9478.5372]
+Sun 19 Jan 2025 23:04:01 INFO  epoch 44 evaluating [time: 1.48s, valid_score: 0.089000]
+Sun 19 Jan 2025 23:04:01 INFO  valid result: 
+precision@10 : 0.0553    hit@10 : 0.3461    mrr@10 : 0.1419    ndcg@10 : 0.089    map@10 : 0.0458    itemcoverage@10 : 0.0615    averagepopularity@10 : 65.6712    tailpercentage@10 : 0.0022
+Sun 19 Jan 2025 23:04:01 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-54-56.pth
+Sun 19 Jan 2025 23:04:13 INFO  epoch 45 training [time: 11.78s, train loss: 9222.9842]
+Sun 19 Jan 2025 23:04:25 INFO  epoch 46 training [time: 11.63s, train loss: 8986.1573]
+Sun 19 Jan 2025 23:04:37 INFO  epoch 47 training [time: 12.17s, train loss: 8778.7004]
+Sun 19 Jan 2025 23:04:49 INFO  epoch 48 training [time: 11.95s, train loss: 8584.7859]
+Sun 19 Jan 2025 23:05:01 INFO  epoch 49 training [time: 11.80s, train loss: 8421.4395]
+Sun 19 Jan 2025 23:05:02 INFO  epoch 49 evaluating [time: 1.47s, valid_score: 0.095300]
+Sun 19 Jan 2025 23:05:02 INFO  valid result: 
+precision@10 : 0.0566    hit@10 : 0.3506    mrr@10 : 0.1554    ndcg@10 : 0.0953    map@10 : 0.0514    itemcoverage@10 : 0.0755    averagepopularity@10 : 55.2034    tailpercentage@10 : 0.0022
+Sun 19 Jan 2025 23:05:02 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-54-56.pth
+Sun 19 Jan 2025 23:05:14 INFO  epoch 50 training [time: 11.71s, train loss: 8269.1774]
+Sun 19 Jan 2025 23:05:25 INFO  epoch 51 training [time: 11.48s, train loss: 8151.5534]
+Sun 19 Jan 2025 23:05:37 INFO  epoch 52 training [time: 12.04s, train loss: 8033.0308]
+Sun 19 Jan 2025 23:05:49 INFO  epoch 53 training [time: 12.14s, train loss: 7937.9505]
+Sun 19 Jan 2025 23:06:01 INFO  epoch 54 training [time: 11.69s, train loss: 7853.7373]
+Sun 19 Jan 2025 23:06:03 INFO  epoch 54 evaluating [time: 1.48s, valid_score: 0.097600]
+Sun 19 Jan 2025 23:06:03 INFO  valid result: 
+precision@10 : 0.058    hit@10 : 0.3517    mrr@10 : 0.1577    ndcg@10 : 0.0976    map@10 : 0.053    itemcoverage@10 : 0.0761    averagepopularity@10 : 52.7669    tailpercentage@10 : 0.0018
+Sun 19 Jan 2025 23:06:03 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-54-56.pth
+Sun 19 Jan 2025 23:06:15 INFO  epoch 55 training [time: 11.96s, train loss: 7780.0587]
+Sun 19 Jan 2025 23:06:26 INFO  epoch 56 training [time: 11.50s, train loss: 7721.2092]
+Sun 19 Jan 2025 23:06:38 INFO  epoch 57 training [time: 11.70s, train loss: 7668.7450]
+Sun 19 Jan 2025 23:06:50 INFO  epoch 58 training [time: 12.37s, train loss: 7612.7857]
+Sun 19 Jan 2025 23:07:02 INFO  epoch 59 training [time: 11.75s, train loss: 7577.1144]
+Sun 19 Jan 2025 23:07:03 INFO  epoch 59 evaluating [time: 1.48s, valid_score: 0.098800]
+Sun 19 Jan 2025 23:07:03 INFO  valid result: 
+precision@10 : 0.0596    hit@10 : 0.3573    mrr@10 : 0.1544    ndcg@10 : 0.0988    map@10 : 0.0541    itemcoverage@10 : 0.0723    averagepopularity@10 : 52.5431    tailpercentage@10 : 0.0009
+Sun 19 Jan 2025 23:07:03 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-54-56.pth
+Sun 19 Jan 2025 23:07:15 INFO  epoch 60 training [time: 11.64s, train loss: 7552.3917]
+Sun 19 Jan 2025 23:07:26 INFO  epoch 61 training [time: 11.44s, train loss: 7519.7638]
+Sun 19 Jan 2025 23:07:38 INFO  epoch 62 training [time: 11.69s, train loss: 7491.7803]
+Sun 19 Jan 2025 23:07:51 INFO  epoch 63 training [time: 12.34s, train loss: 7450.2252]
+Sun 19 Jan 2025 23:08:02 INFO  epoch 64 training [time: 11.84s, train loss: 7439.9588]
+Sun 19 Jan 2025 23:08:04 INFO  epoch 64 evaluating [time: 1.48s, valid_score: 0.103000]
+Sun 19 Jan 2025 23:08:04 INFO  valid result: 
+precision@10 : 0.0621    hit@10 : 0.373    mrr@10 : 0.1592    ndcg@10 : 0.103    map@10 : 0.0564    itemcoverage@10 : 0.0657    averagepopularity@10 : 54.8475    tailpercentage@10 : 0.0007
+Sun 19 Jan 2025 23:08:04 INFO  Saving current: saved\UltraGCN-Jan-19-2025_22-54-56.pth
+Sun 19 Jan 2025 23:08:15 INFO  epoch 65 training [time: 11.60s, train loss: 7421.0869]
+Sun 19 Jan 2025 23:08:27 INFO  epoch 66 training [time: 11.42s, train loss: 7399.3054]
+Sun 19 Jan 2025 23:08:39 INFO  epoch 67 training [time: 11.92s, train loss: 7381.5583]
+Sun 19 Jan 2025 23:08:51 INFO  epoch 68 training [time: 11.79s, train loss: 7362.2129]
+Sun 19 Jan 2025 23:09:03 INFO  epoch 69 training [time: 12.14s, train loss: 7351.8057]
+Sun 19 Jan 2025 23:09:04 INFO  epoch 69 evaluating [time: 1.47s, valid_score: 0.101500]
+Sun 19 Jan 2025 23:09:04 INFO  valid result: 
+precision@10 : 0.0608    hit@10 : 0.3596    mrr@10 : 0.1533    ndcg@10 : 0.1015    map@10 : 0.0562    itemcoverage@10 : 0.0622    averagepopularity@10 : 55.804    tailpercentage@10 : 0.0008
+Sun 19 Jan 2025 23:09:16 INFO  epoch 70 training [time: 11.88s, train loss: 7350.1106]
+Sun 19 Jan 2025 23:09:28 INFO  epoch 71 training [time: 11.49s, train loss: 7321.6283]
+Sun 19 Jan 2025 23:09:39 INFO  epoch 72 training [time: 11.82s, train loss: 7304.9987]
+Sun 19 Jan 2025 23:09:51 INFO  epoch 73 training [time: 11.89s, train loss: 7301.2502]
+Sun 19 Jan 2025 23:10:04 INFO  epoch 74 training [time: 12.24s, train loss: 7294.2222]
+Sun 19 Jan 2025 23:10:05 INFO  epoch 74 evaluating [time: 1.47s, valid_score: 0.102200]
+Sun 19 Jan 2025 23:10:05 INFO  valid result: 
+precision@10 : 0.06    hit@10 : 0.3596    mrr@10 : 0.1563    ndcg@10 : 0.1022    map@10 : 0.0571    itemcoverage@10 : 0.0568    averagepopularity@10 : 57.9507    tailpercentage@10 : 0.0012
+Sun 19 Jan 2025 23:10:17 INFO  epoch 75 training [time: 11.65s, train loss: 7288.9763]
+Sun 19 Jan 2025 23:10:28 INFO  epoch 76 training [time: 11.63s, train loss: 7272.9496]
+Sun 19 Jan 2025 23:10:40 INFO  epoch 77 training [time: 11.64s, train loss: 7268.7967]
+Sun 19 Jan 2025 23:10:52 INFO  epoch 78 training [time: 11.59s, train loss: 7264.3495]
+Sun 19 Jan 2025 23:11:03 INFO  epoch 79 training [time: 11.80s, train loss: 7255.2766]
+Sun 19 Jan 2025 23:11:05 INFO  epoch 79 evaluating [time: 1.57s, valid_score: 0.100000]
+Sun 19 Jan 2025 23:11:05 INFO  valid result: 
+precision@10 : 0.0592    hit@10 : 0.3472    mrr@10 : 0.1526    ndcg@10 : 0.1    map@10 : 0.0563    itemcoverage@10 : 0.0543    averagepopularity@10 : 58.4327    tailpercentage@10 : 0.001
+Sun 19 Jan 2025 23:11:17 INFO  epoch 80 training [time: 12.03s, train loss: 7257.1240]
+Sun 19 Jan 2025 23:11:29 INFO  epoch 81 training [time: 11.72s, train loss: 7250.1754]
+Sun 19 Jan 2025 23:11:40 INFO  epoch 82 training [time: 11.64s, train loss: 7231.2492]
+Sun 19 Jan 2025 23:11:52 INFO  epoch 83 training [time: 11.71s, train loss: 7229.6385]
+Sun 19 Jan 2025 23:12:04 INFO  epoch 84 training [time: 11.76s, train loss: 7230.1913]
+Sun 19 Jan 2025 23:12:05 INFO  epoch 84 evaluating [time: 1.48s, valid_score: 0.101400]
+Sun 19 Jan 2025 23:12:05 INFO  valid result: 
+precision@10 : 0.0588    hit@10 : 0.3506    mrr@10 : 0.1543    ndcg@10 : 0.1014    map@10 : 0.057    itemcoverage@10 : 0.052    averagepopularity@10 : 58.8696    tailpercentage@10 : 0.0013
+Sun 19 Jan 2025 23:12:17 INFO  epoch 85 training [time: 12.17s, train loss: 7211.6087]
+Sun 19 Jan 2025 23:12:29 INFO  epoch 86 training [time: 11.67s, train loss: 7208.1458]
+Sun 19 Jan 2025 23:12:41 INFO  epoch 87 training [time: 11.51s, train loss: 7222.5939]
+Sun 19 Jan 2025 23:12:53 INFO  epoch 88 training [time: 11.98s, train loss: 7218.7377]
+Sun 19 Jan 2025 23:13:04 INFO  epoch 89 training [time: 11.62s, train loss: 7205.2582]
+Sun 19 Jan 2025 23:13:06 INFO  epoch 89 evaluating [time: 1.49s, valid_score: 0.101700]
+Sun 19 Jan 2025 23:13:06 INFO  valid result: 
+precision@10 : 0.0589    hit@10 : 0.3528    mrr@10 : 0.157    ndcg@10 : 0.1017    map@10 : 0.0569    itemcoverage@10 : 0.0491    averagepopularity@10 : 60.8742    tailpercentage@10 : 0.001
+Sun 19 Jan 2025 23:13:18 INFO  epoch 90 training [time: 12.06s, train loss: 7191.9301]
+Sun 19 Jan 2025 23:13:30 INFO  epoch 91 training [time: 11.79s, train loss: 7197.3556]
+Sun 19 Jan 2025 23:13:41 INFO  epoch 92 training [time: 11.58s, train loss: 7179.9073]
+Sun 19 Jan 2025 23:13:53 INFO  epoch 93 training [time: 11.88s, train loss: 7191.7855]
+Sun 19 Jan 2025 23:14:05 INFO  epoch 94 training [time: 11.61s, train loss: 7182.8228]
+Sun 19 Jan 2025 23:14:06 INFO  epoch 94 evaluating [time: 1.48s, valid_score: 0.099200]
+Sun 19 Jan 2025 23:14:06 INFO  valid result: 
+precision@10 : 0.0573    hit@10 : 0.3449    mrr@10 : 0.1536    ndcg@10 : 0.0992    map@10 : 0.056    itemcoverage@10 : 0.0494    averagepopularity@10 : 61.9398    tailpercentage@10 : 0.0009
+Sun 19 Jan 2025 23:14:18 INFO  epoch 95 training [time: 11.71s, train loss: 7178.2388]
+Sun 19 Jan 2025 23:14:30 INFO  epoch 96 training [time: 12.30s, train loss: 7176.2829]
+Sun 19 Jan 2025 23:14:42 INFO  epoch 97 training [time: 11.61s, train loss: 7167.1045]
+Sun 19 Jan 2025 23:14:54 INFO  epoch 98 training [time: 11.86s, train loss: 7173.7018]
+Sun 19 Jan 2025 23:15:05 INFO  epoch 99 training [time: 11.78s, train loss: 7172.0236]
+Sun 19 Jan 2025 23:15:07 INFO  epoch 99 evaluating [time: 1.47s, valid_score: 0.100900]
+Sun 19 Jan 2025 23:15:07 INFO  valid result: 
+precision@10 : 0.0582    hit@10 : 0.3438    mrr@10 : 0.1534    ndcg@10 : 0.1009    map@10 : 0.0568    itemcoverage@10 : 0.0467    averagepopularity@10 : 61.6936    tailpercentage@10 : 0.0009
+Sun 19 Jan 2025 23:15:07 INFO  Loading model structure and parameters from saved\UltraGCN-Jan-19-2025_22-54-56.pth
+Sun 19 Jan 2025 23:15:08 INFO  best valid : OrderedDict({'precision@10': 0.0621, 'hit@10': 0.373, 'mrr@10': 0.1592, 'ndcg@10': 0.103, 'map@10': 0.0564, 'itemcoverage@10': 0.0657, 'averagepopularity@10': 54.8475, 'tailpercentage@10': 0.0007})
+Sun 19 Jan 2025 23:15:08 INFO  test result: OrderedDict({'precision@10': 0.1255, 'hit@10': 0.5245, 'mrr@10': 0.2781, 'ndcg@10': 0.1611, 'map@10': 0.0961, 'itemcoverage@10': 0.067, 'averagepopularity@10': 54.9107, 'tailpercentage@10': 0.0008})
+Sun 19 Jan 2025 23:15:10 INFO  [Training]: train_batch_size = [128] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Sun 19 Jan 2025 23:15:10 INFO  [Evaluation]: eval_batch_size = [256] eval_args: [{'split': {'RS': [0.7, 0.1, 0.2]}, 'order': 'RO', 'group_by': 'None', 'mode': {'valid': 'full', 'test': 'full'}}]
+Sun 19 Jan 2025 23:15:37 INFO  epoch 0 training [time: 11.15s, train loss: 311410.2639]
+Sun 19 Jan 2025 23:15:48 INFO  epoch 1 training [time: 10.93s, train loss: 40116.1568]
+Sun 19 Jan 2025 23:15:59 INFO  epoch 2 training [time: 10.86s, train loss: 27160.6703]
+Sun 19 Jan 2025 23:16:10 INFO  epoch 3 training [time: 10.77s, train loss: 24851.7874]
+Sun 19 Jan 2025 23:16:21 INFO  epoch 4 training [time: 11.00s, train loss: 23937.4079]
+Sun 19 Jan 2025 23:16:23 INFO  epoch 4 evaluating [time: 1.69s, valid_score: 0.035000]
+Sun 19 Jan 2025 23:16:23 INFO  valid result: 
+precision@10 : 0.0208    hit@10 : 0.1711    mrr@10 : 0.0557    ndcg@10 : 0.035    map@10 : 0.0169    itemcoverage@10 : 0.0013    averagepopularity@10 : 133.3365    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 23:16:23 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-15-26.pth
+Sun 19 Jan 2025 23:16:34 INFO  epoch 5 training [time: 11.21s, train loss: 23357.5704]
+Sun 19 Jan 2025 23:16:45 INFO  epoch 6 training [time: 10.95s, train loss: 22879.3126]
+Sun 19 Jan 2025 23:16:56 INFO  epoch 7 training [time: 10.82s, train loss: 22441.7274]
+Sun 19 Jan 2025 23:17:06 INFO  epoch 8 training [time: 10.78s, train loss: 22024.7709]
+Sun 19 Jan 2025 23:17:17 INFO  epoch 9 training [time: 10.62s, train loss: 21631.1742]
+Sun 19 Jan 2025 23:17:19 INFO  epoch 9 evaluating [time: 1.70s, valid_score: 0.035400]
+Sun 19 Jan 2025 23:17:19 INFO  valid result: 
+precision@10 : 0.0209    hit@10 : 0.1684    mrr@10 : 0.0547    ndcg@10 : 0.0354    map@10 : 0.0171    itemcoverage@10 : 0.0011    averagepopularity@10 : 134.2135    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 23:17:19 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-15-26.pth
+Sun 19 Jan 2025 23:17:29 INFO  epoch 10 training [time: 10.80s, train loss: 21259.3171]
+Sun 19 Jan 2025 23:17:41 INFO  epoch 11 training [time: 11.19s, train loss: 20911.2513]
+Sun 19 Jan 2025 23:17:52 INFO  epoch 12 training [time: 10.88s, train loss: 20589.3638]
+Sun 19 Jan 2025 23:18:02 INFO  epoch 13 training [time: 10.86s, train loss: 20290.6499]
+Sun 19 Jan 2025 23:18:13 INFO  epoch 14 training [time: 10.69s, train loss: 20019.8517]
+Sun 19 Jan 2025 23:18:15 INFO  epoch 14 evaluating [time: 1.77s, valid_score: 0.035000]
+Sun 19 Jan 2025 23:18:15 INFO  valid result: 
+precision@10 : 0.0213    hit@10 : 0.172    mrr@10 : 0.0566    ndcg@10 : 0.035    map@10 : 0.0164    itemcoverage@10 : 0.0013    averagepopularity@10 : 132.807    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 23:18:25 INFO  epoch 15 training [time: 10.44s, train loss: 19768.7644]
+Sun 19 Jan 2025 23:18:36 INFO  epoch 16 training [time: 10.70s, train loss: 19539.3780]
+Sun 19 Jan 2025 23:18:47 INFO  epoch 17 training [time: 11.38s, train loss: 19333.9533]
+Sun 19 Jan 2025 23:18:58 INFO  epoch 18 training [time: 10.63s, train loss: 19144.4725]
+Sun 19 Jan 2025 23:19:09 INFO  epoch 19 training [time: 10.93s, train loss: 18971.3265]
+Sun 19 Jan 2025 23:19:11 INFO  epoch 19 evaluating [time: 1.70s, valid_score: 0.035300]
+Sun 19 Jan 2025 23:19:11 INFO  valid result: 
+precision@10 : 0.0211    hit@10 : 0.1684    mrr@10 : 0.0552    ndcg@10 : 0.0353    map@10 : 0.017    itemcoverage@10 : 0.0013    averagepopularity@10 : 130.3758    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 23:19:21 INFO  epoch 20 training [time: 10.83s, train loss: 18810.5485]
+Sun 19 Jan 2025 23:19:32 INFO  epoch 21 training [time: 10.83s, train loss: 18665.2469]
+Sun 19 Jan 2025 23:19:43 INFO  epoch 22 training [time: 10.64s, train loss: 18522.6914]
+Sun 19 Jan 2025 23:19:54 INFO  epoch 23 training [time: 11.16s, train loss: 18389.2797]
+Sun 19 Jan 2025 23:20:05 INFO  epoch 24 training [time: 10.73s, train loss: 18258.2592]
+Sun 19 Jan 2025 23:20:07 INFO  epoch 24 evaluating [time: 1.70s, valid_score: 0.035400]
+Sun 19 Jan 2025 23:20:07 INFO  valid result: 
+precision@10 : 0.0209    hit@10 : 0.1667    mrr@10 : 0.056    ndcg@10 : 0.0354    map@10 : 0.0174    itemcoverage@10 : 0.0013    averagepopularity@10 : 131.864    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 23:20:07 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-15-26.pth
+Sun 19 Jan 2025 23:20:18 INFO  epoch 25 training [time: 10.95s, train loss: 18127.1611]
+Sun 19 Jan 2025 23:20:28 INFO  epoch 26 training [time: 10.46s, train loss: 17990.4720]
+Sun 19 Jan 2025 23:20:39 INFO  epoch 27 training [time: 10.72s, train loss: 17841.8153]
+Sun 19 Jan 2025 23:20:49 INFO  epoch 28 training [time: 10.60s, train loss: 17675.3092]
+Sun 19 Jan 2025 23:21:01 INFO  epoch 29 training [time: 11.41s, train loss: 17475.7024]
+Sun 19 Jan 2025 23:21:02 INFO  epoch 29 evaluating [time: 1.70s, valid_score: 0.042000]
+Sun 19 Jan 2025 23:21:02 INFO  valid result: 
+precision@10 : 0.0242    hit@10 : 0.1836    mrr@10 : 0.0666    ndcg@10 : 0.042    map@10 : 0.0215    itemcoverage@10 : 0.003    averagepopularity@10 : 127.7696    tailpercentage@10 : 0.0001
+Sun 19 Jan 2025 23:21:02 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-15-26.pth
+Sun 19 Jan 2025 23:21:13 INFO  epoch 30 training [time: 10.52s, train loss: 17238.9777]
+Sun 19 Jan 2025 23:21:24 INFO  epoch 31 training [time: 10.63s, train loss: 16957.6619]
+Sun 19 Jan 2025 23:21:35 INFO  epoch 32 training [time: 10.98s, train loss: 16635.1478]
+Sun 19 Jan 2025 23:21:45 INFO  epoch 33 training [time: 10.79s, train loss: 16277.4143]
+Sun 19 Jan 2025 23:21:56 INFO  epoch 34 training [time: 10.60s, train loss: 15885.4893]
+Sun 19 Jan 2025 23:21:58 INFO  epoch 34 evaluating [time: 1.69s, valid_score: 0.063500]
+Sun 19 Jan 2025 23:21:58 INFO  valid result: 
+precision@10 : 0.0374    hit@10 : 0.2433    mrr@10 : 0.098    ndcg@10 : 0.0635    map@10 : 0.034    itemcoverage@10 : 0.0173    averagepopularity@10 : 115.9463    tailpercentage@10 : 0.0011
+Sun 19 Jan 2025 23:21:58 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-15-26.pth
+Sun 19 Jan 2025 23:22:09 INFO  epoch 35 training [time: 11.16s, train loss: 15459.8729]
+Sun 19 Jan 2025 23:22:20 INFO  epoch 36 training [time: 10.81s, train loss: 15008.7150]
+Sun 19 Jan 2025 23:22:31 INFO  epoch 37 training [time: 10.87s, train loss: 14540.9266]
+Sun 19 Jan 2025 23:22:41 INFO  epoch 38 training [time: 10.49s, train loss: 14047.3966]
+Sun 19 Jan 2025 23:22:52 INFO  epoch 39 training [time: 10.87s, train loss: 13560.8772]
+Sun 19 Jan 2025 23:22:54 INFO  epoch 39 evaluating [time: 1.71s, valid_score: 0.081700]
+Sun 19 Jan 2025 23:22:54 INFO  valid result: 
+precision@10 : 0.0488    hit@10 : 0.3093    mrr@10 : 0.1272    ndcg@10 : 0.0817    map@10 : 0.0436    itemcoverage@10 : 0.043    averagepopularity@10 : 92.4179    tailpercentage@10 : 0.0029
+Sun 19 Jan 2025 23:22:54 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-15-26.pth
+Sun 19 Jan 2025 23:23:04 INFO  epoch 40 training [time: 10.86s, train loss: 13078.0030]
+Sun 19 Jan 2025 23:23:16 INFO  epoch 41 training [time: 11.08s, train loss: 12609.5461]
+Sun 19 Jan 2025 23:23:26 INFO  epoch 42 training [time: 10.50s, train loss: 12167.2988]
+Sun 19 Jan 2025 23:23:37 INFO  epoch 43 training [time: 10.83s, train loss: 11744.4063]
+Sun 19 Jan 2025 23:23:48 INFO  epoch 44 training [time: 10.74s, train loss: 11347.4299]
+Sun 19 Jan 2025 23:23:49 INFO  epoch 44 evaluating [time: 1.70s, valid_score: 0.099700]
+Sun 19 Jan 2025 23:23:49 INFO  valid result: 
+precision@10 : 0.0586    hit@10 : 0.3717    mrr@10 : 0.161    ndcg@10 : 0.0997    map@10 : 0.0536    itemcoverage@10 : 0.0744    averagepopularity@10 : 73.8593    tailpercentage@10 : 0.0029
+Sun 19 Jan 2025 23:23:49 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-15-26.pth
+Sun 19 Jan 2025 23:24:00 INFO  epoch 45 training [time: 10.87s, train loss: 10989.4280]
+Sun 19 Jan 2025 23:24:11 INFO  epoch 46 training [time: 10.83s, train loss: 10659.9747]
+Sun 19 Jan 2025 23:24:22 INFO  epoch 47 training [time: 11.02s, train loss: 10356.0418]
+Sun 19 Jan 2025 23:24:33 INFO  epoch 48 training [time: 10.88s, train loss: 10092.4260]
+Sun 19 Jan 2025 23:24:43 INFO  epoch 49 training [time: 10.37s, train loss: 9837.6251]
+Sun 19 Jan 2025 23:24:45 INFO  epoch 49 evaluating [time: 1.83s, valid_score: 0.101300]
+Sun 19 Jan 2025 23:24:45 INFO  valid result: 
+precision@10 : 0.0602    hit@10 : 0.3743    mrr@10 : 0.1646    ndcg@10 : 0.1013    map@10 : 0.0541    itemcoverage@10 : 0.0929    averagepopularity@10 : 62.8046    tailpercentage@10 : 0.0037
+Sun 19 Jan 2025 23:24:45 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-15-26.pth
+Sun 19 Jan 2025 23:24:56 INFO  epoch 50 training [time: 10.57s, train loss: 9622.8356]
+Sun 19 Jan 2025 23:25:06 INFO  epoch 51 training [time: 10.65s, train loss: 9431.2766]
+Sun 19 Jan 2025 23:25:18 INFO  epoch 52 training [time: 11.18s, train loss: 9252.2048]
+Sun 19 Jan 2025 23:25:28 INFO  epoch 53 training [time: 10.63s, train loss: 9102.6177]
+Sun 19 Jan 2025 23:25:39 INFO  epoch 54 training [time: 10.68s, train loss: 8977.0117]
+Sun 19 Jan 2025 23:25:41 INFO  epoch 54 evaluating [time: 1.70s, valid_score: 0.103500]
+Sun 19 Jan 2025 23:25:41 INFO  valid result: 
+precision@10 : 0.0624    hit@10 : 0.3806    mrr@10 : 0.1664    ndcg@10 : 0.1035    map@10 : 0.0544    itemcoverage@10 : 0.0948    averagepopularity@10 : 59.698    tailpercentage@10 : 0.0028
+Sun 19 Jan 2025 23:25:41 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-15-26.pth
+Sun 19 Jan 2025 23:25:51 INFO  epoch 55 training [time: 10.70s, train loss: 8857.9620]
+Sun 19 Jan 2025 23:26:02 INFO  epoch 56 training [time: 10.80s, train loss: 8746.4457]
+Sun 19 Jan 2025 23:26:13 INFO  epoch 57 training [time: 10.60s, train loss: 8661.0161]
+Sun 19 Jan 2025 23:26:24 INFO  epoch 58 training [time: 11.15s, train loss: 8583.8573]
+Sun 19 Jan 2025 23:26:35 INFO  epoch 59 training [time: 10.99s, train loss: 8513.1450]
+Sun 19 Jan 2025 23:26:37 INFO  epoch 59 evaluating [time: 1.72s, valid_score: 0.101900]
+Sun 19 Jan 2025 23:26:37 INFO  valid result: 
+precision@10 : 0.062    hit@10 : 0.3725    mrr@10 : 0.1588    ndcg@10 : 0.1019    map@10 : 0.0539    itemcoverage@10 : 0.0894    averagepopularity@10 : 59.6283    tailpercentage@10 : 0.0023
+Sun 19 Jan 2025 23:26:47 INFO  epoch 60 training [time: 10.73s, train loss: 8450.5590]
+Sun 19 Jan 2025 23:26:58 INFO  epoch 61 training [time: 10.71s, train loss: 8401.2789]
+Sun 19 Jan 2025 23:27:09 INFO  epoch 62 training [time: 10.77s, train loss: 8346.0486]
+Sun 19 Jan 2025 23:27:20 INFO  epoch 63 training [time: 10.74s, train loss: 8304.0710]
+Sun 19 Jan 2025 23:27:31 INFO  epoch 64 training [time: 11.39s, train loss: 8268.8765]
+Sun 19 Jan 2025 23:27:33 INFO  epoch 64 evaluating [time: 1.69s, valid_score: 0.101700]
+Sun 19 Jan 2025 23:27:33 INFO  valid result: 
+precision@10 : 0.0616    hit@10 : 0.3717    mrr@10 : 0.1564    ndcg@10 : 0.1017    map@10 : 0.0544    itemcoverage@10 : 0.081    averagepopularity@10 : 60.7027    tailpercentage@10 : 0.0019
+Sun 19 Jan 2025 23:27:43 INFO  epoch 65 training [time: 10.44s, train loss: 8228.4449]
+Sun 19 Jan 2025 23:27:54 INFO  epoch 66 training [time: 10.73s, train loss: 8214.2803]
+Sun 19 Jan 2025 23:28:04 INFO  epoch 67 training [time: 10.55s, train loss: 8182.6006]
+Sun 19 Jan 2025 23:28:15 INFO  epoch 68 training [time: 10.94s, train loss: 8165.7856]
+Sun 19 Jan 2025 23:28:26 INFO  epoch 69 training [time: 10.69s, train loss: 8140.3972]
+Sun 19 Jan 2025 23:28:28 INFO  epoch 69 evaluating [time: 1.69s, valid_score: 0.100600]
+Sun 19 Jan 2025 23:28:28 INFO  valid result: 
+precision@10 : 0.0604    hit@10 : 0.369    mrr@10 : 0.1568    ndcg@10 : 0.1006    map@10 : 0.0538    itemcoverage@10 : 0.0769    averagepopularity@10 : 61.5564    tailpercentage@10 : 0.0015
+Sun 19 Jan 2025 23:28:39 INFO  epoch 70 training [time: 11.29s, train loss: 8111.6527]
+Sun 19 Jan 2025 23:28:50 INFO  epoch 71 training [time: 10.88s, train loss: 8099.3365]
+Sun 19 Jan 2025 23:29:01 INFO  epoch 72 training [time: 10.77s, train loss: 8079.6047]
+Sun 19 Jan 2025 23:29:11 INFO  epoch 73 training [time: 10.52s, train loss: 8051.8972]
+Sun 19 Jan 2025 23:29:22 INFO  epoch 74 training [time: 11.04s, train loss: 8040.2891]
+Sun 19 Jan 2025 23:29:24 INFO  epoch 74 evaluating [time: 1.70s, valid_score: 0.100200]
+Sun 19 Jan 2025 23:29:24 INFO  valid result: 
+precision@10 : 0.0608    hit@10 : 0.3761    mrr@10 : 0.1498    ndcg@10 : 0.1002    map@10 : 0.0529    itemcoverage@10 : 0.0697    averagepopularity@10 : 64.2156    tailpercentage@10 : 0.0021
+Sun 19 Jan 2025 23:29:35 INFO  epoch 75 training [time: 10.77s, train loss: 8029.4903]
+Sun 19 Jan 2025 23:29:46 INFO  epoch 76 training [time: 11.36s, train loss: 8014.7319]
+Sun 19 Jan 2025 23:29:57 INFO  epoch 77 training [time: 10.63s, train loss: 8008.3194]
+Sun 19 Jan 2025 23:30:07 INFO  epoch 78 training [time: 10.76s, train loss: 7992.9646]
+Sun 19 Jan 2025 23:30:18 INFO  epoch 79 training [time: 10.59s, train loss: 7988.1607]
+Sun 19 Jan 2025 23:30:20 INFO  epoch 79 evaluating [time: 1.72s, valid_score: 0.101800]
+Sun 19 Jan 2025 23:30:20 INFO  valid result: 
+precision@10 : 0.0604    hit@10 : 0.3752    mrr@10 : 0.1574    ndcg@10 : 0.1018    map@10 : 0.0547    itemcoverage@10 : 0.0661    averagepopularity@10 : 64.0772    tailpercentage@10 : 0.0017
+Sun 19 Jan 2025 23:30:30 INFO  epoch 80 training [time: 10.75s, train loss: 7974.5923]
+Sun 19 Jan 2025 23:30:41 INFO  epoch 81 training [time: 10.58s, train loss: 7966.8336]
+Sun 19 Jan 2025 23:30:52 INFO  epoch 82 training [time: 11.24s, train loss: 7964.4206]
+Sun 19 Jan 2025 23:31:03 INFO  epoch 83 training [time: 10.83s, train loss: 7942.0960]
+Sun 19 Jan 2025 23:31:14 INFO  epoch 84 training [time: 10.60s, train loss: 7940.3159]
+Sun 19 Jan 2025 23:31:15 INFO  epoch 84 evaluating [time: 1.80s, valid_score: 0.097800]
+Sun 19 Jan 2025 23:31:15 INFO  valid result: 
+precision@10 : 0.0577    hit@10 : 0.361    mrr@10 : 0.1533    ndcg@10 : 0.0978    map@10 : 0.0525    itemcoverage@10 : 0.0622    averagepopularity@10 : 66.2594    tailpercentage@10 : 0.0014
+Sun 19 Jan 2025 23:31:26 INFO  epoch 85 training [time: 10.64s, train loss: 7932.1235]
+Sun 19 Jan 2025 23:31:37 INFO  epoch 86 training [time: 10.76s, train loss: 7930.8432]
+Sun 19 Jan 2025 23:31:48 INFO  epoch 87 training [time: 10.89s, train loss: 7921.7180]
+Sun 19 Jan 2025 23:31:59 INFO  epoch 88 training [time: 11.16s, train loss: 7912.2542]
+Sun 19 Jan 2025 23:32:10 INFO  epoch 89 training [time: 10.60s, train loss: 7904.7700]
+Sun 19 Jan 2025 23:32:11 INFO  epoch 89 evaluating [time: 1.70s, valid_score: 0.097800]
+Sun 19 Jan 2025 23:32:11 INFO  valid result: 
+precision@10 : 0.0578    hit@10 : 0.3636    mrr@10 : 0.1511    ndcg@10 : 0.0978    map@10 : 0.0526    itemcoverage@10 : 0.0599    averagepopularity@10 : 67.209    tailpercentage@10 : 0.001
+Sun 19 Jan 2025 23:32:22 INFO  epoch 90 training [time: 10.81s, train loss: 7901.2619]
+Sun 19 Jan 2025 23:32:33 INFO  epoch 91 training [time: 11.00s, train loss: 7891.6766]
+Sun 19 Jan 2025 23:32:44 INFO  epoch 92 training [time: 10.58s, train loss: 7885.4673]
+Sun 19 Jan 2025 23:32:55 INFO  epoch 93 training [time: 10.89s, train loss: 7882.7714]
+Sun 19 Jan 2025 23:33:06 INFO  epoch 94 training [time: 11.14s, train loss: 7878.7037]
+Sun 19 Jan 2025 23:33:07 INFO  epoch 94 evaluating [time: 1.70s, valid_score: 0.096200]
+Sun 19 Jan 2025 23:33:07 INFO  valid result: 
+precision@10 : 0.056    hit@10 : 0.352    mrr@10 : 0.1506    ndcg@10 : 0.0962    map@10 : 0.0525    itemcoverage@10 : 0.0572    averagepopularity@10 : 68.5474    tailpercentage@10 : 0.001
+Sun 19 Jan 2025 23:33:18 INFO  epoch 95 training [time: 10.98s, train loss: 7875.4372]
+Sun 19 Jan 2025 23:33:29 INFO  epoch 96 training [time: 10.67s, train loss: 7877.9797]
+Sun 19 Jan 2025 23:33:40 INFO  epoch 97 training [time: 10.87s, train loss: 7864.7255]
+Sun 19 Jan 2025 23:33:51 INFO  epoch 98 training [time: 10.99s, train loss: 7861.3347]
+Sun 19 Jan 2025 23:34:02 INFO  epoch 99 training [time: 11.01s, train loss: 7867.6394]
+Sun 19 Jan 2025 23:34:04 INFO  epoch 99 evaluating [time: 1.76s, valid_score: 0.098400]
+Sun 19 Jan 2025 23:34:04 INFO  valid result: 
+precision@10 : 0.0578    hit@10 : 0.3627    mrr@10 : 0.1546    ndcg@10 : 0.0984    map@10 : 0.0529    itemcoverage@10 : 0.055    averagepopularity@10 : 69.1031    tailpercentage@10 : 0.0013
+Sun 19 Jan 2025 23:34:04 INFO  Loading model structure and parameters from saved\UltraGCN-Jan-19-2025_23-15-26.pth
+Sun 19 Jan 2025 23:34:05 INFO  best valid : OrderedDict({'precision@10': 0.0624, 'hit@10': 0.3806, 'mrr@10': 0.1664, 'ndcg@10': 0.1035, 'map@10': 0.0544, 'itemcoverage@10': 0.0948, 'averagepopularity@10': 59.698, 'tailpercentage@10': 0.0028})
+Sun 19 Jan 2025 23:34:05 INFO  test result: OrderedDict({'precision@10': 0.1315, 'hit@10': 0.5475, 'mrr@10': 0.2883, 'ndcg@10': 0.1673, 'map@10': 0.1006, 'itemcoverage@10': 0.0969, 'averagepopularity@10': 59.3576, 'tailpercentage@10': 0.0028})
+Sun 19 Jan 2025 23:34:07 INFO  [Training]: train_batch_size = [128] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Sun 19 Jan 2025 23:34:07 INFO  [Evaluation]: eval_batch_size = [256] eval_args: [{'split': {'RS': [0.7, 0.1, 0.2]}, 'order': 'RO', 'group_by': 'None', 'mode': {'valid': 'full', 'test': 'full'}}]
+Sun 19 Jan 2025 23:34:31 INFO  epoch 0 training [time: 10.40s, train loss: 305939.5673]
+Sun 19 Jan 2025 23:34:41 INFO  epoch 1 training [time: 10.29s, train loss: 39653.1646]
+Sun 19 Jan 2025 23:34:52 INFO  epoch 2 training [time: 10.43s, train loss: 26141.5288]
+Sun 19 Jan 2025 23:35:02 INFO  epoch 3 training [time: 10.33s, train loss: 23762.3825]
+Sun 19 Jan 2025 23:35:13 INFO  epoch 4 training [time: 10.82s, train loss: 22858.4346]
+Sun 19 Jan 2025 23:35:15 INFO  epoch 4 evaluating [time: 1.72s, valid_score: 0.045700]
+Sun 19 Jan 2025 23:35:15 INFO  valid result: 
+precision@10 : 0.0252    hit@10 : 0.1949    mrr@10 : 0.0776    ndcg@10 : 0.0457    map@10 : 0.0233    itemcoverage@10 : 0.0017    averagepopularity@10 : 148.7664    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 23:35:15 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-34-21.pth
+Sun 19 Jan 2025 23:35:25 INFO  epoch 5 training [time: 10.33s, train loss: 22310.4951]
+Sun 19 Jan 2025 23:35:36 INFO  epoch 6 training [time: 10.64s, train loss: 21871.5587]
+Sun 19 Jan 2025 23:35:46 INFO  epoch 7 training [time: 10.45s, train loss: 21474.4794]
+Sun 19 Jan 2025 23:35:57 INFO  epoch 8 training [time: 10.48s, train loss: 21096.7381]
+Sun 19 Jan 2025 23:36:07 INFO  epoch 9 training [time: 10.44s, train loss: 20737.7892]
+Sun 19 Jan 2025 23:36:09 INFO  epoch 9 evaluating [time: 1.61s, valid_score: 0.046600]
+Sun 19 Jan 2025 23:36:09 INFO  valid result: 
+precision@10 : 0.0261    hit@10 : 0.2004    mrr@10 : 0.0784    ndcg@10 : 0.0466    map@10 : 0.0234    itemcoverage@10 : 0.0017    averagepopularity@10 : 148.3584    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 23:36:09 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-34-21.pth
+Sun 19 Jan 2025 23:36:20 INFO  epoch 10 training [time: 11.03s, train loss: 20398.3348]
+Sun 19 Jan 2025 23:36:30 INFO  epoch 11 training [time: 10.61s, train loss: 20079.5980]
+Sun 19 Jan 2025 23:36:41 INFO  epoch 12 training [time: 10.29s, train loss: 19779.6895]
+Sun 19 Jan 2025 23:36:51 INFO  epoch 13 training [time: 10.68s, train loss: 19502.4050]
+Sun 19 Jan 2025 23:37:02 INFO  epoch 14 training [time: 10.60s, train loss: 19246.6881]
+Sun 19 Jan 2025 23:37:03 INFO  epoch 14 evaluating [time: 1.62s, valid_score: 0.045300]
+Sun 19 Jan 2025 23:37:03 INFO  valid result: 
+precision@10 : 0.0261    hit@10 : 0.2004    mrr@10 : 0.075    ndcg@10 : 0.0453    map@10 : 0.0218    itemcoverage@10 : 0.0018    averagepopularity@10 : 148.0572    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 23:37:14 INFO  epoch 15 training [time: 10.43s, train loss: 19011.6555]
+Sun 19 Jan 2025 23:37:25 INFO  epoch 16 training [time: 11.16s, train loss: 18794.1500]
+Sun 19 Jan 2025 23:37:36 INFO  epoch 17 training [time: 10.60s, train loss: 18598.0891]
+Sun 19 Jan 2025 23:37:46 INFO  epoch 18 training [time: 10.60s, train loss: 18417.7383]
+Sun 19 Jan 2025 23:37:57 INFO  epoch 19 training [time: 10.51s, train loss: 18252.8971]
+Sun 19 Jan 2025 23:37:58 INFO  epoch 19 evaluating [time: 1.62s, valid_score: 0.048900]
+Sun 19 Jan 2025 23:37:58 INFO  valid result: 
+precision@10 : 0.0267    hit@10 : 0.2031    mrr@10 : 0.083    ndcg@10 : 0.0489    map@10 : 0.025    itemcoverage@10 : 0.0018    averagepopularity@10 : 149.3247    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 23:37:58 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-34-21.pth
+Sun 19 Jan 2025 23:38:09 INFO  epoch 20 training [time: 10.53s, train loss: 18102.1114]
+Sun 19 Jan 2025 23:38:20 INFO  epoch 21 training [time: 10.64s, train loss: 17962.5102]
+Sun 19 Jan 2025 23:38:31 INFO  epoch 22 training [time: 11.11s, train loss: 17825.0781]
+Sun 19 Jan 2025 23:38:41 INFO  epoch 23 training [time: 10.59s, train loss: 17687.8467]
+Sun 19 Jan 2025 23:38:52 INFO  epoch 24 training [time: 10.55s, train loss: 17541.1039]
+Sun 19 Jan 2025 23:38:53 INFO  epoch 24 evaluating [time: 1.63s, valid_score: 0.048100]
+Sun 19 Jan 2025 23:38:53 INFO  valid result: 
+precision@10 : 0.025    hit@10 : 0.1895    mrr@10 : 0.0846    ndcg@10 : 0.0481    map@10 : 0.0259    itemcoverage@10 : 0.0018    averagepopularity@10 : 148.6544    tailpercentage@10 : 0.0
+Sun 19 Jan 2025 23:39:04 INFO  epoch 25 training [time: 10.64s, train loss: 17391.1234]
+Sun 19 Jan 2025 23:39:14 INFO  epoch 26 training [time: 10.36s, train loss: 17237.8715]
+Sun 19 Jan 2025 23:39:25 INFO  epoch 27 training [time: 10.50s, train loss: 17077.4046]
+Sun 19 Jan 2025 23:39:36 INFO  epoch 28 training [time: 11.05s, train loss: 16906.0467]
+Sun 19 Jan 2025 23:39:46 INFO  epoch 29 training [time: 10.44s, train loss: 16719.4091]
+Sun 19 Jan 2025 23:39:48 INFO  epoch 29 evaluating [time: 1.63s, valid_score: 0.051700]
+Sun 19 Jan 2025 23:39:48 INFO  valid result: 
+precision@10 : 0.0283    hit@10 : 0.2067    mrr@10 : 0.0889    ndcg@10 : 0.0517    map@10 : 0.0274    itemcoverage@10 : 0.0045    averagepopularity@10 : 149.1899    tailpercentage@10 : 0.0008
+Sun 19 Jan 2025 23:39:48 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-34-21.pth
+Sun 19 Jan 2025 23:39:59 INFO  epoch 30 training [time: 10.41s, train loss: 16509.6640]
+Sun 19 Jan 2025 23:40:09 INFO  epoch 31 training [time: 10.56s, train loss: 16273.3998]
+Sun 19 Jan 2025 23:40:20 INFO  epoch 32 training [time: 10.67s, train loss: 16013.0454]
+Sun 19 Jan 2025 23:40:30 INFO  epoch 33 training [time: 10.50s, train loss: 15725.5246]
+Sun 19 Jan 2025 23:40:41 INFO  epoch 34 training [time: 10.79s, train loss: 15412.6839]
+Sun 19 Jan 2025 23:40:43 INFO  epoch 34 evaluating [time: 1.62s, valid_score: 0.060600]
+Sun 19 Jan 2025 23:40:43 INFO  valid result: 
+precision@10 : 0.0349    hit@10 : 0.2375    mrr@10 : 0.101    ndcg@10 : 0.0606    map@10 : 0.032    itemcoverage@10 : 0.013    averagepopularity@10 : 140.5102    tailpercentage@10 : 0.0013
+Sun 19 Jan 2025 23:40:43 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-34-21.pth
+Sun 19 Jan 2025 23:40:53 INFO  epoch 35 training [time: 10.59s, train loss: 15074.9796]
+Sun 19 Jan 2025 23:41:04 INFO  epoch 36 training [time: 10.53s, train loss: 14711.2095]
+Sun 19 Jan 2025 23:41:14 INFO  epoch 37 training [time: 10.28s, train loss: 14318.0098]
+Sun 19 Jan 2025 23:41:25 INFO  epoch 38 training [time: 10.86s, train loss: 13900.4568]
+Sun 19 Jan 2025 23:41:36 INFO  epoch 39 training [time: 10.70s, train loss: 13466.2972]
+Sun 19 Jan 2025 23:41:37 INFO  epoch 39 evaluating [time: 1.62s, valid_score: 0.079100]
+Sun 19 Jan 2025 23:41:37 INFO  valid result: 
+precision@10 : 0.0474    hit@10 : 0.3046    mrr@10 : 0.1265    ndcg@10 : 0.0791    map@10 : 0.042    itemcoverage@10 : 0.0357    averagepopularity@10 : 120.6116    tailpercentage@10 : 0.0016
+Sun 19 Jan 2025 23:41:37 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-34-21.pth
+Sun 19 Jan 2025 23:41:48 INFO  epoch 40 training [time: 11.03s, train loss: 13013.6535]
+Sun 19 Jan 2025 23:41:59 INFO  epoch 41 training [time: 10.34s, train loss: 12570.4681]
+Sun 19 Jan 2025 23:42:09 INFO  epoch 42 training [time: 10.61s, train loss: 12132.3134]
+Sun 19 Jan 2025 23:42:20 INFO  epoch 43 training [time: 10.45s, train loss: 11704.6661]
+Sun 19 Jan 2025 23:42:30 INFO  epoch 44 training [time: 10.58s, train loss: 11304.8190]
+Sun 19 Jan 2025 23:42:32 INFO  epoch 44 evaluating [time: 1.64s, valid_score: 0.095300]
+Sun 19 Jan 2025 23:42:32 INFO  valid result: 
+precision@10 : 0.0562    hit@10 : 0.3581    mrr@10 : 0.1495    ndcg@10 : 0.0953    map@10 : 0.0508    itemcoverage@10 : 0.0654    averagepopularity@10 : 98.5609    tailpercentage@10 : 0.0035
+Sun 19 Jan 2025 23:42:32 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-34-21.pth
+Sun 19 Jan 2025 23:42:42 INFO  epoch 45 training [time: 10.44s, train loss: 10927.5502]
+Sun 19 Jan 2025 23:42:54 INFO  epoch 46 training [time: 11.18s, train loss: 10571.4131]
+Sun 19 Jan 2025 23:43:04 INFO  epoch 47 training [time: 10.47s, train loss: 10242.9108]
+Sun 19 Jan 2025 23:43:15 INFO  epoch 48 training [time: 10.45s, train loss: 9955.7030]
+Sun 19 Jan 2025 23:43:25 INFO  epoch 49 training [time: 10.40s, train loss: 9681.2230]
+Sun 19 Jan 2025 23:43:27 INFO  epoch 49 evaluating [time: 1.63s, valid_score: 0.101100]
+Sun 19 Jan 2025 23:43:27 INFO  valid result: 
+precision@10 : 0.0598    hit@10 : 0.3753    mrr@10 : 0.1566    ndcg@10 : 0.1011    map@10 : 0.0542    itemcoverage@10 : 0.0883    averagepopularity@10 : 83.3845    tailpercentage@10 : 0.0031
+Sun 19 Jan 2025 23:43:27 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-34-21.pth
+Sun 19 Jan 2025 23:43:37 INFO  epoch 50 training [time: 10.42s, train loss: 9445.5540]
+Sun 19 Jan 2025 23:43:48 INFO  epoch 51 training [time: 10.52s, train loss: 9234.8930]
+Sun 19 Jan 2025 23:43:58 INFO  epoch 52 training [time: 10.97s, train loss: 9051.3362]
+Sun 19 Jan 2025 23:44:09 INFO  epoch 53 training [time: 10.45s, train loss: 8885.0666]
+Sun 19 Jan 2025 23:44:20 INFO  epoch 54 training [time: 10.71s, train loss: 8737.6938]
+Sun 19 Jan 2025 23:44:21 INFO  epoch 54 evaluating [time: 1.63s, valid_score: 0.103500]
+Sun 19 Jan 2025 23:44:21 INFO  valid result: 
+precision@10 : 0.0603    hit@10 : 0.3817    mrr@10 : 0.1614    ndcg@10 : 0.1035    map@10 : 0.0555    itemcoverage@10 : 0.0948    averagepopularity@10 : 78.1532    tailpercentage@10 : 0.0029
+Sun 19 Jan 2025 23:44:21 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-34-21.pth
+Sun 19 Jan 2025 23:44:32 INFO  epoch 55 training [time: 10.57s, train loss: 8615.3889]
+Sun 19 Jan 2025 23:44:42 INFO  epoch 56 training [time: 10.46s, train loss: 8508.1721]
+Sun 19 Jan 2025 23:44:53 INFO  epoch 57 training [time: 10.51s, train loss: 8401.0623]
+Sun 19 Jan 2025 23:45:04 INFO  epoch 58 training [time: 11.08s, train loss: 8328.5814]
+Sun 19 Jan 2025 23:45:14 INFO  epoch 59 training [time: 10.28s, train loss: 8240.2900]
+Sun 19 Jan 2025 23:45:16 INFO  epoch 59 evaluating [time: 1.73s, valid_score: 0.108600]
+Sun 19 Jan 2025 23:45:16 INFO  valid result: 
+precision@10 : 0.064    hit@10 : 0.3998    mrr@10 : 0.1633    ndcg@10 : 0.1086    map@10 : 0.057    itemcoverage@10 : 0.0897    averagepopularity@10 : 76.3463    tailpercentage@10 : 0.0023
+Sun 19 Jan 2025 23:45:16 INFO  Saving current: saved\UltraGCN-Jan-19-2025_23-34-21.pth
+Sun 19 Jan 2025 23:45:26 INFO  epoch 60 training [time: 10.25s, train loss: 8186.7804]
+Sun 19 Jan 2025 23:45:37 INFO  epoch 61 training [time: 10.58s, train loss: 8124.4595]
+Sun 19 Jan 2025 23:45:47 INFO  epoch 62 training [time: 10.46s, train loss: 8065.8844]
+Sun 19 Jan 2025 23:45:58 INFO  epoch 63 training [time: 10.37s, train loss: 8027.5971]
+Sun 19 Jan 2025 23:46:09 INFO  epoch 64 training [time: 11.14s, train loss: 7993.2102]
+Sun 19 Jan 2025 23:46:10 INFO  epoch 64 evaluating [time: 1.63s, valid_score: 0.106700]
+Sun 19 Jan 2025 23:46:10 INFO  valid result: 
+precision@10 : 0.0618    hit@10 : 0.3871    mrr@10 : 0.162    ndcg@10 : 0.1067    map@10 : 0.0579    itemcoverage@10 : 0.0817    averagepopularity@10 : 78.0714    tailpercentage@10 : 0.0015
+Sun 19 Jan 2025 23:46:21 INFO  epoch 65 training [time: 10.65s, train loss: 7940.9994]
+Sun 19 Jan 2025 23:46:31 INFO  epoch 66 training [time: 10.44s, train loss: 7911.9233]
+Sun 19 Jan 2025 23:46:42 INFO  epoch 67 training [time: 10.28s, train loss: 7889.9648]
+Sun 19 Jan 2025 23:46:52 INFO  epoch 68 training [time: 10.60s, train loss: 7853.4681]
+Sun 19 Jan 2025 23:47:03 INFO  epoch 69 training [time: 10.53s, train loss: 7838.7141]
+Sun 19 Jan 2025 23:47:05 INFO  epoch 69 evaluating [time: 1.64s, valid_score: 0.106800]
+Sun 19 Jan 2025 23:47:05 INFO  valid result: 
+precision@10 : 0.0607    hit@10 : 0.3799    mrr@10 : 0.1618    ndcg@10 : 0.1068    map@10 : 0.0594    itemcoverage@10 : 0.0763    averagepopularity@10 : 78.4534    tailpercentage@10 : 0.0015
+Sun 19 Jan 2025 23:47:15 INFO  epoch 70 training [time: 10.87s, train loss: 7815.6116]
+Sun 19 Jan 2025 23:47:26 INFO  epoch 71 training [time: 10.62s, train loss: 7808.8121]
+Sun 19 Jan 2025 23:47:37 INFO  epoch 72 training [time: 10.51s, train loss: 7773.5512]
+Sun 19 Jan 2025 23:47:47 INFO  epoch 73 training [time: 10.44s, train loss: 7753.2709]
+Sun 19 Jan 2025 23:47:57 INFO  epoch 74 training [time: 10.31s, train loss: 7743.4922]
+Sun 19 Jan 2025 23:47:59 INFO  epoch 74 evaluating [time: 1.62s, valid_score: 0.105300]
+Sun 19 Jan 2025 23:47:59 INFO  valid result: 
+precision@10 : 0.0612    hit@10 : 0.3808    mrr@10 : 0.1584    ndcg@10 : 0.1053    map@10 : 0.0576    itemcoverage@10 : 0.0714    averagepopularity@10 : 82.218    tailpercentage@10 : 0.0015
+Sun 19 Jan 2025 23:48:10 INFO  epoch 75 training [time: 10.69s, train loss: 7729.6161]
+Sun 19 Jan 2025 23:48:21 INFO  epoch 76 training [time: 11.07s, train loss: 7723.6342]
+Sun 19 Jan 2025 23:48:31 INFO  epoch 77 training [time: 10.44s, train loss: 7705.9283]
+Sun 19 Jan 2025 23:48:41 INFO  epoch 78 training [time: 10.40s, train loss: 7692.6532]
+Sun 19 Jan 2025 23:48:52 INFO  epoch 79 training [time: 10.53s, train loss: 7679.3458]
+Sun 19 Jan 2025 23:48:54 INFO  epoch 79 evaluating [time: 1.63s, valid_score: 0.105400]
+Sun 19 Jan 2025 23:48:54 INFO  valid result: 
+precision@10 : 0.0606    hit@10 : 0.3699    mrr@10 : 0.1604    ndcg@10 : 0.1054    map@10 : 0.0591    itemcoverage@10 : 0.0678    averagepopularity@10 : 81.9475    tailpercentage@10 : 0.001
+Sun 19 Jan 2025 23:49:04 INFO  epoch 80 training [time: 10.59s, train loss: 7659.2657]
+Sun 19 Jan 2025 23:49:14 INFO  epoch 81 training [time: 10.24s, train loss: 7651.4169]
+Sun 19 Jan 2025 23:49:26 INFO  epoch 82 training [time: 11.06s, train loss: 7646.8160]
+Sun 19 Jan 2025 23:49:36 INFO  epoch 83 training [time: 10.52s, train loss: 7635.1778]
+Sun 19 Jan 2025 23:49:47 INFO  epoch 84 training [time: 10.58s, train loss: 7637.8187]
+Sun 19 Jan 2025 23:49:48 INFO  epoch 84 evaluating [time: 1.63s, valid_score: 0.106400]
+Sun 19 Jan 2025 23:49:48 INFO  valid result: 
+precision@10 : 0.061    hit@10 : 0.3699    mrr@10 : 0.1594    ndcg@10 : 0.1064    map@10 : 0.0594    itemcoverage@10 : 0.0616    averagepopularity@10 : 85.3152    tailpercentage@10 : 0.0014
+Sun 19 Jan 2025 23:49:59 INFO  epoch 85 training [time: 10.39s, train loss: 7628.5965]
+Sun 19 Jan 2025 23:50:09 INFO  epoch 86 training [time: 10.55s, train loss: 7618.1615]
+Sun 19 Jan 2025 23:50:20 INFO  epoch 87 training [time: 10.43s, train loss: 7617.6031]
+Sun 19 Jan 2025 23:50:31 INFO  epoch 88 training [time: 11.15s, train loss: 7603.5392]
+Sun 19 Jan 2025 23:50:41 INFO  epoch 89 training [time: 10.41s, train loss: 7597.4395]
+Sun 19 Jan 2025 23:50:43 INFO  epoch 89 evaluating [time: 1.63s, valid_score: 0.106400]
+Sun 19 Jan 2025 23:50:43 INFO  valid result: 
+precision@10 : 0.0614    hit@10 : 0.3772    mrr@10 : 0.1623    ndcg@10 : 0.1064    map@10 : 0.059    itemcoverage@10 : 0.0596    averagepopularity@10 : 86.1879    tailpercentage@10 : 0.0018
+Sun 19 Jan 2025 23:50:53 INFO  epoch 90 training [time: 10.43s, train loss: 7580.2726]
+Sun 19 Jan 2025 23:51:04 INFO  epoch 91 training [time: 10.52s, train loss: 7588.7724]
+Sun 19 Jan 2025 23:51:14 INFO  epoch 92 training [time: 10.28s, train loss: 7583.0330]
+Sun 19 Jan 2025 23:51:25 INFO  epoch 93 training [time: 10.53s, train loss: 7569.7842]
+Sun 19 Jan 2025 23:51:35 INFO  epoch 94 training [time: 10.91s, train loss: 7570.2517]
+Sun 19 Jan 2025 23:51:37 INFO  epoch 94 evaluating [time: 1.62s, valid_score: 0.104500]
+Sun 19 Jan 2025 23:51:37 INFO  valid result: 
+precision@10 : 0.0602    hit@10 : 0.3708    mrr@10 : 0.1574    ndcg@10 : 0.1045    map@10 : 0.0579    itemcoverage@10 : 0.0571    averagepopularity@10 : 87.098    tailpercentage@10 : 0.0013
+Sun 19 Jan 2025 23:51:48 INFO  epoch 95 training [time: 10.42s, train loss: 7571.2422]
+Sun 19 Jan 2025 23:51:58 INFO  epoch 96 training [time: 10.36s, train loss: 7571.6947]
+Sun 19 Jan 2025 23:52:08 INFO  epoch 97 training [time: 10.49s, train loss: 7546.6014]
+Sun 19 Jan 2025 23:52:19 INFO  epoch 98 training [time: 10.66s, train loss: 7564.0400]
+Sun 19 Jan 2025 23:52:29 INFO  epoch 99 training [time: 10.42s, train loss: 7554.5064]
+Sun 19 Jan 2025 23:52:31 INFO  epoch 99 evaluating [time: 1.80s, valid_score: 0.106200]
+Sun 19 Jan 2025 23:52:31 INFO  valid result: 
+precision@10 : 0.0606    hit@10 : 0.3699    mrr@10 : 0.1594    ndcg@10 : 0.1062    map@10 : 0.0596    itemcoverage@10 : 0.0566    averagepopularity@10 : 87.4647    tailpercentage@10 : 0.0011
+Sun 19 Jan 2025 23:52:31 INFO  Loading model structure and parameters from saved\UltraGCN-Jan-19-2025_23-34-21.pth
+Sun 19 Jan 2025 23:52:33 INFO  best valid : OrderedDict({'precision@10': 0.064, 'hit@10': 0.3998, 'mrr@10': 0.1633, 'ndcg@10': 0.1086, 'map@10': 0.057, 'itemcoverage@10': 0.0897, 'averagepopularity@10': 76.3463, 'tailpercentage@10': 0.0023})
+Sun 19 Jan 2025 23:52:33 INFO  test result: OrderedDict({'precision@10': 0.1254, 'hit@10': 0.5325, 'mrr@10': 0.273, 'ndcg@10': 0.158, 'map@10': 0.0933, 'itemcoverage@10': 0.09, 'averagepopularity@10': 76.8498, 'tailpercentage@10': 0.0019})

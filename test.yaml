@@ -1,20 +1,19 @@
 # Model and Dataset
-model: "ForwardGNN"
-dataset: "ml-100k"
-data_path: r"C:\Users\s8347434\Documents\RecBole-GNN\asset\data"
+data_path: "C:/Users/s8347434/Documents/RecBole-GNN/asset/data"
 
 field_separator: "\t"
 USER_ID_FIELD: user_id
 ITEM_ID_FIELD: item_id
-user_inter_num_interval: [20, 100]
+TIME_FIELD: timestamp
+user_inter_num_interval: "[20,inf)"
 load_col:
-    inter: [user_id, item_id]
+    inter: [user_id, item_id, timestamp]
 
 # Evaluation
 eval_args:                      # (dict) 4 keys: group_by, order, split, and mode
-  split: {'LK': ['test_only', 10]}   # (dict) The splitting strategy ranging in ['RS','LS'].{'RS':[0.8,0.1,0.1]}, valid_and_test, test_only, valid_only
+  #split: {'LK': ['test_only', 10]}   # (dict) The splitting strategy ranging in ['RS','LS'].{'RS':[0.8,0.1,0.1]}, valid_and_test, test_only, valid_only
   #split: { 'LS': 'test_only' }   # (dict) The splitting strategy ranging in ['RS','LS'].{'RS':[0.8,0.1,0.1]}
-  #split: { 'RS':[0.7,0.1,0.2] }   # (dict) The splitting strategy ranging in ['RS','LS'].{'RS':[0.8,0.1,0.1]}
+  split: { 'RS':[0.7,0.1,0.2] }   # (dict) The splitting strategy ranging in ['RS','LS'].{'RS':[0.8,0.1,0.1]}
   group_by: user                # (str) The grouping strategy ranging in ['user', 'none'].
   order: RO                     # (str) The ordering strategy ranging in ['RO', 'TO'].
   mode: full
@@ -22,29 +21,33 @@ eval_args:                      # (dict) 4 keys: group_by, order, split, and mod
 # permanent
 shuffle: False
 layer_evaluation: False
-num_threads: 24
+num_threads: 12
 eval_batch_size: 2048           # (int) The training batch size.
-train_batch_size: 4096          # (int) The training batch size.
+train_batch_size: 2058          # (int) The training batch size.
 learner: adam                   # (str) The name of used optimizer.
-save_step: 2
+save_step: 5
 train_stage: "pretrain"
 show_progress: True
 valid_metric: "ndcg@10"
 eval_step: 5
+stopping_step: 10
+goodness_type: "pool-square-mean"
+pool_type: "add"
+pool_dim: 1
 
 # tuning parameters
-embedding_size: 128
+embedding_size: 64
 lgcn_dim: 128
 n_layers: 2
 reg_weight: 1e-05               # (float) The L2 regularization weight.
 learning_rate: 0.01             # (float) Learning rate.
 theta: 2.0
 gnn_type: 'GCN'
-forward_learning_type: 'FL-BPR'
+forward_learning_type: 'FF'
 pretrain_epochs: 20
 
 # for finetuning aggregation layer
-epochs: 2
+epochs: 1
 
 #train_neg_sample_args: ~
 
@@ -54,5 +57,23 @@ train_neg_sample_args:          # (dict) Negative sampling configuration for mod
   alpha: 1.0                    # (float) The power of sampling probability for popularity distribution.
   dynamic: False                # (bool) Whether to use dynamic negative sampling.
   candidate_num: 1              # (int) The number of candidate negative items when dynamic negative sampling.
+repeatable: False
 
-# k: 90
+dropout: 0.1
+lambda1: 1e-07
+lambda2: 0.0001
+temp: 0.5
+
+embedding_dim: 64
+w1: 1e-4
+w2: 1
+w3: 1e-6
+w4: 1
+negative_weight: 300
+negative_num: 10
+gamma: 1e-4
+lambda: 5e-2
+ii_neighbor_num: 10
+initial_weight: 1e-4
+
+topUser: 10

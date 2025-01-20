@@ -9,3 +9,4 @@ from recbole_gnn.model.general_recommender.xsimgcl import XSimGCL
 from recbole_gnn.model.general_recommender.directau import DirectAU
 from recbole_gnn.model.general_recommender.ssl4rec import SSL4REC
 from recbole_gnn.model.general_recommender.forwardgnn import ForwardGNN
+from recbole_gnn.model.general_recommender.ultragcn import UltraGCN

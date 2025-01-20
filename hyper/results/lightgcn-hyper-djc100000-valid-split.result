@@ -1,0 +1,282 @@
+embedding_size:64, epochs:100, learning_rate:0.001, n_layers:3, reg_weight:1e-05
+Valid result:
+precision@10 : 0.0427    hit@10 : 0.2986    mrr@10 : 0.1227    ndcg@10 : 0.0637    map@10 : 0.0292    itemcoverage@10 : 0.0576    averagepopularity@10 : 78.6117    tailpercentage@10 : 0.0019
+Test result:
+precision@10 : 0.0869    hit@10 : 0.4618    mrr@10 : 0.2171    ndcg@10 : 0.1112    map@10 : 0.0569    itemcoverage@10 : 0.0596    averagepopularity@10 : 78.0573    tailpercentage@10 : 0.0026
+
+embedding_size:64, epochs:100, learning_rate:0.0001, n_layers:1, reg_weight:0.0001
+Valid result:
+precision@10 : 0.0322    hit@10 : 0.224    mrr@10 : 0.0941    ndcg@10 : 0.0498    map@10 : 0.0236    itemcoverage@10 : 0.0691    averagepopularity@10 : 93.1268    tailpercentage@10 : 0.0055
+Test result:
+precision@10 : 0.0584    hit@10 : 0.3225    mrr@10 : 0.1525    ndcg@10 : 0.0753    map@10 : 0.038    itemcoverage@10 : 0.0381    averagepopularity@10 : 102.4667    tailpercentage@10 : 0.001
+
+embedding_size:64, epochs:100, learning_rate:0.0001, n_layers:4, reg_weight:1e-06
+Valid result:
+precision@10 : 0.0277    hit@10 : 0.1965    mrr@10 : 0.0824    ndcg@10 : 0.0436    map@10 : 0.0206    itemcoverage@10 : 0.03    averagepopularity@10 : 114.4205    tailpercentage@10 : 0.0051
+Test result:
+precision@10 : 0.0477    hit@10 : 0.2882    mrr@10 : 0.1405    ndcg@10 : 0.0647    map@10 : 0.0311    itemcoverage@10 : 0.0109    averagepopularity@10 : 123.7761    tailpercentage@10 : 0.0012
+
+embedding_size:64, epochs:100, learning_rate:0.001, n_layers:1, reg_weight:0.0001
+Valid result:
+precision@10 : 0.0491    hit@10 : 0.334    mrr@10 : 0.1338    ndcg@10 : 0.0736    map@10 : 0.0344    itemcoverage@10 : 0.0778    averagepopularity@10 : 71.2611    tailpercentage@10 : 0.0027
+Test result:
+precision@10 : 0.1008    hit@10 : 0.501    mrr@10 : 0.2512    ndcg@10 : 0.1302    map@10 : 0.0698    itemcoverage@10 : 0.08    averagepopularity@10 : 70.7968    tailpercentage@10 : 0.0034
+
+embedding_size:64, epochs:100, learning_rate:0.0001, n_layers:3, reg_weight:1e-05
+Valid result:
+precision@10 : 0.0284    hit@10 : 0.2033    mrr@10 : 0.0806    ndcg@10 : 0.0442    map@10 : 0.021    itemcoverage@10 : 0.0743    averagepopularity@10 : 90.0347    tailpercentage@10 : 0.0275
+Test result:
+precision@10 : 0.0489    hit@10 : 0.2929    mrr@10 : 0.1412    ndcg@10 : 0.0654    map@10 : 0.0315    itemcoverage@10 : 0.0134    averagepopularity@10 : 121.1847    tailpercentage@10 : 0.0005
+
+embedding_size:64, epochs:100, learning_rate:0.01, n_layers:4, reg_weight:1e-05
+Valid result:
+precision@10 : 0.0576    hit@10 : 0.3448    mrr@10 : 0.1571    ndcg@10 : 0.0913    map@10 : 0.0484    itemcoverage@10 : 0.1184    averagepopularity@10 : 48.7282    tailpercentage@10 : 0.0041
+Test result:
+precision@10 : 0.1182    hit@10 : 0.5105    mrr@10 : 0.2746    ndcg@10 : 0.1516    map@10 : 0.0877    itemcoverage@10 : 0.1202    averagepopularity@10 : 48.2571    tailpercentage@10 : 0.0043
+
+embedding_size:64, epochs:100, learning_rate:0.005, n_layers:1, reg_weight:0.0001
+Valid result:
+precision@10 : 0.0565    hit@10 : 0.3477    mrr@10 : 0.1483    ndcg@10 : 0.0885    map@10 : 0.0457    itemcoverage@10 : 0.1078    averagepopularity@10 : 50.3192    tailpercentage@10 : 0.0035
+Test result:
+precision@10 : 0.1145    hit@10 : 0.5067    mrr@10 : 0.2592    ndcg@10 : 0.1457    map@10 : 0.0846    itemcoverage@10 : 0.1111    averagepopularity@10 : 49.9018    tailpercentage@10 : 0.0035
+
+embedding_size:64, epochs:100, learning_rate:0.01, n_layers:3, reg_weight:0.0001
+Valid result:
+precision@10 : 0.0574    hit@10 : 0.3428    mrr@10 : 0.1591    ndcg@10 : 0.0916    map@10 : 0.0483    itemcoverage@10 : 0.1151    averagepopularity@10 : 49.7483    tailpercentage@10 : 0.0047
+Test result:
+precision@10 : 0.1177    hit@10 : 0.5153    mrr@10 : 0.2676    ndcg@10 : 0.1497    map@10 : 0.0861    itemcoverage@10 : 0.1168    averagepopularity@10 : 49.382    tailpercentage@10 : 0.005
+
+embedding_size:64, epochs:100, learning_rate:0.01, n_layers:3, reg_weight:1e-05
+Valid result:
+precision@10 : 0.0571    hit@10 : 0.3418    mrr@10 : 0.1536    ndcg@10 : 0.0905    map@10 : 0.0477    itemcoverage@10 : 0.117    averagepopularity@10 : 47.69    tailpercentage@10 : 0.0044
+Test result:
+precision@10 : 0.1172    hit@10 : 0.5134    mrr@10 : 0.2625    ndcg@10 : 0.1481    map@10 : 0.0855    itemcoverage@10 : 0.1192    averagepopularity@10 : 47.2599    tailpercentage@10 : 0.005
+
+embedding_size:64, epochs:100, learning_rate:0.01, n_layers:2, reg_weight:1e-05
+Valid result:
+precision@10 : 0.0548    hit@10 : 0.3497    mrr@10 : 0.1505    ndcg@10 : 0.0853    map@10 : 0.0424    itemcoverage@10 : 0.0967    averagepopularity@10 : 59.289    tailpercentage@10 : 0.0035
+Test result:
+precision@10 : 0.1154    hit@10 : 0.5181    mrr@10 : 0.2616    ndcg@10 : 0.1478    map@10 : 0.0848    itemcoverage@10 : 0.1109    averagepopularity@10 : 49.559    tailpercentage@10 : 0.0046
+
+embedding_size:64, epochs:100, learning_rate:0.001, n_layers:2, reg_weight:0.0001
+Valid result:
+precision@10 : 0.0454    hit@10 : 0.3134    mrr@10 : 0.1308    ndcg@10 : 0.068    map@10 : 0.0315    itemcoverage@10 : 0.0662    averagepopularity@10 : 74.62    tailpercentage@10 : 0.0024
+Test result:
+precision@10 : 0.0922    hit@10 : 0.48    mrr@10 : 0.2356    ndcg@10 : 0.1191    map@10 : 0.0613    itemcoverage@10 : 0.0688    averagepopularity@10 : 73.6603    tailpercentage@10 : 0.0029
+
+embedding_size:64, epochs:100, learning_rate:0.01, n_layers:4, reg_weight:0.0001
+Valid result:
+precision@10 : 0.0583    hit@10 : 0.3468    mrr@10 : 0.1613    ndcg@10 : 0.0928    map@10 : 0.0491    itemcoverage@10 : 0.1153    averagepopularity@10 : 51.3146    tailpercentage@10 : 0.0042
+Test result:
+precision@10 : 0.1194    hit@10 : 0.5191    mrr@10 : 0.2733    ndcg@10 : 0.1523    map@10 : 0.0873    itemcoverage@10 : 0.1176    averagepopularity@10 : 50.9485    tailpercentage@10 : 0.0045
+
+embedding_size:64, epochs:100, learning_rate:0.005, n_layers:1, reg_weight:1e-05
+Valid result:
+precision@10 : 0.0559    hit@10 : 0.3389    mrr@10 : 0.1485    ndcg@10 : 0.0881    map@10 : 0.0457    itemcoverage@10 : 0.1072    averagepopularity@10 : 50.2099    tailpercentage@10 : 0.0033
+Test result:
+precision@10 : 0.1141    hit@10 : 0.5095    mrr@10 : 0.2571    ndcg@10 : 0.145    map@10 : 0.084    itemcoverage@10 : 0.1116    averagepopularity@10 : 49.5281    tailpercentage@10 : 0.0033
+
+embedding_size:64, epochs:100, learning_rate:0.0001, n_layers:4, reg_weight:0.0001
+Valid result:
+precision@10 : 0.0277    hit@10 : 0.1965    mrr@10 : 0.0824    ndcg@10 : 0.0436    map@10 : 0.0207    itemcoverage@10 : 0.0299    averagepopularity@10 : 114.4615    tailpercentage@10 : 0.0051
+Test result:
+precision@10 : 0.0477    hit@10 : 0.2882    mrr@10 : 0.1405    ndcg@10 : 0.0647    map@10 : 0.0311    itemcoverage@10 : 0.0109    averagepopularity@10 : 123.7755    tailpercentage@10 : 0.0012
+
+embedding_size:64, epochs:100, learning_rate:0.001, n_layers:1, reg_weight:1e-05
+Valid result:
+precision@10 : 0.0489    hit@10 : 0.332    mrr@10 : 0.1335    ndcg@10 : 0.0733    map@10 : 0.0343    itemcoverage@10 : 0.0777    averagepopularity@10 : 71.3143    tailpercentage@10 : 0.0028
+Test result:
+precision@10 : 0.1009    hit@10 : 0.501    mrr@10 : 0.2507    ndcg@10 : 0.1302    map@10 : 0.0697    itemcoverage@10 : 0.0797    averagepopularity@10 : 70.851    tailpercentage@10 : 0.0034
+
+embedding_size:64, epochs:100, learning_rate:0.005, n_layers:4, reg_weight:0.0001
+Valid result:
+precision@10 : 0.0583    hit@10 : 0.3595    mrr@10 : 0.1525    ndcg@10 : 0.0875    map@10 : 0.0432    itemcoverage@10 : 0.1098    averagepopularity@10 : 58.0451    tailpercentage@10 : 0.0038
+Test result:
+precision@10 : 0.1156    hit@10 : 0.5305    mrr@10 : 0.2754    ndcg@10 : 0.1485    map@10 : 0.0822    itemcoverage@10 : 0.1122    averagepopularity@10 : 57.9383    tailpercentage@10 : 0.0042
+
+embedding_size:64, epochs:100, learning_rate:0.001, n_layers:3, reg_weight:0.0001
+Valid result:
+precision@10 : 0.0428    hit@10 : 0.2996    mrr@10 : 0.1225    ndcg@10 : 0.0636    map@10 : 0.0292    itemcoverage@10 : 0.0575    averagepopularity@10 : 78.6819    tailpercentage@10 : 0.0019
+Test result:
+precision@10 : 0.0872    hit@10 : 0.4637    mrr@10 : 0.2175    ndcg@10 : 0.1113    map@10 : 0.0569    itemcoverage@10 : 0.0594    averagepopularity@10 : 78.1182    tailpercentage@10 : 0.0026
+
+embedding_size:64, epochs:100, learning_rate:0.01, n_layers:2, reg_weight:0.0001
+Valid result:
+precision@10 : 0.0552    hit@10 : 0.3517    mrr@10 : 0.1498    ndcg@10 : 0.0856    map@10 : 0.0424    itemcoverage@10 : 0.0967    averagepopularity@10 : 59.6852    tailpercentage@10 : 0.0035
+Test result:
+precision@10 : 0.1169    hit@10 : 0.52    mrr@10 : 0.2639    ndcg@10 : 0.1492    map@10 : 0.0854    itemcoverage@10 : 0.1106    averagepopularity@10 : 50.1845    tailpercentage@10 : 0.0042
+
+embedding_size:64, epochs:100, learning_rate:0.01, n_layers:2, reg_weight:1e-06
+Valid result:
+precision@10 : 0.0546    hit@10 : 0.3487    mrr@10 : 0.1504    ndcg@10 : 0.0851    map@10 : 0.0423    itemcoverage@10 : 0.0966    averagepopularity@10 : 59.2844    tailpercentage@10 : 0.0035
+Test result:
+precision@10 : 0.1156    hit@10 : 0.5181    mrr@10 : 0.2609    ndcg@10 : 0.1478    map@10 : 0.0848    itemcoverage@10 : 0.1112    averagepopularity@10 : 49.52    tailpercentage@10 : 0.0048
+
+embedding_size:64, epochs:100, learning_rate:0.01, n_layers:1, reg_weight:0.0001
+Valid result:
+precision@10 : 0.0533    hit@10 : 0.331    mrr@10 : 0.1462    ndcg@10 : 0.0844    map@10 : 0.0434    itemcoverage@10 : 0.0959    averagepopularity@10 : 56.1338    tailpercentage@10 : 0.0035
+Test result:
+precision@10 : 0.1093    hit@10 : 0.5134    mrr@10 : 0.257    ndcg@10 : 0.1398    map@10 : 0.078    itemcoverage@10 : 0.1065    averagepopularity@10 : 51.5181    tailpercentage@10 : 0.0044
+
+embedding_size:64, epochs:100, learning_rate:0.0001, n_layers:2, reg_weight:0.0001
+Valid result:
+precision@10 : 0.0295    hit@10 : 0.2122    mrr@10 : 0.0889    ndcg@10 : 0.0466    map@10 : 0.0219    itemcoverage@10 : 0.0686    averagepopularity@10 : 97.0882    tailpercentage@10 : 0.0093
+Test result:
+precision@10 : 0.0532    hit@10 : 0.3063    mrr@10 : 0.1479    ndcg@10 : 0.0704    map@10 : 0.0347    itemcoverage@10 : 0.0214    averagepopularity@10 : 114.0898    tailpercentage@10 : 0.0005
+
+embedding_size:64, epochs:100, learning_rate:0.001, n_layers:2, reg_weight:1e-06
+Valid result:
+precision@10 : 0.0457    hit@10 : 0.3153    mrr@10 : 0.1319    ndcg@10 : 0.0684    map@10 : 0.0318    itemcoverage@10 : 0.0662    averagepopularity@10 : 74.5678    tailpercentage@10 : 0.0024
+Test result:
+precision@10 : 0.0923    hit@10 : 0.4809    mrr@10 : 0.2362    ndcg@10 : 0.1193    map@10 : 0.0614    itemcoverage@10 : 0.0687    averagepopularity@10 : 73.6206    tailpercentage@10 : 0.0029
+
+embedding_size:64, epochs:100, learning_rate:0.0001, n_layers:3, reg_weight:0.0001
+Valid result:
+precision@10 : 0.0284    hit@10 : 0.2033    mrr@10 : 0.0806    ndcg@10 : 0.0442    map@10 : 0.021    itemcoverage@10 : 0.0741    averagepopularity@10 : 90.1    tailpercentage@10 : 0.0275
+Test result:
+precision@10 : 0.0489    hit@10 : 0.2929    mrr@10 : 0.1412    ndcg@10 : 0.0654    map@10 : 0.0315    itemcoverage@10 : 0.0134    averagepopularity@10 : 121.1973    tailpercentage@10 : 0.0005
+
+embedding_size:64, epochs:100, learning_rate:0.001, n_layers:4, reg_weight:0.0001
+Valid result:
+precision@10 : 0.0392    hit@10 : 0.278    mrr@10 : 0.1154    ndcg@10 : 0.0588    map@10 : 0.0269    itemcoverage@10 : 0.0488    averagepopularity@10 : 81.302    tailpercentage@10 : 0.001
+Test result:
+precision@10 : 0.0838    hit@10 : 0.4475    mrr@10 : 0.2094    ndcg@10 : 0.1068    map@10 : 0.0541    itemcoverage@10 : 0.051    averagepopularity@10 : 80.7633    tailpercentage@10 : 0.0015
+
+embedding_size:64, epochs:100, learning_rate:0.005, n_layers:2, reg_weight:0.0001
+Valid result:
+precision@10 : 0.0602    hit@10 : 0.3664    mrr@10 : 0.1565    ndcg@10 : 0.0922    map@10 : 0.047    itemcoverage@10 : 0.1118    averagepopularity@10 : 51.8109    tailpercentage@10 : 0.003
+Test result:
+precision@10 : 0.118    hit@10 : 0.5267    mrr@10 : 0.2718    ndcg@10 : 0.1515    map@10 : 0.0872    itemcoverage@10 : 0.1151    averagepopularity@10 : 50.5823    tailpercentage@10 : 0.0036
+
+embedding_size:64, epochs:100, learning_rate:0.01, n_layers:3, reg_weight:1e-06
+Valid result:
+precision@10 : 0.057    hit@10 : 0.3418    mrr@10 : 0.1528    ndcg@10 : 0.0901    map@10 : 0.0475    itemcoverage@10 : 0.1171    averagepopularity@10 : 47.4248    tailpercentage@10 : 0.0045
+Test result:
+precision@10 : 0.1164    hit@10 : 0.5124    mrr@10 : 0.2623    ndcg@10 : 0.1475    map@10 : 0.0852    itemcoverage@10 : 0.1191    averagepopularity@10 : 47.0563    tailpercentage@10 : 0.0051
+
+embedding_size:64, epochs:100, learning_rate:0.0001, n_layers:3, reg_weight:1e-06
+Valid result:
+precision@10 : 0.0283    hit@10 : 0.2033    mrr@10 : 0.0796    ndcg@10 : 0.0439    map@10 : 0.0209    itemcoverage@10 : 0.0743    averagepopularity@10 : 90.0334    tailpercentage@10 : 0.0276
+Test result:
+precision@10 : 0.0489    hit@10 : 0.2929    mrr@10 : 0.1412    ndcg@10 : 0.0654    map@10 : 0.0315    itemcoverage@10 : 0.0134    averagepopularity@10 : 121.1847    tailpercentage@10 : 0.0005
+
+embedding_size:64, epochs:100, learning_rate:0.0001, n_layers:1, reg_weight:1e-05
+Valid result:
+precision@10 : 0.032    hit@10 : 0.222    mrr@10 : 0.0939    ndcg@10 : 0.0497    map@10 : 0.0236    itemcoverage@10 : 0.0692    averagepopularity@10 : 93.1175    tailpercentage@10 : 0.0055
+Test result:
+precision@10 : 0.0585    hit@10 : 0.3225    mrr@10 : 0.1525    ndcg@10 : 0.0753    map@10 : 0.038    itemcoverage@10 : 0.0381    averagepopularity@10 : 102.4571    tailpercentage@10 : 0.001
+
+embedding_size:64, epochs:100, learning_rate:0.001, n_layers:3, reg_weight:1e-06
+Valid result:
+precision@10 : 0.0427    hit@10 : 0.2986    mrr@10 : 0.1227    ndcg@10 : 0.0637    map@10 : 0.0292    itemcoverage@10 : 0.0576    averagepopularity@10 : 78.6429    tailpercentage@10 : 0.0019
+Test result:
+precision@10 : 0.0869    hit@10 : 0.4618    mrr@10 : 0.2171    ndcg@10 : 0.1112    map@10 : 0.0569    itemcoverage@10 : 0.0596    averagepopularity@10 : 78.0781    tailpercentage@10 : 0.0026
+
+embedding_size:64, epochs:100, learning_rate:0.005, n_layers:1, reg_weight:1e-06
+Valid result:
+precision@10 : 0.0557    hit@10 : 0.3379    mrr@10 : 0.1476    ndcg@10 : 0.0879    map@10 : 0.0456    itemcoverage@10 : 0.1073    averagepopularity@10 : 50.2049    tailpercentage@10 : 0.0033
+Test result:
+precision@10 : 0.1139    hit@10 : 0.5105    mrr@10 : 0.2567    ndcg@10 : 0.1446    map@10 : 0.0836    itemcoverage@10 : 0.1116    averagepopularity@10 : 49.4851    tailpercentage@10 : 0.0031
+
+embedding_size:64, epochs:100, learning_rate:0.0001, n_layers:4, reg_weight:1e-05
+Valid result:
+precision@10 : 0.0277    hit@10 : 0.1965    mrr@10 : 0.0824    ndcg@10 : 0.0436    map@10 : 0.0206    itemcoverage@10 : 0.03    averagepopularity@10 : 114.4204    tailpercentage@10 : 0.0051
+Test result:
+precision@10 : 0.0477    hit@10 : 0.2882    mrr@10 : 0.1405    ndcg@10 : 0.0647    map@10 : 0.0311    itemcoverage@10 : 0.0109    averagepopularity@10 : 123.7761    tailpercentage@10 : 0.0012
+
+embedding_size:64, epochs:100, learning_rate:0.01, n_layers:1, reg_weight:1e-06
+Valid result:
+precision@10 : 0.0535    hit@10 : 0.334    mrr@10 : 0.1466    ndcg@10 : 0.0846    map@10 : 0.0434    itemcoverage@10 : 0.0963    averagepopularity@10 : 56.0736    tailpercentage@10 : 0.0037
+Test result:
+precision@10 : 0.1085    hit@10 : 0.5086    mrr@10 : 0.258    ndcg@10 : 0.1394    map@10 : 0.0781    itemcoverage@10 : 0.106    averagepopularity@10 : 51.3143    tailpercentage@10 : 0.0038
+
+embedding_size:64, epochs:100, learning_rate:0.001, n_layers:4, reg_weight:1e-05
+Valid result:
+precision@10 : 0.0395    hit@10 : 0.2809    mrr@10 : 0.1154    ndcg@10 : 0.0589    map@10 : 0.0268    itemcoverage@10 : 0.0486    averagepopularity@10 : 81.1012    tailpercentage@10 : 0.001
+Test result:
+precision@10 : 0.0837    hit@10 : 0.4447    mrr@10 : 0.2092    ndcg@10 : 0.1068    map@10 : 0.0544    itemcoverage@10 : 0.0507    averagepopularity@10 : 80.5552    tailpercentage@10 : 0.0015
+
+embedding_size:64, epochs:100, learning_rate:0.005, n_layers:3, reg_weight:0.0001
+Valid result:
+precision@10 : 0.0587    hit@10 : 0.3576    mrr@10 : 0.1557    ndcg@10 : 0.0895    map@10 : 0.0451    itemcoverage@10 : 0.1126    averagepopularity@10 : 55.9139    tailpercentage@10 : 0.0047
+Test result:
+precision@10 : 0.1175    hit@10 : 0.5286    mrr@10 : 0.2745    ndcg@10 : 0.1503    map@10 : 0.0842    itemcoverage@10 : 0.1142    averagepopularity@10 : 55.5871    tailpercentage@10 : 0.0051
+
+embedding_size:64, epochs:100, learning_rate:0.01, n_layers:1, reg_weight:1e-05
+Valid result:
+precision@10 : 0.0534    hit@10 : 0.333    mrr@10 : 0.1465    ndcg@10 : 0.0846    map@10 : 0.0434    itemcoverage@10 : 0.0963    averagepopularity@10 : 56.0944    tailpercentage@10 : 0.0037
+Test result:
+precision@10 : 0.1085    hit@10 : 0.5095    mrr@10 : 0.2586    ndcg@10 : 0.1396    map@10 : 0.0783    itemcoverage@10 : 0.1063    averagepopularity@10 : 51.2833    tailpercentage@10 : 0.0038
+
+embedding_size:64, epochs:100, learning_rate:0.001, n_layers:4, reg_weight:1e-06
+Valid result:
+precision@10 : 0.0397    hit@10 : 0.2819    mrr@10 : 0.1151    ndcg@10 : 0.0589    map@10 : 0.0268    itemcoverage@10 : 0.0486    averagepopularity@10 : 81.0826    tailpercentage@10 : 0.001
+Test result:
+precision@10 : 0.0842    hit@10 : 0.4466    mrr@10 : 0.2094    ndcg@10 : 0.1072    map@10 : 0.0545    itemcoverage@10 : 0.0508    averagepopularity@10 : 80.527    tailpercentage@10 : 0.0015
+
+embedding_size:64, epochs:100, learning_rate:0.005, n_layers:2, reg_weight:1e-06
+Valid result:
+precision@10 : 0.0584    hit@10 : 0.3576    mrr@10 : 0.1588    ndcg@10 : 0.0923    map@10 : 0.0482    itemcoverage@10 : 0.1118    averagepopularity@10 : 52.4572    tailpercentage@10 : 0.0028
+Test result:
+precision@10 : 0.1174    hit@10 : 0.5258    mrr@10 : 0.2674    ndcg@10 : 0.15    map@10 : 0.086    itemcoverage@10 : 0.1155    averagepopularity@10 : 49.6166    tailpercentage@10 : 0.0039
+
+embedding_size:64, epochs:100, learning_rate:0.005, n_layers:4, reg_weight:1e-06
+Valid result:
+precision@10 : 0.0584    hit@10 : 0.3625    mrr@10 : 0.1557    ndcg@10 : 0.0888    map@10 : 0.0444    itemcoverage@10 : 0.1084    averagepopularity@10 : 57.4615    tailpercentage@10 : 0.0045
+Test result:
+precision@10 : 0.1165    hit@10 : 0.5267    mrr@10 : 0.277    ndcg@10 : 0.1502    map@10 : 0.084    itemcoverage@10 : 0.1128    averagepopularity@10 : 56.6159    tailpercentage@10 : 0.0045
+
+embedding_size:64, epochs:100, learning_rate:0.005, n_layers:4, reg_weight:1e-05
+Valid result:
+precision@10 : 0.0583    hit@10 : 0.3615    mrr@10 : 0.1552    ndcg@10 : 0.0886    map@10 : 0.0442    itemcoverage@10 : 0.108    averagepopularity@10 : 57.5845    tailpercentage@10 : 0.0044
+Test result:
+precision@10 : 0.116    hit@10 : 0.5267    mrr@10 : 0.2757    ndcg@10 : 0.1496    map@10 : 0.0836    itemcoverage@10 : 0.1124    averagepopularity@10 : 56.7017    tailpercentage@10 : 0.0045
+
+embedding_size:64, epochs:100, learning_rate:0.01, n_layers:4, reg_weight:1e-06
+Valid result:
+precision@10 : 0.057    hit@10 : 0.3418    mrr@10 : 0.1555    ndcg@10 : 0.0906    map@10 : 0.0481    itemcoverage@10 : 0.1187    averagepopularity@10 : 48.3635    tailpercentage@10 : 0.004
+Test result:
+precision@10 : 0.1187    hit@10 : 0.5134    mrr@10 : 0.2743    ndcg@10 : 0.1519    map@10 : 0.0877    itemcoverage@10 : 0.1207    averagepopularity@10 : 47.9747    tailpercentage@10 : 0.0043
+
+embedding_size:64, epochs:100, learning_rate:0.0001, n_layers:1, reg_weight:1e-06
+Valid result:
+precision@10 : 0.032    hit@10 : 0.222    mrr@10 : 0.0939    ndcg@10 : 0.0497    map@10 : 0.0236    itemcoverage@10 : 0.0692    averagepopularity@10 : 93.1175    tailpercentage@10 : 0.0055
+Test result:
+precision@10 : 0.0585    hit@10 : 0.3225    mrr@10 : 0.1525    ndcg@10 : 0.0753    map@10 : 0.038    itemcoverage@10 : 0.0381    averagepopularity@10 : 102.4571    tailpercentage@10 : 0.001
+
+embedding_size:64, epochs:100, learning_rate:0.001, n_layers:2, reg_weight:1e-05
+Valid result:
+precision@10 : 0.0457    hit@10 : 0.3153    mrr@10 : 0.1319    ndcg@10 : 0.0684    map@10 : 0.0318    itemcoverage@10 : 0.0661    averagepopularity@10 : 74.574    tailpercentage@10 : 0.0024
+Test result:
+precision@10 : 0.0923    hit@10 : 0.4809    mrr@10 : 0.2363    ndcg@10 : 0.1193    map@10 : 0.0614    itemcoverage@10 : 0.0688    averagepopularity@10 : 73.6215    tailpercentage@10 : 0.0029
+
+embedding_size:64, epochs:100, learning_rate:0.005, n_layers:3, reg_weight:1e-06
+Valid result:
+precision@10 : 0.0563    hit@10 : 0.3458    mrr@10 : 0.1573    ndcg@10 : 0.0885    map@10 : 0.0454    itemcoverage@10 : 0.1135    averagepopularity@10 : 54.8508    tailpercentage@10 : 0.0047
+Test result:
+precision@10 : 0.1177    hit@10 : 0.5267    mrr@10 : 0.2749    ndcg@10 : 0.1505    map@10 : 0.0847    itemcoverage@10 : 0.1158    averagepopularity@10 : 54.4202    tailpercentage@10 : 0.0052
+
+embedding_size:64, epochs:100, learning_rate:0.005, n_layers:2, reg_weight:1e-05
+Valid result:
+precision@10 : 0.0584    hit@10 : 0.3576    mrr@10 : 0.1584    ndcg@10 : 0.0922    map@10 : 0.0482    itemcoverage@10 : 0.1118    averagepopularity@10 : 52.5421    tailpercentage@10 : 0.0028
+Test result:
+precision@10 : 0.1177    hit@10 : 0.5267    mrr@10 : 0.267    ndcg@10 : 0.1501    map@10 : 0.086    itemcoverage@10 : 0.1156    averagepopularity@10 : 49.7135    tailpercentage@10 : 0.0038
+
+embedding_size:64, epochs:100, learning_rate:0.0001, n_layers:2, reg_weight:1e-06
+Valid result:
+precision@10 : 0.0294    hit@10 : 0.2112    mrr@10 : 0.0889    ndcg@10 : 0.0465    map@10 : 0.0219    itemcoverage@10 : 0.0689    averagepopularity@10 : 97.001    tailpercentage@10 : 0.0094
+Test result:
+precision@10 : 0.0531    hit@10 : 0.3053    mrr@10 : 0.1478    ndcg@10 : 0.0702    map@10 : 0.0346    itemcoverage@10 : 0.0214    averagepopularity@10 : 114.0744    tailpercentage@10 : 0.0005
+
+embedding_size:64, epochs:100, learning_rate:0.001, n_layers:1, reg_weight:1e-06
+Valid result:
+precision@10 : 0.0489    hit@10 : 0.332    mrr@10 : 0.1335    ndcg@10 : 0.0733    map@10 : 0.0343    itemcoverage@10 : 0.0776    averagepopularity@10 : 71.322    tailpercentage@10 : 0.0028
+Test result:
+precision@10 : 0.1009    hit@10 : 0.501    mrr@10 : 0.2507    ndcg@10 : 0.1301    map@10 : 0.0697    itemcoverage@10 : 0.0795    averagepopularity@10 : 70.8536    tailpercentage@10 : 0.0034
+
+embedding_size:64, epochs:100, learning_rate:0.0001, n_layers:2, reg_weight:1e-05
+Valid result:
+precision@10 : 0.0294    hit@10 : 0.2112    mrr@10 : 0.0889    ndcg@10 : 0.0465    map@10 : 0.0219    itemcoverage@10 : 0.0689    averagepopularity@10 : 97.0079    tailpercentage@10 : 0.0094
+Test result:
+precision@10 : 0.0531    hit@10 : 0.3053    mrr@10 : 0.1478    ndcg@10 : 0.0702    map@10 : 0.0346    itemcoverage@10 : 0.0214    averagepopularity@10 : 114.0751    tailpercentage@10 : 0.0005
+

@@ -1,0 +1,11 @@
+embedding_dim: 64               # (int) The dimensionality of the embedding vectors for both users and items.
+w1: 1e-6                        # (float) The regularization weight for the first type of edge in the graph (e.g., user-item edges).
+w2: 1                           # (float) The regularization weight for the second type of edge (e.g., item-item edges).
+w3: 1e-6                        # (float) The regularization weight for another specific type of edge or constraint.
+w4: 1                           # (float) Regularization weight for another interaction type or edge.
+negative_weight: 1500           # (float) Weight assigned to negative samples in the loss function.
+negative_num: 300               # (int) The number of negative samples generated per positive sample for training.
+gamma: 1e-4                     # (float) Scaling factor for a specific regularization term, often related to preventing overfitting.
+lambda: 5e-4                    # (float) L2 regularization term to control the model's complexity and prevent overfitting.
+ii_neighbor_num: 10             # (int) Number of neighbors considered for each item in the item-item graph.
+initial_weight: 1e-4            # (float) Initial weight for model parameters.

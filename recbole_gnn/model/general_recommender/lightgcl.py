@@ -111,9 +111,9 @@ class LightGCL(GeneralRecommender):
         """
         indices = torch.from_numpy(
             np.vstack((matrix.row, matrix.col)).astype(np.int64))
-        values = torch.from_numpy(matrix.data)
+        values = torch.from_numpy(matrix.data).to(torch.float32)
         shape = torch.Size(matrix.shape)
-        x = torch.sparse.FloatTensor(indices, values, shape).coalesce().to(self.device)
+        x = torch.sparse_coo_tensor(indices, values, shape).coalesce().to(self.device)
         return x
 
     def sparse_dropout(self, matrix, dropout):
@@ -122,7 +122,7 @@ class LightGCL(GeneralRecommender):
         indices = matrix.indices()
         values = F.dropout(matrix.values(), p=dropout)
         size = matrix.size()
-        return torch.sparse.FloatTensor(indices, values, size)
+        return torch.sparse_coo_tensor(indices, values, size)
 
     def forward(self):
         for layer in range(1, self.n_layers + 1):

@@ -23,7 +23,6 @@ from recbole.utils import (
     WandbLogger,
 )
 
-
 class ForwardGNNTrainer(PretrainTrainer):
     r"""ForwardTrainer is designed to train Forward-Forward models.
     """
@@ -772,7 +771,6 @@ class NCLTrainer(Trainer):
                 iter_data.set_postfix_str(set_color('GPU RAM: ' + get_gpu_usage(self.device), 'yellow'))
         return total_loss
 
-
 class HMLETTrainer(Trainer):
     def __init__(self, config, model):
         super(HMLETTrainer, self).__init__(config, model)
@@ -793,7 +791,6 @@ class HMLETTrainer(Trainer):
             for gating in self.model.gating_nets:
                 self.model._gating_freeze(gating, True)
         return super()._train_epoch(train_data, epoch_idx, loss_func, show_progress)
-
 
 class SEPTTrainer(Trainer):
     def __init__(self, config, model):

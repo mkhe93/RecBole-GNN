@@ -14,16 +14,53 @@ except ImportError:
 
 from recbole.data.dataset import SequentialDataset
 from recbole.data.dataset import Dataset as RecBoleDataset
-from recbole.utils import set_color, FeatureSource
+from recbole.utils import FeatureSource
+from recbole.utils.logger import set_color
+import numpy as np
 
 import recbole
 import pickle
 from recbole.utils import ensure_dir
 
+import networkx
 
 class GeneralGraphDataset(RecBoleDataset):
     def __init__(self, config):
         super().__init__(config)
+
+    def __str__(self):
+        info = [set_color(self.dataset_name, "pink")]
+        info.append(set_color("Traditional graph dataset characteristics", "pink"))
+        if self.uid_field:
+            info.extend(
+                [
+                    set_color("The number of users", "blue") + f": {self.user_num}",
+                    set_color("Average actions of users", "blue") + f": {self.avg_actions_of_users}",
+                    set_color("Median actions of users", "blue") + f": {self.median_actions_of_users}",
+                    set_color("Min actions of users", "blue") + f": {self.min_actions_of_users}",
+                    set_color("Max actions of users", "blue") + f": {self.max_actions_of_users}"
+                ]
+            )
+        if self.iid_field:
+            info.extend(
+                [
+                    set_color("The number of items", "blue") + f": {self.item_num}",
+                    set_color("Average actions of items", "blue") + f": {self.avg_actions_of_items}",
+                    set_color("Median actions of items", "blue") + f": {self.median_actions_of_items}",
+                    set_color("Min actions of items", "blue") + f": {self.min_actions_of_items}",
+                    set_color("Max actions of items", "blue") + f": {self.max_actions_of_items}"
+                ]
+            )
+        info.append(set_color("The number of inters", "blue") + f": {self.inter_num}")
+        if self.uid_field and self.iid_field:
+            info.append(
+                set_color("The sparsity of the dataset", "blue")
+                + f": {self.sparsity * 100}%"
+            )
+
+        info.append(set_color("Remain Fields", "blue") + f": {list(self.field2type)}")
+        return "\n".join(info)
+
 
     if recbole.__version__ == "1.1.1":
 
@@ -77,34 +114,6 @@ class GeneralGraphDataset(RecBoleDataset):
         edge_index, edge_weight = gcn_norm(edge_index, edge_weight, num_nodes, add_self_loops=False)
 
         return edge_index, edge_weight
-
-    def get_bipartite_inter_mat(self, row='user', row_norm=True):
-        r"""Get the row-normalized bipartite interaction matrix of users and items.
-        """
-        if row == 'user':
-            row_field, col_field = self.uid_field, self.iid_field
-        else:
-            row_field, col_field = self.iid_field, self.uid_field
-
-        row = self.inter_feat[row_field]
-        col = self.inter_feat[col_field]
-        edge_index = torch.stack([row, col])
-
-        if row_norm:
-            deg = degree(edge_index[0], self.num(row_field))
-            norm_deg = 1. / torch.where(deg == 0, torch.ones([1]), deg)
-            edge_weight = norm_deg[edge_index[0]]
-        else:
-            row_deg = degree(edge_index[0], self.num(row_field))
-            col_deg = degree(edge_index[1], self.num(col_field))
-
-            row_norm_deg = 1. / torch.sqrt(torch.where(row_deg == 0, torch.ones([1]), row_deg))
-            col_norm_deg = 1. / torch.sqrt(torch.where(col_deg == 0, torch.ones([1]), col_deg))
-
-            edge_weight = row_norm_deg[edge_index[0]] * col_norm_deg[edge_index[1]]
-
-        return edge_index, edge_weight
-
 
 class SessionGraphDataset(SequentialDataset):
     def __init__(self, config):

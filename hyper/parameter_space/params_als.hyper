@@ -1,4 +1,4 @@
 regularization choice [0.005, 0.01, 0.015, 0.05, 0.08, 0.1]
-embedding_size choice [32, 64]
-alpha choice [0.6, 0.8, 1.0, 1.2, 1.4]
-epochs choice [30]
+embedding_size choice [32, 64, 96, 128, 192, 256, 512, 768, 1024]
+alpha choice [0.25, 0.5, 0.75, 1, 1.25, 1.5, 1.75, 2, 2.25, 2.5, 2.75]
+epochs choice [100]
