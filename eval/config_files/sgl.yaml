@@ -38,7 +38,7 @@ train_neg_sample_args:          # (dict) Negative sampling configuration for mod
   candidate_num: 1              # (int) The number of candidate negative items when dynamic negative sampling.
 
 # best hyper parameters
-epochs: 100
+epochs: 50
 embedding_size: 64
 n_layers: 4
 learning_rate: 0.005

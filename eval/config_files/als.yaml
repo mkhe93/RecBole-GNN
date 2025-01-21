@@ -34,6 +34,6 @@ num_threads: 12                 # (str) The name of used optimizer.
 
 # best hyper parameters
 embedding_size: 96
-epochs: 100
+epochs: 50
 regularization: 0.08
 alpha: 2.75
