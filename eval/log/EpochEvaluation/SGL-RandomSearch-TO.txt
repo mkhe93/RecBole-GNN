@@ -1,0 +1,1769 @@
+Thu 30 Jan 2025 16:30:00 INFO  [Training]: train_batch_size = [2048] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Thu 30 Jan 2025 16:30:00 INFO  [Evaluation]: eval_batch_size = [2048] eval_args: [{'split': {'LK': ['valid_and_test', 5]}, 'order': 'TO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+Thu 30 Jan 2025 16:30:46 INFO  epoch 0 training [time: 46.71s, train loss: 80646.6538]
+Thu 30 Jan 2025 16:31:35 INFO  epoch 1 training [time: 48.95s, train loss: 78950.5991]
+Thu 30 Jan 2025 16:32:26 INFO  epoch 2 training [time: 50.95s, train loss: 78532.5498]
+Thu 30 Jan 2025 16:33:14 INFO  epoch 3 training [time: 48.12s, train loss: 77859.4026]
+Thu 30 Jan 2025 16:34:04 INFO  epoch 4 training [time: 49.93s, train loss: 76870.0414]
+Thu 30 Jan 2025 16:34:07 INFO  epoch 4 evaluating [time: 2.15s, valid_score: 0.041000]
+Thu 30 Jan 2025 16:34:07 INFO  valid result: 
+precision@10 : 0.0249    hit@10 : 0.1342    mrr@10 : 0.0588    ndcg@10 : 0.041    map@10 : 0.0237    itemcoverage@10 : 0.1691    averagepopularity@10 : 29.1993    tailpercentage@10 : 0.0993
+Thu 30 Jan 2025 16:34:07 INFO  Saving current: saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 16:34:55 INFO  epoch 5 training [time: 47.96s, train loss: 75722.7960]
+Thu 30 Jan 2025 16:35:44 INFO  epoch 6 training [time: 49.15s, train loss: 73681.8807]
+Thu 30 Jan 2025 16:36:32 INFO  epoch 7 training [time: 47.97s, train loss: 70749.3984]
+Thu 30 Jan 2025 16:37:20 INFO  epoch 8 training [time: 48.57s, train loss: 67732.1249]
+Thu 30 Jan 2025 16:38:09 INFO  epoch 9 training [time: 48.85s, train loss: 64887.3108]
+Thu 30 Jan 2025 16:38:11 INFO  epoch 9 evaluating [time: 2.00s, valid_score: 0.056000]
+Thu 30 Jan 2025 16:38:11 INFO  valid result: 
+precision@10 : 0.0339    hit@10 : 0.155    mrr@10 : 0.0697    ndcg@10 : 0.056    map@10 : 0.0371    itemcoverage@10 : 0.1699    averagepopularity@10 : 29.4795    tailpercentage@10 : 0.0277
+Thu 30 Jan 2025 16:38:11 INFO  Saving current: saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 16:39:00 INFO  epoch 10 training [time: 48.28s, train loss: 62012.3861]
+Thu 30 Jan 2025 16:39:50 INFO  epoch 11 training [time: 50.81s, train loss: 59056.4578]
+Thu 30 Jan 2025 16:40:39 INFO  epoch 12 training [time: 48.17s, train loss: 55776.2682]
+Thu 30 Jan 2025 16:41:26 INFO  epoch 13 training [time: 47.57s, train loss: 51786.3734]
+Thu 30 Jan 2025 16:42:15 INFO  epoch 14 training [time: 48.91s, train loss: 47869.0139]
+Thu 30 Jan 2025 16:42:17 INFO  epoch 14 evaluating [time: 2.03s, valid_score: 0.062400]
+Thu 30 Jan 2025 16:42:17 INFO  valid result: 
+precision@10 : 0.0361    hit@10 : 0.1859    mrr@10 : 0.0876    ndcg@10 : 0.0624    map@10 : 0.0402    itemcoverage@10 : 0.1108    averagepopularity@10 : 91.1416    tailpercentage@10 : 0.0068
+Thu 30 Jan 2025 16:42:17 INFO  Saving current: saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 16:43:06 INFO  epoch 15 training [time: 49.04s, train loss: 44914.4615]
+Thu 30 Jan 2025 16:43:56 INFO  epoch 16 training [time: 49.50s, train loss: 42757.6978]
+Thu 30 Jan 2025 16:44:44 INFO  epoch 17 training [time: 48.33s, train loss: 41146.1003]
+Thu 30 Jan 2025 16:45:34 INFO  epoch 18 training [time: 49.87s, train loss: 39805.5794]
+Thu 30 Jan 2025 16:46:22 INFO  epoch 19 training [time: 48.03s, train loss: 38777.1060]
+Thu 30 Jan 2025 16:46:24 INFO  epoch 19 evaluating [time: 1.90s, valid_score: 0.065000]
+Thu 30 Jan 2025 16:46:24 INFO  valid result: 
+precision@10 : 0.0367    hit@10 : 0.1949    mrr@10 : 0.0959    ndcg@10 : 0.065    map@10 : 0.0415    itemcoverage@10 : 0.1011    averagepopularity@10 : 95.0268    tailpercentage@10 : 0.0048
+Thu 30 Jan 2025 16:46:24 INFO  Saving current: saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 16:47:12 INFO  epoch 20 training [time: 48.43s, train loss: 37909.2719]
+Thu 30 Jan 2025 16:48:01 INFO  epoch 21 training [time: 48.81s, train loss: 37123.8307]
+Thu 30 Jan 2025 16:48:49 INFO  epoch 22 training [time: 47.91s, train loss: 36495.0558]
+Thu 30 Jan 2025 16:49:37 INFO  epoch 23 training [time: 47.80s, train loss: 35929.1819]
+Thu 30 Jan 2025 16:50:26 INFO  epoch 24 training [time: 49.62s, train loss: 35411.7620]
+Thu 30 Jan 2025 16:50:28 INFO  epoch 24 evaluating [time: 2.06s, valid_score: 0.067600]
+Thu 30 Jan 2025 16:50:28 INFO  valid result: 
+precision@10 : 0.0393    hit@10 : 0.194    mrr@10 : 0.0947    ndcg@10 : 0.0676    map@10 : 0.0436    itemcoverage@10 : 0.1081    averagepopularity@10 : 86.5937    tailpercentage@10 : 0.0049
+Thu 30 Jan 2025 16:50:28 INFO  Saving current: saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 16:51:18 INFO  epoch 25 training [time: 49.82s, train loss: 34905.6646]
+Thu 30 Jan 2025 16:52:09 INFO  epoch 26 training [time: 50.65s, train loss: 34477.6779]
+Thu 30 Jan 2025 16:52:58 INFO  epoch 27 training [time: 49.01s, train loss: 34111.1086]
+Thu 30 Jan 2025 16:53:47 INFO  epoch 28 training [time: 49.02s, train loss: 33784.6814]
+Thu 30 Jan 2025 16:54:35 INFO  epoch 29 training [time: 47.75s, train loss: 33514.9688]
+Thu 30 Jan 2025 16:54:37 INFO  epoch 29 evaluating [time: 2.06s, valid_score: 0.068600]
+Thu 30 Jan 2025 16:54:37 INFO  valid result: 
+precision@10 : 0.0403    hit@10 : 0.1922    mrr@10 : 0.0922    ndcg@10 : 0.0686    map@10 : 0.0451    itemcoverage@10 : 0.1154    averagepopularity@10 : 79.2338    tailpercentage@10 : 0.0049
+Thu 30 Jan 2025 16:54:37 INFO  Saving current: saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 16:55:26 INFO  epoch 30 training [time: 49.07s, train loss: 33186.3603]
+Thu 30 Jan 2025 16:56:16 INFO  epoch 31 training [time: 49.67s, train loss: 32930.3232]
+Thu 30 Jan 2025 16:57:05 INFO  epoch 32 training [time: 49.62s, train loss: 32741.5032]
+Thu 30 Jan 2025 16:57:54 INFO  epoch 33 training [time: 49.17s, train loss: 32488.4014]
+Thu 30 Jan 2025 16:58:42 INFO  epoch 34 training [time: 47.54s, train loss: 32301.1405]
+Thu 30 Jan 2025 16:58:44 INFO  epoch 34 evaluating [time: 2.25s, valid_score: 0.069300]
+Thu 30 Jan 2025 16:58:44 INFO  valid result: 
+precision@10 : 0.0407    hit@10 : 0.1967    mrr@10 : 0.0931    ndcg@10 : 0.0693    map@10 : 0.0456    itemcoverage@10 : 0.1206    averagepopularity@10 : 74.1207    tailpercentage@10 : 0.0053
+Thu 30 Jan 2025 16:58:44 INFO  Saving current: saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 16:59:33 INFO  epoch 35 training [time: 48.82s, train loss: 32108.9734]
+Thu 30 Jan 2025 17:00:21 INFO  epoch 36 training [time: 48.30s, train loss: 31917.5953]
+Thu 30 Jan 2025 17:01:11 INFO  epoch 37 training [time: 49.28s, train loss: 31712.3752]
+Thu 30 Jan 2025 17:02:00 INFO  epoch 38 training [time: 49.13s, train loss: 31609.7584]
+Thu 30 Jan 2025 17:02:48 INFO  epoch 39 training [time: 48.33s, train loss: 31425.4823]
+Thu 30 Jan 2025 17:02:51 INFO  epoch 39 evaluating [time: 2.54s, valid_score: 0.070600]
+Thu 30 Jan 2025 17:02:51 INFO  valid result: 
+precision@10 : 0.0419    hit@10 : 0.2067    mrr@10 : 0.095    ndcg@10 : 0.0706    map@10 : 0.046    itemcoverage@10 : 0.1263    averagepopularity@10 : 70.2108    tailpercentage@10 : 0.0056
+Thu 30 Jan 2025 17:02:51 INFO  Saving current: saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 17:03:39 INFO  epoch 40 training [time: 48.25s, train loss: 31275.5994]
+Thu 30 Jan 2025 17:04:26 INFO  epoch 41 training [time: 47.23s, train loss: 31117.1241]
+Thu 30 Jan 2025 17:05:15 INFO  epoch 42 training [time: 48.91s, train loss: 31007.0692]
+Thu 30 Jan 2025 17:06:04 INFO  epoch 43 training [time: 49.18s, train loss: 30873.7692]
+Thu 30 Jan 2025 17:06:52 INFO  epoch 44 training [time: 48.03s, train loss: 30789.7972]
+Thu 30 Jan 2025 17:06:54 INFO  epoch 44 evaluating [time: 1.96s, valid_score: 0.070900]
+Thu 30 Jan 2025 17:06:54 INFO  valid result: 
+precision@10 : 0.0422    hit@10 : 0.2058    mrr@10 : 0.0951    ndcg@10 : 0.0709    map@10 : 0.0461    itemcoverage@10 : 0.1308    averagepopularity@10 : 66.9587    tailpercentage@10 : 0.0054
+Thu 30 Jan 2025 17:06:54 INFO  Saving current: saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 17:07:42 INFO  epoch 45 training [time: 48.19s, train loss: 30684.8633]
+Thu 30 Jan 2025 17:08:31 INFO  epoch 46 training [time: 48.09s, train loss: 30586.8629]
+Thu 30 Jan 2025 17:09:17 INFO  epoch 47 training [time: 46.42s, train loss: 30434.6219]
+Thu 30 Jan 2025 17:10:04 INFO  epoch 48 training [time: 47.19s, train loss: 30387.0942]
+Thu 30 Jan 2025 17:10:52 INFO  epoch 49 training [time: 47.61s, train loss: 30269.4680]
+Thu 30 Jan 2025 17:10:54 INFO  epoch 49 evaluating [time: 2.06s, valid_score: 0.070700]
+Thu 30 Jan 2025 17:10:54 INFO  valid result: 
+precision@10 : 0.0422    hit@10 : 0.2049    mrr@10 : 0.0939    ndcg@10 : 0.0707    map@10 : 0.0461    itemcoverage@10 : 0.1349    averagepopularity@10 : 64.4007    tailpercentage@10 : 0.0066
+Thu 30 Jan 2025 17:11:42 INFO  epoch 50 training [time: 48.22s, train loss: 30204.7321]
+Thu 30 Jan 2025 17:12:31 INFO  epoch 51 training [time: 49.13s, train loss: 30114.9896]
+Thu 30 Jan 2025 17:13:18 INFO  epoch 52 training [time: 47.07s, train loss: 30046.7162]
+Thu 30 Jan 2025 17:14:08 INFO  epoch 53 training [time: 50.24s, train loss: 29970.2368]
+Thu 30 Jan 2025 17:14:57 INFO  epoch 54 training [time: 48.42s, train loss: 29866.9462]
+Thu 30 Jan 2025 17:14:59 INFO  epoch 54 evaluating [time: 2.24s, valid_score: 0.071600]
+Thu 30 Jan 2025 17:14:59 INFO  valid result: 
+precision@10 : 0.0424    hit@10 : 0.204    mrr@10 : 0.0961    ndcg@10 : 0.0716    map@10 : 0.0468    itemcoverage@10 : 0.1383    averagepopularity@10 : 62.1471    tailpercentage@10 : 0.0073
+Thu 30 Jan 2025 17:14:59 INFO  Saving current: saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 17:15:48 INFO  epoch 55 training [time: 49.34s, train loss: 29804.6771]
+Thu 30 Jan 2025 17:16:38 INFO  epoch 56 training [time: 49.16s, train loss: 29747.0272]
+Thu 30 Jan 2025 17:17:26 INFO  epoch 57 training [time: 48.02s, train loss: 29651.8951]
+Thu 30 Jan 2025 17:18:13 INFO  epoch 58 training [time: 47.61s, train loss: 29607.4120]
+Thu 30 Jan 2025 17:19:01 INFO  epoch 59 training [time: 47.81s, train loss: 29546.9539]
+Thu 30 Jan 2025 17:19:03 INFO  epoch 59 evaluating [time: 2.07s, valid_score: 0.072400]
+Thu 30 Jan 2025 17:19:03 INFO  valid result: 
+precision@10 : 0.0431    hit@10 : 0.2085    mrr@10 : 0.0967    ndcg@10 : 0.0724    map@10 : 0.0474    itemcoverage@10 : 0.1412    averagepopularity@10 : 60.8525    tailpercentage@10 : 0.0077
+Thu 30 Jan 2025 17:19:03 INFO  Saving current: saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 17:19:52 INFO  epoch 60 training [time: 49.23s, train loss: 29498.2577]
+Thu 30 Jan 2025 17:20:42 INFO  epoch 61 training [time: 49.17s, train loss: 29412.8350]
+Thu 30 Jan 2025 17:21:29 INFO  epoch 62 training [time: 47.52s, train loss: 29373.9871]
+Thu 30 Jan 2025 17:22:18 INFO  epoch 63 training [time: 49.30s, train loss: 29331.9308]
+Thu 30 Jan 2025 17:23:05 INFO  epoch 64 training [time: 46.28s, train loss: 29286.2961]
+Thu 30 Jan 2025 17:23:07 INFO  epoch 64 evaluating [time: 2.40s, valid_score: 0.073400]
+Thu 30 Jan 2025 17:23:07 INFO  valid result: 
+precision@10 : 0.0434    hit@10 : 0.2058    mrr@10 : 0.0977    ndcg@10 : 0.0734    map@10 : 0.0488    itemcoverage@10 : 0.1434    averagepopularity@10 : 59.426    tailpercentage@10 : 0.0079
+Thu 30 Jan 2025 17:23:07 INFO  Saving current: saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 17:23:57 INFO  epoch 65 training [time: 49.79s, train loss: 29213.2909]
+Thu 30 Jan 2025 17:24:44 INFO  epoch 66 training [time: 46.89s, train loss: 29184.1353]
+Thu 30 Jan 2025 17:25:31 INFO  epoch 67 training [time: 46.93s, train loss: 29125.9514]
+Thu 30 Jan 2025 17:26:20 INFO  epoch 68 training [time: 49.01s, train loss: 29090.4125]
+Thu 30 Jan 2025 17:27:09 INFO  epoch 69 training [time: 49.55s, train loss: 29037.0129]
+Thu 30 Jan 2025 17:27:12 INFO  epoch 69 evaluating [time: 2.44s, valid_score: 0.074200]
+Thu 30 Jan 2025 17:27:12 INFO  valid result: 
+precision@10 : 0.0441    hit@10 : 0.2067    mrr@10 : 0.0982    ndcg@10 : 0.0742    map@10 : 0.0492    itemcoverage@10 : 0.1466    averagepopularity@10 : 58.2548    tailpercentage@10 : 0.008
+Thu 30 Jan 2025 17:27:12 INFO  Saving current: saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 17:28:01 INFO  epoch 70 training [time: 49.43s, train loss: 29006.6219]
+Thu 30 Jan 2025 17:28:49 INFO  epoch 71 training [time: 47.63s, train loss: 28955.9140]
+Thu 30 Jan 2025 17:29:39 INFO  epoch 72 training [time: 50.38s, train loss: 28896.3729]
+Thu 30 Jan 2025 17:30:28 INFO  epoch 73 training [time: 49.12s, train loss: 28874.3373]
+Thu 30 Jan 2025 17:31:16 INFO  epoch 74 training [time: 47.48s, train loss: 28844.7592]
+Thu 30 Jan 2025 17:31:18 INFO  epoch 74 evaluating [time: 1.95s, valid_score: 0.075000]
+Thu 30 Jan 2025 17:31:18 INFO  valid result: 
+precision@10 : 0.0444    hit@10 : 0.2103    mrr@10 : 0.1001    ndcg@10 : 0.075    map@10 : 0.0497    itemcoverage@10 : 0.1487    averagepopularity@10 : 57.4767    tailpercentage@10 : 0.0092
+Thu 30 Jan 2025 17:31:18 INFO  Saving current: saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 17:32:07 INFO  epoch 75 training [time: 49.29s, train loss: 28804.3907]
+Thu 30 Jan 2025 17:32:56 INFO  epoch 76 training [time: 48.98s, train loss: 28766.9949]
+Thu 30 Jan 2025 17:33:46 INFO  epoch 77 training [time: 49.57s, train loss: 28726.8453]
+Thu 30 Jan 2025 17:34:32 INFO  epoch 78 training [time: 46.32s, train loss: 28697.5308]
+Thu 30 Jan 2025 17:35:20 INFO  epoch 79 training [time: 48.50s, train loss: 28648.3187]
+Thu 30 Jan 2025 17:35:23 INFO  epoch 79 evaluating [time: 2.34s, valid_score: 0.074700]
+Thu 30 Jan 2025 17:35:23 INFO  valid result: 
+precision@10 : 0.0442    hit@10 : 0.2121    mrr@10 : 0.0995    ndcg@10 : 0.0747    map@10 : 0.0495    itemcoverage@10 : 0.1509    averagepopularity@10 : 56.4741    tailpercentage@10 : 0.0095
+Thu 30 Jan 2025 17:36:13 INFO  epoch 80 training [time: 49.80s, train loss: 28638.4139]
+Thu 30 Jan 2025 17:36:58 INFO  epoch 81 training [time: 45.33s, train loss: 28597.1561]
+Thu 30 Jan 2025 17:37:45 INFO  epoch 82 training [time: 47.17s, train loss: 28568.1243]
+Thu 30 Jan 2025 17:38:34 INFO  epoch 83 training [time: 48.44s, train loss: 28535.4783]
+Thu 30 Jan 2025 17:39:22 INFO  epoch 84 training [time: 48.26s, train loss: 28508.1652]
+Thu 30 Jan 2025 17:39:24 INFO  epoch 84 evaluating [time: 2.33s, valid_score: 0.075300]
+Thu 30 Jan 2025 17:39:24 INFO  valid result: 
+precision@10 : 0.0445    hit@10 : 0.2176    mrr@10 : 0.1006    ndcg@10 : 0.0753    map@10 : 0.0497    itemcoverage@10 : 0.1519    averagepopularity@10 : 55.8598    tailpercentage@10 : 0.0099
+Thu 30 Jan 2025 17:39:24 INFO  Saving current: saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 17:40:11 INFO  epoch 85 training [time: 46.89s, train loss: 28482.9392]
+Thu 30 Jan 2025 17:41:00 INFO  epoch 86 training [time: 49.36s, train loss: 28448.8391]
+Thu 30 Jan 2025 17:41:50 INFO  epoch 87 training [time: 49.52s, train loss: 28416.6211]
+Thu 30 Jan 2025 17:42:37 INFO  epoch 88 training [time: 47.44s, train loss: 28399.9238]
+Thu 30 Jan 2025 17:43:26 INFO  epoch 89 training [time: 48.90s, train loss: 28395.9692]
+Thu 30 Jan 2025 17:43:28 INFO  epoch 89 evaluating [time: 2.05s, valid_score: 0.076000]
+Thu 30 Jan 2025 17:43:28 INFO  valid result: 
+precision@10 : 0.0451    hit@10 : 0.2194    mrr@10 : 0.1007    ndcg@10 : 0.076    map@10 : 0.0502    itemcoverage@10 : 0.1528    averagepopularity@10 : 55.7708    tailpercentage@10 : 0.0101
+Thu 30 Jan 2025 17:43:28 INFO  Saving current: saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 17:44:18 INFO  epoch 90 training [time: 49.31s, train loss: 28348.6032]
+Thu 30 Jan 2025 17:45:05 INFO  epoch 91 training [time: 47.56s, train loss: 28322.5344]
+Thu 30 Jan 2025 17:45:54 INFO  epoch 92 training [time: 49.16s, train loss: 28307.6787]
+Thu 30 Jan 2025 17:46:43 INFO  epoch 93 training [time: 48.94s, train loss: 28272.3973]
+Thu 30 Jan 2025 17:47:30 INFO  epoch 94 training [time: 46.43s, train loss: 28247.4307]
+Thu 30 Jan 2025 17:47:32 INFO  epoch 94 evaluating [time: 1.99s, valid_score: 0.075900]
+Thu 30 Jan 2025 17:47:32 INFO  valid result: 
+precision@10 : 0.0444    hit@10 : 0.2167    mrr@10 : 0.1027    ndcg@10 : 0.0759    map@10 : 0.0502    itemcoverage@10 : 0.1532    averagepopularity@10 : 55.3012    tailpercentage@10 : 0.0101
+Thu 30 Jan 2025 17:48:21 INFO  epoch 95 training [time: 49.33s, train loss: 28238.9124]
+Thu 30 Jan 2025 17:49:11 INFO  epoch 96 training [time: 49.51s, train loss: 28217.4884]
+Thu 30 Jan 2025 17:49:58 INFO  epoch 97 training [time: 47.72s, train loss: 28181.6945]
+Thu 30 Jan 2025 17:50:47 INFO  epoch 98 training [time: 48.73s, train loss: 28161.7988]
+Thu 30 Jan 2025 17:51:34 INFO  epoch 99 training [time: 46.70s, train loss: 28158.0206]
+Thu 30 Jan 2025 17:51:36 INFO  epoch 99 evaluating [time: 2.00s, valid_score: 0.075800]
+Thu 30 Jan 2025 17:51:36 INFO  valid result: 
+precision@10 : 0.0447    hit@10 : 0.2185    mrr@10 : 0.1013    ndcg@10 : 0.0758    map@10 : 0.0501    itemcoverage@10 : 0.1545    averagepopularity@10 : 54.8102    tailpercentage@10 : 0.0094
+Thu 30 Jan 2025 17:51:36 INFO  Loading model structure and parameters from saved\SGL-Jan-30-2025_16-30-00.pth
+Thu 30 Jan 2025 17:51:38 INFO  best valid : OrderedDict({'precision@10': 0.0451, 'hit@10': 0.2194, 'mrr@10': 0.1007, 'ndcg@10': 0.076, 'map@10': 0.0502, 'itemcoverage@10': 0.1528, 'averagepopularity@10': 55.7708, 'tailpercentage@10': 0.0101})
+Thu 30 Jan 2025 17:51:38 INFO  test result: OrderedDict({'precision@10': 0.0362, 'hit@10': 0.1967, 'mrr@10': 0.0886, 'ndcg@10': 0.0718, 'map@10': 0.0483, 'itemcoverage@10': 0.1528, 'averagepopularity@10': 55.7385, 'tailpercentage@10': 0.0101})
+Thu 30 Jan 2025 17:51:40 INFO  [Training]: train_batch_size = [2048] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Thu 30 Jan 2025 17:51:40 INFO  [Evaluation]: eval_batch_size = [2048] eval_args: [{'split': {'LK': ['valid_and_test', 5]}, 'order': 'TO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+Thu 30 Jan 2025 17:52:37 INFO  epoch 0 training [time: 57.73s, train loss: 88656.1324]
+Thu 30 Jan 2025 17:53:34 INFO  epoch 1 training [time: 56.89s, train loss: 84646.3900]
+Thu 30 Jan 2025 17:54:33 INFO  epoch 2 training [time: 58.60s, train loss: 83156.0926]
+Thu 30 Jan 2025 17:55:27 INFO  epoch 3 training [time: 54.06s, train loss: 80901.3827]
+Thu 30 Jan 2025 17:56:23 INFO  epoch 4 training [time: 56.42s, train loss: 77023.7452]
+Thu 30 Jan 2025 17:56:26 INFO  epoch 4 evaluating [time: 2.38s, valid_score: 0.053200]
+Thu 30 Jan 2025 17:56:26 INFO  valid result: 
+precision@10 : 0.0308    hit@10 : 0.145    mrr@10 : 0.0709    ndcg@10 : 0.0532    map@10 : 0.0353    itemcoverage@10 : 0.1673    averagepopularity@10 : 18.6217    tailpercentage@10 : 0.0309
+Thu 30 Jan 2025 17:56:26 INFO  Saving current: saved\SGL-Jan-30-2025_17-51-40.pth
+Thu 30 Jan 2025 17:57:23 INFO  epoch 5 training [time: 57.32s, train loss: 72940.8000]
+Thu 30 Jan 2025 17:58:18 INFO  epoch 6 training [time: 54.91s, train loss: 69395.8442]
+Thu 30 Jan 2025 17:59:15 INFO  epoch 7 training [time: 56.54s, train loss: 66167.3259]
+Thu 30 Jan 2025 18:00:07 INFO  epoch 8 training [time: 52.39s, train loss: 62873.6760]
+Thu 30 Jan 2025 18:01:05 INFO  epoch 9 training [time: 57.60s, train loss: 59450.5522]
+Thu 30 Jan 2025 18:01:07 INFO  epoch 9 evaluating [time: 2.61s, valid_score: 0.067800]
+Thu 30 Jan 2025 18:01:07 INFO  valid result: 
+precision@10 : 0.0383    hit@10 : 0.173    mrr@10 : 0.0904    ndcg@10 : 0.0678    map@10 : 0.0475    itemcoverage@10 : 0.1156    averagepopularity@10 : 33.7003    tailpercentage@10 : 0.0066
+Thu 30 Jan 2025 18:01:07 INFO  Saving current: saved\SGL-Jan-30-2025_17-51-40.pth
+Thu 30 Jan 2025 18:02:03 INFO  epoch 10 training [time: 55.83s, train loss: 55611.0247]
+Thu 30 Jan 2025 18:03:02 INFO  epoch 11 training [time: 57.83s, train loss: 51657.0965]
+Thu 30 Jan 2025 18:03:59 INFO  epoch 12 training [time: 57.29s, train loss: 48277.0919]
+Thu 30 Jan 2025 18:04:57 INFO  epoch 13 training [time: 57.51s, train loss: 45810.7570]
+Thu 30 Jan 2025 18:05:54 INFO  epoch 14 training [time: 57.06s, train loss: 43918.9307]
+Thu 30 Jan 2025 18:05:56 INFO  epoch 14 evaluating [time: 2.20s, valid_score: 0.066500]
+Thu 30 Jan 2025 18:05:56 INFO  valid result: 
+precision@10 : 0.0372    hit@10 : 0.181    mrr@10 : 0.0944    ndcg@10 : 0.0665    map@10 : 0.0437    itemcoverage@10 : 0.0821    averagepopularity@10 : 63.4745    tailpercentage@10 : 0.0055
+Thu 30 Jan 2025 18:06:52 INFO  epoch 15 training [time: 56.41s, train loss: 42409.6522]
+Thu 30 Jan 2025 18:07:49 INFO  epoch 16 training [time: 56.54s, train loss: 41218.5207]
+Thu 30 Jan 2025 18:08:46 INFO  epoch 17 training [time: 56.92s, train loss: 40198.1593]
+Thu 30 Jan 2025 18:09:41 INFO  epoch 18 training [time: 55.46s, train loss: 39373.5413]
+Thu 30 Jan 2025 18:10:36 INFO  epoch 19 training [time: 55.14s, train loss: 38553.0728]
+Thu 30 Jan 2025 18:10:39 INFO  epoch 19 evaluating [time: 2.35s, valid_score: 0.068900]
+Thu 30 Jan 2025 18:10:39 INFO  valid result: 
+precision@10 : 0.0384    hit@10 : 0.181    mrr@10 : 0.0958    ndcg@10 : 0.0689    map@10 : 0.0472    itemcoverage@10 : 0.0886    averagepopularity@10 : 58.5629    tailpercentage@10 : 0.006
+Thu 30 Jan 2025 18:10:39 INFO  Saving current: saved\SGL-Jan-30-2025_17-51-40.pth
+Thu 30 Jan 2025 18:11:36 INFO  epoch 20 training [time: 57.61s, train loss: 37906.1975]
+Thu 30 Jan 2025 18:12:32 INFO  epoch 21 training [time: 56.02s, train loss: 37364.6349]
+Thu 30 Jan 2025 18:13:29 INFO  epoch 22 training [time: 56.89s, train loss: 36879.7233]
+Thu 30 Jan 2025 18:14:23 INFO  epoch 23 training [time: 53.66s, train loss: 36451.1046]
+Thu 30 Jan 2025 18:15:21 INFO  epoch 24 training [time: 58.06s, train loss: 36092.7097]
+Thu 30 Jan 2025 18:15:23 INFO  epoch 24 evaluating [time: 2.21s, valid_score: 0.071000]
+Thu 30 Jan 2025 18:15:23 INFO  valid result: 
+precision@10 : 0.0401    hit@10 : 0.184    mrr@10 : 0.0938    ndcg@10 : 0.071    map@10 : 0.0501    itemcoverage@10 : 0.0943    averagepopularity@10 : 54.2514    tailpercentage@10 : 0.0064
+Thu 30 Jan 2025 18:15:23 INFO  Saving current: saved\SGL-Jan-30-2025_17-51-40.pth
+Thu 30 Jan 2025 18:16:19 INFO  epoch 25 training [time: 56.12s, train loss: 35698.1250]
+Thu 30 Jan 2025 18:17:15 INFO  epoch 26 training [time: 56.07s, train loss: 35363.3168]
+Thu 30 Jan 2025 18:18:12 INFO  epoch 27 training [time: 56.91s, train loss: 35048.9113]
+Thu 30 Jan 2025 18:19:08 INFO  epoch 28 training [time: 55.85s, train loss: 34845.9759]
+Thu 30 Jan 2025 18:20:05 INFO  epoch 29 training [time: 56.48s, train loss: 34554.3730]
+Thu 30 Jan 2025 18:20:07 INFO  epoch 29 evaluating [time: 2.27s, valid_score: 0.072400]
+Thu 30 Jan 2025 18:20:07 INFO  valid result: 
+precision@10 : 0.0412    hit@10 : 0.188    mrr@10 : 0.0958    ndcg@10 : 0.0724    map@10 : 0.0509    itemcoverage@10 : 0.0996    averagepopularity@10 : 51.062    tailpercentage@10 : 0.0066
+Thu 30 Jan 2025 18:20:07 INFO  Saving current: saved\SGL-Jan-30-2025_17-51-40.pth
+Thu 30 Jan 2025 18:21:03 INFO  epoch 30 training [time: 56.55s, train loss: 34329.5751]
+Thu 30 Jan 2025 18:21:59 INFO  epoch 31 training [time: 55.53s, train loss: 34134.0533]
+Thu 30 Jan 2025 18:22:54 INFO  epoch 32 training [time: 55.03s, train loss: 33960.5214]
+Thu 30 Jan 2025 18:23:51 INFO  epoch 33 training [time: 57.01s, train loss: 33756.9179]
+Thu 30 Jan 2025 18:24:49 INFO  epoch 34 training [time: 57.73s, train loss: 33595.1600]
+Thu 30 Jan 2025 18:24:51 INFO  epoch 34 evaluating [time: 2.41s, valid_score: 0.074400]
+Thu 30 Jan 2025 18:24:51 INFO  valid result: 
+precision@10 : 0.0426    hit@10 : 0.193    mrr@10 : 0.0973    ndcg@10 : 0.0744    map@10 : 0.0525    itemcoverage@10 : 0.1037    averagepopularity@10 : 48.564    tailpercentage@10 : 0.0078
+Thu 30 Jan 2025 18:24:51 INFO  Saving current: saved\SGL-Jan-30-2025_17-51-40.pth
+Thu 30 Jan 2025 18:25:46 INFO  epoch 35 training [time: 54.57s, train loss: 33438.8450]
+Thu 30 Jan 2025 18:26:45 INFO  epoch 36 training [time: 58.75s, train loss: 33280.9766]
+Thu 30 Jan 2025 18:27:43 INFO  epoch 37 training [time: 58.60s, train loss: 33146.7431]
+Thu 30 Jan 2025 18:28:41 INFO  epoch 38 training [time: 57.64s, train loss: 33029.9946]
+Thu 30 Jan 2025 18:29:40 INFO  epoch 39 training [time: 58.66s, train loss: 32914.3683]
+Thu 30 Jan 2025 18:29:42 INFO  epoch 39 evaluating [time: 2.15s, valid_score: 0.074600]
+Thu 30 Jan 2025 18:29:42 INFO  valid result: 
+precision@10 : 0.0422    hit@10 : 0.193    mrr@10 : 0.0984    ndcg@10 : 0.0746    map@10 : 0.053    itemcoverage@10 : 0.1081    averagepopularity@10 : 46.5726    tailpercentage@10 : 0.0076
+Thu 30 Jan 2025 18:29:42 INFO  Saving current: saved\SGL-Jan-30-2025_17-51-40.pth
+Thu 30 Jan 2025 18:30:37 INFO  epoch 40 training [time: 55.13s, train loss: 32784.4645]
+Thu 30 Jan 2025 18:31:34 INFO  epoch 41 training [time: 56.82s, train loss: 32677.5871]
+Thu 30 Jan 2025 18:32:31 INFO  epoch 42 training [time: 57.26s, train loss: 32560.4035]
+Thu 30 Jan 2025 18:33:27 INFO  epoch 43 training [time: 56.31s, train loss: 32453.8122]
+Thu 30 Jan 2025 18:34:26 INFO  epoch 44 training [time: 58.16s, train loss: 32347.8002]
+Thu 30 Jan 2025 18:34:28 INFO  epoch 44 evaluating [time: 2.48s, valid_score: 0.075000]
+Thu 30 Jan 2025 18:34:28 INFO  valid result: 
+precision@10 : 0.0421    hit@10 : 0.192    mrr@10 : 0.1    ndcg@10 : 0.075    map@10 : 0.0536    itemcoverage@10 : 0.1119    averagepopularity@10 : 45.0085    tailpercentage@10 : 0.0077
+Thu 30 Jan 2025 18:34:28 INFO  Saving current: saved\SGL-Jan-30-2025_17-51-40.pth
+Thu 30 Jan 2025 18:35:23 INFO  epoch 45 training [time: 54.53s, train loss: 32269.7792]
+Thu 30 Jan 2025 18:36:20 INFO  epoch 46 training [time: 57.57s, train loss: 32194.8193]
+Thu 30 Jan 2025 18:37:17 INFO  epoch 47 training [time: 56.96s, train loss: 32099.6890]
+Thu 30 Jan 2025 18:38:12 INFO  epoch 48 training [time: 55.33s, train loss: 32022.1205]
+Thu 30 Jan 2025 18:39:09 INFO  epoch 49 training [time: 56.51s, train loss: 31961.0211]
+Thu 30 Jan 2025 18:39:11 INFO  epoch 49 evaluating [time: 2.37s, valid_score: 0.075400]
+Thu 30 Jan 2025 18:39:11 INFO  valid result: 
+precision@10 : 0.0422    hit@10 : 0.19    mrr@10 : 0.101    ndcg@10 : 0.0754    map@10 : 0.054    itemcoverage@10 : 0.1147    averagepopularity@10 : 44.0431    tailpercentage@10 : 0.0085
+Thu 30 Jan 2025 18:39:11 INFO  Saving current: saved\SGL-Jan-30-2025_17-51-40.pth
+Thu 30 Jan 2025 18:40:09 INFO  epoch 50 training [time: 58.03s, train loss: 31861.3980]
+Thu 30 Jan 2025 18:41:06 INFO  epoch 51 training [time: 56.39s, train loss: 31808.0026]
+Thu 30 Jan 2025 18:42:01 INFO  epoch 52 training [time: 55.56s, train loss: 31782.5619]
+Thu 30 Jan 2025 18:42:58 INFO  epoch 53 training [time: 56.28s, train loss: 31658.7606]
+Thu 30 Jan 2025 18:43:52 INFO  epoch 54 training [time: 54.20s, train loss: 31616.3897]
+Thu 30 Jan 2025 18:43:54 INFO  epoch 54 evaluating [time: 1.84s, valid_score: 0.076300]
+Thu 30 Jan 2025 18:43:54 INFO  valid result: 
+precision@10 : 0.0432    hit@10 : 0.192    mrr@10 : 0.1012    ndcg@10 : 0.0763    map@10 : 0.0543    itemcoverage@10 : 0.1184    averagepopularity@10 : 42.4947    tailpercentage@10 : 0.0081
+Thu 30 Jan 2025 18:43:54 INFO  Saving current: saved\SGL-Jan-30-2025_17-51-40.pth
+Thu 30 Jan 2025 18:44:52 INFO  epoch 55 training [time: 57.77s, train loss: 31547.3864]
+Thu 30 Jan 2025 18:45:47 INFO  epoch 56 training [time: 54.95s, train loss: 31495.6942]
+Thu 30 Jan 2025 18:46:42 INFO  epoch 57 training [time: 55.21s, train loss: 31434.7291]
+Thu 30 Jan 2025 18:47:38 INFO  epoch 58 training [time: 56.07s, train loss: 31387.9496]
+Thu 30 Jan 2025 18:48:35 INFO  epoch 59 training [time: 56.78s, train loss: 31355.5223]
+Thu 30 Jan 2025 18:48:37 INFO  epoch 59 evaluating [time: 2.30s, valid_score: 0.075800]
+Thu 30 Jan 2025 18:48:37 INFO  valid result: 
+precision@10 : 0.0431    hit@10 : 0.195    mrr@10 : 0.1008    ndcg@10 : 0.0758    map@10 : 0.0536    itemcoverage@10 : 0.1206    averagepopularity@10 : 41.4789    tailpercentage@10 : 0.0081
+Thu 30 Jan 2025 18:49:33 INFO  epoch 60 training [time: 55.26s, train loss: 31293.1781]
+Thu 30 Jan 2025 18:50:30 INFO  epoch 61 training [time: 56.90s, train loss: 31244.6568]
+Thu 30 Jan 2025 18:51:25 INFO  epoch 62 training [time: 55.76s, train loss: 31185.3130]
+Thu 30 Jan 2025 18:52:22 INFO  epoch 63 training [time: 56.87s, train loss: 31161.0689]
+Thu 30 Jan 2025 18:53:19 INFO  epoch 64 training [time: 56.68s, train loss: 31106.2649]
+Thu 30 Jan 2025 18:53:21 INFO  epoch 64 evaluating [time: 2.25s, valid_score: 0.075700]
+Thu 30 Jan 2025 18:53:21 INFO  valid result: 
+precision@10 : 0.0435    hit@10 : 0.195    mrr@10 : 0.1001    ndcg@10 : 0.0757    map@10 : 0.0531    itemcoverage@10 : 0.1232    averagepopularity@10 : 40.7554    tailpercentage@10 : 0.0089
+Thu 30 Jan 2025 18:54:19 INFO  epoch 65 training [time: 57.96s, train loss: 31060.2971]
+Thu 30 Jan 2025 18:55:17 INFO  epoch 66 training [time: 58.19s, train loss: 31059.2539]
+Thu 30 Jan 2025 18:56:14 INFO  epoch 67 training [time: 56.29s, train loss: 30994.5084]
+Thu 30 Jan 2025 18:57:07 INFO  epoch 68 training [time: 53.50s, train loss: 30945.5086]
+Thu 30 Jan 2025 18:58:05 INFO  epoch 69 training [time: 57.91s, train loss: 30895.3902]
+Thu 30 Jan 2025 18:58:08 INFO  epoch 69 evaluating [time: 2.35s, valid_score: 0.075500]
+Thu 30 Jan 2025 18:58:08 INFO  valid result: 
+precision@10 : 0.0438    hit@10 : 0.195    mrr@10 : 0.0993    ndcg@10 : 0.0755    map@10 : 0.0525    itemcoverage@10 : 0.1246    averagepopularity@10 : 40.3967    tailpercentage@10 : 0.0086
+Thu 30 Jan 2025 18:59:03 INFO  epoch 70 training [time: 55.25s, train loss: 30874.6283]
+Thu 30 Jan 2025 19:00:00 INFO  epoch 71 training [time: 57.07s, train loss: 30827.0942]
+Thu 30 Jan 2025 19:00:57 INFO  epoch 72 training [time: 57.66s, train loss: 30797.7077]
+Thu 30 Jan 2025 19:01:52 INFO  epoch 73 training [time: 54.70s, train loss: 30769.1116]
+Thu 30 Jan 2025 19:02:48 INFO  epoch 74 training [time: 55.96s, train loss: 30724.7074]
+Thu 30 Jan 2025 19:02:51 INFO  epoch 74 evaluating [time: 2.55s, valid_score: 0.074100]
+Thu 30 Jan 2025 19:02:51 INFO  valid result: 
+precision@10 : 0.0431    hit@10 : 0.198    mrr@10 : 0.0975    ndcg@10 : 0.0741    map@10 : 0.051    itemcoverage@10 : 0.1262    averagepopularity@10 : 40.0274    tailpercentage@10 : 0.0085
+Thu 30 Jan 2025 19:03:47 INFO  epoch 75 training [time: 56.17s, train loss: 30697.4758]
+Thu 30 Jan 2025 19:04:43 INFO  epoch 76 training [time: 55.61s, train loss: 30663.6937]
+Thu 30 Jan 2025 19:05:38 INFO  epoch 77 training [time: 55.33s, train loss: 30648.2012]
+Thu 30 Jan 2025 19:06:34 INFO  epoch 78 training [time: 56.25s, train loss: 30608.3484]
+Thu 30 Jan 2025 19:07:30 INFO  epoch 79 training [time: 55.80s, train loss: 30585.1155]
+Thu 30 Jan 2025 19:07:32 INFO  epoch 79 evaluating [time: 2.41s, valid_score: 0.073700]
+Thu 30 Jan 2025 19:07:32 INFO  valid result: 
+precision@10 : 0.0431    hit@10 : 0.198    mrr@10 : 0.0967    ndcg@10 : 0.0737    map@10 : 0.0507    itemcoverage@10 : 0.1276    averagepopularity@10 : 39.2687    tailpercentage@10 : 0.0091
+Thu 30 Jan 2025 19:08:28 INFO  epoch 80 training [time: 55.85s, train loss: 30567.7722]
+Thu 30 Jan 2025 19:09:27 INFO  epoch 81 training [time: 58.57s, train loss: 30541.1064]
+Thu 30 Jan 2025 19:10:23 INFO  epoch 82 training [time: 55.78s, train loss: 30512.3447]
+Thu 30 Jan 2025 19:11:14 INFO  epoch 83 training [time: 51.57s, train loss: 30493.0656]
+Thu 30 Jan 2025 19:12:11 INFO  epoch 84 training [time: 56.52s, train loss: 30460.8907]
+Thu 30 Jan 2025 19:12:13 INFO  epoch 84 evaluating [time: 2.30s, valid_score: 0.072700]
+Thu 30 Jan 2025 19:12:13 INFO  valid result: 
+precision@10 : 0.0425    hit@10 : 0.196    mrr@10 : 0.0954    ndcg@10 : 0.0727    map@10 : 0.0498    itemcoverage@10 : 0.1285    averagepopularity@10 : 38.8087    tailpercentage@10 : 0.0087
+Thu 30 Jan 2025 19:13:08 INFO  epoch 85 training [time: 55.20s, train loss: 30431.0337]
+Thu 30 Jan 2025 19:14:04 INFO  epoch 86 training [time: 55.63s, train loss: 30416.2668]
+Thu 30 Jan 2025 19:15:01 INFO  epoch 87 training [time: 56.90s, train loss: 30390.3154]
+Thu 30 Jan 2025 19:15:57 INFO  epoch 88 training [time: 56.32s, train loss: 30377.9088]
+Thu 30 Jan 2025 19:16:53 INFO  epoch 89 training [time: 56.08s, train loss: 30342.0937]
+Thu 30 Jan 2025 19:16:55 INFO  epoch 89 evaluating [time: 2.18s, valid_score: 0.072500]
+Thu 30 Jan 2025 19:16:55 INFO  valid result: 
+precision@10 : 0.0426    hit@10 : 0.195    mrr@10 : 0.0954    ndcg@10 : 0.0725    map@10 : 0.0494    itemcoverage@10 : 0.1294    averagepopularity@10 : 38.55    tailpercentage@10 : 0.0087
+Thu 30 Jan 2025 19:17:51 INFO  epoch 90 training [time: 55.51s, train loss: 30329.4364]
+Thu 30 Jan 2025 19:18:47 INFO  epoch 91 training [time: 55.93s, train loss: 30287.3312]
+Thu 30 Jan 2025 19:19:42 INFO  epoch 92 training [time: 55.81s, train loss: 30286.9579]
+Thu 30 Jan 2025 19:20:40 INFO  epoch 93 training [time: 57.09s, train loss: 30259.5319]
+Thu 30 Jan 2025 19:21:36 INFO  epoch 94 training [time: 56.09s, train loss: 30238.1278]
+Thu 30 Jan 2025 19:21:38 INFO  epoch 94 evaluating [time: 2.30s, valid_score: 0.071800]
+Thu 30 Jan 2025 19:21:38 INFO  valid result: 
+precision@10 : 0.0422    hit@10 : 0.194    mrr@10 : 0.0941    ndcg@10 : 0.0718    map@10 : 0.0492    itemcoverage@10 : 0.1301    averagepopularity@10 : 38.2855    tailpercentage@10 : 0.0083
+Thu 30 Jan 2025 19:22:35 INFO  epoch 95 training [time: 56.53s, train loss: 30232.6372]
+Thu 30 Jan 2025 19:23:31 INFO  epoch 96 training [time: 56.98s, train loss: 30211.2869]
+Thu 30 Jan 2025 19:24:27 INFO  epoch 97 training [time: 55.91s, train loss: 30189.0851]
+Thu 30 Jan 2025 19:25:22 INFO  epoch 98 training [time: 54.76s, train loss: 30174.3882]
+Thu 30 Jan 2025 19:26:18 INFO  epoch 99 training [time: 55.46s, train loss: 30148.9622]
+Thu 30 Jan 2025 19:26:21 INFO  epoch 99 evaluating [time: 3.07s, valid_score: 0.071900]
+Thu 30 Jan 2025 19:26:21 INFO  valid result: 
+precision@10 : 0.0426    hit@10 : 0.195    mrr@10 : 0.0933    ndcg@10 : 0.0719    map@10 : 0.0488    itemcoverage@10 : 0.1312    averagepopularity@10 : 38.1118    tailpercentage@10 : 0.0078
+Thu 30 Jan 2025 19:26:21 INFO  Loading model structure and parameters from saved\SGL-Jan-30-2025_17-51-40.pth
+Thu 30 Jan 2025 19:26:22 INFO  best valid : OrderedDict({'precision@10': 0.0432, 'hit@10': 0.192, 'mrr@10': 0.1012, 'ndcg@10': 0.0763, 'map@10': 0.0543, 'itemcoverage@10': 0.1184, 'averagepopularity@10': 42.4947, 'tailpercentage@10': 0.0081})
+Thu 30 Jan 2025 19:26:22 INFO  test result: OrderedDict({'precision@10': 0.0327, 'hit@10': 0.157, 'mrr@10': 0.0817, 'ndcg@10': 0.0683, 'map@10': 0.0504, 'itemcoverage@10': 0.1185, 'averagepopularity@10': 42.3744, 'tailpercentage@10': 0.0081})
+Fri 31 Jan 2025 07:36:21 INFO  [Training]: train_batch_size = [2048] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Fri 31 Jan 2025 07:36:21 INFO  [Evaluation]: eval_batch_size = [2048] eval_args: [{'split': {'LK': ['valid_and_test', 5]}, 'order': 'TO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+Fri 31 Jan 2025 07:37:06 INFO  epoch 0 training [time: 45.19s, train loss: 84254.5090]
+Fri 31 Jan 2025 07:37:51 INFO  epoch 1 training [time: 45.01s, train loss: 82117.6295]
+Fri 31 Jan 2025 07:38:35 INFO  epoch 2 training [time: 44.14s, train loss: 81329.5728]
+Fri 31 Jan 2025 07:39:20 INFO  epoch 3 training [time: 44.86s, train loss: 79876.8597]
+Fri 31 Jan 2025 07:40:04 INFO  epoch 4 training [time: 43.64s, train loss: 77827.4104]
+Fri 31 Jan 2025 07:40:06 INFO  epoch 4 evaluating [time: 2.33s, valid_score: 0.021200]
+Fri 31 Jan 2025 07:40:06 INFO  valid result:
+precision@10 : 0.0119    hit@10 : 0.0648    mrr@10 : 0.0314    ndcg@10 : 0.0212    map@10 : 0.0138    itemcoverage@10 : 0.1604    averagepopularity@10 : 15.6918    tailpercentage@10 : 0.0382
+Fri 31 Jan 2025 07:40:06 INFO  Saving current: saved\SGL-Jan-31-2025_07-36-21.pth
+Fri 31 Jan 2025 07:40:49 INFO  epoch 5 training [time: 42.66s, train loss: 76040.9878]
+Fri 31 Jan 2025 07:41:30 INFO  epoch 6 training [time: 41.77s, train loss: 74087.4702]
+Fri 31 Jan 2025 07:42:12 INFO  epoch 7 training [time: 41.71s, train loss: 71624.1700]
+Fri 31 Jan 2025 07:42:55 INFO  epoch 8 training [time: 42.65s, train loss: 68842.1462]
+Fri 31 Jan 2025 07:43:36 INFO  epoch 9 training [time: 41.56s, train loss: 65909.6952]
+Fri 31 Jan 2025 07:43:39 INFO  epoch 9 evaluating [time: 2.26s, valid_score: 0.042300]
+Fri 31 Jan 2025 07:43:39 INFO  valid result:
+precision@10 : 0.0249    hit@10 : 0.1361    mrr@10 : 0.0597    ndcg@10 : 0.0423    map@10 : 0.027    itemcoverage@10 : 0.1518    averagepopularity@10 : 26.3873    tailpercentage@10 : 0.0063
+Fri 31 Jan 2025 07:43:39 INFO  Saving current: saved\SGL-Jan-31-2025_07-36-21.pth
+Fri 31 Jan 2025 07:44:20 INFO  epoch 10 training [time: 41.85s, train loss: 62567.0233]
+Fri 31 Jan 2025 07:45:04 INFO  epoch 11 training [time: 43.08s, train loss: 58580.5941]
+Fri 31 Jan 2025 07:45:46 INFO  epoch 12 training [time: 42.61s, train loss: 53978.4468]
+Fri 31 Jan 2025 07:46:29 INFO  epoch 13 training [time: 42.53s, train loss: 49674.4232]
+Fri 31 Jan 2025 07:47:11 INFO  epoch 14 training [time: 42.57s, train loss: 46424.0362]
+Fri 31 Jan 2025 07:47:14 INFO  epoch 14 evaluating [time: 2.45s, valid_score: 0.051400]
+Fri 31 Jan 2025 07:47:14 INFO  valid result:
+precision@10 : 0.0291    hit@10 : 0.1491    mrr@10 : 0.0742    ndcg@10 : 0.0514    map@10 : 0.0331    itemcoverage@10 : 0.0918    averagepopularity@10 : 74.9725    tailpercentage@10 : 0.0039
+Fri 31 Jan 2025 07:47:14 INFO  Saving current: saved\SGL-Jan-31-2025_07-36-21.pth
+Fri 31 Jan 2025 07:47:55 INFO  epoch 15 training [time: 41.43s, train loss: 44120.5134]
+Fri 31 Jan 2025 07:48:38 INFO  epoch 16 training [time: 42.80s, train loss: 42385.2718]
+Fri 31 Jan 2025 07:49:21 INFO  epoch 17 training [time: 42.65s, train loss: 40973.3845]
+Fri 31 Jan 2025 07:50:03 INFO  epoch 18 training [time: 42.85s, train loss: 39853.3038]
+Fri 31 Jan 2025 07:50:46 INFO  epoch 19 training [time: 42.47s, train loss: 38964.1886]
+Fri 31 Jan 2025 07:50:48 INFO  epoch 19 evaluating [time: 2.18s, valid_score: 0.055100]
+Fri 31 Jan 2025 07:50:48 INFO  valid result:
+precision@10 : 0.0318    hit@10 : 0.162    mrr@10 : 0.0775    ndcg@10 : 0.0551    map@10 : 0.0353    itemcoverage@10 : 0.0996    averagepopularity@10 : 71.2388    tailpercentage@10 : 0.0044
+Fri 31 Jan 2025 07:50:48 INFO  Saving current: saved\SGL-Jan-31-2025_07-36-21.pth
+Fri 31 Jan 2025 07:51:30 INFO  epoch 20 training [time: 41.80s, train loss: 38135.2467]
+Fri 31 Jan 2025 07:52:13 INFO  epoch 21 training [time: 42.64s, train loss: 37449.4013]
+Fri 31 Jan 2025 07:52:56 INFO  epoch 22 training [time: 43.49s, train loss: 36846.6343]
+Fri 31 Jan 2025 07:53:39 INFO  epoch 23 training [time: 42.47s, train loss: 36287.5304]
+Fri 31 Jan 2025 07:54:21 INFO  epoch 24 training [time: 42.83s, train loss: 35843.0623]
+Fri 31 Jan 2025 07:54:24 INFO  epoch 24 evaluating [time: 2.27s, valid_score: 0.055000]
+Fri 31 Jan 2025 07:54:24 INFO  valid result:
+precision@10 : 0.032    hit@10 : 0.1704    mrr@10 : 0.0772    ndcg@10 : 0.055    map@10 : 0.0352    itemcoverage@10 : 0.1117    averagepopularity@10 : 64.4245    tailpercentage@10 : 0.0051
+Fri 31 Jan 2025 07:55:08 INFO  epoch 25 training [time: 43.81s, train loss: 35424.7592]
+Fri 31 Jan 2025 07:55:50 INFO  epoch 26 training [time: 42.61s, train loss: 35097.8702]
+Fri 31 Jan 2025 07:56:32 INFO  epoch 27 training [time: 41.88s, train loss: 34737.7624]
+Fri 31 Jan 2025 07:57:14 INFO  epoch 28 training [time: 42.19s, train loss: 34433.4942]
+Fri 31 Jan 2025 07:57:57 INFO  epoch 29 training [time: 42.71s, train loss: 34144.9193]
+Fri 31 Jan 2025 07:57:59 INFO  epoch 29 evaluating [time: 2.10s, valid_score: 0.055900]
+Fri 31 Jan 2025 07:57:59 INFO  valid result:
+precision@10 : 0.033    hit@10 : 0.1769    mrr@10 : 0.0775    ndcg@10 : 0.0559    map@10 : 0.0355    itemcoverage@10 : 0.1199    averagepopularity@10 : 59.7526    tailpercentage@10 : 0.0052
+Fri 31 Jan 2025 07:57:59 INFO  Saving current: saved\SGL-Jan-31-2025_07-36-21.pth
+Fri 31 Jan 2025 07:58:42 INFO  epoch 30 training [time: 43.43s, train loss: 33891.2928]
+Fri 31 Jan 2025 07:59:24 INFO  epoch 31 training [time: 41.87s, train loss: 33687.7318]
+Fri 31 Jan 2025 08:00:07 INFO  epoch 32 training [time: 42.45s, train loss: 33422.2680]
+Fri 31 Jan 2025 08:00:49 INFO  epoch 33 training [time: 42.40s, train loss: 33218.0271]
+Fri 31 Jan 2025 08:01:32 INFO  epoch 34 training [time: 42.78s, train loss: 33086.4649]
+Fri 31 Jan 2025 08:01:34 INFO  epoch 34 evaluating [time: 2.16s, valid_score: 0.056900]
+Fri 31 Jan 2025 08:01:34 INFO  valid result:
+precision@10 : 0.034    hit@10 : 0.1796    mrr@10 : 0.0777    ndcg@10 : 0.0569    map@10 : 0.036    itemcoverage@10 : 0.1271    averagepopularity@10 : 56.8414    tailpercentage@10 : 0.0054
+Fri 31 Jan 2025 08:01:34 INFO  Saving current: saved\SGL-Jan-31-2025_07-36-21.pth
+Fri 31 Jan 2025 08:02:16 INFO  epoch 35 training [time: 41.94s, train loss: 32858.4327]
+Fri 31 Jan 2025 08:02:59 INFO  epoch 36 training [time: 42.71s, train loss: 32705.2909]
+Fri 31 Jan 2025 08:03:42 INFO  epoch 37 training [time: 43.32s, train loss: 32548.4467]
+Fri 31 Jan 2025 08:04:25 INFO  epoch 38 training [time: 43.01s, train loss: 32429.3863]
+Fri 31 Jan 2025 08:05:08 INFO  epoch 39 training [time: 43.09s, train loss: 32299.4073]
+Fri 31 Jan 2025 08:05:11 INFO  epoch 39 evaluating [time: 2.16s, valid_score: 0.056500]
+Fri 31 Jan 2025 08:05:11 INFO  valid result:
+precision@10 : 0.0341    hit@10 : 0.1833    mrr@10 : 0.0762    ndcg@10 : 0.0565    map@10 : 0.0356    itemcoverage@10 : 0.1338    averagepopularity@10 : 54.2271    tailpercentage@10 : 0.006
+Fri 31 Jan 2025 08:05:53 INFO  epoch 40 training [time: 42.55s, train loss: 32162.4761]
+Fri 31 Jan 2025 08:06:37 INFO  epoch 41 training [time: 43.84s, train loss: 32011.4359]
+Fri 31 Jan 2025 08:07:20 INFO  epoch 42 training [time: 42.87s, train loss: 31932.6664]
+Fri 31 Jan 2025 08:08:05 INFO  epoch 43 training [time: 44.90s, train loss: 31794.9212]
+Fri 31 Jan 2025 08:08:48 INFO  epoch 44 training [time: 43.27s, train loss: 31726.9362]
+Fri 31 Jan 2025 08:08:50 INFO  epoch 44 evaluating [time: 2.12s, valid_score: 0.056800]
+Fri 31 Jan 2025 08:08:50 INFO  valid result:
+precision@10 : 0.0346    hit@10 : 0.1852    mrr@10 : 0.0756    ndcg@10 : 0.0568    map@10 : 0.0357    itemcoverage@10 : 0.1385    averagepopularity@10 : 52.4666    tailpercentage@10 : 0.0063
+Fri 31 Jan 2025 08:09:35 INFO  epoch 45 training [time: 44.11s, train loss: 31599.0833]
+Fri 31 Jan 2025 08:10:20 INFO  epoch 46 training [time: 45.10s, train loss: 31535.8232]
+Fri 31 Jan 2025 08:11:02 INFO  epoch 47 training [time: 42.60s, train loss: 31449.8923]
+Fri 31 Jan 2025 08:11:46 INFO  epoch 48 training [time: 43.82s, train loss: 31376.3482]
+Fri 31 Jan 2025 08:12:29 INFO  epoch 49 training [time: 43.35s, train loss: 31278.4019]
+Fri 31 Jan 2025 08:12:32 INFO  epoch 49 evaluating [time: 2.22s, valid_score: 0.056800]
+Fri 31 Jan 2025 08:12:32 INFO  valid result:
+precision@10 : 0.0346    hit@10 : 0.188    mrr@10 : 0.0766    ndcg@10 : 0.0568    map@10 : 0.0356    itemcoverage@10 : 0.1424    averagepopularity@10 : 50.9794    tailpercentage@10 : 0.0067
+Fri 31 Jan 2025 08:13:16 INFO  epoch 50 training [time: 44.31s, train loss: 31171.6870]
+Fri 31 Jan 2025 08:13:59 INFO  epoch 51 training [time: 43.48s, train loss: 31115.7630]
+Fri 31 Jan 2025 08:14:44 INFO  epoch 52 training [time: 45.04s, train loss: 31036.6576]
+Fri 31 Jan 2025 08:15:29 INFO  epoch 53 training [time: 44.21s, train loss: 30995.0295]
+Fri 31 Jan 2025 08:16:12 INFO  epoch 54 training [time: 43.72s, train loss: 30896.9038]
+Fri 31 Jan 2025 08:16:15 INFO  epoch 54 evaluating [time: 2.14s, valid_score: 0.057500]
+Fri 31 Jan 2025 08:16:15 INFO  valid result:
+precision@10 : 0.0349    hit@10 : 0.1907    mrr@10 : 0.0783    ndcg@10 : 0.0575    map@10 : 0.036    itemcoverage@10 : 0.1466    averagepopularity@10 : 49.9281    tailpercentage@10 : 0.0066
+Fri 31 Jan 2025 08:16:15 INFO  Saving current: saved\SGL-Jan-31-2025_07-36-21.pth
+Fri 31 Jan 2025 08:16:59 INFO  epoch 55 training [time: 44.32s, train loss: 30844.3079]
+Fri 31 Jan 2025 08:17:43 INFO  epoch 56 training [time: 44.41s, train loss: 30789.3579]
+Fri 31 Jan 2025 08:18:27 INFO  epoch 57 training [time: 43.53s, train loss: 30753.2845]
+Fri 31 Jan 2025 08:19:11 INFO  epoch 58 training [time: 43.74s, train loss: 30696.9274]
+Fri 31 Jan 2025 08:19:54 INFO  epoch 59 training [time: 43.87s, train loss: 30643.0626]
+Fri 31 Jan 2025 08:19:57 INFO  epoch 59 evaluating [time: 2.15s, valid_score: 0.057200]
+Fri 31 Jan 2025 08:19:57 INFO  valid result:
+precision@10 : 0.0347    hit@10 : 0.187    mrr@10 : 0.0771    ndcg@10 : 0.0572    map@10 : 0.0359    itemcoverage@10 : 0.149    averagepopularity@10 : 48.8816    tailpercentage@10 : 0.0067
+Fri 31 Jan 2025 08:20:41 INFO  epoch 60 training [time: 43.93s, train loss: 30560.0925]
+Fri 31 Jan 2025 08:21:25 INFO  epoch 61 training [time: 44.26s, train loss: 30519.6305]
+Fri 31 Jan 2025 08:22:09 INFO  epoch 62 training [time: 44.63s, train loss: 30477.0922]
+Fri 31 Jan 2025 08:22:52 INFO  epoch 63 training [time: 42.84s, train loss: 30469.2240]
+Fri 31 Jan 2025 08:23:35 INFO  epoch 64 training [time: 42.76s, train loss: 30384.9559]
+Fri 31 Jan 2025 08:23:37 INFO  epoch 64 evaluating [time: 2.12s, valid_score: 0.058300]
+Fri 31 Jan 2025 08:23:37 INFO  valid result:
+precision@10 : 0.036    hit@10 : 0.1954    mrr@10 : 0.0782    ndcg@10 : 0.0583    map@10 : 0.0359    itemcoverage@10 : 0.1509    averagepopularity@10 : 47.952    tailpercentage@10 : 0.0064
+Fri 31 Jan 2025 08:23:37 INFO  Saving current: saved\SGL-Jan-31-2025_07-36-21.pth
+Fri 31 Jan 2025 08:24:21 INFO  epoch 65 training [time: 43.62s, train loss: 30361.2878]
+Fri 31 Jan 2025 08:25:03 INFO  epoch 66 training [time: 42.59s, train loss: 30324.8470]
+Fri 31 Jan 2025 08:25:45 INFO  epoch 67 training [time: 41.94s, train loss: 30270.8287]
+Fri 31 Jan 2025 08:26:28 INFO  epoch 68 training [time: 43.08s, train loss: 30226.2319]
+Fri 31 Jan 2025 08:27:13 INFO  epoch 69 training [time: 43.69s, train loss: 30198.2723]
+Fri 31 Jan 2025 08:27:16 INFO  epoch 69 evaluating [time: 2.22s, valid_score: 0.059300]
+Fri 31 Jan 2025 08:27:16 INFO  valid result:
+precision@10 : 0.0367    hit@10 : 0.1963    mrr@10 : 0.0792    ndcg@10 : 0.0593    map@10 : 0.0366    itemcoverage@10 : 0.1532    averagepopularity@10 : 46.8298    tailpercentage@10 : 0.0067
+Fri 31 Jan 2025 08:27:16 INFO  Saving current: saved\SGL-Jan-31-2025_07-36-21.pth
+Fri 31 Jan 2025 08:27:59 INFO  epoch 70 training [time: 43.43s, train loss: 30159.7489]
+Fri 31 Jan 2025 08:28:41 INFO  epoch 71 training [time: 42.08s, train loss: 30128.3079]
+Fri 31 Jan 2025 08:29:23 INFO  epoch 72 training [time: 42.40s, train loss: 30080.5714]
+Fri 31 Jan 2025 08:30:07 INFO  epoch 73 training [time: 43.66s, train loss: 30050.8412]
+Fri 31 Jan 2025 08:30:50 INFO  epoch 74 training [time: 42.97s, train loss: 30006.7516]
+Fri 31 Jan 2025 08:30:52 INFO  epoch 74 evaluating [time: 2.18s, valid_score: 0.060300]
+Fri 31 Jan 2025 08:30:52 INFO  valid result:
+precision@10 : 0.0369    hit@10 : 0.1963    mrr@10 : 0.0818    ndcg@10 : 0.0603    map@10 : 0.0373    itemcoverage@10 : 0.1545    averagepopularity@10 : 46.3278    tailpercentage@10 : 0.0069
+Fri 31 Jan 2025 08:30:52 INFO  Saving current: saved\SGL-Jan-31-2025_07-36-21.pth
+Fri 31 Jan 2025 08:31:35 INFO  epoch 75 training [time: 42.59s, train loss: 29997.1734]
+Fri 31 Jan 2025 08:32:19 INFO  epoch 76 training [time: 43.82s, train loss: 29960.1115]
+Fri 31 Jan 2025 08:33:02 INFO  epoch 77 training [time: 42.80s, train loss: 29919.2514]
+Fri 31 Jan 2025 08:33:45 INFO  epoch 78 training [time: 43.35s, train loss: 29882.1209]
+Fri 31 Jan 2025 08:34:29 INFO  epoch 79 training [time: 43.15s, train loss: 29866.2551]
+Fri 31 Jan 2025 08:34:31 INFO  epoch 79 evaluating [time: 2.14s, valid_score: 0.060600]
+Fri 31 Jan 2025 08:34:31 INFO  valid result:
+precision@10 : 0.037    hit@10 : 0.1954    mrr@10 : 0.0822    ndcg@10 : 0.0606    map@10 : 0.0373    itemcoverage@10 : 0.156    averagepopularity@10 : 45.7924    tailpercentage@10 : 0.0066
+Fri 31 Jan 2025 08:34:31 INFO  Saving current: saved\SGL-Jan-31-2025_07-36-21.pth
+Fri 31 Jan 2025 08:35:14 INFO  epoch 80 training [time: 43.01s, train loss: 29831.6873]
+Fri 31 Jan 2025 08:35:57 INFO  epoch 81 training [time: 43.43s, train loss: 29789.3597]
+Fri 31 Jan 2025 08:36:40 INFO  epoch 82 training [time: 42.95s, train loss: 29781.3097]
+Fri 31 Jan 2025 08:37:23 INFO  epoch 83 training [time: 42.57s, train loss: 29756.2926]
+Fri 31 Jan 2025 08:38:07 INFO  epoch 84 training [time: 44.08s, train loss: 29738.1842]
+Fri 31 Jan 2025 08:38:09 INFO  epoch 84 evaluating [time: 2.11s, valid_score: 0.059100]
+Fri 31 Jan 2025 08:38:09 INFO  valid result:
+precision@10 : 0.036    hit@10 : 0.1907    mrr@10 : 0.0804    ndcg@10 : 0.0591    map@10 : 0.0365    itemcoverage@10 : 0.157    averagepopularity@10 : 45.1086    tailpercentage@10 : 0.0065
+Fri 31 Jan 2025 08:38:53 INFO  epoch 85 training [time: 44.10s, train loss: 29688.8145]
+Fri 31 Jan 2025 08:39:35 INFO  epoch 86 training [time: 41.54s, train loss: 29689.6043]
+Fri 31 Jan 2025 08:40:19 INFO  epoch 87 training [time: 44.37s, train loss: 29683.7187]
+Fri 31 Jan 2025 08:41:03 INFO  epoch 88 training [time: 43.90s, train loss: 29622.1295]
+Fri 31 Jan 2025 08:41:46 INFO  epoch 89 training [time: 43.01s, train loss: 29612.3540]
+Fri 31 Jan 2025 08:41:48 INFO  epoch 89 evaluating [time: 2.17s, valid_score: 0.059300]
+Fri 31 Jan 2025 08:41:48 INFO  valid result:
+precision@10 : 0.0368    hit@10 : 0.1954    mrr@10 : 0.0791    ndcg@10 : 0.0593    map@10 : 0.0363    itemcoverage@10 : 0.1579    averagepopularity@10 : 44.7617    tailpercentage@10 : 0.0065
+Fri 31 Jan 2025 08:42:32 INFO  epoch 90 training [time: 43.88s, train loss: 29600.0302]
+Fri 31 Jan 2025 08:43:16 INFO  epoch 91 training [time: 44.12s, train loss: 29557.6915]
+Fri 31 Jan 2025 08:43:58 INFO  epoch 92 training [time: 42.35s, train loss: 29575.4987]
+Fri 31 Jan 2025 08:44:41 INFO  epoch 93 training [time: 42.89s, train loss: 29511.7250]
+Fri 31 Jan 2025 08:45:24 INFO  epoch 94 training [time: 42.45s, train loss: 29505.1535]
+Fri 31 Jan 2025 08:45:26 INFO  epoch 94 evaluating [time: 2.46s, valid_score: 0.058800]
+Fri 31 Jan 2025 08:45:26 INFO  valid result:
+precision@10 : 0.0365    hit@10 : 0.1926    mrr@10 : 0.0783    ndcg@10 : 0.0588    map@10 : 0.0359    itemcoverage@10 : 0.1594    averagepopularity@10 : 44.2887    tailpercentage@10 : 0.0067
+Fri 31 Jan 2025 08:46:09 INFO  epoch 95 training [time: 42.44s, train loss: 29495.3335]
+Fri 31 Jan 2025 08:46:53 INFO  epoch 96 training [time: 44.06s, train loss: 29456.3205]
+Fri 31 Jan 2025 08:47:37 INFO  epoch 97 training [time: 44.24s, train loss: 29447.9754]
+Fri 31 Jan 2025 08:48:21 INFO  epoch 98 training [time: 43.75s, train loss: 29440.4752]
+Fri 31 Jan 2025 08:49:04 INFO  epoch 99 training [time: 43.05s, train loss: 29416.2841]
+Fri 31 Jan 2025 08:49:06 INFO  epoch 99 evaluating [time: 2.18s, valid_score: 0.058200]
+Fri 31 Jan 2025 08:49:06 INFO  valid result:
+precision@10 : 0.0357    hit@10 : 0.1889    mrr@10 : 0.0785    ndcg@10 : 0.0582    map@10 : 0.0354    itemcoverage@10 : 0.1601    averagepopularity@10 : 44.0736    tailpercentage@10 : 0.0064
+Fri 31 Jan 2025 08:49:06 INFO  Loading model structure and parameters from saved\SGL-Jan-31-2025_07-36-21.pth
+Fri 31 Jan 2025 08:49:08 INFO  best valid : OrderedDict({'precision@10': 0.037, 'hit@10': 0.1954, 'mrr@10': 0.0822, 'ndcg@10': 0.0606, 'map@10': 0.0373, 'itemcoverage@10': 0.156, 'averagepopularity@10': 45.7924, 'tailpercentage@10': 0.0066})
+Fri 31 Jan 2025 08:49:08 INFO  test result: OrderedDict({'precision@10': 0.0278, 'hit@10': 0.1556, 'mrr@10': 0.0661, 'ndcg@10': 0.0536, 'map@10': 0.0346, 'itemcoverage@10': 0.1562, 'averagepopularity@10': 45.7297, 'tailpercentage@10': 0.0066})
+Fri 31 Jan 2025 08:49:10 INFO  [Training]: train_batch_size = [2048] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Fri 31 Jan 2025 08:49:10 INFO  [Evaluation]: eval_batch_size = [2048] eval_args: [{'split': {'LK': ['valid_and_test', 5]}, 'order': 'TO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+Fri 31 Jan 2025 08:49:42 INFO  epoch 0 training [time: 32.38s, train loss: 74918.5332]
+Fri 31 Jan 2025 08:50:15 INFO  epoch 1 training [time: 32.39s, train loss: 73246.8152]
+Fri 31 Jan 2025 08:50:46 INFO  epoch 2 training [time: 31.62s, train loss: 72984.8116]
+Fri 31 Jan 2025 08:51:19 INFO  epoch 3 training [time: 32.82s, train loss: 72546.1110]
+Fri 31 Jan 2025 08:51:53 INFO  epoch 4 training [time: 33.46s, train loss: 71423.1981]
+Fri 31 Jan 2025 08:51:55 INFO  epoch 4 evaluating [time: 2.07s, valid_score: 0.022100]
+Fri 31 Jan 2025 08:51:55 INFO  valid result:
+precision@10 : 0.0125    hit@10 : 0.0747    mrr@10 : 0.0349    ndcg@10 : 0.0221    map@10 : 0.0126    itemcoverage@10 : 0.2133    averagepopularity@10 : 22.6638    tailpercentage@10 : 0.0696
+Fri 31 Jan 2025 08:51:55 INFO  Saving current: saved\SGL-Jan-31-2025_08-49-10.pth
+Fri 31 Jan 2025 08:52:26 INFO  epoch 5 training [time: 31.51s, train loss: 70309.2670]
+Fri 31 Jan 2025 08:52:59 INFO  epoch 6 training [time: 32.53s, train loss: 69212.3103]
+Fri 31 Jan 2025 08:53:31 INFO  epoch 7 training [time: 32.33s, train loss: 67820.5997]
+Fri 31 Jan 2025 08:54:03 INFO  epoch 8 training [time: 32.11s, train loss: 66089.7487]
+Fri 31 Jan 2025 08:54:36 INFO  epoch 9 training [time: 32.64s, train loss: 64342.3428]
+Fri 31 Jan 2025 08:54:38 INFO  epoch 9 evaluating [time: 2.13s, valid_score: 0.031500]
+Fri 31 Jan 2025 08:54:38 INFO  valid result:
+precision@10 : 0.0182    hit@10 : 0.1023    mrr@10 : 0.0474    ndcg@10 : 0.0315    map@10 : 0.0187    itemcoverage@10 : 0.1927    averagepopularity@10 : 17.7802    tailpercentage@10 : 0.0917
+Fri 31 Jan 2025 08:54:38 INFO  Saving current: saved\SGL-Jan-31-2025_08-49-10.pth
+Fri 31 Jan 2025 08:55:10 INFO  epoch 10 training [time: 31.96s, train loss: 62585.4952]
+Fri 31 Jan 2025 08:55:43 INFO  epoch 11 training [time: 32.79s, train loss: 60768.9487]
+Fri 31 Jan 2025 08:56:14 INFO  epoch 12 training [time: 31.71s, train loss: 58805.7974]
+Fri 31 Jan 2025 08:56:47 INFO  epoch 13 training [time: 32.09s, train loss: 56674.4398]
+Fri 31 Jan 2025 08:57:20 INFO  epoch 14 training [time: 33.01s, train loss: 54258.9324]
+Fri 31 Jan 2025 08:57:22 INFO  epoch 14 evaluating [time: 2.19s, valid_score: 0.065600]
+Fri 31 Jan 2025 08:57:22 INFO  valid result:
+precision@10 : 0.038    hit@10 : 0.1959    mrr@10 : 0.0961    ndcg@10 : 0.0656    map@10 : 0.0402    itemcoverage@10 : 0.144    averagepopularity@10 : 69.6762    tailpercentage@10 : 0.0187
+Fri 31 Jan 2025 08:57:22 INFO  Saving current: saved\SGL-Jan-31-2025_08-49-10.pth
+Fri 31 Jan 2025 08:57:54 INFO  epoch 15 training [time: 32.06s, train loss: 51294.2955]
+Fri 31 Jan 2025 08:58:26 INFO  epoch 16 training [time: 32.15s, train loss: 47273.2566]
+Fri 31 Jan 2025 08:58:57 INFO  epoch 17 training [time: 31.27s, train loss: 43166.8833]
+Fri 31 Jan 2025 08:59:30 INFO  epoch 18 training [time: 32.32s, train loss: 40486.4110]
+Fri 31 Jan 2025 09:00:02 INFO  epoch 19 training [time: 32.02s, train loss: 38859.3689]
+Fri 31 Jan 2025 09:00:04 INFO  epoch 19 evaluating [time: 2.18s, valid_score: 0.062400]
+Fri 31 Jan 2025 09:00:04 INFO  valid result:
+precision@10 : 0.034    hit@10 : 0.1975    mrr@10 : 0.1026    ndcg@10 : 0.0624    map@10 : 0.0367    itemcoverage@10 : 0.1005    averagepopularity@10 : 148.5772    tailpercentage@10 : 0.0097
+Fri 31 Jan 2025 09:00:37 INFO  epoch 20 training [time: 32.97s, train loss: 37575.2203]
+Fri 31 Jan 2025 09:01:09 INFO  epoch 21 training [time: 32.06s, train loss: 36659.7438]
+Fri 31 Jan 2025 09:01:42 INFO  epoch 22 training [time: 32.79s, train loss: 35867.9200]
+Fri 31 Jan 2025 09:02:14 INFO  epoch 23 training [time: 32.83s, train loss: 35161.7758]
+Fri 31 Jan 2025 09:02:47 INFO  epoch 24 training [time: 32.76s, train loss: 34654.8676]
+Fri 31 Jan 2025 09:02:49 INFO  epoch 24 evaluating [time: 2.09s, valid_score: 0.063300]
+Fri 31 Jan 2025 09:02:49 INFO  valid result:
+precision@10 : 0.0356    hit@10 : 0.2046    mrr@10 : 0.0999    ndcg@10 : 0.0633    map@10 : 0.037    itemcoverage@10 : 0.1088    averagepopularity@10 : 135.0928    tailpercentage@10 : 0.0088
+Fri 31 Jan 2025 09:03:22 INFO  epoch 25 training [time: 32.21s, train loss: 34133.3209]
+Fri 31 Jan 2025 09:03:54 INFO  epoch 26 training [time: 32.84s, train loss: 33616.8881]
+Fri 31 Jan 2025 09:04:27 INFO  epoch 27 training [time: 32.46s, train loss: 33224.0384]
+Fri 31 Jan 2025 09:05:00 INFO  epoch 28 training [time: 33.31s, train loss: 32876.4217]
+Fri 31 Jan 2025 09:05:33 INFO  epoch 29 training [time: 32.73s, train loss: 32554.6566]
+Fri 31 Jan 2025 09:05:35 INFO  epoch 29 evaluating [time: 2.07s, valid_score: 0.066900]
+Fri 31 Jan 2025 09:05:35 INFO  valid result:
+precision@10 : 0.0382    hit@10 : 0.2077    mrr@10 : 0.1032    ndcg@10 : 0.0669    map@10 : 0.0395    itemcoverage@10 : 0.1185    averagepopularity@10 : 121.5385    tailpercentage@10 : 0.0098
+Fri 31 Jan 2025 09:05:35 INFO  Saving current: saved\SGL-Jan-31-2025_08-49-10.pth
+Fri 31 Jan 2025 09:06:08 INFO  epoch 30 training [time: 32.66s, train loss: 32227.6361]
+Fri 31 Jan 2025 09:06:39 INFO  epoch 31 training [time: 30.98s, train loss: 31944.2112]
+Fri 31 Jan 2025 09:07:12 INFO  epoch 32 training [time: 33.38s, train loss: 31665.6987]
+Fri 31 Jan 2025 09:07:45 INFO  epoch 33 training [time: 32.90s, train loss: 31403.0048]
+Fri 31 Jan 2025 09:08:18 INFO  epoch 34 training [time: 33.53s, train loss: 31215.4659]
+Fri 31 Jan 2025 09:08:21 INFO  epoch 34 evaluating [time: 2.21s, valid_score: 0.068100]
+Fri 31 Jan 2025 09:08:21 INFO  valid result:
+precision@10 : 0.0389    hit@10 : 0.2069    mrr@10 : 0.1024    ndcg@10 : 0.0681    map@10 : 0.0413    itemcoverage@10 : 0.1255    averagepopularity@10 : 110.2282    tailpercentage@10 : 0.0098
+Fri 31 Jan 2025 09:08:21 INFO  Saving current: saved\SGL-Jan-31-2025_08-49-10.pth
+Fri 31 Jan 2025 09:08:53 INFO  epoch 35 training [time: 32.49s, train loss: 30949.1722]
+Fri 31 Jan 2025 09:09:26 INFO  epoch 36 training [time: 32.63s, train loss: 30770.9145]
+Fri 31 Jan 2025 09:09:57 INFO  epoch 37 training [time: 31.22s, train loss: 30574.3220]
+Fri 31 Jan 2025 09:10:29 INFO  epoch 38 training [time: 32.21s, train loss: 30404.4470]
+Fri 31 Jan 2025 09:11:02 INFO  epoch 39 training [time: 32.68s, train loss: 30182.1110]
+Fri 31 Jan 2025 09:11:04 INFO  epoch 39 evaluating [time: 2.23s, valid_score: 0.069100]
+Fri 31 Jan 2025 09:11:04 INFO  valid result:
+precision@10 : 0.0399    hit@10 : 0.2038    mrr@10 : 0.1004    ndcg@10 : 0.0691    map@10 : 0.0426    itemcoverage@10 : 0.1331    averagepopularity@10 : 101.6212    tailpercentage@10 : 0.0101
+Fri 31 Jan 2025 09:11:04 INFO  Saving current: saved\SGL-Jan-31-2025_08-49-10.pth
+Fri 31 Jan 2025 09:11:38 INFO  epoch 40 training [time: 33.82s, train loss: 30044.6465]
+Fri 31 Jan 2025 09:12:11 INFO  epoch 41 training [time: 32.83s, train loss: 29902.2034]
+Fri 31 Jan 2025 09:12:44 INFO  epoch 42 training [time: 33.39s, train loss: 29775.0812]
+Fri 31 Jan 2025 09:13:17 INFO  epoch 43 training [time: 32.51s, train loss: 29607.3640]
+Fri 31 Jan 2025 09:13:50 INFO  epoch 44 training [time: 32.86s, train loss: 29491.2882]
+Fri 31 Jan 2025 09:13:52 INFO  epoch 44 evaluating [time: 2.22s, valid_score: 0.069300]
+Fri 31 Jan 2025 09:13:52 INFO  valid result:
+precision@10 : 0.0403    hit@10 : 0.2061    mrr@10 : 0.0988    ndcg@10 : 0.0693    map@10 : 0.0432    itemcoverage@10 : 0.1388    averagepopularity@10 : 95.6729    tailpercentage@10 : 0.0103
+Fri 31 Jan 2025 09:13:52 INFO  Saving current: saved\SGL-Jan-31-2025_08-49-10.pth
+Fri 31 Jan 2025 09:14:24 INFO  epoch 45 training [time: 31.92s, train loss: 29374.2938]
+Fri 31 Jan 2025 09:14:56 INFO  epoch 46 training [time: 32.31s, train loss: 29279.8170]
+Fri 31 Jan 2025 09:15:28 INFO  epoch 47 training [time: 32.11s, train loss: 29128.1031]
+Fri 31 Jan 2025 09:16:01 INFO  epoch 48 training [time: 32.84s, train loss: 29027.4670]
+Fri 31 Jan 2025 09:16:34 INFO  epoch 49 training [time: 32.35s, train loss: 28939.4112]
+Fri 31 Jan 2025 09:16:36 INFO  epoch 49 evaluating [time: 2.16s, valid_score: 0.070500]
+Fri 31 Jan 2025 09:16:36 INFO  valid result:
+precision@10 : 0.0417    hit@10 : 0.2101    mrr@10 : 0.0972    ndcg@10 : 0.0705    map@10 : 0.0447    itemcoverage@10 : 0.1436    averagepopularity@10 : 90.3917    tailpercentage@10 : 0.0098
+Fri 31 Jan 2025 09:16:36 INFO  Saving current: saved\SGL-Jan-31-2025_08-49-10.pth
+Fri 31 Jan 2025 09:17:08 INFO  epoch 50 training [time: 32.32s, train loss: 28826.3838]
+Fri 31 Jan 2025 09:17:40 INFO  epoch 51 training [time: 32.04s, train loss: 28741.0460]
+Fri 31 Jan 2025 09:18:13 INFO  epoch 52 training [time: 32.40s, train loss: 28619.2841]
+Fri 31 Jan 2025 09:18:46 INFO  epoch 53 training [time: 33.07s, train loss: 28592.7635]
+Fri 31 Jan 2025 09:19:19 INFO  epoch 54 training [time: 32.84s, train loss: 28465.4140]
+Fri 31 Jan 2025 09:19:21 INFO  epoch 54 evaluating [time: 2.19s, valid_score: 0.071700]
+Fri 31 Jan 2025 09:19:21 INFO  valid result:
+precision@10 : 0.042    hit@10 : 0.2077    mrr@10 : 0.0995    ndcg@10 : 0.0717    map@10 : 0.0464    itemcoverage@10 : 0.147    averagepopularity@10 : 86.9366    tailpercentage@10 : 0.01
+Fri 31 Jan 2025 09:19:21 INFO  Saving current: saved\SGL-Jan-31-2025_08-49-10.pth
+Fri 31 Jan 2025 09:19:53 INFO  epoch 55 training [time: 32.08s, train loss: 28385.5349]
+Fri 31 Jan 2025 09:20:26 INFO  epoch 56 training [time: 32.83s, train loss: 28316.2950]
+Fri 31 Jan 2025 09:20:58 INFO  epoch 57 training [time: 32.48s, train loss: 28212.9973]
+Fri 31 Jan 2025 09:21:31 INFO  epoch 58 training [time: 32.37s, train loss: 28150.9943]
+Fri 31 Jan 2025 09:22:03 INFO  epoch 59 training [time: 31.97s, train loss: 28078.0483]
+Fri 31 Jan 2025 09:22:05 INFO  epoch 59 evaluating [time: 2.19s, valid_score: 0.071500]
+Fri 31 Jan 2025 09:22:05 INFO  valid result:
+precision@10 : 0.0423    hit@10 : 0.2101    mrr@10 : 0.0964    ndcg@10 : 0.0715    map@10 : 0.0466    itemcoverage@10 : 0.1515    averagepopularity@10 : 84.1831    tailpercentage@10 : 0.0095
+Fri 31 Jan 2025 09:22:36 INFO  epoch 60 training [time: 31.54s, train loss: 28027.7634]
+Fri 31 Jan 2025 09:23:10 INFO  epoch 61 training [time: 33.28s, train loss: 27956.5558]
+Fri 31 Jan 2025 09:23:43 INFO  epoch 62 training [time: 33.05s, train loss: 27878.9531]
+Fri 31 Jan 2025 09:24:14 INFO  epoch 63 training [time: 31.55s, train loss: 27804.3380]
+Fri 31 Jan 2025 09:24:47 INFO  epoch 64 training [time: 32.15s, train loss: 27784.1486]
+Fri 31 Jan 2025 09:24:49 INFO  epoch 64 evaluating [time: 2.21s, valid_score: 0.071300]
+Fri 31 Jan 2025 09:24:49 INFO  valid result:
+precision@10 : 0.0421    hit@10 : 0.2085    mrr@10 : 0.0966    ndcg@10 : 0.0713    map@10 : 0.0466    itemcoverage@10 : 0.154    averagepopularity@10 : 81.8634    tailpercentage@10 : 0.009
+Fri 31 Jan 2025 09:25:21 INFO  epoch 65 training [time: 31.81s, train loss: 27686.3393]
+Fri 31 Jan 2025 09:25:54 INFO  epoch 66 training [time: 33.34s, train loss: 27643.9488]
+Fri 31 Jan 2025 09:26:26 INFO  epoch 67 training [time: 32.61s, train loss: 27593.1695]
+Fri 31 Jan 2025 09:26:59 INFO  epoch 68 training [time: 32.39s, train loss: 27553.0349]
+Fri 31 Jan 2025 09:27:32 INFO  epoch 69 training [time: 33.20s, train loss: 27514.3865]
+Fri 31 Jan 2025 09:27:34 INFO  epoch 69 evaluating [time: 2.30s, valid_score: 0.071500]
+Fri 31 Jan 2025 09:27:34 INFO  valid result:
+precision@10 : 0.0426    hit@10 : 0.2093    mrr@10 : 0.095    ndcg@10 : 0.0715    map@10 : 0.0468    itemcoverage@10 : 0.1562    averagepopularity@10 : 80.0009    tailpercentage@10 : 0.0087
+Fri 31 Jan 2025 09:28:08 INFO  epoch 70 training [time: 33.83s, train loss: 27468.2360]
+Fri 31 Jan 2025 09:28:41 INFO  epoch 71 training [time: 32.43s, train loss: 27385.9901]
+Fri 31 Jan 2025 09:29:13 INFO  epoch 72 training [time: 32.61s, train loss: 27353.6796]
+Fri 31 Jan 2025 09:29:46 INFO  epoch 73 training [time: 32.89s, train loss: 27321.7850]
+Fri 31 Jan 2025 09:30:18 INFO  epoch 74 training [time: 31.98s, train loss: 27273.8653]
+Fri 31 Jan 2025 09:30:20 INFO  epoch 74 evaluating [time: 2.17s, valid_score: 0.072300]
+Fri 31 Jan 2025 09:30:20 INFO  valid result:
+precision@10 : 0.0431    hit@10 : 0.2124    mrr@10 : 0.0959    ndcg@10 : 0.0723    map@10 : 0.0473    itemcoverage@10 : 0.1588    averagepopularity@10 : 78.7895    tailpercentage@10 : 0.0087
+Fri 31 Jan 2025 09:30:20 INFO  Saving current: saved\SGL-Jan-31-2025_08-49-10.pth
+Fri 31 Jan 2025 09:30:53 INFO  epoch 75 training [time: 32.46s, train loss: 27227.6638]
+Fri 31 Jan 2025 09:31:25 INFO  epoch 76 training [time: 31.95s, train loss: 27172.7530]
+Fri 31 Jan 2025 09:31:55 INFO  epoch 77 training [time: 30.51s, train loss: 27134.6159]
+Fri 31 Jan 2025 09:32:28 INFO  epoch 78 training [time: 33.00s, train loss: 27092.6446]
+Fri 31 Jan 2025 09:33:00 INFO  epoch 79 training [time: 30.92s, train loss: 27035.6870]
+Fri 31 Jan 2025 09:33:02 INFO  epoch 79 evaluating [time: 2.21s, valid_score: 0.072400]
+Fri 31 Jan 2025 09:33:02 INFO  valid result:
+precision@10 : 0.0434    hit@10 : 0.2164    mrr@10 : 0.0953    ndcg@10 : 0.0724    map@10 : 0.0472    itemcoverage@10 : 0.1621    averagepopularity@10 : 77.5552    tailpercentage@10 : 0.0086
+Fri 31 Jan 2025 09:33:02 INFO  Saving current: saved\SGL-Jan-31-2025_08-49-10.pth
+Fri 31 Jan 2025 09:33:35 INFO  epoch 80 training [time: 32.37s, train loss: 27031.9579]
+Fri 31 Jan 2025 09:34:05 INFO  epoch 81 training [time: 30.36s, train loss: 27000.7906]
+Fri 31 Jan 2025 09:34:37 INFO  epoch 82 training [time: 32.50s, train loss: 26942.3706]
+Fri 31 Jan 2025 09:35:10 INFO  epoch 83 training [time: 32.27s, train loss: 26942.2724]
+Fri 31 Jan 2025 09:35:41 INFO  epoch 84 training [time: 31.75s, train loss: 26878.2397]
+Fri 31 Jan 2025 09:35:44 INFO  epoch 84 evaluating [time: 2.18s, valid_score: 0.073800]
+Fri 31 Jan 2025 09:35:44 INFO  valid result:
+precision@10 : 0.0442    hit@10 : 0.2164    mrr@10 : 0.0974    ndcg@10 : 0.0738    map@10 : 0.0482    itemcoverage@10 : 0.1631    averagepopularity@10 : 76.4913    tailpercentage@10 : 0.0085
+Fri 31 Jan 2025 09:35:44 INFO  Saving current: saved\SGL-Jan-31-2025_08-49-10.pth
+Fri 31 Jan 2025 09:36:16 INFO  epoch 85 training [time: 32.54s, train loss: 26842.5459]
+Fri 31 Jan 2025 09:36:49 INFO  epoch 86 training [time: 32.75s, train loss: 26833.0420]
+Fri 31 Jan 2025 09:37:21 INFO  epoch 87 training [time: 31.59s, train loss: 26797.7136]
+Fri 31 Jan 2025 09:37:54 INFO  epoch 88 training [time: 33.06s, train loss: 26760.3745]
+Fri 31 Jan 2025 09:38:26 INFO  epoch 89 training [time: 32.82s, train loss: 26735.6684]
+Fri 31 Jan 2025 09:38:29 INFO  epoch 89 evaluating [time: 2.18s, valid_score: 0.073500]
+Fri 31 Jan 2025 09:38:29 INFO  valid result:
+precision@10 : 0.0439    hit@10 : 0.2164    mrr@10 : 0.0978    ndcg@10 : 0.0735    map@10 : 0.0479    itemcoverage@10 : 0.1653    averagepopularity@10 : 75.393    tailpercentage@10 : 0.0084
+Fri 31 Jan 2025 09:39:01 INFO  epoch 90 training [time: 32.24s, train loss: 26698.9322]
+Fri 31 Jan 2025 09:39:34 INFO  epoch 91 training [time: 32.76s, train loss: 26674.6689]
+Fri 31 Jan 2025 09:40:07 INFO  epoch 92 training [time: 33.22s, train loss: 26646.2270]
+Fri 31 Jan 2025 09:40:39 INFO  epoch 93 training [time: 31.95s, train loss: 26603.9923]
+Fri 31 Jan 2025 09:41:11 INFO  epoch 94 training [time: 32.08s, train loss: 26583.6725]
+Fri 31 Jan 2025 09:41:13 INFO  epoch 94 evaluating [time: 2.21s, valid_score: 0.073700]
+Fri 31 Jan 2025 09:41:13 INFO  valid result:
+precision@10 : 0.0441    hit@10 : 0.2187    mrr@10 : 0.0977    ndcg@10 : 0.0737    map@10 : 0.0481    itemcoverage@10 : 0.1688    averagepopularity@10 : 74.5947    tailpercentage@10 : 0.0086
+Fri 31 Jan 2025 09:41:46 INFO  epoch 95 training [time: 33.09s, train loss: 26555.4160]
+Fri 31 Jan 2025 09:42:19 INFO  epoch 96 training [time: 32.51s, train loss: 26532.2243]
+Fri 31 Jan 2025 09:42:52 INFO  epoch 97 training [time: 33.11s, train loss: 26501.4895]
+Fri 31 Jan 2025 09:43:25 INFO  epoch 98 training [time: 33.34s, train loss: 26480.4610]
+Fri 31 Jan 2025 09:43:57 INFO  epoch 99 training [time: 32.14s, train loss: 26460.3549]
+Fri 31 Jan 2025 09:43:59 INFO  epoch 99 evaluating [time: 2.20s, valid_score: 0.074600]
+Fri 31 Jan 2025 09:43:59 INFO  valid result:
+precision@10 : 0.0445    hit@10 : 0.2187    mrr@10 : 0.0989    ndcg@10 : 0.0746    map@10 : 0.0489    itemcoverage@10 : 0.1701    averagepopularity@10 : 73.7467    tailpercentage@10 : 0.0086
+Fri 31 Jan 2025 09:43:59 INFO  Saving current: saved\SGL-Jan-31-2025_08-49-10.pth
+Fri 31 Jan 2025 09:44:00 INFO  Loading model structure and parameters from saved\SGL-Jan-31-2025_08-49-10.pth
+Fri 31 Jan 2025 09:44:02 INFO  best valid : OrderedDict({'precision@10': 0.0445, 'hit@10': 0.2187, 'mrr@10': 0.0989, 'ndcg@10': 0.0746, 'map@10': 0.0489, 'itemcoverage@10': 0.1701, 'averagepopularity@10': 73.7467, 'tailpercentage@10': 0.0086})
+Fri 31 Jan 2025 09:44:02 INFO  test result: OrderedDict({'precision@10': 0.034, 'hit@10': 0.1849, 'mrr@10': 0.083, 'ndcg@10': 0.0674, 'map@10': 0.0452, 'itemcoverage@10': 0.1702, 'averagepopularity@10': 73.5966, 'tailpercentage@10': 0.0085})
+Fri 31 Jan 2025 09:44:04 INFO  [Training]: train_batch_size = [2048] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Fri 31 Jan 2025 09:44:04 INFO  [Evaluation]: eval_batch_size = [2048] eval_args: [{'split': {'LK': ['valid_and_test', 5]}, 'order': 'TO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+Fri 31 Jan 2025 09:44:40 INFO  epoch 0 training [time: 36.74s, train loss: 77468.4214]
+Fri 31 Jan 2025 09:45:19 INFO  epoch 1 training [time: 38.36s, train loss: 75998.4231]
+Fri 31 Jan 2025 09:45:54 INFO  epoch 2 training [time: 35.58s, train loss: 75642.5916]
+Fri 31 Jan 2025 09:46:30 INFO  epoch 3 training [time: 35.57s, train loss: 74714.1655]
+Fri 31 Jan 2025 09:47:06 INFO  epoch 4 training [time: 36.50s, train loss: 73284.6802]
+Fri 31 Jan 2025 09:47:09 INFO  epoch 4 evaluating [time: 2.12s, valid_score: 0.028400]
+Fri 31 Jan 2025 09:47:09 INFO  valid result:
+precision@10 : 0.0166    hit@10 : 0.1021    mrr@10 : 0.045    ndcg@10 : 0.0284    map@10 : 0.0159    itemcoverage@10 : 0.1734    averagepopularity@10 : 26.2579    tailpercentage@10 : 0.0414
+Fri 31 Jan 2025 09:47:09 INFO  Saving current: saved\SGL-Jan-31-2025_09-44-04.pth
+Fri 31 Jan 2025 09:47:47 INFO  epoch 5 training [time: 38.02s, train loss: 71711.1661]
+Fri 31 Jan 2025 09:48:24 INFO  epoch 6 training [time: 37.76s, train loss: 69980.1539]
+Fri 31 Jan 2025 09:49:01 INFO  epoch 7 training [time: 36.62s, train loss: 67798.4830]
+Fri 31 Jan 2025 09:49:37 INFO  epoch 8 training [time: 36.24s, train loss: 65378.1537]
+Fri 31 Jan 2025 09:50:13 INFO  epoch 9 training [time: 35.92s, train loss: 63064.8107]
+Fri 31 Jan 2025 09:50:15 INFO  epoch 9 evaluating [time: 2.12s, valid_score: 0.034200]
+Fri 31 Jan 2025 09:50:15 INFO  valid result:
+precision@10 : 0.0198    hit@10 : 0.1137    mrr@10 : 0.0516    ndcg@10 : 0.0342    map@10 : 0.0204    itemcoverage@10 : 0.1746    averagepopularity@10 : 17.4288    tailpercentage@10 : 0.0284
+Fri 31 Jan 2025 09:50:15 INFO  Saving current: saved\SGL-Jan-31-2025_09-44-04.pth
+Fri 31 Jan 2025 09:50:52 INFO  epoch 10 training [time: 36.39s, train loss: 60827.3719]
+Fri 31 Jan 2025 09:51:28 INFO  epoch 11 training [time: 36.04s, train loss: 58503.6710]
+Fri 31 Jan 2025 09:52:03 INFO  epoch 12 training [time: 35.40s, train loss: 56080.6691]
+Fri 31 Jan 2025 09:52:39 INFO  epoch 13 training [time: 35.64s, train loss: 53323.4556]
+Fri 31 Jan 2025 09:53:15 INFO  epoch 14 training [time: 36.28s, train loss: 49966.7833]
+Fri 31 Jan 2025 09:53:17 INFO  epoch 14 evaluating [time: 2.13s, valid_score: 0.055200]
+Fri 31 Jan 2025 09:53:17 INFO  valid result:
+precision@10 : 0.0332    hit@10 : 0.1862    mrr@10 : 0.0796    ndcg@10 : 0.0552    map@10 : 0.0323    itemcoverage@10 : 0.121    averagepopularity@10 : 76.3635    tailpercentage@10 : 0.0082
+Fri 31 Jan 2025 09:53:17 INFO  Saving current: saved\SGL-Jan-31-2025_09-44-04.pth
+Fri 31 Jan 2025 09:53:54 INFO  epoch 15 training [time: 36.28s, train loss: 46193.8693]
+Fri 31 Jan 2025 09:54:30 INFO  epoch 16 training [time: 36.82s, train loss: 42967.7848]
+Fri 31 Jan 2025 09:55:07 INFO  epoch 17 training [time: 37.08s, train loss: 40779.8106]
+Fri 31 Jan 2025 09:55:44 INFO  epoch 18 training [time: 36.56s, train loss: 39290.8416]
+Fri 31 Jan 2025 09:56:20 INFO  epoch 19 training [time: 36.34s, train loss: 38068.2880]
+Fri 31 Jan 2025 09:56:22 INFO  epoch 19 evaluating [time: 2.10s, valid_score: 0.054800]
+Fri 31 Jan 2025 09:56:22 INFO  valid result:
+precision@10 : 0.0333    hit@10 : 0.1916    mrr@10 : 0.0804    ndcg@10 : 0.0548    map@10 : 0.0307    itemcoverage@10 : 0.0992    averagepopularity@10 : 104.2393    tailpercentage@10 : 0.0056
+Fri 31 Jan 2025 09:56:58 INFO  epoch 20 training [time: 35.99s, train loss: 37061.2839]
+Fri 31 Jan 2025 09:57:35 INFO  epoch 21 training [time: 37.05s, train loss: 36275.4531]
+Fri 31 Jan 2025 09:58:11 INFO  epoch 22 training [time: 35.82s, train loss: 35633.1613]
+Fri 31 Jan 2025 09:58:48 INFO  epoch 23 training [time: 36.86s, train loss: 34987.4750]
+Fri 31 Jan 2025 09:59:23 INFO  epoch 24 training [time: 35.00s, train loss: 34503.8085]
+Fri 31 Jan 2025 09:59:26 INFO  epoch 24 evaluating [time: 2.34s, valid_score: 0.057700]
+Fri 31 Jan 2025 09:59:26 INFO  valid result:
+precision@10 : 0.0355    hit@10 : 0.2014    mrr@10 : 0.0836    ndcg@10 : 0.0577    map@10 : 0.0324    itemcoverage@10 : 0.1063    averagepopularity@10 : 93.4464    tailpercentage@10 : 0.0047
+Fri 31 Jan 2025 09:59:26 INFO  Saving current: saved\SGL-Jan-31-2025_09-44-04.pth
+Fri 31 Jan 2025 10:00:01 INFO  epoch 25 training [time: 35.47s, train loss: 33983.9908]
+Fri 31 Jan 2025 10:00:38 INFO  epoch 26 training [time: 36.84s, train loss: 33585.3197]
+Fri 31 Jan 2025 10:01:14 INFO  epoch 27 training [time: 35.66s, train loss: 33231.4788]
+Fri 31 Jan 2025 10:01:50 INFO  epoch 28 training [time: 36.25s, train loss: 32823.9055]
+Fri 31 Jan 2025 10:02:25 INFO  epoch 29 training [time: 35.36s, train loss: 32533.6879]
+Fri 31 Jan 2025 10:02:27 INFO  epoch 29 evaluating [time: 2.11s, valid_score: 0.059000]
+Fri 31 Jan 2025 10:02:27 INFO  valid result:
+precision@10 : 0.0359    hit@10 : 0.2014    mrr@10 : 0.0854    ndcg@10 : 0.059    map@10 : 0.0339    itemcoverage@10 : 0.1153    averagepopularity@10 : 84.796    tailpercentage@10 : 0.0053
+Fri 31 Jan 2025 10:02:27 INFO  Saving current: saved\SGL-Jan-31-2025_09-44-04.pth
+Fri 31 Jan 2025 10:03:04 INFO  epoch 30 training [time: 36.83s, train loss: 32246.3120]
+Fri 31 Jan 2025 10:03:40 INFO  epoch 31 training [time: 35.47s, train loss: 32008.9984]
+Fri 31 Jan 2025 10:04:15 INFO  epoch 32 training [time: 34.93s, train loss: 31787.7559]
+Fri 31 Jan 2025 10:04:50 INFO  epoch 33 training [time: 35.26s, train loss: 31505.3384]
+Fri 31 Jan 2025 10:05:26 INFO  epoch 34 training [time: 35.91s, train loss: 31314.2612]
+Fri 31 Jan 2025 10:05:28 INFO  epoch 34 evaluating [time: 2.16s, valid_score: 0.060800]
+Fri 31 Jan 2025 10:05:28 INFO  valid result:
+precision@10 : 0.0371    hit@10 : 0.2077    mrr@10 : 0.0875    ndcg@10 : 0.0608    map@10 : 0.0352    itemcoverage@10 : 0.1219    averagepopularity@10 : 78.9085    tailpercentage@10 : 0.0059
+Fri 31 Jan 2025 10:05:28 INFO  Saving current: saved\SGL-Jan-31-2025_09-44-04.pth
+Fri 31 Jan 2025 10:06:05 INFO  epoch 35 training [time: 37.10s, train loss: 31134.8854]
+Fri 31 Jan 2025 10:06:41 INFO  epoch 36 training [time: 35.78s, train loss: 30922.8032]
+Fri 31 Jan 2025 10:07:18 INFO  epoch 37 training [time: 37.00s, train loss: 30749.5295]
+Fri 31 Jan 2025 10:07:54 INFO  epoch 38 training [time: 36.51s, train loss: 30570.9365]
+Fri 31 Jan 2025 10:08:30 INFO  epoch 39 training [time: 36.11s, train loss: 30426.8122]
+Fri 31 Jan 2025 10:08:33 INFO  epoch 39 evaluating [time: 2.14s, valid_score: 0.061900]
+Fri 31 Jan 2025 10:08:33 INFO  valid result:
+precision@10 : 0.0376    hit@10 : 0.2104    mrr@10 : 0.0882    ndcg@10 : 0.0619    map@10 : 0.0363    itemcoverage@10 : 0.127    averagepopularity@10 : 74.1556    tailpercentage@10 : 0.007
+Fri 31 Jan 2025 10:08:33 INFO  Saving current: saved\SGL-Jan-31-2025_09-44-04.pth
+Fri 31 Jan 2025 10:09:09 INFO  epoch 40 training [time: 36.13s, train loss: 30317.8307]
+Fri 31 Jan 2025 10:09:45 INFO  epoch 41 training [time: 36.59s, train loss: 30125.3641]
+Fri 31 Jan 2025 10:10:21 INFO  epoch 42 training [time: 36.07s, train loss: 30057.7333]
+Fri 31 Jan 2025 10:10:58 INFO  epoch 43 training [time: 36.26s, train loss: 29935.0448]
+Fri 31 Jan 2025 10:11:33 INFO  epoch 44 training [time: 35.54s, train loss: 29795.0118]
+Fri 31 Jan 2025 10:11:35 INFO  epoch 44 evaluating [time: 2.08s, valid_score: 0.062000]
+Fri 31 Jan 2025 10:11:35 INFO  valid result:
+precision@10 : 0.038    hit@10 : 0.2149    mrr@10 : 0.0872    ndcg@10 : 0.062    map@10 : 0.0365    itemcoverage@10 : 0.1334    averagepopularity@10 : 70.8814    tailpercentage@10 : 0.0074
+Fri 31 Jan 2025 10:11:35 INFO  Saving current: saved\SGL-Jan-31-2025_09-44-04.pth
+Fri 31 Jan 2025 10:12:11 INFO  epoch 45 training [time: 35.96s, train loss: 29687.8883]
+Fri 31 Jan 2025 10:12:48 INFO  epoch 46 training [time: 36.26s, train loss: 29576.0865]
+Fri 31 Jan 2025 10:13:24 INFO  epoch 47 training [time: 36.72s, train loss: 29484.2655]
+Fri 31 Jan 2025 10:14:02 INFO  epoch 48 training [time: 37.66s, train loss: 29374.7439]
+Fri 31 Jan 2025 10:14:38 INFO  epoch 49 training [time: 35.96s, train loss: 29262.6238]
+Fri 31 Jan 2025 10:14:40 INFO  epoch 49 evaluating [time: 2.08s, valid_score: 0.061700]
+Fri 31 Jan 2025 10:14:40 INFO  valid result:
+precision@10 : 0.0376    hit@10 : 0.2104    mrr@10 : 0.0874    ndcg@10 : 0.0617    map@10 : 0.0368    itemcoverage@10 : 0.138    averagepopularity@10 : 67.5653    tailpercentage@10 : 0.0078
+Fri 31 Jan 2025 10:15:17 INFO  epoch 50 training [time: 36.96s, train loss: 29193.6783]
+Fri 31 Jan 2025 10:15:53 INFO  epoch 51 training [time: 35.65s, train loss: 29137.0458]
+Fri 31 Jan 2025 10:16:28 INFO  epoch 52 training [time: 35.48s, train loss: 29077.8745]
+Fri 31 Jan 2025 10:17:05 INFO  epoch 53 training [time: 37.02s, train loss: 28977.5932]
+Fri 31 Jan 2025 10:17:41 INFO  epoch 54 training [time: 36.24s, train loss: 28874.7944]
+Fri 31 Jan 2025 10:17:43 INFO  epoch 54 evaluating [time: 2.13s, valid_score: 0.062100]
+Fri 31 Jan 2025 10:17:43 INFO  valid result:
+precision@10 : 0.038    hit@10 : 0.2131    mrr@10 : 0.0876    ndcg@10 : 0.0621    map@10 : 0.037    itemcoverage@10 : 0.1408    averagepopularity@10 : 65.5402    tailpercentage@10 : 0.0083
+Fri 31 Jan 2025 10:17:43 INFO  Saving current: saved\SGL-Jan-31-2025_09-44-04.pth
+Fri 31 Jan 2025 10:18:20 INFO  epoch 55 training [time: 36.27s, train loss: 28833.0638]
+Fri 31 Jan 2025 10:18:56 INFO  epoch 56 training [time: 36.11s, train loss: 28766.5514]
+Fri 31 Jan 2025 10:19:31 INFO  epoch 57 training [time: 35.14s, train loss: 28683.8573]
+Fri 31 Jan 2025 10:20:08 INFO  epoch 58 training [time: 36.13s, train loss: 28654.1102]
+Fri 31 Jan 2025 10:20:43 INFO  epoch 59 training [time: 35.90s, train loss: 28569.4380]
+Fri 31 Jan 2025 10:20:46 INFO  epoch 59 evaluating [time: 2.10s, valid_score: 0.061700]
+Fri 31 Jan 2025 10:20:46 INFO  valid result:
+precision@10 : 0.0372    hit@10 : 0.2077    mrr@10 : 0.0883    ndcg@10 : 0.0617    map@10 : 0.0373    itemcoverage@10 : 0.1437    averagepopularity@10 : 63.8973    tailpercentage@10 : 0.008
+Fri 31 Jan 2025 10:21:21 INFO  epoch 60 training [time: 35.55s, train loss: 28494.3777]
+Fri 31 Jan 2025 10:21:57 INFO  epoch 61 training [time: 35.83s, train loss: 28467.5115]
+Fri 31 Jan 2025 10:22:34 INFO  epoch 62 training [time: 36.78s, train loss: 28406.5413]
+Fri 31 Jan 2025 10:23:10 INFO  epoch 63 training [time: 36.21s, train loss: 28360.4468]
+Fri 31 Jan 2025 10:23:46 INFO  epoch 64 training [time: 35.77s, train loss: 28324.6872]
+Fri 31 Jan 2025 10:23:48 INFO  epoch 64 evaluating [time: 2.10s, valid_score: 0.061200]
+Fri 31 Jan 2025 10:23:48 INFO  valid result:
+precision@10 : 0.0368    hit@10 : 0.2005    mrr@10 : 0.0867    ndcg@10 : 0.0612    map@10 : 0.0371    itemcoverage@10 : 0.1468    averagepopularity@10 : 62.0714    tailpercentage@10 : 0.0083
+Fri 31 Jan 2025 10:24:23 INFO  epoch 65 training [time: 34.81s, train loss: 28249.9229]
+Fri 31 Jan 2025 10:25:00 INFO  epoch 66 training [time: 36.47s, train loss: 28205.6573]
+Fri 31 Jan 2025 10:25:35 INFO  epoch 67 training [time: 35.75s, train loss: 28164.5118]
+Fri 31 Jan 2025 10:26:10 INFO  epoch 68 training [time: 35.00s, train loss: 28091.9864]
+Fri 31 Jan 2025 10:26:46 INFO  epoch 69 training [time: 35.61s, train loss: 28091.2816]
+Fri 31 Jan 2025 10:26:48 INFO  epoch 69 evaluating [time: 2.37s, valid_score: 0.062700]
+Fri 31 Jan 2025 10:26:48 INFO  valid result:
+precision@10 : 0.0374    hit@10 : 0.2068    mrr@10 : 0.0911    ndcg@10 : 0.0627    map@10 : 0.038    itemcoverage@10 : 0.1479    averagepopularity@10 : 61.1181    tailpercentage@10 : 0.0084
+Fri 31 Jan 2025 10:26:48 INFO  Saving current: saved\SGL-Jan-31-2025_09-44-04.pth
+Fri 31 Jan 2025 10:27:24 INFO  epoch 70 training [time: 35.89s, train loss: 28042.8054]
+Fri 31 Jan 2025 10:28:02 INFO  epoch 71 training [time: 37.78s, train loss: 28012.9057]
+Fri 31 Jan 2025 10:28:39 INFO  epoch 72 training [time: 36.55s, train loss: 27972.1428]
+Fri 31 Jan 2025 10:29:14 INFO  epoch 73 training [time: 35.55s, train loss: 27930.6570]
+Fri 31 Jan 2025 10:29:50 INFO  epoch 74 training [time: 36.38s, train loss: 27881.3768]
+Fri 31 Jan 2025 10:29:53 INFO  epoch 74 evaluating [time: 2.13s, valid_score: 0.062400]
+Fri 31 Jan 2025 10:29:53 INFO  valid result:
+precision@10 : 0.0369    hit@10 : 0.2059    mrr@10 : 0.0919    ndcg@10 : 0.0624    map@10 : 0.038    itemcoverage@10 : 0.1501    averagepopularity@10 : 60.0503    tailpercentage@10 : 0.0088
+Fri 31 Jan 2025 10:30:28 INFO  epoch 75 training [time: 35.88s, train loss: 27847.3818]
+Fri 31 Jan 2025 10:31:05 INFO  epoch 76 training [time: 36.16s, train loss: 27815.0146]
+Fri 31 Jan 2025 10:31:41 INFO  epoch 77 training [time: 36.36s, train loss: 27769.8060]
+Fri 31 Jan 2025 10:32:16 INFO  epoch 78 training [time: 35.43s, train loss: 27735.4422]
+Fri 31 Jan 2025 10:32:53 INFO  epoch 79 training [time: 36.16s, train loss: 27725.8529]
+Fri 31 Jan 2025 10:32:55 INFO  epoch 79 evaluating [time: 2.22s, valid_score: 0.062600]
+Fri 31 Jan 2025 10:32:55 INFO  valid result:
+precision@10 : 0.037    hit@10 : 0.2059    mrr@10 : 0.0923    ndcg@10 : 0.0626    map@10 : 0.038    itemcoverage@10 : 0.1525    averagepopularity@10 : 58.5784    tailpercentage@10 : 0.009
+Fri 31 Jan 2025 10:33:31 INFO  epoch 80 training [time: 36.20s, train loss: 27689.1976]
+Fri 31 Jan 2025 10:34:08 INFO  epoch 81 training [time: 36.63s, train loss: 27649.3642]
+Fri 31 Jan 2025 10:34:45 INFO  epoch 82 training [time: 36.81s, train loss: 27598.7822]
+Fri 31 Jan 2025 10:35:21 INFO  epoch 83 training [time: 36.41s, train loss: 27618.7111]
+Fri 31 Jan 2025 10:35:57 INFO  epoch 84 training [time: 36.10s, train loss: 27577.7722]
+Fri 31 Jan 2025 10:36:00 INFO  epoch 84 evaluating [time: 2.15s, valid_score: 0.062200]
+Fri 31 Jan 2025 10:36:00 INFO  valid result:
+precision@10 : 0.0372    hit@10 : 0.2077    mrr@10 : 0.09    ndcg@10 : 0.0622    map@10 : 0.0376    itemcoverage@10 : 0.1521    averagepopularity@10 : 57.9937    tailpercentage@10 : 0.0084
+Fri 31 Jan 2025 10:36:35 INFO  epoch 85 training [time: 35.27s, train loss: 27538.4792]
+Fri 31 Jan 2025 10:37:11 INFO  epoch 86 training [time: 36.31s, train loss: 27496.8617]
+Fri 31 Jan 2025 10:37:47 INFO  epoch 87 training [time: 35.93s, train loss: 27473.0872]
+Fri 31 Jan 2025 10:38:24 INFO  epoch 88 training [time: 36.92s, train loss: 27462.8290]
+Fri 31 Jan 2025 10:39:00 INFO  epoch 89 training [time: 36.36s, train loss: 27445.8998]
+Fri 31 Jan 2025 10:39:02 INFO  epoch 89 evaluating [time: 2.07s, valid_score: 0.061900]
+Fri 31 Jan 2025 10:39:02 INFO  valid result:
+precision@10 : 0.0369    hit@10 : 0.2059    mrr@10 : 0.0897    ndcg@10 : 0.0619    map@10 : 0.0376    itemcoverage@10 : 0.1524    averagepopularity@10 : 57.282    tailpercentage@10 : 0.0086
+Fri 31 Jan 2025 10:39:39 INFO  epoch 90 training [time: 36.22s, train loss: 27413.3012]
+Fri 31 Jan 2025 10:40:15 INFO  epoch 91 training [time: 36.67s, train loss: 27384.7674]
+Fri 31 Jan 2025 10:40:51 INFO  epoch 92 training [time: 36.02s, train loss: 27352.7826]
+Fri 31 Jan 2025 10:41:28 INFO  epoch 93 training [time: 36.93s, train loss: 27333.6104]
+Fri 31 Jan 2025 10:42:04 INFO  epoch 94 training [time: 35.64s, train loss: 27320.7246]
+Fri 31 Jan 2025 10:42:06 INFO  epoch 94 evaluating [time: 2.37s, valid_score: 0.061900]
+Fri 31 Jan 2025 10:42:06 INFO  valid result:
+precision@10 : 0.0368    hit@10 : 0.2041    mrr@10 : 0.09    ndcg@10 : 0.0619    map@10 : 0.0377    itemcoverage@10 : 0.1541    averagepopularity@10 : 56.366    tailpercentage@10 : 0.0089
+Fri 31 Jan 2025 10:42:43 INFO  epoch 95 training [time: 36.29s, train loss: 27295.6061]
+Fri 31 Jan 2025 10:43:18 INFO  epoch 96 training [time: 35.60s, train loss: 27266.8018]
+Fri 31 Jan 2025 10:43:55 INFO  epoch 97 training [time: 36.45s, train loss: 27254.0736]
+Fri 31 Jan 2025 10:44:31 INFO  epoch 98 training [time: 36.48s, train loss: 27227.5359]
+Fri 31 Jan 2025 10:45:06 INFO  epoch 99 training [time: 35.05s, train loss: 27214.5908]
+Fri 31 Jan 2025 10:45:08 INFO  epoch 99 evaluating [time: 2.15s, valid_score: 0.061300]
+Fri 31 Jan 2025 10:45:08 INFO  valid result:
+precision@10 : 0.0365    hit@10 : 0.2059    mrr@10 : 0.0892    ndcg@10 : 0.0613    map@10 : 0.037    itemcoverage@10 : 0.1557    averagepopularity@10 : 56.0321    tailpercentage@10 : 0.0086
+Fri 31 Jan 2025 10:45:08 INFO  Loading model structure and parameters from saved\SGL-Jan-31-2025_09-44-04.pth
+Fri 31 Jan 2025 10:45:10 INFO  best valid : OrderedDict({'precision@10': 0.0374, 'hit@10': 0.2068, 'mrr@10': 0.0911, 'ndcg@10': 0.0627, 'map@10': 0.038, 'itemcoverage@10': 0.1479, 'averagepopularity@10': 61.1181, 'tailpercentage@10': 0.0084})
+Fri 31 Jan 2025 10:45:10 INFO  test result: OrderedDict({'precision@10': 0.0279, 'hit@10': 0.1611, 'mrr@10': 0.0735, 'ndcg@10': 0.0555, 'map@10': 0.0353, 'itemcoverage@10': 0.1479, 'averagepopularity@10': 60.9193, 'tailpercentage@10': 0.0083})
+Fri 31 Jan 2025 10:45:12 INFO  [Training]: train_batch_size = [2048] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Fri 31 Jan 2025 10:45:12 INFO  [Evaluation]: eval_batch_size = [2048] eval_args: [{'split': {'LK': ['valid_and_test', 5]}, 'order': 'TO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+Fri 31 Jan 2025 10:45:47 INFO  epoch 0 training [time: 35.25s, train loss: 77083.9111]
+Fri 31 Jan 2025 10:46:22 INFO  epoch 1 training [time: 34.91s, train loss: 75564.9236]
+Fri 31 Jan 2025 10:46:57 INFO  epoch 2 training [time: 35.05s, train loss: 75300.3446]
+Fri 31 Jan 2025 10:47:31 INFO  epoch 3 training [time: 34.03s, train loss: 74602.8098]
+Fri 31 Jan 2025 10:48:07 INFO  epoch 4 training [time: 35.35s, train loss: 73603.1920]
+Fri 31 Jan 2025 10:48:09 INFO  epoch 4 evaluating [time: 2.32s, valid_score: 0.025000]
+Fri 31 Jan 2025 10:48:09 INFO  valid result:
+precision@10 : 0.0144    hit@10 : 0.0946    mrr@10 : 0.0411    ndcg@10 : 0.025    map@10 : 0.0137    itemcoverage@10 : 0.209    averagepopularity@10 : 22.031    tailpercentage@10 : 0.0678
+Fri 31 Jan 2025 10:48:09 INFO  Saving current: saved\SGL-Jan-31-2025_10-45-12.pth
+Fri 31 Jan 2025 10:48:44 INFO  epoch 5 training [time: 34.60s, train loss: 72780.8248]
+Fri 31 Jan 2025 10:49:18 INFO  epoch 6 training [time: 34.31s, train loss: 71825.3358]
+Fri 31 Jan 2025 10:49:53 INFO  epoch 7 training [time: 35.29s, train loss: 70426.5050]
+Fri 31 Jan 2025 10:50:28 INFO  epoch 8 training [time: 34.62s, train loss: 68424.3684]
+Fri 31 Jan 2025 10:51:02 INFO  epoch 9 training [time: 34.64s, train loss: 66094.5319]
+Fri 31 Jan 2025 10:51:04 INFO  epoch 9 evaluating [time: 2.08s, valid_score: 0.045200]
+Fri 31 Jan 2025 10:51:04 INFO  valid result:
+precision@10 : 0.026    hit@10 : 0.1419    mrr@10 : 0.0676    ndcg@10 : 0.0452    map@10 : 0.0284    itemcoverage@10 : 0.1971    averagepopularity@10 : 24.272    tailpercentage@10 : 0.0264
+Fri 31 Jan 2025 10:51:05 INFO  Saving current: saved\SGL-Jan-31-2025_10-45-12.pth
+Fri 31 Jan 2025 10:51:40 INFO  epoch 10 training [time: 35.22s, train loss: 63517.3146]
+Fri 31 Jan 2025 10:52:14 INFO  epoch 11 training [time: 34.61s, train loss: 60631.6324]
+Fri 31 Jan 2025 10:52:48 INFO  epoch 12 training [time: 33.84s, train loss: 57341.2944]
+Fri 31 Jan 2025 10:53:23 INFO  epoch 13 training [time: 34.41s, train loss: 53453.0370]
+Fri 31 Jan 2025 10:53:57 INFO  epoch 14 training [time: 34.72s, train loss: 48951.8202]
+Fri 31 Jan 2025 10:53:59 INFO  epoch 14 evaluating [time: 2.18s, valid_score: 0.052700]
+Fri 31 Jan 2025 10:53:59 INFO  valid result:
+precision@10 : 0.0318    hit@10 : 0.1796    mrr@10 : 0.0776    ndcg@10 : 0.0527    map@10 : 0.03    itemcoverage@10 : 0.1289    averagepopularity@10 : 85.4468    tailpercentage@10 : 0.0071
+Fri 31 Jan 2025 10:54:00 INFO  Saving current: saved\SGL-Jan-31-2025_10-45-12.pth
+Fri 31 Jan 2025 10:54:35 INFO  epoch 15 training [time: 35.54s, train loss: 45125.8214]
+Fri 31 Jan 2025 10:55:08 INFO  epoch 16 training [time: 32.63s, train loss: 42491.5781]
+Fri 31 Jan 2025 10:55:43 INFO  epoch 17 training [time: 34.88s, train loss: 40560.7770]
+Fri 31 Jan 2025 10:56:17 INFO  epoch 18 training [time: 34.51s, train loss: 39092.6180]
+Fri 31 Jan 2025 10:56:51 INFO  epoch 19 training [time: 34.26s, train loss: 37880.8464]
+Fri 31 Jan 2025 10:56:54 INFO  epoch 19 evaluating [time: 2.34s, valid_score: 0.055700]
+Fri 31 Jan 2025 10:56:54 INFO  valid result:
+precision@10 : 0.0323    hit@10 : 0.1901    mrr@10 : 0.0884    ndcg@10 : 0.0557    map@10 : 0.0313    itemcoverage@10 : 0.1181    averagepopularity@10 : 95.5274    tailpercentage@10 : 0.005
+Fri 31 Jan 2025 10:56:54 INFO  Saving current: saved\SGL-Jan-31-2025_10-45-12.pth
+Fri 31 Jan 2025 10:57:28 INFO  epoch 20 training [time: 33.87s, train loss: 36972.8438]
+Fri 31 Jan 2025 10:58:02 INFO  epoch 21 training [time: 34.10s, train loss: 36166.5081]
+Fri 31 Jan 2025 10:58:36 INFO  epoch 22 training [time: 33.93s, train loss: 35403.2898]
+Fri 31 Jan 2025 10:59:09 INFO  epoch 23 training [time: 33.36s, train loss: 34801.0465]
+Fri 31 Jan 2025 10:59:43 INFO  epoch 24 training [time: 34.15s, train loss: 34291.9696]
+Fri 31 Jan 2025 10:59:45 INFO  epoch 24 evaluating [time: 2.21s, valid_score: 0.062000]
+Fri 31 Jan 2025 10:59:45 INFO  valid result:
+precision@10 : 0.0361    hit@10 : 0.1997    mrr@10 : 0.0952    ndcg@10 : 0.062    map@10 : 0.036    itemcoverage@10 : 0.1268    averagepopularity@10 : 88.0347    tailpercentage@10 : 0.0051
+Fri 31 Jan 2025 10:59:45 INFO  Saving current: saved\SGL-Jan-31-2025_10-45-12.pth
+Fri 31 Jan 2025 11:00:20 INFO  epoch 25 training [time: 34.11s, train loss: 33824.9851]
+Fri 31 Jan 2025 11:00:53 INFO  epoch 26 training [time: 33.92s, train loss: 33431.2586]
+Fri 31 Jan 2025 11:01:27 INFO  epoch 27 training [time: 33.76s, train loss: 33024.9496]
+Fri 31 Jan 2025 11:02:02 INFO  epoch 28 training [time: 34.85s, train loss: 32622.7929]
+Fri 31 Jan 2025 11:02:37 INFO  epoch 29 training [time: 35.08s, train loss: 32333.6341]
+Fri 31 Jan 2025 11:02:39 INFO  epoch 29 evaluating [time: 2.24s, valid_score: 0.065900]
+Fri 31 Jan 2025 11:02:39 INFO  valid result:
+precision@10 : 0.0381    hit@10 : 0.2053    mrr@10 : 0.0988    ndcg@10 : 0.0659    map@10 : 0.0397    itemcoverage@10 : 0.1366    averagepopularity@10 : 81.8658    tailpercentage@10 : 0.0059
+Fri 31 Jan 2025 11:02:39 INFO  Saving current: saved\SGL-Jan-31-2025_10-45-12.pth
+Fri 31 Jan 2025 11:03:15 INFO  epoch 30 training [time: 35.72s, train loss: 32050.4829]
+Fri 31 Jan 2025 11:03:49 INFO  epoch 31 training [time: 33.66s, train loss: 31762.0671]
+Fri 31 Jan 2025 11:04:24 INFO  epoch 32 training [time: 34.72s, train loss: 31565.9538]
+Fri 31 Jan 2025 11:04:58 INFO  epoch 33 training [time: 34.77s, train loss: 31319.4227]
+Fri 31 Jan 2025 11:05:33 INFO  epoch 34 training [time: 34.54s, train loss: 31155.1548]
+Fri 31 Jan 2025 11:05:35 INFO  epoch 34 evaluating [time: 1.84s, valid_score: 0.067600]
+Fri 31 Jan 2025 11:05:35 INFO  valid result:
+precision@10 : 0.0403    hit@10 : 0.2037    mrr@10 : 0.095    ndcg@10 : 0.0676    map@10 : 0.0415    itemcoverage@10 : 0.1444    averagepopularity@10 : 76.603    tailpercentage@10 : 0.0061
+Fri 31 Jan 2025 11:05:35 INFO  Saving current: saved\SGL-Jan-31-2025_10-45-12.pth
+Fri 31 Jan 2025 11:06:11 INFO  epoch 35 training [time: 36.23s, train loss: 30929.3737]
+Fri 31 Jan 2025 11:06:45 INFO  epoch 36 training [time: 33.54s, train loss: 30727.8927]
+Fri 31 Jan 2025 11:07:18 INFO  epoch 37 training [time: 33.55s, train loss: 30540.7569]
+Fri 31 Jan 2025 11:07:52 INFO  epoch 38 training [time: 34.32s, train loss: 30399.2559]
+Fri 31 Jan 2025 11:08:27 INFO  epoch 39 training [time: 34.40s, train loss: 30262.0856]
+Fri 31 Jan 2025 11:08:29 INFO  epoch 39 evaluating [time: 2.22s, valid_score: 0.069300]
+Fri 31 Jan 2025 11:08:29 INFO  valid result:
+precision@10 : 0.0416    hit@10 : 0.2093    mrr@10 : 0.0951    ndcg@10 : 0.0693    map@10 : 0.0434    itemcoverage@10 : 0.1506    averagepopularity@10 : 72.7286    tailpercentage@10 : 0.0064
+Fri 31 Jan 2025 11:08:29 INFO  Saving current: saved\SGL-Jan-31-2025_10-45-12.pth
+Fri 31 Jan 2025 11:09:03 INFO  epoch 40 training [time: 34.23s, train loss: 30119.2035]
+Fri 31 Jan 2025 11:09:38 INFO  epoch 41 training [time: 34.54s, train loss: 29977.0414]
+Fri 31 Jan 2025 11:10:12 INFO  epoch 42 training [time: 34.52s, train loss: 29857.1881]
+Fri 31 Jan 2025 11:10:48 INFO  epoch 43 training [time: 35.71s, train loss: 29739.0224]
+Fri 31 Jan 2025 11:11:23 INFO  epoch 44 training [time: 35.04s, train loss: 29671.4462]
+Fri 31 Jan 2025 11:11:25 INFO  epoch 44 evaluating [time: 2.25s, valid_score: 0.071000]
+Fri 31 Jan 2025 11:11:25 INFO  valid result:
+precision@10 : 0.0428    hit@10 : 0.2173    mrr@10 : 0.0965    ndcg@10 : 0.071    map@10 : 0.0449    itemcoverage@10 : 0.1561    averagepopularity@10 : 69.5002    tailpercentage@10 : 0.0067
+Fri 31 Jan 2025 11:11:25 INFO  Saving current: saved\SGL-Jan-31-2025_10-45-12.pth
+Fri 31 Jan 2025 11:12:00 INFO  epoch 45 training [time: 34.47s, train loss: 29536.4772]
+Fri 31 Jan 2025 11:12:34 INFO  epoch 46 training [time: 34.10s, train loss: 29439.5969]
+Fri 31 Jan 2025 11:13:11 INFO  epoch 47 training [time: 36.69s, train loss: 29332.9527]
+Fri 31 Jan 2025 11:13:45 INFO  epoch 48 training [time: 33.99s, train loss: 29266.3130]
+Fri 31 Jan 2025 11:14:18 INFO  epoch 49 training [time: 33.65s, train loss: 29160.7804]
+Fri 31 Jan 2025 11:14:21 INFO  epoch 49 evaluating [time: 2.23s, valid_score: 0.070400]
+Fri 31 Jan 2025 11:14:21 INFO  valid result:
+precision@10 : 0.0424    hit@10 : 0.2157    mrr@10 : 0.0953    ndcg@10 : 0.0704    map@10 : 0.0445    itemcoverage@10 : 0.1615    averagepopularity@10 : 66.8677    tailpercentage@10 : 0.007
+Fri 31 Jan 2025 11:14:55 INFO  epoch 50 training [time: 34.63s, train loss: 29079.8253]
+Fri 31 Jan 2025 11:15:29 INFO  epoch 51 training [time: 33.42s, train loss: 29002.4338]
+Fri 31 Jan 2025 11:16:03 INFO  epoch 52 training [time: 34.00s, train loss: 28921.5496]
+Fri 31 Jan 2025 11:16:37 INFO  epoch 53 training [time: 34.06s, train loss: 28845.9547]
+Fri 31 Jan 2025 11:17:11 INFO  epoch 54 training [time: 34.83s, train loss: 28740.5485]
+Fri 31 Jan 2025 11:17:14 INFO  epoch 54 evaluating [time: 2.09s, valid_score: 0.070500]
+Fri 31 Jan 2025 11:17:14 INFO  valid result:
+precision@10 : 0.0427    hit@10 : 0.2141    mrr@10 : 0.094    ndcg@10 : 0.0705    map@10 : 0.0446    itemcoverage@10 : 0.1661    averagepopularity@10 : 64.8856    tailpercentage@10 : 0.0075
+Fri 31 Jan 2025 11:17:47 INFO  epoch 55 training [time: 33.77s, train loss: 28689.9344]
+Fri 31 Jan 2025 11:18:20 INFO  epoch 56 training [time: 33.05s, train loss: 28628.2316]
+Fri 31 Jan 2025 11:18:54 INFO  epoch 57 training [time: 33.79s, train loss: 28566.3990]
+Fri 31 Jan 2025 11:19:29 INFO  epoch 58 training [time: 35.27s, train loss: 28482.2590]
+Fri 31 Jan 2025 11:20:03 INFO  epoch 59 training [time: 33.93s, train loss: 28452.1279]
+Fri 31 Jan 2025 11:20:05 INFO  epoch 59 evaluating [time: 2.08s, valid_score: 0.070500]
+Fri 31 Jan 2025 11:20:05 INFO  valid result:
+precision@10 : 0.0426    hit@10 : 0.2157    mrr@10 : 0.0947    ndcg@10 : 0.0705    map@10 : 0.0448    itemcoverage@10 : 0.1686    averagepopularity@10 : 63.3828    tailpercentage@10 : 0.0078
+Fri 31 Jan 2025 11:20:41 INFO  epoch 60 training [time: 35.25s, train loss: 28379.8232]
+Fri 31 Jan 2025 11:21:15 INFO  epoch 61 training [time: 34.57s, train loss: 28331.6389]
+Fri 31 Jan 2025 11:21:50 INFO  epoch 62 training [time: 34.95s, train loss: 28277.5289]
+Fri 31 Jan 2025 11:22:23 INFO  epoch 63 training [time: 32.98s, train loss: 28230.3317]
+Fri 31 Jan 2025 11:23:00 INFO  epoch 64 training [time: 35.94s, train loss: 28179.7319]
+Fri 31 Jan 2025 11:23:02 INFO  epoch 64 evaluating [time: 2.22s, valid_score: 0.071700]
+Fri 31 Jan 2025 11:23:02 INFO  valid result:
+precision@10 : 0.0433    hit@10 : 0.2213    mrr@10 : 0.0974    ndcg@10 : 0.0717    map@10 : 0.0454    itemcoverage@10 : 0.1711    averagepopularity@10 : 62.2168    tailpercentage@10 : 0.0077
+Fri 31 Jan 2025 11:23:02 INFO  Saving current: saved\SGL-Jan-31-2025_10-45-12.pth
+Fri 31 Jan 2025 11:23:36 INFO  epoch 65 training [time: 34.11s, train loss: 28140.0539]
+Fri 31 Jan 2025 11:24:10 INFO  epoch 66 training [time: 34.27s, train loss: 28082.6531]
+Fri 31 Jan 2025 11:24:45 INFO  epoch 67 training [time: 34.87s, train loss: 28052.6489]
+Fri 31 Jan 2025 11:25:20 INFO  epoch 68 training [time: 34.34s, train loss: 27991.2789]
+Fri 31 Jan 2025 11:25:55 INFO  epoch 69 training [time: 35.05s, train loss: 27947.2887]
+Fri 31 Jan 2025 11:25:57 INFO  epoch 69 evaluating [time: 2.14s, valid_score: 0.071100]
+Fri 31 Jan 2025 11:25:57 INFO  valid result:
+precision@10 : 0.0426    hit@10 : 0.2141    mrr@10 : 0.0963    ndcg@10 : 0.0711    map@10 : 0.0453    itemcoverage@10 : 0.1759    averagepopularity@10 : 60.9734    tailpercentage@10 : 0.0079
+Fri 31 Jan 2025 11:26:32 INFO  epoch 70 training [time: 34.90s, train loss: 27900.4181]
+Fri 31 Jan 2025 11:27:07 INFO  epoch 71 training [time: 35.04s, train loss: 27884.9231]
+Fri 31 Jan 2025 11:27:42 INFO  epoch 72 training [time: 35.56s, train loss: 27825.3448]
+Fri 31 Jan 2025 11:28:18 INFO  epoch 73 training [time: 35.28s, train loss: 27788.8648]
+Fri 31 Jan 2025 11:28:52 INFO  epoch 74 training [time: 34.16s, train loss: 27783.5798]
+Fri 31 Jan 2025 11:28:54 INFO  epoch 74 evaluating [time: 2.12s, valid_score: 0.071400]
+Fri 31 Jan 2025 11:28:54 INFO  valid result:
+precision@10 : 0.043    hit@10 : 0.2173    mrr@10 : 0.0965    ndcg@10 : 0.0714    map@10 : 0.0453    itemcoverage@10 : 0.1783    averagepopularity@10 : 60.405    tailpercentage@10 : 0.008
+Fri 31 Jan 2025 11:29:29 INFO  epoch 75 training [time: 34.99s, train loss: 27721.7674]
+Fri 31 Jan 2025 11:30:03 INFO  epoch 76 training [time: 34.09s, train loss: 27674.9099]
+Fri 31 Jan 2025 11:30:38 INFO  epoch 77 training [time: 34.79s, train loss: 27648.1565]
+Fri 31 Jan 2025 11:31:12 INFO  epoch 78 training [time: 34.50s, train loss: 27610.2546]
+Fri 31 Jan 2025 11:31:48 INFO  epoch 79 training [time: 35.29s, train loss: 27580.4523]
+Fri 31 Jan 2025 11:31:50 INFO  epoch 79 evaluating [time: 2.13s, valid_score: 0.072000]
+Fri 31 Jan 2025 11:31:50 INFO  valid result:
+precision@10 : 0.0433    hit@10 : 0.2213    mrr@10 : 0.0979    ndcg@10 : 0.072    map@10 : 0.0456    itemcoverage@10 : 0.1807    averagepopularity@10 : 59.0418    tailpercentage@10 : 0.0083
+Fri 31 Jan 2025 11:31:50 INFO  Saving current: saved\SGL-Jan-31-2025_10-45-12.pth
+Fri 31 Jan 2025 11:32:25 INFO  epoch 80 training [time: 35.55s, train loss: 27581.4641]
+Fri 31 Jan 2025 11:33:00 INFO  epoch 81 training [time: 35.05s, train loss: 27523.7578]
+Fri 31 Jan 2025 11:33:36 INFO  epoch 82 training [time: 35.81s, train loss: 27509.2083]
+Fri 31 Jan 2025 11:34:11 INFO  epoch 83 training [time: 34.74s, train loss: 27473.3229]
+Fri 31 Jan 2025 11:34:46 INFO  epoch 84 training [time: 35.24s, train loss: 27448.8403]
+Fri 31 Jan 2025 11:34:48 INFO  epoch 84 evaluating [time: 2.09s, valid_score: 0.072100]
+Fri 31 Jan 2025 11:34:48 INFO  valid result:
+precision@10 : 0.0435    hit@10 : 0.2213    mrr@10 : 0.0976    ndcg@10 : 0.0721    map@10 : 0.0458    itemcoverage@10 : 0.1829    averagepopularity@10 : 58.6303    tailpercentage@10 : 0.009
+Fri 31 Jan 2025 11:34:48 INFO  Saving current: saved\SGL-Jan-31-2025_10-45-12.pth
+Fri 31 Jan 2025 11:35:22 INFO  epoch 85 training [time: 33.66s, train loss: 27397.1258]
+Fri 31 Jan 2025 11:35:56 INFO  epoch 86 training [time: 34.48s, train loss: 27381.1103]
+Fri 31 Jan 2025 11:36:31 INFO  epoch 87 training [time: 34.52s, train loss: 27357.0752]
+Fri 31 Jan 2025 11:37:05 INFO  epoch 88 training [time: 34.38s, train loss: 27354.1516]
+Fri 31 Jan 2025 11:37:40 INFO  epoch 89 training [time: 34.57s, train loss: 27297.9252]
+Fri 31 Jan 2025 11:37:42 INFO  epoch 89 evaluating [time: 1.88s, valid_score: 0.071500]
+Fri 31 Jan 2025 11:37:42 INFO  valid result:
+precision@10 : 0.0432    hit@10 : 0.2205    mrr@10 : 0.096    ndcg@10 : 0.0715    map@10 : 0.0454    itemcoverage@10 : 0.1842    averagepopularity@10 : 57.9334    tailpercentage@10 : 0.0091
+Fri 31 Jan 2025 11:38:18 INFO  epoch 90 training [time: 35.94s, train loss: 27299.0871]
+Fri 31 Jan 2025 11:38:52 INFO  epoch 91 training [time: 33.83s, train loss: 27261.9059]
+Fri 31 Jan 2025 11:39:27 INFO  epoch 92 training [time: 34.81s, train loss: 27217.7398]
+Fri 31 Jan 2025 11:40:02 INFO  epoch 93 training [time: 35.20s, train loss: 27217.6727]
+Fri 31 Jan 2025 11:40:36 INFO  epoch 94 training [time: 33.95s, train loss: 27184.2827]
+Fri 31 Jan 2025 11:40:38 INFO  epoch 94 evaluating [time: 2.13s, valid_score: 0.071700]
+Fri 31 Jan 2025 11:40:38 INFO  valid result:
+precision@10 : 0.0432    hit@10 : 0.2213    mrr@10 : 0.0968    ndcg@10 : 0.0717    map@10 : 0.0455    itemcoverage@10 : 0.1866    averagepopularity@10 : 57.2624    tailpercentage@10 : 0.0088
+Fri 31 Jan 2025 11:41:12 INFO  epoch 95 training [time: 34.30s, train loss: 27184.2735]
+Fri 31 Jan 2025 11:41:47 INFO  epoch 96 training [time: 34.16s, train loss: 27156.3089]
+Fri 31 Jan 2025 11:42:23 INFO  epoch 97 training [time: 35.66s, train loss: 27132.0250]
+Fri 31 Jan 2025 11:42:59 INFO  epoch 98 training [time: 36.02s, train loss: 27095.3127]
+Fri 31 Jan 2025 11:43:33 INFO  epoch 99 training [time: 34.38s, train loss: 27091.1971]
+Fri 31 Jan 2025 11:43:36 INFO  epoch 99 evaluating [time: 2.30s, valid_score: 0.071300]
+Fri 31 Jan 2025 11:43:36 INFO  valid result:
+precision@10 : 0.0429    hit@10 : 0.2205    mrr@10 : 0.0967    ndcg@10 : 0.0713    map@10 : 0.0454    itemcoverage@10 : 0.1879    averagepopularity@10 : 57.0106    tailpercentage@10 : 0.009
+Fri 31 Jan 2025 11:43:36 INFO  Loading model structure and parameters from saved\SGL-Jan-31-2025_10-45-12.pth
+Fri 31 Jan 2025 11:43:38 INFO  best valid : OrderedDict({'precision@10': 0.0435, 'hit@10': 0.2213, 'mrr@10': 0.0976, 'ndcg@10': 0.0721, 'map@10': 0.0458, 'itemcoverage@10': 0.1829, 'averagepopularity@10': 58.6303, 'tailpercentage@10': 0.009})
+Fri 31 Jan 2025 11:43:38 INFO  test result: OrderedDict({'precision@10': 0.0327, 'hit@10': 0.1836, 'mrr@10': 0.0813, 'ndcg@10': 0.0643, 'map@10': 0.042, 'itemcoverage@10': 0.1828, 'averagepopularity@10': 58.5994, 'tailpercentage@10': 0.0089})
+Fri 31 Jan 2025 11:43:39 INFO  [Training]: train_batch_size = [2048] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Fri 31 Jan 2025 11:43:39 INFO  [Evaluation]: eval_batch_size = [2048] eval_args: [{'split': {'LK': ['valid_and_test', 5]}, 'order': 'TO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+Fri 31 Jan 2025 11:44:22 INFO  epoch 0 training [time: 42.60s, train loss: 82345.8211]
+Fri 31 Jan 2025 11:45:04 INFO  epoch 1 training [time: 41.59s, train loss: 79979.7634]
+Fri 31 Jan 2025 11:45:45 INFO  epoch 2 training [time: 41.22s, train loss: 79443.5529]
+Fri 31 Jan 2025 11:46:25 INFO  epoch 3 training [time: 40.40s, train loss: 78513.8690]
+Fri 31 Jan 2025 11:47:07 INFO  epoch 4 training [time: 41.91s, train loss: 77512.6204]
+Fri 31 Jan 2025 11:47:09 INFO  epoch 4 evaluating [time: 2.07s, valid_score: 0.051400]
+Fri 31 Jan 2025 11:47:09 INFO  valid result:
+precision@10 : 0.0282    hit@10 : 0.1381    mrr@10 : 0.0754    ndcg@10 : 0.0514    map@10 : 0.0342    itemcoverage@10 : 0.1774    averagepopularity@10 : 27.4837    tailpercentage@10 : 0.0194
+Fri 31 Jan 2025 11:47:09 INFO  Saving current: saved\SGL-Jan-31-2025_11-43-39.pth
+Fri 31 Jan 2025 11:47:51 INFO  epoch 5 training [time: 42.04s, train loss: 76439.2185]
+Fri 31 Jan 2025 11:48:32 INFO  epoch 6 training [time: 40.54s, train loss: 74546.3591]
+Fri 31 Jan 2025 11:49:13 INFO  epoch 7 training [time: 40.96s, train loss: 71649.7429]
+Fri 31 Jan 2025 11:49:54 INFO  epoch 8 training [time: 41.05s, train loss: 68518.1240]
+Fri 31 Jan 2025 11:50:36 INFO  epoch 9 training [time: 41.89s, train loss: 65336.1210]
+Fri 31 Jan 2025 11:50:38 INFO  epoch 9 evaluating [time: 1.87s, valid_score: 0.061900]
+Fri 31 Jan 2025 11:50:38 INFO  valid result:
+precision@10 : 0.0355    hit@10 : 0.1576    mrr@10 : 0.0815    ndcg@10 : 0.0619    map@10 : 0.0432    itemcoverage@10 : 0.1588    averagepopularity@10 : 23.2332    tailpercentage@10 : 0.0114
+Fri 31 Jan 2025 11:50:38 INFO  Saving current: saved\SGL-Jan-31-2025_11-43-39.pth
+Fri 31 Jan 2025 11:51:19 INFO  epoch 10 training [time: 41.78s, train loss: 61887.6711]
+Fri 31 Jan 2025 11:52:00 INFO  epoch 11 training [time: 40.33s, train loss: 58147.1104]
+Fri 31 Jan 2025 11:52:40 INFO  epoch 12 training [time: 40.79s, train loss: 54009.7231]
+Fri 31 Jan 2025 11:53:21 INFO  epoch 13 training [time: 40.93s, train loss: 49714.4414]
+Fri 31 Jan 2025 11:54:03 INFO  epoch 14 training [time: 41.64s, train loss: 46182.8888]
+Fri 31 Jan 2025 11:54:05 INFO  epoch 14 evaluating [time: 2.02s, valid_score: 0.069500]
+Fri 31 Jan 2025 11:54:05 INFO  valid result:
+precision@10 : 0.0408    hit@10 : 0.19    mrr@10 : 0.0915    ndcg@10 : 0.0695    map@10 : 0.0461    itemcoverage@10 : 0.0982    averagepopularity@10 : 79.2683    tailpercentage@10 : 0.007
+Fri 31 Jan 2025 11:54:05 INFO  Saving current: saved\SGL-Jan-31-2025_11-43-39.pth
+Fri 31 Jan 2025 11:54:47 INFO  epoch 15 training [time: 41.90s, train loss: 43656.0808]
+Fri 31 Jan 2025 11:55:28 INFO  epoch 16 training [time: 40.69s, train loss: 41840.0403]
+Fri 31 Jan 2025 11:56:08 INFO  epoch 17 training [time: 40.00s, train loss: 40425.0854]
+Fri 31 Jan 2025 11:56:49 INFO  epoch 18 training [time: 41.56s, train loss: 39229.6546]
+Fri 31 Jan 2025 11:57:29 INFO  epoch 19 training [time: 40.15s, train loss: 38328.0991]
+Fri 31 Jan 2025 11:57:32 INFO  epoch 19 evaluating [time: 2.39s, valid_score: 0.070200]
+Fri 31 Jan 2025 11:57:32 INFO  valid result:
+precision@10 : 0.0408    hit@10 : 0.1918    mrr@10 : 0.0942    ndcg@10 : 0.0702    map@10 : 0.0468    itemcoverage@10 : 0.0978    averagepopularity@10 : 78.8854    tailpercentage@10 : 0.0053
+Fri 31 Jan 2025 11:57:32 INFO  Saving current: saved\SGL-Jan-31-2025_11-43-39.pth
+Fri 31 Jan 2025 11:58:11 INFO  epoch 20 training [time: 39.46s, train loss: 37512.5643]
+Fri 31 Jan 2025 11:58:53 INFO  epoch 21 training [time: 41.61s, train loss: 36793.7185]
+Fri 31 Jan 2025 11:59:33 INFO  epoch 22 training [time: 40.10s, train loss: 36220.3480]
+Fri 31 Jan 2025 12:00:13 INFO  epoch 23 training [time: 40.17s, train loss: 35671.4283]
+Fri 31 Jan 2025 12:00:55 INFO  epoch 24 training [time: 41.30s, train loss: 35244.9442]
+Fri 31 Jan 2025 12:00:57 INFO  epoch 24 evaluating [time: 2.09s, valid_score: 0.071800]
+Fri 31 Jan 2025 12:00:57 INFO  valid result:
+precision@10 : 0.041    hit@10 : 0.1891    mrr@10 : 0.0974    ndcg@10 : 0.0718    map@10 : 0.0489    itemcoverage@10 : 0.1051    averagepopularity@10 : 72.6496    tailpercentage@10 : 0.0062
+Fri 31 Jan 2025 12:00:57 INFO  Saving current: saved\SGL-Jan-31-2025_11-43-39.pth
+Fri 31 Jan 2025 12:01:37 INFO  epoch 25 training [time: 39.97s, train loss: 34798.6245]
+Fri 31 Jan 2025 12:02:16 INFO  epoch 26 training [time: 39.34s, train loss: 34398.8622]
+Fri 31 Jan 2025 12:02:59 INFO  epoch 27 training [time: 42.59s, train loss: 34086.2201]
+Fri 31 Jan 2025 12:03:39 INFO  epoch 28 training [time: 40.57s, train loss: 33762.9713]
+Fri 31 Jan 2025 12:04:20 INFO  epoch 29 training [time: 41.27s, train loss: 33471.7828]
+Fri 31 Jan 2025 12:04:22 INFO  epoch 29 evaluating [time: 2.08s, valid_score: 0.071600]
+Fri 31 Jan 2025 12:04:22 INFO  valid result:
+precision@10 : 0.0409    hit@10 : 0.1918    mrr@10 : 0.098    ndcg@10 : 0.0716    map@10 : 0.0488    itemcoverage@10 : 0.1144    averagepopularity@10 : 67.7551    tailpercentage@10 : 0.007
+Fri 31 Jan 2025 12:05:02 INFO  epoch 30 training [time: 39.94s, train loss: 33232.7349]
+Fri 31 Jan 2025 12:05:42 INFO  epoch 31 training [time: 39.90s, train loss: 32970.8273]
+Fri 31 Jan 2025 12:06:24 INFO  epoch 32 training [time: 41.62s, train loss: 32771.7738]
+Fri 31 Jan 2025 12:07:05 INFO  epoch 33 training [time: 40.83s, train loss: 32578.3436]
+Fri 31 Jan 2025 12:07:46 INFO  epoch 34 training [time: 41.18s, train loss: 32360.5927]
+Fri 31 Jan 2025 12:07:48 INFO  epoch 34 evaluating [time: 2.20s, valid_score: 0.073300]
+Fri 31 Jan 2025 12:07:48 INFO  valid result:
+precision@10 : 0.0421    hit@10 : 0.1937    mrr@10 : 0.0992    ndcg@10 : 0.0733    map@10 : 0.05    itemcoverage@10 : 0.122    averagepopularity@10 : 63.3756    tailpercentage@10 : 0.0069
+Fri 31 Jan 2025 12:07:48 INFO  Saving current: saved\SGL-Jan-31-2025_11-43-39.pth
+Fri 31 Jan 2025 12:08:29 INFO  epoch 35 training [time: 41.25s, train loss: 32184.5806]
+Fri 31 Jan 2025 12:09:09 INFO  epoch 36 training [time: 39.61s, train loss: 31999.4523]
+Fri 31 Jan 2025 12:09:50 INFO  epoch 37 training [time: 40.52s, train loss: 31848.7325]
+Fri 31 Jan 2025 12:10:31 INFO  epoch 38 training [time: 40.98s, train loss: 31714.7353]
+Fri 31 Jan 2025 12:11:11 INFO  epoch 39 training [time: 40.82s, train loss: 31573.9980]
+Fri 31 Jan 2025 12:11:13 INFO  epoch 39 evaluating [time: 2.11s, valid_score: 0.075100]
+Fri 31 Jan 2025 12:11:13 INFO  valid result:
+precision@10 : 0.0429    hit@10 : 0.1918    mrr@10 : 0.1018    ndcg@10 : 0.0751    map@10 : 0.0516    itemcoverage@10 : 0.1281    averagepopularity@10 : 60.427    tailpercentage@10 : 0.0078
+Fri 31 Jan 2025 12:11:14 INFO  Saving current: saved\SGL-Jan-31-2025_11-43-39.pth
+Fri 31 Jan 2025 12:11:55 INFO  epoch 40 training [time: 41.78s, train loss: 31456.7555]
+Fri 31 Jan 2025 12:12:36 INFO  epoch 41 training [time: 40.76s, train loss: 31292.7034]
+Fri 31 Jan 2025 12:13:17 INFO  epoch 42 training [time: 41.38s, train loss: 31187.6345]
+Fri 31 Jan 2025 12:13:58 INFO  epoch 43 training [time: 40.82s, train loss: 31112.7733]
+Fri 31 Jan 2025 12:14:39 INFO  epoch 44 training [time: 41.20s, train loss: 30958.3055]
+Fri 31 Jan 2025 12:14:42 INFO  epoch 44 evaluating [time: 2.08s, valid_score: 0.076000]
+Fri 31 Jan 2025 12:14:42 INFO  valid result:
+precision@10 : 0.0439    hit@10 : 0.1909    mrr@10 : 0.0993    ndcg@10 : 0.076    map@10 : 0.0528    itemcoverage@10 : 0.134    averagepopularity@10 : 57.7447    tailpercentage@10 : 0.0089
+Fri 31 Jan 2025 12:14:42 INFO  Saving current: saved\SGL-Jan-31-2025_11-43-39.pth
+Fri 31 Jan 2025 12:15:22 INFO  epoch 45 training [time: 40.46s, train loss: 30858.2705]
+Fri 31 Jan 2025 12:16:02 INFO  epoch 46 training [time: 40.16s, train loss: 30773.0011]
+Fri 31 Jan 2025 12:16:42 INFO  epoch 47 training [time: 39.86s, train loss: 30686.1776]
+Fri 31 Jan 2025 12:17:22 INFO  epoch 48 training [time: 40.09s, train loss: 30636.0284]
+Fri 31 Jan 2025 12:18:01 INFO  epoch 49 training [time: 38.95s, train loss: 30541.5456]
+Fri 31 Jan 2025 12:18:03 INFO  epoch 49 evaluating [time: 2.09s, valid_score: 0.076600]
+Fri 31 Jan 2025 12:18:03 INFO  valid result:
+precision@10 : 0.0446    hit@10 : 0.1956    mrr@10 : 0.1002    ndcg@10 : 0.0766    map@10 : 0.053    itemcoverage@10 : 0.1388    averagepopularity@10 : 56.2489    tailpercentage@10 : 0.0102
+Fri 31 Jan 2025 12:18:03 INFO  Saving current: saved\SGL-Jan-31-2025_11-43-39.pth
+Fri 31 Jan 2025 12:18:44 INFO  epoch 50 training [time: 40.30s, train loss: 30457.1615]
+Fri 31 Jan 2025 12:19:24 INFO  epoch 51 training [time: 40.81s, train loss: 30347.3301]
+Fri 31 Jan 2025 12:20:04 INFO  epoch 52 training [time: 40.01s, train loss: 30304.1304]
+Fri 31 Jan 2025 12:20:45 INFO  epoch 53 training [time: 40.60s, train loss: 30253.0714]
+Fri 31 Jan 2025 12:21:25 INFO  epoch 54 training [time: 39.55s, train loss: 30178.9579]
+Fri 31 Jan 2025 12:21:27 INFO  epoch 54 evaluating [time: 2.07s, valid_score: 0.077100]
+Fri 31 Jan 2025 12:21:27 INFO  valid result:
+precision@10 : 0.0449    hit@10 : 0.1956    mrr@10 : 0.1006    ndcg@10 : 0.0771    map@10 : 0.0533    itemcoverage@10 : 0.1447    averagepopularity@10 : 54.3688    tailpercentage@10 : 0.0106
+Fri 31 Jan 2025 12:21:27 INFO  Saving current: saved\SGL-Jan-31-2025_11-43-39.pth
+Fri 31 Jan 2025 12:22:07 INFO  epoch 55 training [time: 40.51s, train loss: 30072.2166]
+Fri 31 Jan 2025 12:22:48 INFO  epoch 56 training [time: 40.60s, train loss: 30036.7210]
+Fri 31 Jan 2025 12:23:27 INFO  epoch 57 training [time: 39.71s, train loss: 29994.6935]
+Fri 31 Jan 2025 12:24:08 INFO  epoch 58 training [time: 40.26s, train loss: 29933.0294]
+Fri 31 Jan 2025 12:24:48 INFO  epoch 59 training [time: 40.53s, train loss: 29846.9271]
+Fri 31 Jan 2025 12:24:51 INFO  epoch 59 evaluating [time: 2.46s, valid_score: 0.076500]
+Fri 31 Jan 2025 12:24:51 INFO  valid result:
+precision@10 : 0.0449    hit@10 : 0.203    mrr@10 : 0.1002    ndcg@10 : 0.0765    map@10 : 0.0524    itemcoverage@10 : 0.1476    averagepopularity@10 : 53.218    tailpercentage@10 : 0.0112
+Fri 31 Jan 2025 12:25:30 INFO  epoch 60 training [time: 39.64s, train loss: 29815.0980]
+Fri 31 Jan 2025 12:26:10 INFO  epoch 61 training [time: 40.02s, train loss: 29738.6423]
+Fri 31 Jan 2025 12:26:51 INFO  epoch 62 training [time: 40.37s, train loss: 29718.9250]
+Fri 31 Jan 2025 12:27:32 INFO  epoch 63 training [time: 40.80s, train loss: 29663.5691]
+Fri 31 Jan 2025 12:28:14 INFO  epoch 64 training [time: 42.27s, train loss: 29614.2029]
+Fri 31 Jan 2025 12:28:16 INFO  epoch 64 evaluating [time: 2.13s, valid_score: 0.075800]
+Fri 31 Jan 2025 12:28:16 INFO  valid result:
+precision@10 : 0.0442    hit@10 : 0.2011    mrr@10 : 0.0995    ndcg@10 : 0.0758    map@10 : 0.0521    itemcoverage@10 : 0.1505    averagepopularity@10 : 52.0902    tailpercentage@10 : 0.0111
+Fri 31 Jan 2025 12:28:56 INFO  epoch 65 training [time: 39.88s, train loss: 29551.9585]
+Fri 31 Jan 2025 12:29:36 INFO  epoch 66 training [time: 39.75s, train loss: 29521.3558]
+Fri 31 Jan 2025 12:30:16 INFO  epoch 67 training [time: 40.69s, train loss: 29466.1299]
+Fri 31 Jan 2025 12:30:55 INFO  epoch 68 training [time: 39.11s, train loss: 29420.7871]
+Fri 31 Jan 2025 12:31:36 INFO  epoch 69 training [time: 40.30s, train loss: 29399.1830]
+Fri 31 Jan 2025 12:31:38 INFO  epoch 69 evaluating [time: 2.41s, valid_score: 0.075700]
+Fri 31 Jan 2025 12:31:38 INFO  valid result:
+precision@10 : 0.0444    hit@10 : 0.2048    mrr@10 : 0.0992    ndcg@10 : 0.0757    map@10 : 0.0519    itemcoverage@10 : 0.1531    averagepopularity@10 : 51.035    tailpercentage@10 : 0.0117
+Fri 31 Jan 2025 12:32:19 INFO  epoch 70 training [time: 40.54s, train loss: 29338.2613]
+Fri 31 Jan 2025 12:33:00 INFO  epoch 71 training [time: 41.36s, train loss: 29308.4426]
+Fri 31 Jan 2025 12:33:41 INFO  epoch 72 training [time: 40.64s, train loss: 29280.7621]
+Fri 31 Jan 2025 12:34:20 INFO  epoch 73 training [time: 39.09s, train loss: 29239.7117]
+Fri 31 Jan 2025 12:35:00 INFO  epoch 74 training [time: 40.74s, train loss: 29191.6596]
+Fri 31 Jan 2025 12:35:03 INFO  epoch 74 evaluating [time: 2.09s, valid_score: 0.076400]
+Fri 31 Jan 2025 12:35:03 INFO  valid result:
+precision@10 : 0.0449    hit@10 : 0.2057    mrr@10 : 0.0994    ndcg@10 : 0.0764    map@10 : 0.0524    itemcoverage@10 : 0.1553    averagepopularity@10 : 50.3874    tailpercentage@10 : 0.012
+Fri 31 Jan 2025 12:35:42 INFO  epoch 75 training [time: 39.14s, train loss: 29176.9939]
+Fri 31 Jan 2025 12:36:22 INFO  epoch 76 training [time: 39.84s, train loss: 29152.7608]
+Fri 31 Jan 2025 12:37:02 INFO  epoch 77 training [time: 40.75s, train loss: 29102.1451]
+Fri 31 Jan 2025 12:37:43 INFO  epoch 78 training [time: 40.76s, train loss: 29085.3344]
+Fri 31 Jan 2025 12:38:24 INFO  epoch 79 training [time: 40.92s, train loss: 29048.5421]
+Fri 31 Jan 2025 12:38:26 INFO  epoch 79 evaluating [time: 2.09s, valid_score: 0.075800]
+Fri 31 Jan 2025 12:38:26 INFO  valid result:
+precision@10 : 0.0447    hit@10 : 0.2067    mrr@10 : 0.0992    ndcg@10 : 0.0758    map@10 : 0.0518    itemcoverage@10 : 0.1574    averagepopularity@10 : 49.7528    tailpercentage@10 : 0.0114
+Fri 31 Jan 2025 12:39:06 INFO  epoch 80 training [time: 40.08s, train loss: 29013.8774]
+Fri 31 Jan 2025 12:39:47 INFO  epoch 81 training [time: 40.54s, train loss: 28968.9345]
+Fri 31 Jan 2025 12:40:27 INFO  epoch 82 training [time: 40.17s, train loss: 28955.6691]
+Fri 31 Jan 2025 12:41:08 INFO  epoch 83 training [time: 40.84s, train loss: 28939.3698]
+Fri 31 Jan 2025 12:41:49 INFO  epoch 84 training [time: 41.31s, train loss: 28896.9377]
+Fri 31 Jan 2025 12:41:51 INFO  epoch 84 evaluating [time: 2.12s, valid_score: 0.075400]
+Fri 31 Jan 2025 12:41:51 INFO  valid result:
+precision@10 : 0.0444    hit@10 : 0.2067    mrr@10 : 0.0988    ndcg@10 : 0.0754    map@10 : 0.0512    itemcoverage@10 : 0.1584    averagepopularity@10 : 49.5277    tailpercentage@10 : 0.0117
+Fri 31 Jan 2025 12:42:33 INFO  epoch 85 training [time: 41.60s, train loss: 28873.9384]
+Fri 31 Jan 2025 12:43:14 INFO  epoch 86 training [time: 40.96s, train loss: 28850.2665]
+Fri 31 Jan 2025 12:43:54 INFO  epoch 87 training [time: 40.39s, train loss: 28812.4637]
+Fri 31 Jan 2025 12:44:36 INFO  epoch 88 training [time: 41.59s, train loss: 28805.9614]
+Fri 31 Jan 2025 12:45:17 INFO  epoch 89 training [time: 41.07s, train loss: 28788.8754]
+Fri 31 Jan 2025 12:45:19 INFO  epoch 89 evaluating [time: 2.11s, valid_score: 0.076000]
+Fri 31 Jan 2025 12:45:19 INFO  valid result:
+precision@10 : 0.0449    hit@10 : 0.2067    mrr@10 : 0.1    ndcg@10 : 0.076    map@10 : 0.0516    itemcoverage@10 : 0.1611    averagepopularity@10 : 48.8319    tailpercentage@10 : 0.0115
+Fri 31 Jan 2025 12:46:01 INFO  epoch 90 training [time: 42.15s, train loss: 28756.4102]
+Fri 31 Jan 2025 12:46:41 INFO  epoch 91 training [time: 40.22s, train loss: 28728.2296]
+Fri 31 Jan 2025 12:47:21 INFO  epoch 92 training [time: 39.55s, train loss: 28710.9978]
+Fri 31 Jan 2025 12:48:02 INFO  epoch 93 training [time: 40.92s, train loss: 28688.9357]
+Fri 31 Jan 2025 12:48:42 INFO  epoch 94 training [time: 40.34s, train loss: 28672.7978]
+Fri 31 Jan 2025 12:48:44 INFO  epoch 94 evaluating [time: 2.13s, valid_score: 0.075100]
+Fri 31 Jan 2025 12:48:44 INFO  valid result:
+precision@10 : 0.0445    hit@10 : 0.2085    mrr@10 : 0.0982    ndcg@10 : 0.0751    map@10 : 0.0505    itemcoverage@10 : 0.1626    averagepopularity@10 : 48.3107    tailpercentage@10 : 0.0112
+Fri 31 Jan 2025 12:49:25 INFO  epoch 95 training [time: 40.81s, train loss: 28643.6784]
+Fri 31 Jan 2025 12:50:05 INFO  epoch 96 training [time: 40.29s, train loss: 28644.0100]
+Fri 31 Jan 2025 12:50:45 INFO  epoch 97 training [time: 39.60s, train loss: 28603.2461]
+Fri 31 Jan 2025 12:51:26 INFO  epoch 98 training [time: 41.15s, train loss: 28590.3483]
+Fri 31 Jan 2025 12:52:06 INFO  epoch 99 training [time: 39.96s, train loss: 28560.7073]
+Fri 31 Jan 2025 12:52:09 INFO  epoch 99 evaluating [time: 2.52s, valid_score: 0.075100]
+Fri 31 Jan 2025 12:52:09 INFO  valid result:
+precision@10 : 0.0444    hit@10 : 0.2085    mrr@10 : 0.099    ndcg@10 : 0.0751    map@10 : 0.0503    itemcoverage@10 : 0.1645    averagepopularity@10 : 48.0023    tailpercentage@10 : 0.012
+Fri 31 Jan 2025 12:52:09 INFO  Loading model structure and parameters from saved\SGL-Jan-31-2025_11-43-39.pth
+Fri 31 Jan 2025 12:52:11 INFO  best valid : OrderedDict({'precision@10': 0.0449, 'hit@10': 0.1956, 'mrr@10': 0.1006, 'ndcg@10': 0.0771, 'map@10': 0.0533, 'itemcoverage@10': 0.1447, 'averagepopularity@10': 54.3688, 'tailpercentage@10': 0.0106})
+Fri 31 Jan 2025 12:52:11 INFO  test result: OrderedDict({'precision@10': 0.0344, 'hit@10': 0.165, 'mrr@10': 0.0829, 'ndcg@10': 0.0695, 'map@10': 0.0493, 'itemcoverage@10': 0.1448, 'averagepopularity@10': 54.1754, 'tailpercentage@10': 0.0107})
+Fri 31 Jan 2025 12:52:13 INFO  [Training]: train_batch_size = [2048] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Fri 31 Jan 2025 12:52:13 INFO  [Evaluation]: eval_batch_size = [2048] eval_args: [{'split': {'LK': ['valid_and_test', 5]}, 'order': 'TO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+Fri 31 Jan 2025 12:52:59 INFO  epoch 0 training [time: 45.81s, train loss: 88581.4490]
+Fri 31 Jan 2025 12:53:46 INFO  epoch 1 training [time: 47.80s, train loss: 85002.4584]
+Fri 31 Jan 2025 12:54:32 INFO  epoch 2 training [time: 45.91s, train loss: 83714.6503]
+Fri 31 Jan 2025 12:55:20 INFO  epoch 3 training [time: 47.55s, train loss: 81758.8884]
+Fri 31 Jan 2025 12:56:06 INFO  epoch 4 training [time: 46.06s, train loss: 78282.8983]
+Fri 31 Jan 2025 12:56:08 INFO  epoch 4 evaluating [time: 1.94s, valid_score: 0.033600]
+Fri 31 Jan 2025 12:56:08 INFO  valid result:
+precision@10 : 0.0186    hit@10 : 0.0935    mrr@10 : 0.0502    ndcg@10 : 0.0336    map@10 : 0.0222    itemcoverage@10 : 0.1307    averagepopularity@10 : 14.3683    tailpercentage@10 : 0.2039
+Fri 31 Jan 2025 12:56:08 INFO  Saving current: saved\SGL-Jan-31-2025_12-52-13.pth
+Fri 31 Jan 2025 12:56:53 INFO  epoch 5 training [time: 45.09s, train loss: 73643.3306]
+Fri 31 Jan 2025 12:57:39 INFO  epoch 6 training [time: 45.69s, train loss: 69344.2928]
+Fri 31 Jan 2025 12:58:24 INFO  epoch 7 training [time: 45.22s, train loss: 65999.8962]
+Fri 31 Jan 2025 12:59:08 INFO  epoch 8 training [time: 44.08s, train loss: 62940.6328]
+Fri 31 Jan 2025 12:59:54 INFO  epoch 9 training [time: 45.64s, train loss: 59910.7316]
+Fri 31 Jan 2025 12:59:55 INFO  epoch 9 evaluating [time: 1.82s, valid_score: 0.052400]
+Fri 31 Jan 2025 12:59:56 INFO  valid result:
+precision@10 : 0.0308    hit@10 : 0.1598    mrr@10 : 0.0742    ndcg@10 : 0.0524    map@10 : 0.0324    itemcoverage@10 : 0.1181    averagepopularity@10 : 32.4249    tailpercentage@10 : 0.0386
+Fri 31 Jan 2025 12:59:56 INFO  Saving current: saved\SGL-Jan-31-2025_12-52-13.pth
+Fri 31 Jan 2025 13:00:40 INFO  epoch 10 training [time: 44.40s, train loss: 56643.7965]
+Fri 31 Jan 2025 13:01:25 INFO  epoch 11 training [time: 44.38s, train loss: 52861.4787]
+Fri 31 Jan 2025 13:02:11 INFO  epoch 12 training [time: 45.46s, train loss: 49379.2862]
+Fri 31 Jan 2025 13:02:56 INFO  epoch 13 training [time: 45.32s, train loss: 46571.0353]
+Fri 31 Jan 2025 13:03:41 INFO  epoch 14 training [time: 45.27s, train loss: 44535.8847]
+Fri 31 Jan 2025 13:03:43 INFO  epoch 14 evaluating [time: 1.98s, valid_score: 0.047800]
+Fri 31 Jan 2025 13:03:43 INFO  valid result:
+precision@10 : 0.0276    hit@10 : 0.1467    mrr@10 : 0.0702    ndcg@10 : 0.0478    map@10 : 0.0292    itemcoverage@10 : 0.0798    averagepopularity@10 : 71.1982    tailpercentage@10 : 0.0103
+Fri 31 Jan 2025 13:04:29 INFO  epoch 15 training [time: 45.31s, train loss: 42948.4299]
+Fri 31 Jan 2025 13:05:14 INFO  epoch 16 training [time: 44.96s, train loss: 41717.3495]
+Fri 31 Jan 2025 13:06:00 INFO  epoch 17 training [time: 45.89s, train loss: 40645.1324]
+Fri 31 Jan 2025 13:06:45 INFO  epoch 18 training [time: 45.13s, train loss: 39669.6520]
+Fri 31 Jan 2025 13:07:29 INFO  epoch 19 training [time: 44.42s, train loss: 38920.9022]
+Fri 31 Jan 2025 13:07:31 INFO  epoch 19 evaluating [time: 2.14s, valid_score: 0.048400]
+Fri 31 Jan 2025 13:07:31 INFO  valid result:
+precision@10 : 0.0286    hit@10 : 0.1533    mrr@10 : 0.0699    ndcg@10 : 0.0484    map@10 : 0.0289    itemcoverage@10 : 0.0809    averagepopularity@10 : 66.2811    tailpercentage@10 : 0.0076
+Fri 31 Jan 2025 13:08:17 INFO  epoch 20 training [time: 45.79s, train loss: 38240.0310]
+Fri 31 Jan 2025 13:09:02 INFO  epoch 21 training [time: 44.72s, train loss: 37636.8323]
+Fri 31 Jan 2025 13:09:48 INFO  epoch 22 training [time: 45.89s, train loss: 37119.0504]
+Fri 31 Jan 2025 13:10:33 INFO  epoch 23 training [time: 45.37s, train loss: 36718.6195]
+Fri 31 Jan 2025 13:11:18 INFO  epoch 24 training [time: 44.77s, train loss: 36219.4491]
+Fri 31 Jan 2025 13:11:20 INFO  epoch 24 evaluating [time: 1.97s, valid_score: 0.053600]
+Fri 31 Jan 2025 13:11:20 INFO  valid result:
+precision@10 : 0.0328    hit@10 : 0.175    mrr@10 : 0.0747    ndcg@10 : 0.0536    map@10 : 0.0316    itemcoverage@10 : 0.0858    averagepopularity@10 : 59.9973    tailpercentage@10 : 0.0074
+Fri 31 Jan 2025 13:11:20 INFO  Saving current: saved\SGL-Jan-31-2025_12-52-13.pth
+Fri 31 Jan 2025 13:12:05 INFO  epoch 25 training [time: 45.53s, train loss: 35890.4192]
+Fri 31 Jan 2025 13:12:51 INFO  epoch 26 training [time: 45.86s, train loss: 35528.3042]
+Fri 31 Jan 2025 13:13:37 INFO  epoch 27 training [time: 45.90s, train loss: 35229.2240]
+Fri 31 Jan 2025 13:14:23 INFO  epoch 28 training [time: 45.76s, train loss: 34961.8652]
+Fri 31 Jan 2025 13:15:09 INFO  epoch 29 training [time: 45.86s, train loss: 34693.4420]
+Fri 31 Jan 2025 13:15:11 INFO  epoch 29 evaluating [time: 1.99s, valid_score: 0.058400]
+Fri 31 Jan 2025 13:15:11 INFO  valid result:
+precision@10 : 0.035    hit@10 : 0.1837    mrr@10 : 0.0814    ndcg@10 : 0.0584    map@10 : 0.0357    itemcoverage@10 : 0.0916    averagepopularity@10 : 55.271    tailpercentage@10 : 0.0068
+Fri 31 Jan 2025 13:15:11 INFO  Saving current: saved\SGL-Jan-31-2025_12-52-13.pth
+Fri 31 Jan 2025 13:15:56 INFO  epoch 30 training [time: 45.08s, train loss: 34450.9557]
+Fri 31 Jan 2025 13:16:42 INFO  epoch 31 training [time: 45.86s, train loss: 34196.5053]
+Fri 31 Jan 2025 13:17:27 INFO  epoch 32 training [time: 45.18s, train loss: 34043.6468]
+Fri 31 Jan 2025 13:18:13 INFO  epoch 33 training [time: 45.75s, train loss: 33831.3593]
+Fri 31 Jan 2025 13:18:57 INFO  epoch 34 training [time: 44.78s, train loss: 33656.2712]
+Fri 31 Jan 2025 13:18:59 INFO  epoch 34 evaluating [time: 2.04s, valid_score: 0.062300]
+Fri 31 Jan 2025 13:18:59 INFO  valid result:
+precision@10 : 0.0378    hit@10 : 0.188    mrr@10 : 0.0826    ndcg@10 : 0.0623    map@10 : 0.0396    itemcoverage@10 : 0.0963    averagepopularity@10 : 52.0417    tailpercentage@10 : 0.0076
+Fri 31 Jan 2025 13:18:59 INFO  Saving current: saved\SGL-Jan-31-2025_12-52-13.pth
+Fri 31 Jan 2025 13:19:45 INFO  epoch 35 training [time: 45.55s, train loss: 33467.2723]
+Fri 31 Jan 2025 13:20:29 INFO  epoch 36 training [time: 43.80s, train loss: 33291.0380]
+Fri 31 Jan 2025 13:21:14 INFO  epoch 37 training [time: 45.43s, train loss: 33163.3475]
+Fri 31 Jan 2025 13:22:00 INFO  epoch 38 training [time: 45.56s, train loss: 33017.8890]
+Fri 31 Jan 2025 13:22:45 INFO  epoch 39 training [time: 45.19s, train loss: 32905.9741]
+Fri 31 Jan 2025 13:22:47 INFO  epoch 39 evaluating [time: 2.08s, valid_score: 0.064600]
+Fri 31 Jan 2025 13:22:47 INFO  valid result:
+precision@10 : 0.0389    hit@10 : 0.1902    mrr@10 : 0.0847    ndcg@10 : 0.0646    map@10 : 0.0421    itemcoverage@10 : 0.1004    averagepopularity@10 : 49.5905    tailpercentage@10 : 0.0085
+Fri 31 Jan 2025 13:22:47 INFO  Saving current: saved\SGL-Jan-31-2025_12-52-13.pth
+Fri 31 Jan 2025 13:23:32 INFO  epoch 40 training [time: 44.89s, train loss: 32761.7452]
+Fri 31 Jan 2025 13:24:18 INFO  epoch 41 training [time: 45.69s, train loss: 32643.0959]
+Fri 31 Jan 2025 13:25:03 INFO  epoch 42 training [time: 45.64s, train loss: 32560.0198]
+Fri 31 Jan 2025 13:25:49 INFO  epoch 43 training [time: 45.57s, train loss: 32408.4800]
+Fri 31 Jan 2025 13:26:34 INFO  epoch 44 training [time: 44.44s, train loss: 32350.1635]
+Fri 31 Jan 2025 13:26:36 INFO  epoch 44 evaluating [time: 1.99s, valid_score: 0.065700]
+Fri 31 Jan 2025 13:26:36 INFO  valid result:
+precision@10 : 0.0398    hit@10 : 0.1978    mrr@10 : 0.0849    ndcg@10 : 0.0657    map@10 : 0.043    itemcoverage@10 : 0.1046    averagepopularity@10 : 48.0391    tailpercentage@10 : 0.009
+Fri 31 Jan 2025 13:26:36 INFO  Saving current: saved\SGL-Jan-31-2025_12-52-13.pth
+Fri 31 Jan 2025 13:27:22 INFO  epoch 45 training [time: 45.81s, train loss: 32219.0604]
+Fri 31 Jan 2025 13:28:07 INFO  epoch 46 training [time: 45.78s, train loss: 32143.5419]
+Fri 31 Jan 2025 13:28:52 INFO  epoch 47 training [time: 44.61s, train loss: 32094.6890]
+Fri 31 Jan 2025 13:29:37 INFO  epoch 48 training [time: 44.84s, train loss: 31964.7179]
+Fri 31 Jan 2025 13:30:23 INFO  epoch 49 training [time: 46.07s, train loss: 31921.8587]
+Fri 31 Jan 2025 13:30:25 INFO  epoch 49 evaluating [time: 2.21s, valid_score: 0.066800]
+Fri 31 Jan 2025 13:30:25 INFO  valid result:
+precision@10 : 0.0398    hit@10 : 0.1989    mrr@10 : 0.0874    ndcg@10 : 0.0668    map@10 : 0.0442    itemcoverage@10 : 0.1078    averagepopularity@10 : 46.5725    tailpercentage@10 : 0.0089
+Fri 31 Jan 2025 13:30:25 INFO  Saving current: saved\SGL-Jan-31-2025_12-52-13.pth
+Fri 31 Jan 2025 13:31:10 INFO  epoch 50 training [time: 45.05s, train loss: 31819.0532]
+Fri 31 Jan 2025 13:31:56 INFO  epoch 51 training [time: 45.69s, train loss: 31732.6873]
+Fri 31 Jan 2025 13:32:42 INFO  epoch 52 training [time: 45.81s, train loss: 31689.3471]
+Fri 31 Jan 2025 13:33:27 INFO  epoch 53 training [time: 44.96s, train loss: 31624.2418]
+Fri 31 Jan 2025 13:34:12 INFO  epoch 54 training [time: 45.69s, train loss: 31558.4543]
+Fri 31 Jan 2025 13:34:14 INFO  epoch 54 evaluating [time: 1.81s, valid_score: 0.066700]
+Fri 31 Jan 2025 13:34:14 INFO  valid result:
+precision@10 : 0.0398    hit@10 : 0.1989    mrr@10 : 0.0873    ndcg@10 : 0.0667    map@10 : 0.0441    itemcoverage@10 : 0.1114    averagepopularity@10 : 45.4896    tailpercentage@10 : 0.01
+Fri 31 Jan 2025 13:35:00 INFO  epoch 55 training [time: 45.70s, train loss: 31487.0471]
+Fri 31 Jan 2025 13:35:44 INFO  epoch 56 training [time: 44.52s, train loss: 31414.8091]
+Fri 31 Jan 2025 13:36:29 INFO  epoch 57 training [time: 44.51s, train loss: 31348.1443]
+Fri 31 Jan 2025 13:37:12 INFO  epoch 58 training [time: 43.46s, train loss: 31312.3623]
+Fri 31 Jan 2025 13:37:56 INFO  epoch 59 training [time: 43.35s, train loss: 31257.1599]
+Fri 31 Jan 2025 13:37:58 INFO  epoch 59 evaluating [time: 1.94s, valid_score: 0.068400]
+Fri 31 Jan 2025 13:37:58 INFO  valid result:
+precision@10 : 0.0408    hit@10 : 0.2043    mrr@10 : 0.0905    ndcg@10 : 0.0684    map@10 : 0.0451    itemcoverage@10 : 0.1137    averagepopularity@10 : 44.4379    tailpercentage@10 : 0.0104
+Fri 31 Jan 2025 13:37:58 INFO  Saving current: saved\SGL-Jan-31-2025_12-52-13.pth
+Fri 31 Jan 2025 13:38:41 INFO  epoch 60 training [time: 43.56s, train loss: 31210.4025]
+Fri 31 Jan 2025 13:39:23 INFO  epoch 61 training [time: 41.76s, train loss: 31157.7144]
+Fri 31 Jan 2025 13:40:00 INFO  epoch 62 training [time: 37.11s, train loss: 31112.1718]
+Fri 31 Jan 2025 13:40:38 INFO  epoch 63 training [time: 37.48s, train loss: 31056.6287]
+Fri 31 Jan 2025 13:41:15 INFO  epoch 64 training [time: 37.47s, train loss: 31026.4854]
+Fri 31 Jan 2025 13:41:17 INFO  epoch 64 evaluating [time: 2.05s, valid_score: 0.068300]
+Fri 31 Jan 2025 13:41:17 INFO  valid result:
+precision@10 : 0.0404    hit@10 : 0.2054    mrr@10 : 0.0902    ndcg@10 : 0.0683    map@10 : 0.0451    itemcoverage@10 : 0.1161    averagepopularity@10 : 43.6827    tailpercentage@10 : 0.0111
+Fri 31 Jan 2025 13:41:55 INFO  epoch 65 training [time: 37.60s, train loss: 30948.6337]
+Fri 31 Jan 2025 13:42:35 INFO  epoch 66 training [time: 39.18s, train loss: 30934.7073]
+Fri 31 Jan 2025 13:43:13 INFO  epoch 67 training [time: 37.20s, train loss: 30875.4197]
+Fri 31 Jan 2025 13:43:51 INFO  epoch 68 training [time: 38.26s, train loss: 30839.2231]
+Fri 31 Jan 2025 13:44:28 INFO  epoch 69 training [time: 37.11s, train loss: 30824.8470]
+Fri 31 Jan 2025 13:44:30 INFO  epoch 69 evaluating [time: 2.08s, valid_score: 0.068600]
+Fri 31 Jan 2025 13:44:30 INFO  valid result:
+precision@10 : 0.0403    hit@10 : 0.2054    mrr@10 : 0.0916    ndcg@10 : 0.0686    map@10 : 0.0455    itemcoverage@10 : 0.1177    averagepopularity@10 : 43.1671    tailpercentage@10 : 0.0107
+Fri 31 Jan 2025 13:44:30 INFO  Saving current: saved\SGL-Jan-31-2025_12-52-13.pth
+Fri 31 Jan 2025 13:45:07 INFO  epoch 70 training [time: 37.20s, train loss: 30765.9916]
+Fri 31 Jan 2025 13:45:45 INFO  epoch 71 training [time: 37.97s, train loss: 30728.0903]
+Fri 31 Jan 2025 13:46:22 INFO  epoch 72 training [time: 36.84s, train loss: 30688.4974]
+Fri 31 Jan 2025 13:46:59 INFO  epoch 73 training [time: 37.06s, train loss: 30645.9337]
+Fri 31 Jan 2025 13:47:36 INFO  epoch 74 training [time: 36.77s, train loss: 30625.6789]
+Fri 31 Jan 2025 13:47:38 INFO  epoch 74 evaluating [time: 1.76s, valid_score: 0.068500]
+Fri 31 Jan 2025 13:47:38 INFO  valid result:
+precision@10 : 0.0405    hit@10 : 0.2087    mrr@10 : 0.0908    ndcg@10 : 0.0685    map@10 : 0.0451    itemcoverage@10 : 0.1202    averagepopularity@10 : 42.5418    tailpercentage@10 : 0.0112
+Fri 31 Jan 2025 13:48:16 INFO  epoch 75 training [time: 38.03s, train loss: 30597.8192]
+Fri 31 Jan 2025 13:48:52 INFO  epoch 76 training [time: 36.51s, train loss: 30582.3004]
+Fri 31 Jan 2025 13:49:30 INFO  epoch 77 training [time: 37.35s, train loss: 30532.9797]
+Fri 31 Jan 2025 13:50:08 INFO  epoch 78 training [time: 38.07s, train loss: 30515.1401]
+Fri 31 Jan 2025 13:50:44 INFO  epoch 79 training [time: 36.76s, train loss: 30466.1260]
+Fri 31 Jan 2025 13:50:46 INFO  epoch 79 evaluating [time: 1.69s, valid_score: 0.068500]
+Fri 31 Jan 2025 13:50:46 INFO  valid result:
+precision@10 : 0.0405    hit@10 : 0.2076    mrr@10 : 0.0917    ndcg@10 : 0.0685    map@10 : 0.045    itemcoverage@10 : 0.1221    averagepopularity@10 : 41.9136    tailpercentage@10 : 0.012
+Fri 31 Jan 2025 13:51:23 INFO  epoch 80 training [time: 37.28s, train loss: 30448.9359]
+Fri 31 Jan 2025 13:52:00 INFO  epoch 81 training [time: 36.78s, train loss: 30412.7379]
+Fri 31 Jan 2025 13:52:37 INFO  epoch 82 training [time: 37.03s, train loss: 30379.4527]
+Fri 31 Jan 2025 13:53:15 INFO  epoch 83 training [time: 37.50s, train loss: 30351.4704]
+Fri 31 Jan 2025 13:53:53 INFO  epoch 84 training [time: 38.18s, train loss: 30336.8213]
+Fri 31 Jan 2025 13:53:55 INFO  epoch 84 evaluating [time: 1.75s, valid_score: 0.068900]
+Fri 31 Jan 2025 13:53:55 INFO  valid result:
+precision@10 : 0.0412    hit@10 : 0.2076    mrr@10 : 0.0908    ndcg@10 : 0.0689    map@10 : 0.0452    itemcoverage@10 : 0.1229    averagepopularity@10 : 41.449    tailpercentage@10 : 0.0127
+Fri 31 Jan 2025 13:53:55 INFO  Saving current: saved\SGL-Jan-31-2025_12-52-13.pth
+Fri 31 Jan 2025 13:54:33 INFO  epoch 85 training [time: 38.19s, train loss: 30318.6884]
+Fri 31 Jan 2025 13:55:10 INFO  epoch 86 training [time: 37.08s, train loss: 30281.1230]
+Fri 31 Jan 2025 13:55:48 INFO  epoch 87 training [time: 37.97s, train loss: 30255.0424]
+Fri 31 Jan 2025 13:56:27 INFO  epoch 88 training [time: 38.84s, train loss: 30237.7292]
+Fri 31 Jan 2025 13:57:04 INFO  epoch 89 training [time: 37.52s, train loss: 30210.5965]
+Fri 31 Jan 2025 13:57:06 INFO  epoch 89 evaluating [time: 2.03s, valid_score: 0.068200]
+Fri 31 Jan 2025 13:57:06 INFO  valid result:
+precision@10 : 0.0405    hit@10 : 0.2043    mrr@10 : 0.0903    ndcg@10 : 0.0682    map@10 : 0.045    itemcoverage@10 : 0.1235    averagepopularity@10 : 40.8398    tailpercentage@10 : 0.0121
+Fri 31 Jan 2025 13:57:44 INFO  epoch 90 training [time: 37.95s, train loss: 30176.6031]
+Fri 31 Jan 2025 13:58:21 INFO  epoch 91 training [time: 36.16s, train loss: 30155.2584]
+Fri 31 Jan 2025 13:58:58 INFO  epoch 92 training [time: 37.35s, train loss: 30139.8309]
+Fri 31 Jan 2025 13:59:36 INFO  epoch 93 training [time: 38.38s, train loss: 30132.5410]
+Fri 31 Jan 2025 14:00:15 INFO  epoch 94 training [time: 38.68s, train loss: 30095.3254]
+Fri 31 Jan 2025 14:00:17 INFO  epoch 94 evaluating [time: 1.95s, valid_score: 0.068100]
+Fri 31 Jan 2025 14:00:17 INFO  valid result:
+precision@10 : 0.0404    hit@10 : 0.2    mrr@10 : 0.0898    ndcg@10 : 0.0681    map@10 : 0.0451    itemcoverage@10 : 0.1241    averagepopularity@10 : 40.6027    tailpercentage@10 : 0.0118
+Fri 31 Jan 2025 14:00:54 INFO  epoch 95 training [time: 37.26s, train loss: 30075.8533]
+Fri 31 Jan 2025 14:01:34 INFO  epoch 96 training [time: 39.73s, train loss: 30074.8547]
+Fri 31 Jan 2025 14:02:12 INFO  epoch 97 training [time: 37.94s, train loss: 30042.6434]
+Fri 31 Jan 2025 14:02:51 INFO  epoch 98 training [time: 39.04s, train loss: 30027.2425]
+Fri 31 Jan 2025 14:03:30 INFO  epoch 99 training [time: 39.23s, train loss: 30014.0340]
+Fri 31 Jan 2025 14:03:32 INFO  epoch 99 evaluating [time: 1.97s, valid_score: 0.068200]
+Fri 31 Jan 2025 14:03:32 INFO  valid result:
+precision@10 : 0.041    hit@10 : 0.2022    mrr@10 : 0.088    ndcg@10 : 0.0682    map@10 : 0.0451    itemcoverage@10 : 0.124    averagepopularity@10 : 40.4289    tailpercentage@10 : 0.0122
+Fri 31 Jan 2025 14:03:32 INFO  Loading model structure and parameters from saved\SGL-Jan-31-2025_12-52-13.pth
+Fri 31 Jan 2025 14:03:34 INFO  best valid : OrderedDict({'precision@10': 0.0412, 'hit@10': 0.2076, 'mrr@10': 0.0908, 'ndcg@10': 0.0689, 'map@10': 0.0452, 'itemcoverage@10': 0.1229, 'averagepopularity@10': 41.449, 'tailpercentage@10': 0.0127})
+Fri 31 Jan 2025 14:03:34 INFO  test result: OrderedDict({'precision@10': 0.0323, 'hit@10': 0.1783, 'mrr@10': 0.0747, 'ndcg@10': 0.0629, 'map@10': 0.0424, 'itemcoverage@10': 0.123, 'averagepopularity@10': 41.4171, 'tailpercentage@10': 0.0126})
+Fri 31 Jan 2025 14:03:35 INFO  [Training]: train_batch_size = [2048] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Fri 31 Jan 2025 14:03:35 INFO  [Evaluation]: eval_batch_size = [2048] eval_args: [{'split': {'LK': ['valid_and_test', 5]}, 'order': 'TO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+Fri 31 Jan 2025 14:04:11 INFO  epoch 0 training [time: 36.12s, train loss: 82447.8325]
+Fri 31 Jan 2025 14:04:48 INFO  epoch 1 training [time: 36.45s, train loss: 80930.8281]
+Fri 31 Jan 2025 14:05:24 INFO  epoch 2 training [time: 36.36s, train loss: 80358.9628]
+Fri 31 Jan 2025 14:06:00 INFO  epoch 3 training [time: 36.22s, train loss: 78794.4945]
+Fri 31 Jan 2025 14:06:37 INFO  epoch 4 training [time: 36.83s, train loss: 76870.1055]
+Fri 31 Jan 2025 14:06:39 INFO  epoch 4 evaluating [time: 1.93s, valid_score: 0.035100]
+Fri 31 Jan 2025 14:06:39 INFO  valid result:
+precision@10 : 0.0207    hit@10 : 0.106    mrr@10 : 0.0482    ndcg@10 : 0.0351    map@10 : 0.0229    itemcoverage@10 : 0.2015    averagepopularity@10 : 17.2553    tailpercentage@10 : 0.1006
+Fri 31 Jan 2025 14:06:39 INFO  Saving current: saved\SGL-Jan-31-2025_14-03-35.pth
+Fri 31 Jan 2025 14:07:15 INFO  epoch 5 training [time: 35.48s, train loss: 75540.3868]
+Fri 31 Jan 2025 14:07:49 INFO  epoch 6 training [time: 34.02s, train loss: 74124.9924]
+Fri 31 Jan 2025 14:08:25 INFO  epoch 7 training [time: 35.88s, train loss: 72109.7439]
+Fri 31 Jan 2025 14:09:01 INFO  epoch 8 training [time: 36.04s, train loss: 69607.8430]
+Fri 31 Jan 2025 14:09:35 INFO  epoch 9 training [time: 34.08s, train loss: 66949.9328]
+Fri 31 Jan 2025 14:09:37 INFO  epoch 9 evaluating [time: 2.17s, valid_score: 0.051500]
+Fri 31 Jan 2025 14:09:37 INFO  valid result:
+precision@10 : 0.0302    hit@10 : 0.1397    mrr@10 : 0.0649    ndcg@10 : 0.0515    map@10 : 0.0366    itemcoverage@10 : 0.1632    averagepopularity@10 : 22.6012    tailpercentage@10 : 0.0341
+Fri 31 Jan 2025 14:09:37 INFO  Saving current: saved\SGL-Jan-31-2025_14-03-35.pth
+Fri 31 Jan 2025 14:10:13 INFO  epoch 10 training [time: 36.41s, train loss: 63990.4174]
+Fri 31 Jan 2025 14:10:49 INFO  epoch 11 training [time: 36.03s, train loss: 60782.0577]
+Fri 31 Jan 2025 14:11:26 INFO  epoch 12 training [time: 36.33s, train loss: 56964.4756]
+Fri 31 Jan 2025 14:12:02 INFO  epoch 13 training [time: 36.30s, train loss: 52618.9283]
+Fri 31 Jan 2025 14:12:38 INFO  epoch 14 training [time: 35.55s, train loss: 48499.1799]
+Fri 31 Jan 2025 14:12:40 INFO  epoch 14 evaluating [time: 2.13s, valid_score: 0.060500]
+Fri 31 Jan 2025 14:12:40 INFO  valid result:
+precision@10 : 0.0347    hit@10 : 0.1716    mrr@10 : 0.0836    ndcg@10 : 0.0605    map@10 : 0.0412    itemcoverage@10 : 0.1028    averagepopularity@10 : 73.0364    tailpercentage@10 : 0.0085
+Fri 31 Jan 2025 14:12:40 INFO  Saving current: saved\SGL-Jan-31-2025_14-03-35.pth
+Fri 31 Jan 2025 14:13:15 INFO  epoch 15 training [time: 35.60s, train loss: 45439.3413]
+Fri 31 Jan 2025 14:13:51 INFO  epoch 16 training [time: 35.53s, train loss: 43220.6417]
+Fri 31 Jan 2025 14:14:27 INFO  epoch 17 training [time: 35.78s, train loss: 41553.0239]
+Fri 31 Jan 2025 14:15:03 INFO  epoch 18 training [time: 36.09s, train loss: 40285.2897]
+Fri 31 Jan 2025 14:15:38 INFO  epoch 19 training [time: 34.88s, train loss: 39290.4249]
+Fri 31 Jan 2025 14:15:40 INFO  epoch 19 evaluating [time: 1.96s, valid_score: 0.062300]
+Fri 31 Jan 2025 14:15:40 INFO  valid result:
+precision@10 : 0.0355    hit@10 : 0.1767    mrr@10 : 0.0877    ndcg@10 : 0.0623    map@10 : 0.042    itemcoverage@10 : 0.1019    averagepopularity@10 : 75.2366    tailpercentage@10 : 0.0071
+Fri 31 Jan 2025 14:15:40 INFO  Saving current: saved\SGL-Jan-31-2025_14-03-35.pth
+Fri 31 Jan 2025 14:16:15 INFO  epoch 20 training [time: 35.16s, train loss: 38416.2632]
+Fri 31 Jan 2025 14:16:51 INFO  epoch 21 training [time: 35.64s, train loss: 37706.4796]
+Fri 31 Jan 2025 14:17:28 INFO  epoch 22 training [time: 36.55s, train loss: 37002.6011]
+Fri 31 Jan 2025 14:18:03 INFO  epoch 23 training [time: 35.76s, train loss: 36477.7959]
+Fri 31 Jan 2025 14:18:40 INFO  epoch 24 training [time: 36.31s, train loss: 35989.5271]
+Fri 31 Jan 2025 14:18:42 INFO  epoch 24 evaluating [time: 1.93s, valid_score: 0.065100]
+Fri 31 Jan 2025 14:18:42 INFO  valid result:
+precision@10 : 0.0372    hit@10 : 0.1853    mrr@10 : 0.0904    ndcg@10 : 0.0651    map@10 : 0.0441    itemcoverage@10 : 0.1125    averagepopularity@10 : 68.6402    tailpercentage@10 : 0.0063
+Fri 31 Jan 2025 14:18:42 INFO  Saving current: saved\SGL-Jan-31-2025_14-03-35.pth
+Fri 31 Jan 2025 14:19:16 INFO  epoch 25 training [time: 34.60s, train loss: 35567.6164]
+Fri 31 Jan 2025 14:19:53 INFO  epoch 26 training [time: 37.13s, train loss: 35145.7787]
+Fri 31 Jan 2025 14:20:30 INFO  epoch 27 training [time: 36.90s, train loss: 34772.8287]
+Fri 31 Jan 2025 14:21:05 INFO  epoch 28 training [time: 35.24s, train loss: 34454.6910]
+Fri 31 Jan 2025 14:21:40 INFO  epoch 29 training [time: 34.65s, train loss: 34146.9684]
+Fri 31 Jan 2025 14:21:42 INFO  epoch 29 evaluating [time: 2.36s, valid_score: 0.065800]
+Fri 31 Jan 2025 14:21:42 INFO  valid result:
+precision@10 : 0.0378    hit@10 : 0.1888    mrr@10 : 0.0899    ndcg@10 : 0.0658    map@10 : 0.0444    itemcoverage@10 : 0.121    averagepopularity@10 : 63.0239    tailpercentage@10 : 0.007
+Fri 31 Jan 2025 14:21:43 INFO  Saving current: saved\SGL-Jan-31-2025_14-03-35.pth
+Fri 31 Jan 2025 14:22:18 INFO  epoch 30 training [time: 35.92s, train loss: 33892.5029]
+Fri 31 Jan 2025 14:22:56 INFO  epoch 31 training [time: 37.18s, train loss: 33644.1859]
+Fri 31 Jan 2025 14:23:31 INFO  epoch 32 training [time: 35.81s, train loss: 33405.7438]
+Fri 31 Jan 2025 14:24:07 INFO  epoch 33 training [time: 35.76s, train loss: 33187.3330]
+Fri 31 Jan 2025 14:24:41 INFO  epoch 34 training [time: 33.78s, train loss: 32996.9675]
+Fri 31 Jan 2025 14:24:43 INFO  epoch 34 evaluating [time: 1.96s, valid_score: 0.066500]
+Fri 31 Jan 2025 14:24:43 INFO  valid result:
+precision@10 : 0.0382    hit@10 : 0.1871    mrr@10 : 0.0902    ndcg@10 : 0.0665    map@10 : 0.0453    itemcoverage@10 : 0.1266    averagepopularity@10 : 59.1681    tailpercentage@10 : 0.0076
+Fri 31 Jan 2025 14:24:43 INFO  Saving current: saved\SGL-Jan-31-2025_14-03-35.pth
+Fri 31 Jan 2025 14:25:18 INFO  epoch 35 training [time: 35.18s, train loss: 32814.9563]
+Fri 31 Jan 2025 14:25:54 INFO  epoch 36 training [time: 36.19s, train loss: 32642.1536]
+Fri 31 Jan 2025 14:26:30 INFO  epoch 37 training [time: 36.02s, train loss: 32447.8005]
+Fri 31 Jan 2025 14:27:06 INFO  epoch 38 training [time: 35.85s, train loss: 32301.1345]
+Fri 31 Jan 2025 14:27:43 INFO  epoch 39 training [time: 37.18s, train loss: 32202.2761]
+Fri 31 Jan 2025 14:27:45 INFO  epoch 39 evaluating [time: 2.10s, valid_score: 0.067300]
+Fri 31 Jan 2025 14:27:45 INFO  valid result:
+precision@10 : 0.0388    hit@10 : 0.1922    mrr@10 : 0.0909    ndcg@10 : 0.0673    map@10 : 0.0461    itemcoverage@10 : 0.1329    averagepopularity@10 : 56.2993    tailpercentage@10 : 0.0088
+Fri 31 Jan 2025 14:27:46 INFO  Saving current: saved\SGL-Jan-31-2025_14-03-35.pth
+Fri 31 Jan 2025 14:28:21 INFO  epoch 40 training [time: 35.36s, train loss: 32045.4692]
+Fri 31 Jan 2025 14:28:55 INFO  epoch 41 training [time: 34.62s, train loss: 31916.8621]
+Fri 31 Jan 2025 14:29:32 INFO  epoch 42 training [time: 36.10s, train loss: 31779.4646]
+Fri 31 Jan 2025 14:30:07 INFO  epoch 43 training [time: 35.14s, train loss: 31660.8220]
+Fri 31 Jan 2025 14:30:42 INFO  epoch 44 training [time: 35.45s, train loss: 31541.0552]
+Fri 31 Jan 2025 14:30:44 INFO  epoch 44 evaluating [time: 1.93s, valid_score: 0.066900]
+Fri 31 Jan 2025 14:30:44 INFO  valid result:
+precision@10 : 0.0388    hit@10 : 0.1931    mrr@10 : 0.0894    ndcg@10 : 0.0669    map@10 : 0.0458    itemcoverage@10 : 0.1376    averagepopularity@10 : 53.9729    tailpercentage@10 : 0.0091
+Fri 31 Jan 2025 14:31:20 INFO  epoch 45 training [time: 36.20s, train loss: 31446.6664]
+Fri 31 Jan 2025 14:31:57 INFO  epoch 46 training [time: 36.59s, train loss: 31340.2361]
+Fri 31 Jan 2025 14:32:32 INFO  epoch 47 training [time: 35.07s, train loss: 31236.6516]
+Fri 31 Jan 2025 14:33:09 INFO  epoch 48 training [time: 36.64s, train loss: 31164.6967]
+Fri 31 Jan 2025 14:33:45 INFO  epoch 49 training [time: 36.30s, train loss: 31084.8716]
+Fri 31 Jan 2025 14:33:47 INFO  epoch 49 evaluating [time: 2.33s, valid_score: 0.067500]
+Fri 31 Jan 2025 14:33:47 INFO  valid result:
+precision@10 : 0.0397    hit@10 : 0.1966    mrr@10 : 0.0897    ndcg@10 : 0.0675    map@10 : 0.0457    itemcoverage@10 : 0.1423    averagepopularity@10 : 51.9631    tailpercentage@10 : 0.0097
+Fri 31 Jan 2025 14:33:47 INFO  Saving current: saved\SGL-Jan-31-2025_14-03-35.pth
+Fri 31 Jan 2025 14:34:23 INFO  epoch 50 training [time: 35.74s, train loss: 30997.9997]
+Fri 31 Jan 2025 14:34:59 INFO  epoch 51 training [time: 36.39s, train loss: 30874.1667]
+Fri 31 Jan 2025 14:35:36 INFO  epoch 52 training [time: 36.21s, train loss: 30797.5345]
+Fri 31 Jan 2025 14:36:11 INFO  epoch 53 training [time: 35.75s, train loss: 30747.7344]
+Fri 31 Jan 2025 14:36:47 INFO  epoch 54 training [time: 35.37s, train loss: 30677.7674]
+Fri 31 Jan 2025 14:36:49 INFO  epoch 54 evaluating [time: 2.03s, valid_score: 0.068300]
+Fri 31 Jan 2025 14:36:49 INFO  valid result:
+precision@10 : 0.0397    hit@10 : 0.1991    mrr@10 : 0.0928    ndcg@10 : 0.0683    map@10 : 0.0461    itemcoverage@10 : 0.1449    averagepopularity@10 : 50.8341    tailpercentage@10 : 0.0101
+Fri 31 Jan 2025 14:36:49 INFO  Saving current: saved\SGL-Jan-31-2025_14-03-35.pth
+Fri 31 Jan 2025 14:37:24 INFO  epoch 55 training [time: 35.31s, train loss: 30590.3696]
+Fri 31 Jan 2025 14:37:59 INFO  epoch 56 training [time: 35.12s, train loss: 30554.8755]
+Fri 31 Jan 2025 14:38:35 INFO  epoch 57 training [time: 35.67s, train loss: 30510.6342]
+Fri 31 Jan 2025 14:39:10 INFO  epoch 58 training [time: 34.59s, train loss: 30402.3600]
+Fri 31 Jan 2025 14:39:42 INFO  epoch 59 training [time: 32.85s, train loss: 30350.7564]
+Fri 31 Jan 2025 14:39:44 INFO  epoch 59 evaluating [time: 1.88s, valid_score: 0.068800]
+Fri 31 Jan 2025 14:39:44 INFO  valid result:
+precision@10 : 0.0397    hit@10 : 0.1983    mrr@10 : 0.094    ndcg@10 : 0.0688    map@10 : 0.0465    itemcoverage@10 : 0.1491    averagepopularity@10 : 49.3999    tailpercentage@10 : 0.0106
+Fri 31 Jan 2025 14:39:44 INFO  Saving current: saved\SGL-Jan-31-2025_14-03-35.pth
+Fri 31 Jan 2025 14:40:21 INFO  epoch 60 training [time: 36.81s, train loss: 30294.1512]
+Fri 31 Jan 2025 14:40:57 INFO  epoch 61 training [time: 35.92s, train loss: 30236.1998]
+Fri 31 Jan 2025 14:41:33 INFO  epoch 62 training [time: 36.37s, train loss: 30225.0322]
+Fri 31 Jan 2025 14:42:08 INFO  epoch 63 training [time: 34.47s, train loss: 30132.9183]
+Fri 31 Jan 2025 14:42:44 INFO  epoch 64 training [time: 35.77s, train loss: 30110.2995]
+Fri 31 Jan 2025 14:42:45 INFO  epoch 64 evaluating [time: 1.88s, valid_score: 0.069200]
+Fri 31 Jan 2025 14:42:45 INFO  valid result:
+precision@10 : 0.0405    hit@10 : 0.1991    mrr@10 : 0.093    ndcg@10 : 0.0692    map@10 : 0.0464    itemcoverage@10 : 0.1522    averagepopularity@10 : 48.7517    tailpercentage@10 : 0.0109
+Fri 31 Jan 2025 14:42:46 INFO  Saving current: saved\SGL-Jan-31-2025_14-03-35.pth
+Fri 31 Jan 2025 14:43:22 INFO  epoch 65 training [time: 36.62s, train loss: 30038.6886]
+Fri 31 Jan 2025 14:43:56 INFO  epoch 66 training [time: 34.25s, train loss: 30015.8149]
+Fri 31 Jan 2025 14:44:32 INFO  epoch 67 training [time: 35.59s, train loss: 29956.2361]
+Fri 31 Jan 2025 14:45:08 INFO  epoch 68 training [time: 36.15s, train loss: 29904.2257]
+Fri 31 Jan 2025 14:45:44 INFO  epoch 69 training [time: 36.34s, train loss: 29855.3369]
+Fri 31 Jan 2025 14:45:47 INFO  epoch 69 evaluating [time: 2.32s, valid_score: 0.069100]
+Fri 31 Jan 2025 14:45:47 INFO  valid result:
+precision@10 : 0.0402    hit@10 : 0.1974    mrr@10 : 0.0934    ndcg@10 : 0.0691    map@10 : 0.0465    itemcoverage@10 : 0.1553    averagepopularity@10 : 47.6905    tailpercentage@10 : 0.0112
+Fri 31 Jan 2025 14:46:23 INFO  epoch 70 training [time: 36.40s, train loss: 29840.6907]
+Fri 31 Jan 2025 14:46:59 INFO  epoch 71 training [time: 35.84s, train loss: 29819.2965]
+Fri 31 Jan 2025 14:47:35 INFO  epoch 72 training [time: 36.17s, train loss: 29761.0718]
+Fri 31 Jan 2025 14:48:11 INFO  epoch 73 training [time: 35.53s, train loss: 29708.6281]
+Fri 31 Jan 2025 14:48:46 INFO  epoch 74 training [time: 35.61s, train loss: 29667.4822]
+Fri 31 Jan 2025 14:48:48 INFO  epoch 74 evaluating [time: 2.00s, valid_score: 0.068800]
+Fri 31 Jan 2025 14:48:48 INFO  valid result:
+precision@10 : 0.04    hit@10 : 0.1983    mrr@10 : 0.0934    ndcg@10 : 0.0688    map@10 : 0.0463    itemcoverage@10 : 0.158    averagepopularity@10 : 47.0167    tailpercentage@10 : 0.0119
+Fri 31 Jan 2025 14:49:23 INFO  epoch 75 training [time: 35.11s, train loss: 29658.6876]
+Fri 31 Jan 2025 14:49:59 INFO  epoch 76 training [time: 35.29s, train loss: 29609.3441]
+Fri 31 Jan 2025 14:50:34 INFO  epoch 77 training [time: 35.03s, train loss: 29567.7273]
+Fri 31 Jan 2025 14:51:10 INFO  epoch 78 training [time: 36.54s, train loss: 29547.3703]
+Fri 31 Jan 2025 14:51:47 INFO  epoch 79 training [time: 36.41s, train loss: 29520.3561]
+Fri 31 Jan 2025 14:51:49 INFO  epoch 79 evaluating [time: 1.97s, valid_score: 0.069400]
+Fri 31 Jan 2025 14:51:49 INFO  valid result:
+precision@10 : 0.0403    hit@10 : 0.2    mrr@10 : 0.0943    ndcg@10 : 0.0694    map@10 : 0.0466    itemcoverage@10 : 0.1593    averagepopularity@10 : 46.5689    tailpercentage@10 : 0.0116
+Fri 31 Jan 2025 14:51:49 INFO  Saving current: saved\SGL-Jan-31-2025_14-03-35.pth
+Fri 31 Jan 2025 14:52:25 INFO  epoch 80 training [time: 36.18s, train loss: 29514.2065]
+Fri 31 Jan 2025 14:53:00 INFO  epoch 81 training [time: 35.39s, train loss: 29457.2574]
+Fri 31 Jan 2025 14:53:36 INFO  epoch 82 training [time: 36.19s, train loss: 29445.0097]
+Fri 31 Jan 2025 14:54:13 INFO  epoch 83 training [time: 36.07s, train loss: 29402.4863]
+Fri 31 Jan 2025 14:54:47 INFO  epoch 84 training [time: 34.62s, train loss: 29381.0193]
+Fri 31 Jan 2025 14:54:49 INFO  epoch 84 evaluating [time: 1.91s, valid_score: 0.069700]
+Fri 31 Jan 2025 14:54:49 INFO  valid result:
+precision@10 : 0.0407    hit@10 : 0.2043    mrr@10 : 0.0947    ndcg@10 : 0.0697    map@10 : 0.0466    itemcoverage@10 : 0.1604    averagepopularity@10 : 45.8644    tailpercentage@10 : 0.0119
+Fri 31 Jan 2025 14:54:49 INFO  Saving current: saved\SGL-Jan-31-2025_14-03-35.pth
+Fri 31 Jan 2025 14:55:25 INFO  epoch 85 training [time: 35.55s, train loss: 29331.8019]
+Fri 31 Jan 2025 14:56:00 INFO  epoch 86 training [time: 35.58s, train loss: 29317.0566]
+Fri 31 Jan 2025 14:56:35 INFO  epoch 87 training [time: 35.04s, train loss: 29325.2272]
+Fri 31 Jan 2025 14:57:12 INFO  epoch 88 training [time: 36.78s, train loss: 29283.6183]
+Fri 31 Jan 2025 14:57:48 INFO  epoch 89 training [time: 36.08s, train loss: 29268.3231]
+Fri 31 Jan 2025 14:57:50 INFO  epoch 89 evaluating [time: 1.90s, valid_score: 0.068900]
+Fri 31 Jan 2025 14:57:51 INFO  valid result:
+precision@10 : 0.0398    hit@10 : 0.1991    mrr@10 : 0.0943    ndcg@10 : 0.0689    map@10 : 0.0463    itemcoverage@10 : 0.1623    averagepopularity@10 : 45.3134    tailpercentage@10 : 0.0117
+Fri 31 Jan 2025 14:58:27 INFO  epoch 90 training [time: 36.89s, train loss: 29225.7845]
+Fri 31 Jan 2025 14:59:02 INFO  epoch 91 training [time: 34.71s, train loss: 29203.2122]
+Fri 31 Jan 2025 14:59:39 INFO  epoch 92 training [time: 35.83s, train loss: 29181.8578]
+Fri 31 Jan 2025 15:00:13 INFO  epoch 93 training [time: 34.48s, train loss: 29162.9322]
+Fri 31 Jan 2025 15:00:49 INFO  epoch 94 training [time: 34.92s, train loss: 29145.3231]
+Fri 31 Jan 2025 15:00:50 INFO  epoch 94 evaluating [time: 1.80s, valid_score: 0.068500]
+Fri 31 Jan 2025 15:00:52 INFO  valid result:
+precision@10 : 0.0397    hit@10 : 0.2009    mrr@10 : 0.0932    ndcg@10 : 0.0685    map@10 : 0.0459    itemcoverage@10 : 0.1632    averagepopularity@10 : 45.1958    tailpercentage@10 : 0.0116
+Fri 31 Jan 2025 15:01:28 INFO  epoch 95 training [time: 35.79s, train loss: 29111.8216]
+Fri 31 Jan 2025 15:02:03 INFO  epoch 96 training [time: 35.15s, train loss: 29124.5890]
+Fri 31 Jan 2025 15:02:39 INFO  epoch 97 training [time: 36.46s, train loss: 29073.3597]
+Fri 31 Jan 2025 15:03:15 INFO  epoch 98 training [time: 35.87s, train loss: 29061.8495]
+Fri 31 Jan 2025 15:03:51 INFO  epoch 99 training [time: 36.03s, train loss: 29034.0881]
+Fri 31 Jan 2025 15:03:53 INFO  epoch 99 evaluating [time: 1.87s, valid_score: 0.068600]
+Fri 31 Jan 2025 15:03:53 INFO  valid result:
+precision@10 : 0.0397    hit@10 : 0.1974    mrr@10 : 0.0938    ndcg@10 : 0.0686    map@10 : 0.046    itemcoverage@10 : 0.1643    averagepopularity@10 : 44.8292    tailpercentage@10 : 0.0118
+Fri 31 Jan 2025 15:03:53 INFO  Loading model structure and parameters from saved\SGL-Jan-31-2025_14-03-35.pth
+Fri 31 Jan 2025 15:03:55 INFO  best valid : OrderedDict({'precision@10': 0.0407, 'hit@10': 0.2043, 'mrr@10': 0.0947, 'ndcg@10': 0.0697, 'map@10': 0.0466, 'itemcoverage@10': 0.1604, 'averagepopularity@10': 45.8644, 'tailpercentage@10': 0.0119})
+Fri 31 Jan 2025 15:03:55 INFO  test result: OrderedDict({'precision@10': 0.0316, 'hit@10': 0.1655, 'mrr@10': 0.0797, 'ndcg@10': 0.064, 'map@10': 0.0443, 'itemcoverage@10': 0.1604, 'averagepopularity@10': 45.7054, 'tailpercentage@10': 0.0119})
+Fri 31 Jan 2025 15:03:57 INFO  [Training]: train_batch_size = [2048] train_neg_sample_args: [{'distribution': 'uniform', 'sample_num': 1, 'alpha': 1.0, 'dynamic': False, 'candidate_num': 1}]
+Fri 31 Jan 2025 15:03:57 INFO  [Evaluation]: eval_batch_size = [2048] eval_args: [{'split': {'LK': ['valid_and_test', 5]}, 'order': 'TO', 'group_by': 'user', 'mode': {'valid': 'full', 'test': 'full'}}]
+Fri 31 Jan 2025 15:04:30 INFO  epoch 0 training [time: 33.07s, train loss: 79862.2520]
+Fri 31 Jan 2025 15:05:01 INFO  epoch 1 training [time: 31.46s, train loss: 77983.7032]
+Fri 31 Jan 2025 15:05:35 INFO  epoch 2 training [time: 33.06s, train loss: 77646.4266]
+Fri 31 Jan 2025 15:06:06 INFO  epoch 3 training [time: 31.16s, train loss: 76933.0818]
+Fri 31 Jan 2025 15:06:39 INFO  epoch 4 training [time: 33.63s, train loss: 75720.9670]
+Fri 31 Jan 2025 15:06:41 INFO  epoch 4 evaluating [time: 1.84s, valid_score: 0.040400]
+Fri 31 Jan 2025 15:06:41 INFO  valid result:
+precision@10 : 0.0234    hit@10 : 0.1298    mrr@10 : 0.0608    ndcg@10 : 0.0404    map@10 : 0.0243    itemcoverage@10 : 0.2045    averagepopularity@10 : 30.8789    tailpercentage@10 : 0.0502
+Fri 31 Jan 2025 15:06:41 INFO  Saving current: saved\SGL-Jan-31-2025_15-03-57.pth
+Fri 31 Jan 2025 15:07:14 INFO  epoch 5 training [time: 32.90s, train loss: 74034.7299]
+Fri 31 Jan 2025 15:07:45 INFO  epoch 6 training [time: 30.78s, train loss: 71862.5629]
+Fri 31 Jan 2025 15:08:18 INFO  epoch 7 training [time: 32.48s, train loss: 69721.8401]
+Fri 31 Jan 2025 15:08:49 INFO  epoch 8 training [time: 31.01s, train loss: 67451.6289]
+Fri 31 Jan 2025 15:09:19 INFO  epoch 9 training [time: 30.93s, train loss: 65127.0106]
+Fri 31 Jan 2025 15:09:21 INFO  epoch 9 evaluating [time: 2.00s, valid_score: 0.054000]
+Fri 31 Jan 2025 15:09:21 INFO  valid result:
+precision@10 : 0.0308    hit@10 : 0.1482    mrr@10 : 0.0755    ndcg@10 : 0.054    map@10 : 0.0357    itemcoverage@10 : 0.1843    averagepopularity@10 : 23.4039    tailpercentage@10 : 0.0305
+Fri 31 Jan 2025 15:09:21 INFO  Saving current: saved\SGL-Jan-31-2025_15-03-57.pth
+Fri 31 Jan 2025 15:09:53 INFO  epoch 10 training [time: 31.79s, train loss: 62678.2640]
+Fri 31 Jan 2025 15:10:25 INFO  epoch 11 training [time: 31.52s, train loss: 59907.3820]
+Fri 31 Jan 2025 15:10:56 INFO  epoch 12 training [time: 30.73s, train loss: 56775.6570]
+Fri 31 Jan 2025 15:11:27 INFO  epoch 13 training [time: 31.10s, train loss: 53055.2191]
+Fri 31 Jan 2025 15:11:57 INFO  epoch 14 training [time: 30.57s, train loss: 48879.1704]
+Fri 31 Jan 2025 15:11:59 INFO  epoch 14 evaluating [time: 2.13s, valid_score: 0.065100]
+Fri 31 Jan 2025 15:11:59 INFO  valid result:
+precision@10 : 0.0388    hit@10 : 0.2026    mrr@10 : 0.0927    ndcg@10 : 0.0651    map@10 : 0.0399    itemcoverage@10 : 0.1146    averagepopularity@10 : 83.2127    tailpercentage@10 : 0.009
+Fri 31 Jan 2025 15:11:59 INFO  Saving current: saved\SGL-Jan-31-2025_15-03-57.pth
+Fri 31 Jan 2025 15:12:32 INFO  epoch 15 training [time: 32.59s, train loss: 45292.4997]
+Fri 31 Jan 2025 15:13:06 INFO  epoch 16 training [time: 33.41s, train loss: 42760.1958]
+Fri 31 Jan 2025 15:13:38 INFO  epoch 17 training [time: 32.25s, train loss: 40902.2754]
+Fri 31 Jan 2025 15:14:09 INFO  epoch 18 training [time: 30.99s, train loss: 39568.5912]
+Fri 31 Jan 2025 15:14:42 INFO  epoch 19 training [time: 32.67s, train loss: 38420.3264]
+Fri 31 Jan 2025 15:14:43 INFO  epoch 19 evaluating [time: 1.78s, valid_score: 0.064600]
+Fri 31 Jan 2025 15:14:44 INFO  valid result:
+precision@10 : 0.0384    hit@10 : 0.2035    mrr@10 : 0.0929    ndcg@10 : 0.0646    map@10 : 0.0389    itemcoverage@10 : 0.104    averagepopularity@10 : 90.8308    tailpercentage@10 : 0.0067
+Fri 31 Jan 2025 15:15:15 INFO  epoch 20 training [time: 31.43s, train loss: 37502.9083]
+Fri 31 Jan 2025 15:15:47 INFO  epoch 21 training [time: 31.74s, train loss: 36703.2082]
+Fri 31 Jan 2025 15:16:20 INFO  epoch 22 training [time: 32.93s, train loss: 36010.6197]
+Fri 31 Jan 2025 15:16:51 INFO  epoch 23 training [time: 31.70s, train loss: 35439.2237]
+Fri 31 Jan 2025 15:17:24 INFO  epoch 24 training [time: 32.61s, train loss: 34913.2749]
+Fri 31 Jan 2025 15:17:26 INFO  epoch 24 evaluating [time: 2.11s, valid_score: 0.067400]
+Fri 31 Jan 2025 15:17:26 INFO  valid result:
+precision@10 : 0.0404    hit@10 : 0.2123    mrr@10 : 0.0947    ndcg@10 : 0.0674    map@10 : 0.0412    itemcoverage@10 : 0.1118    averagepopularity@10 : 82.0538    tailpercentage@10 : 0.0072
+Fri 31 Jan 2025 15:17:26 INFO  Saving current: saved\SGL-Jan-31-2025_15-03-57.pth
+Fri 31 Jan 2025 15:17:58 INFO  epoch 25 training [time: 32.17s, train loss: 34488.9836]
+Fri 31 Jan 2025 15:18:30 INFO  epoch 26 training [time: 32.19s, train loss: 34062.9557]
+Fri 31 Jan 2025 15:19:02 INFO  epoch 27 training [time: 31.40s, train loss: 33679.7534]
+Fri 31 Jan 2025 15:19:34 INFO  epoch 28 training [time: 32.05s, train loss: 33395.7582]
+Fri 31 Jan 2025 15:20:06 INFO  epoch 29 training [time: 32.04s, train loss: 33050.2413]
+Fri 31 Jan 2025 15:20:08 INFO  epoch 29 evaluating [time: 1.95s, valid_score: 0.069600]
+Fri 31 Jan 2025 15:20:08 INFO  valid result:
+precision@10 : 0.0419    hit@10 : 0.2211    mrr@10 : 0.0956    ndcg@10 : 0.0696    map@10 : 0.0431    itemcoverage@10 : 0.1218    averagepopularity@10 : 75.4909    tailpercentage@10 : 0.0081
+Fri 31 Jan 2025 15:20:08 INFO  Saving current: saved\SGL-Jan-31-2025_15-03-57.pth
+Fri 31 Jan 2025 15:20:40 INFO  epoch 30 training [time: 32.03s, train loss: 32783.0640]
+Fri 31 Jan 2025 15:21:11 INFO  epoch 31 training [time: 30.71s, train loss: 32524.3342]
+Fri 31 Jan 2025 15:21:41 INFO  epoch 32 training [time: 30.11s, train loss: 32267.1669]
+Fri 31 Jan 2025 15:22:14 INFO  epoch 33 training [time: 32.79s, train loss: 32057.3423]
+Fri 31 Jan 2025 15:22:47 INFO  epoch 34 training [time: 33.53s, train loss: 31884.3777]
+Fri 31 Jan 2025 15:22:49 INFO  epoch 34 evaluating [time: 2.05s, valid_score: 0.071200]
+Fri 31 Jan 2025 15:22:49 INFO  valid result:
+precision@10 : 0.0425    hit@10 : 0.2202    mrr@10 : 0.0979    ndcg@10 : 0.0712    map@10 : 0.0449    itemcoverage@10 : 0.1301    averagepopularity@10 : 70.7969    tailpercentage@10 : 0.0077
+Fri 31 Jan 2025 15:22:49 INFO  Saving current: saved\SGL-Jan-31-2025_15-03-57.pth
+Fri 31 Jan 2025 15:23:20 INFO  epoch 35 training [time: 31.13s, train loss: 31670.1095]
+Fri 31 Jan 2025 15:23:52 INFO  epoch 36 training [time: 31.17s, train loss: 31488.7141]
+Fri 31 Jan 2025 15:24:23 INFO  epoch 37 training [time: 31.58s, train loss: 31304.1223]
+Fri 31 Jan 2025 15:24:55 INFO  epoch 38 training [time: 31.60s, train loss: 31180.2804]
+Fri 31 Jan 2025 15:25:27 INFO  epoch 39 training [time: 31.97s, train loss: 31055.0573]
+Fri 31 Jan 2025 15:25:29 INFO  epoch 39 evaluating [time: 1.99s, valid_score: 0.072100]
+Fri 31 Jan 2025 15:25:29 INFO  valid result:
+precision@10 : 0.0417    hit@10 : 0.2167    mrr@10 : 0.1022    ndcg@10 : 0.0721    map@10 : 0.0462    itemcoverage@10 : 0.1373    averagepopularity@10 : 66.4397    tailpercentage@10 : 0.0082
+Fri 31 Jan 2025 15:25:29 INFO  Saving current: saved\SGL-Jan-31-2025_15-03-57.pth
+Fri 31 Jan 2025 15:26:00 INFO  epoch 40 training [time: 31.40s, train loss: 30905.4574]
+Fri 31 Jan 2025 15:26:32 INFO  epoch 41 training [time: 32.10s, train loss: 30792.9579]
+Fri 31 Jan 2025 15:27:04 INFO  epoch 42 training [time: 31.39s, train loss: 30666.6221]
+Fri 31 Jan 2025 15:27:36 INFO  epoch 43 training [time: 32.05s, train loss: 30530.7289]
+Fri 31 Jan 2025 15:28:07 INFO  epoch 44 training [time: 31.56s, train loss: 30439.8015]
+Fri 31 Jan 2025 15:28:09 INFO  epoch 44 evaluating [time: 1.91s, valid_score: 0.072600]
+Fri 31 Jan 2025 15:28:09 INFO  valid result:
+precision@10 : 0.0421    hit@10 : 0.2184    mrr@10 : 0.1014    ndcg@10 : 0.0726    map@10 : 0.0467    itemcoverage@10 : 0.1426    averagepopularity@10 : 63.3419    tailpercentage@10 : 0.0093
+Fri 31 Jan 2025 15:28:09 INFO  Saving current: saved\SGL-Jan-31-2025_15-03-57.pth
+Fri 31 Jan 2025 15:28:42 INFO  epoch 45 training [time: 32.20s, train loss: 30336.4708]
+Fri 31 Jan 2025 15:29:14 INFO  epoch 46 training [time: 32.47s, train loss: 30207.6393]
+Fri 31 Jan 2025 15:29:46 INFO  epoch 47 training [time: 31.57s, train loss: 30100.8469]
+Fri 31 Jan 2025 15:30:16 INFO  epoch 48 training [time: 30.52s, train loss: 30042.6849]
+Fri 31 Jan 2025 15:30:48 INFO  epoch 49 training [time: 31.70s, train loss: 29951.8091]
+Fri 31 Jan 2025 15:30:50 INFO  epoch 49 evaluating [time: 2.08s, valid_score: 0.073600]
+Fri 31 Jan 2025 15:30:50 INFO  valid result:
+precision@10 : 0.043    hit@10 : 0.2246    mrr@10 : 0.1027    ndcg@10 : 0.0736    map@10 : 0.0472    itemcoverage@10 : 0.1475    averagepopularity@10 : 61.2929    tailpercentage@10 : 0.0096
+Fri 31 Jan 2025 15:30:50 INFO  Saving current: saved\SGL-Jan-31-2025_15-03-57.pth
+Fri 31 Jan 2025 15:31:23 INFO  epoch 50 training [time: 32.74s, train loss: 29841.7442]
+Fri 31 Jan 2025 15:31:54 INFO  epoch 51 training [time: 31.67s, train loss: 29801.7293]
+Fri 31 Jan 2025 15:32:25 INFO  epoch 52 training [time: 30.82s, train loss: 29704.9625]
+Fri 31 Jan 2025 15:32:57 INFO  epoch 53 training [time: 31.74s, train loss: 29635.7507]
+Fri 31 Jan 2025 15:33:29 INFO  epoch 54 training [time: 31.94s, train loss: 29537.8409]
+Fri 31 Jan 2025 15:33:31 INFO  epoch 54 evaluating [time: 1.88s, valid_score: 0.074000]
+Fri 31 Jan 2025 15:33:31 INFO  valid result:
+precision@10 : 0.0433    hit@10 : 0.2228    mrr@10 : 0.1014    ndcg@10 : 0.074    map@10 : 0.0478    itemcoverage@10 : 0.1509    averagepopularity@10 : 59.6307    tailpercentage@10 : 0.0101
+Fri 31 Jan 2025 15:33:31 INFO  Saving current: saved\SGL-Jan-31-2025_15-03-57.pth
+Fri 31 Jan 2025 15:34:01 INFO  epoch 55 training [time: 30.05s, train loss: 29475.0627]
+Fri 31 Jan 2025 15:34:33 INFO  epoch 56 training [time: 32.44s, train loss: 29416.3337]
+Fri 31 Jan 2025 15:35:05 INFO  epoch 57 training [time: 31.69s, train loss: 29372.7215]
+Fri 31 Jan 2025 15:35:37 INFO  epoch 58 training [time: 31.82s, train loss: 29300.7175]
+Fri 31 Jan 2025 15:36:08 INFO  epoch 59 training [time: 31.09s, train loss: 29241.7604]
+Fri 31 Jan 2025 15:36:10 INFO  epoch 59 evaluating [time: 1.73s, valid_score: 0.074600]
+Fri 31 Jan 2025 15:36:10 INFO  valid result:
+precision@10 : 0.0439    hit@10 : 0.2219    mrr@10 : 0.1011    ndcg@10 : 0.0746    map@10 : 0.0485    itemcoverage@10 : 0.1552    averagepopularity@10 : 58.1721    tailpercentage@10 : 0.0108
+Fri 31 Jan 2025 15:36:10 INFO  Saving current: saved\SGL-Jan-31-2025_15-03-57.pth
+Fri 31 Jan 2025 15:36:43 INFO  epoch 60 training [time: 33.25s, train loss: 29174.0288]
+Fri 31 Jan 2025 15:37:14 INFO  epoch 61 training [time: 30.71s, train loss: 29120.7222]
+Fri 31 Jan 2025 15:37:45 INFO  epoch 62 training [time: 31.10s, train loss: 29082.5501]
+Fri 31 Jan 2025 15:38:17 INFO  epoch 63 training [time: 31.88s, train loss: 29027.4761]
+Fri 31 Jan 2025 15:38:48 INFO  epoch 64 training [time: 31.72s, train loss: 28988.0363]
+Fri 31 Jan 2025 15:38:50 INFO  epoch 64 evaluating [time: 2.07s, valid_score: 0.074400]
+Fri 31 Jan 2025 15:38:50 INFO  valid result:
+precision@10 : 0.0439    hit@10 : 0.2184    mrr@10 : 0.0995    ndcg@10 : 0.0744    map@10 : 0.0487    itemcoverage@10 : 0.1579    averagepopularity@10 : 56.9392    tailpercentage@10 : 0.0111
+Fri 31 Jan 2025 15:39:24 INFO  epoch 65 training [time: 33.43s, train loss: 28932.9003]
+Fri 31 Jan 2025 15:39:54 INFO  epoch 66 training [time: 30.72s, train loss: 28871.1373]
+Fri 31 Jan 2025 15:40:26 INFO  epoch 67 training [time: 31.90s, train loss: 28846.2410]
+Fri 31 Jan 2025 15:40:59 INFO  epoch 68 training [time: 32.74s, train loss: 28827.2268]
+Fri 31 Jan 2025 15:41:32 INFO  epoch 69 training [time: 32.49s, train loss: 28726.0335]
+Fri 31 Jan 2025 15:41:34 INFO  epoch 69 evaluating [time: 1.72s, valid_score: 0.075300]
+Fri 31 Jan 2025 15:41:34 INFO  valid result:
+precision@10 : 0.0448    hit@10 : 0.2228    mrr@10 : 0.1004    ndcg@10 : 0.0753    map@10 : 0.0493    itemcoverage@10 : 0.1612    averagepopularity@10 : 55.684    tailpercentage@10 : 0.0113
+Fri 31 Jan 2025 15:41:34 INFO  Saving current: saved\SGL-Jan-31-2025_15-03-57.pth
+Fri 31 Jan 2025 15:42:07 INFO  epoch 70 training [time: 32.65s, train loss: 28719.9911]
+Fri 31 Jan 2025 15:42:39 INFO  epoch 71 training [time: 32.54s, train loss: 28697.2218]
+Fri 31 Jan 2025 15:43:12 INFO  epoch 72 training [time: 32.53s, train loss: 28639.1251]
+Fri 31 Jan 2025 15:43:42 INFO  epoch 73 training [time: 30.27s, train loss: 28613.6070]
+Fri 31 Jan 2025 15:44:13 INFO  epoch 74 training [time: 30.95s, train loss: 28560.9251]
+Fri 31 Jan 2025 15:44:15 INFO  epoch 74 evaluating [time: 1.85s, valid_score: 0.075000]
+Fri 31 Jan 2025 15:44:15 INFO  valid result:
+precision@10 : 0.0446    hit@10 : 0.2193    mrr@10 : 0.0987    ndcg@10 : 0.075    map@10 : 0.0495    itemcoverage@10 : 0.1632    averagepopularity@10 : 54.8739    tailpercentage@10 : 0.0111
+Fri 31 Jan 2025 15:44:46 INFO  epoch 75 training [time: 30.57s, train loss: 28545.2620]
+Fri 31 Jan 2025 15:45:17 INFO  epoch 76 training [time: 31.12s, train loss: 28500.8077]
+Fri 31 Jan 2025 15:45:47 INFO  epoch 77 training [time: 30.01s, train loss: 28456.3328]
+Fri 31 Jan 2025 15:46:17 INFO  epoch 78 training [time: 30.40s, train loss: 28430.5541]
+Fri 31 Jan 2025 15:46:47 INFO  epoch 79 training [time: 30.32s, train loss: 28391.0095]
+Fri 31 Jan 2025 15:46:49 INFO  epoch 79 evaluating [time: 1.78s, valid_score: 0.074600]
+Fri 31 Jan 2025 15:46:49 INFO  valid result:
+precision@10 : 0.0442    hit@10 : 0.2211    mrr@10 : 0.0979    ndcg@10 : 0.0746    map@10 : 0.0494    itemcoverage@10 : 0.1643    averagepopularity@10 : 54.4243    tailpercentage@10 : 0.0112
+Fri 31 Jan 2025 15:47:20 INFO  epoch 80 training [time: 30.92s, train loss: 28355.7873]
+Fri 31 Jan 2025 15:47:51 INFO  epoch 81 training [time: 30.87s, train loss: 28336.7853]
+Fri 31 Jan 2025 15:48:23 INFO  epoch 82 training [time: 31.49s, train loss: 28291.9021]
+Fri 31 Jan 2025 15:48:53 INFO  epoch 83 training [time: 30.41s, train loss: 28279.6792]
+Fri 31 Jan 2025 15:49:25 INFO  epoch 84 training [time: 31.60s, train loss: 28257.5645]
+Fri 31 Jan 2025 15:49:26 INFO  epoch 84 evaluating [time: 1.78s, valid_score: 0.074800]
+Fri 31 Jan 2025 15:49:26 INFO  valid result:
+precision@10 : 0.0441    hit@10 : 0.2202    mrr@10 : 0.0992    ndcg@10 : 0.0748    map@10 : 0.0496    itemcoverage@10 : 0.1671    averagepopularity@10 : 53.9208    tailpercentage@10 : 0.0122
+Fri 31 Jan 2025 15:49:56 INFO  epoch 85 training [time: 29.90s, train loss: 28211.9197]
+Fri 31 Jan 2025 15:50:25 INFO  epoch 86 training [time: 29.18s, train loss: 28200.8509]
+Fri 31 Jan 2025 15:50:55 INFO  epoch 87 training [time: 29.80s, train loss: 28163.6262]
+Fri 31 Jan 2025 15:51:26 INFO  epoch 88 training [time: 30.89s, train loss: 28140.5299]
+Fri 31 Jan 2025 15:51:57 INFO  epoch 89 training [time: 30.62s, train loss: 28104.6809]
+Fri 31 Jan 2025 15:51:59 INFO  epoch 89 evaluating [time: 1.78s, valid_score: 0.074900]
+Fri 31 Jan 2025 15:51:59 INFO  valid result:
+precision@10 : 0.0439    hit@10 : 0.2184    mrr@10 : 0.1004    ndcg@10 : 0.0749    map@10 : 0.0496    itemcoverage@10 : 0.1687    averagepopularity@10 : 53.6417    tailpercentage@10 : 0.0116
+Fri 31 Jan 2025 15:52:29 INFO  epoch 90 training [time: 30.36s, train loss: 28098.4519]
+Fri 31 Jan 2025 15:53:00 INFO  epoch 91 training [time: 30.88s, train loss: 28068.1121]
+Fri 31 Jan 2025 15:53:31 INFO  epoch 92 training [time: 31.69s, train loss: 28051.4353]
+Fri 31 Jan 2025 15:54:02 INFO  epoch 93 training [time: 30.63s, train loss: 28018.8372]
+Fri 31 Jan 2025 15:54:33 INFO  epoch 94 training [time: 31.24s, train loss: 28006.0269]
+Fri 31 Jan 2025 15:54:36 INFO  epoch 94 evaluating [time: 2.17s, valid_score: 0.074600]
+Fri 31 Jan 2025 15:54:36 INFO  valid result:
+precision@10 : 0.0437    hit@10 : 0.2184    mrr@10 : 0.1006    ndcg@10 : 0.0746    map@10 : 0.0495    itemcoverage@10 : 0.169    averagepopularity@10 : 53.3716    tailpercentage@10 : 0.0125
+Fri 31 Jan 2025 15:55:06 INFO  epoch 95 training [time: 30.88s, train loss: 27962.7349]
+Fri 31 Jan 2025 15:55:37 INFO  epoch 96 training [time: 30.98s, train loss: 27949.7756]
+Fri 31 Jan 2025 15:56:08 INFO  epoch 97 training [time: 30.30s, train loss: 27939.7261]
+Fri 31 Jan 2025 15:56:38 INFO  epoch 98 training [time: 30.13s, train loss: 27907.3882]
+Fri 31 Jan 2025 15:57:07 INFO  epoch 99 training [time: 29.26s, train loss: 27875.3442]
+Fri 31 Jan 2025 15:57:09 INFO  epoch 99 evaluating [time: 1.90s, valid_score: 0.073500]
+Fri 31 Jan 2025 15:57:09 INFO  valid result:
+precision@10 : 0.0432    hit@10 : 0.214    mrr@10 : 0.0987    ndcg@10 : 0.0735    map@10 : 0.0488    itemcoverage@10 : 0.1714    averagepopularity@10 : 52.4575    tailpercentage@10 : 0.0123
+Fri 31 Jan 2025 15:57:09 INFO  Loading model structure and parameters from saved\SGL-Jan-31-2025_15-03-57.pth
+Fri 31 Jan 2025 15:57:11 INFO  best valid : OrderedDict({'precision@10': 0.0448, 'hit@10': 0.2228, 'mrr@10': 0.1004, 'ndcg@10': 0.0753, 'map@10': 0.0493, 'itemcoverage@10': 0.1612, 'averagepopularity@10': 55.684, 'tailpercentage@10': 0.0113})
+Fri 31 Jan 2025 15:57:11 INFO  test result: OrderedDict({'precision@10': 0.0336, 'hit@10': 0.186, 'mrr@10': 0.0827, 'ndcg@10': 0.0668, 'map@10': 0.045, 'itemcoverage@10': 0.1613, 'averagepopularity@10': 55.5304, 'tailpercentage@10': 0.0112})
