@@ -5,7 +5,7 @@ field_separator: "\t"
 USER_ID_FIELD: user_id
 ITEM_ID_FIELD: item_id
 TIME_FIELD: timestamp
-user_inter_num_interval: "[20,inf)"
+# user_inter_num_interval: "[20,inf)"
 load_col:
     inter: [user_id, item_id, timestamp]
 
@@ -23,7 +23,7 @@ shuffle: False
 layer_evaluation: False
 num_threads: 12
 eval_batch_size: 2048           # (int) The training batch size.
-train_batch_size: 2058          # (int) The training batch size.
+train_batch_size: 2048          # (int) The training batch size.
 learner: adam                   # (str) The name of used optimizer.
 save_step: 5
 train_stage: "pretrain"
