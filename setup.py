@@ -42,7 +42,7 @@ setup(
     description="A unified, comprehensive and efficient recommendation library",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/mkhe93/RecBole-GNN/tree/feature/forward_gnn",
+    url="https://github.com/mkhe93/RecBole-GNN.git@feature/forward_gnn",
     author="RecBoleTeam",
     author_email="recbole@outlook.com",
     packages=[package for package in find_packages() if package.startswith("recbole")],
