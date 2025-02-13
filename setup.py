@@ -9,7 +9,7 @@ from setuptools import setup, find_packages
 install_requires = [
     "recbole==1.1.1",
     "torch-geometric>=2.0.4",
-    "pytorch>=1.7.0"
+    "torch>=1.7.0"
 ]
 
 setup_requires = []
