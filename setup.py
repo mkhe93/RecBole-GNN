@@ -12,9 +12,9 @@ install_requires = [
     "torch>=1.7.0"
 ]
 
-setup_requires = []
-
 dependency_links = ['git+https://github.com/mkhe93/RecBole.git@mkhe/thesis#egg=recbole-1.3.0']
+
+setup_requires = []
 
 extras_require = {"hyperopt": ["hyperopt==0.2.5"]}
 
@@ -52,6 +52,7 @@ setup(
     install_requires=install_requires,
     setup_requires=setup_requires,
     extras_require=extras_require,
+    dependency_links=dependency_links,
     zip_safe=False,
     classifiers=classifiers,
 )
