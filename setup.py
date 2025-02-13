@@ -7,12 +7,9 @@ import os
 from setuptools import setup, find_packages
 
 install_requires = [
-    "recbole==1.3.0",
     "torch-geometric>=2.0.4",
     "torch>=1.7.0"
 ]
-
-dependency_links = ['git+https://github.com/mkhe93/RecBole.git@mkhe/thesis#egg=recbole-1.3.0']
 
 setup_requires = []
 
@@ -47,12 +44,11 @@ setup(
     url="https://github.com/mkhe93/RecBole-GNN.git@feature/forward_gnn",
     author="RecBoleTeam",
     author_email="recbole@outlook.com",
-    packages=[package for package in find_packages() if package.startswith("recbole")],
+    packages=[package for package in find_packages() if package.startswith("recbole_gnn")],
     include_package_data=True,
     install_requires=install_requires,
     setup_requires=setup_requires,
     extras_require=extras_require,
-    dependency_links=dependency_links,
     zip_safe=False,
     classifiers=classifiers,
 )
