@@ -51,6 +51,7 @@ setup(
     install_requires=install_requires,
     setup_requires=setup_requires,
     extras_require=extras_require,
+    dependency_links=dependency_links,
     zip_safe=False,
     classifiers=classifiers,
 )
