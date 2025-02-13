@@ -37,7 +37,7 @@ if on_rtd:
     install_requires.extend(setup_requires)
 
 setup(
-    name="recbole-gnn",
+    name="recbole_gnn",
     version="0.1.0",  # please remember to edit recbole/__init__.py in response, once updating the version
     description="A unified, comprehensive and efficient recommendation library",
     long_description=long_description,
