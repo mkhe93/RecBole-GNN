@@ -7,7 +7,7 @@ import os
 from setuptools import setup, find_packages
 
 install_requires = [
-    "git+https://github.com/mkhe93/RecBole.git@/mkhe/thesis,
+    "git+https://github.com/mkhe93/RecBole.git@/mkhe/thesis",
     "torch-geometric>=2.0.4",
     "torch>=1.7.0"
 ]
