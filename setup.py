@@ -7,14 +7,14 @@ import os
 from setuptools import setup, find_packages
 
 install_requires = [
-    "recbole==1.1.1",
+    "recbole==1.3.0",
     "torch-geometric>=2.0.4",
     "torch>=1.7.0"
 ]
 
 setup_requires = []
 
-dependency_links = ['git+https://github.com/mkhe93/RecBole.git@mkhe/thesis#egg=recbole-1.1.1']
+dependency_links = ['git+https://github.com/mkhe93/RecBole.git@mkhe/thesis#egg=recbole-1.3.0']
 
 extras_require = {"hyperopt": ["hyperopt==0.2.5"]}
 
