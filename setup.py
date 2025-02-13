@@ -14,6 +14,8 @@ install_requires = [
 
 setup_requires = []
 
+extras_require = {"hyperopt": ["hyperopt==0.2.5"]}
+
 classifiers = ["License :: OSI Approved :: MIT License"]
 
 long_description = (
