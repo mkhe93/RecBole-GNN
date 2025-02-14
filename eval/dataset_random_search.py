@@ -24,7 +24,10 @@ if __name__ == "__main__":
 
     random_numbers = [9, 25, 68, 104, 88, 80, 139, 95, 99, 54]
 
-    model_list = [('UltraGCN', 'ultragcn')]
+    model_list = [#('UltraGCN', 'ultragcn'),
+                  #('XSimGCL', 'xsimgcl'),
+                  ('ALS', 'als')
+                  ]
 
     for model in model_list:
 
@@ -38,7 +41,7 @@ if __name__ == "__main__":
                 break
 
             if model[0] != 'ALS':
-                torch.set_num_threads(8)
+                torch.set_num_threads(12)
 
             parser = argparse.ArgumentParser()
             dataset = f"real-life-atomic-100000-{i}"
@@ -84,7 +87,7 @@ if __name__ == "__main__":
             df = pd.DataFrame(combined_results)
 
             if model[0] == "AsymKNN":
-                df.to_csv(f'log/Benchmark/RO/{model[1]}-Benchmark-RO.csv', sep='\t', index=False)
+                df.to_csv(f'log/LO/{model[1]}-Benchmark-LO.csv', sep='\t', index=False)
             else:
-                df.to_csv(f'log/Benchmark/RO/{model[0]}-10RandomSearch-RO.csv', sep='\t', index=False)
+                df.to_csv(f'log/EpochEvaluation/{model[0]}-RandomSearch-TO.csv', sep='\t', index=False)
 

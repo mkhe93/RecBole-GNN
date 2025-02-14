@@ -21,12 +21,12 @@ if __name__ == "__main__":
         test_res_best_user_list = []
         test_res_worst_user_list = []
 
-        for i in tqdm(range(1,177)):
+        for i in tqdm(range(125,177)):
             file_path = Path(f"../asset/data/real-life-atomic-splits/real-life-atomic-100000-{i}/real-life-atomic-100000-{i}.inter")
             if not file_path.exists():
                 break
 
-            torch.set_num_threads(8)
+            torch.set_num_threads(16)
 
             parser = argparse.ArgumentParser()
             dataset = f"real-life-atomic-100000-{i}"
@@ -70,4 +70,4 @@ if __name__ == "__main__":
             # Convert the combined results into a DataFrame (optional)
             df = pd.DataFrame(combined_results)
 
-            df.to_csv(f'log/Benchmark/RO/{model[0]}-Benchmark-RO.csv', sep='\t', index=False)
+            df.to_csv(f'log/Benchmark/LO/{model[0]}-Benchmark-LO-125.csv', sep='\t', index=False)

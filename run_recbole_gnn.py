@@ -5,9 +5,9 @@ import torch
 from recbole_gnn.quick_start import run_recbole_gnn
 
 if __name__ == '__main__':
-    model = 'SGL'
+    model = 'NGCF'
     dataset = 'real-life-atomic-100000'
-    #dataset = 'ml-100k'
+    dataset = 'ml-100k'
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--model', '-m', type=str, default=model, help='name of models')

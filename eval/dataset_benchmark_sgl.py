@@ -7,14 +7,13 @@ import argparse
 import pandas as pd
 from pathlib import Path
 import torch
-import gc
 
 from tqdm import tqdm
 from recbole_gnn.quick_start import run_recbole_gnn
 
 if __name__ == "__main__":
 
-    model_list = [('UltraGCN', 'ultragcn')]
+    model_list = [('SGL', 'sgl')]
 
     for model in model_list:
 
@@ -22,12 +21,12 @@ if __name__ == "__main__":
         test_res_best_user_list = []
         test_res_worst_user_list = []
 
-        for i in tqdm(range(113,135)):
+        for i in tqdm(range(1,177)):
             file_path = Path(f"../asset/data/real-life-atomic-splits/real-life-atomic-100000-{i}/real-life-atomic-100000-{i}.inter")
             if not file_path.exists():
                 break
 
-            torch.set_num_threads(8)
+            torch.set_num_threads(4)
 
             parser = argparse.ArgumentParser()
             dataset = f"real-life-atomic-100000-{i}"
@@ -71,7 +70,4 @@ if __name__ == "__main__":
             # Convert the combined results into a DataFrame (optional)
             df = pd.DataFrame(combined_results)
 
-            df.to_csv(f'log/Benchmark/LO/{model[0]}-Benchmark-LO-113.csv', sep='\t', index=False)
-
-            del result
-            gc.collect()
+            df.to_csv(f'log/Benchmark/LO/{model[0]}-Benchmark-LO.csv', sep='\t', index=False)

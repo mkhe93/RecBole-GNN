@@ -2,23 +2,23 @@
 # @Author : Gaowei Zhang
 # @Email  : zgw2022101006@ruc.edu.cn
 import os
+
+default_n_threads = 1
+os.environ['OPENBLAS_NUM_THREADS'] = f"{default_n_threads}"
+os.environ['MKL_NUM_THREADS'] = f"{default_n_threads}"
+os.environ['OMP_NUM_THREADS'] = f"{default_n_threads}"
+
 import argparse
 import pandas as pd
 from pathlib import Path
 import threadpoolctl
-import numpy as np
 import torch
 from tqdm import tqdm
 from recbole_gnn.quick_start import run_recbole_gnn
 
 if __name__ == "__main__":
 
-    #np.random.seed(100)
-    #random_numbers = np.random.randint(1, 177, size=10)
-
-    random_numbers = [54]
-
-    model_list = [('SGL', 'sgl')]
+    model_list = [('ALS', 'als')]
 
     for model in model_list:
 
@@ -26,7 +26,7 @@ if __name__ == "__main__":
         test_res_best_user_list = []
         test_res_worst_user_list = []
 
-        for i in tqdm(random_numbers, desc="Datasets", unit='datasets'):
+        for i in tqdm(range(1,177), desc="Datasets", unit='datasets'):
             file_path = Path(f"../asset/data/real-life-atomic-splits/real-life-atomic-100000-{i}/real-life-atomic-100000-{i}.inter")
             if not file_path.exists():
                 break
@@ -78,7 +78,6 @@ if __name__ == "__main__":
             df = pd.DataFrame(combined_results)
 
             if model[0] == "AsymKNN":
-                df.to_csv(f'log/Benchmark/RO/{model[1]}-Benchmark-RO.csv', sep='\t', index=False)
+                df.to_csv(f'log/Benchmark/LO/{model[1]}-Benchmark-LO.csv', sep='\t', index=False)
             else:
-                df.to_csv(f'log/Benchmark/RO/{model[0]}-10RandomSearch-RO-54.csv', sep='\t', index=False)
-
+                df.to_csv(f'log/Benchmark/LO/{model[0]}-Benchmark-LO.csv', sep='\t', index=False)

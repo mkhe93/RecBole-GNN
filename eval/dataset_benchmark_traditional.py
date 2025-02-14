@@ -2,12 +2,6 @@
 # @Author : Gaowei Zhang
 # @Email  : zgw2022101006@ruc.edu.cn
 import os
-
-default_n_threads = 1
-os.environ['OPENBLAS_NUM_THREADS'] = f"{default_n_threads}"
-os.environ['MKL_NUM_THREADS'] = f"{default_n_threads}"
-os.environ['OMP_NUM_THREADS'] = f"{default_n_threads}"
-
 import argparse
 import pandas as pd
 from pathlib import Path
@@ -18,7 +12,7 @@ from recbole_gnn.quick_start import run_recbole_gnn
 
 if __name__ == "__main__":
 
-    model_list = [('AsymKNN', 'user_asym')]
+    model_list = [('BPR', 'bpr')]
 
     for model in model_list:
 
@@ -26,7 +20,7 @@ if __name__ == "__main__":
         test_res_best_user_list = []
         test_res_worst_user_list = []
 
-        for i in tqdm(range(143,177), desc="Datasets", unit='datasets'):
+        for i in tqdm(range(120,177), desc="Datasets", unit='datasets'):
             file_path = Path(f"../asset/data/real-life-atomic-splits/real-life-atomic-100000-{i}/real-life-atomic-100000-{i}.inter")
             if not file_path.exists():
                 break
@@ -43,8 +37,7 @@ if __name__ == "__main__":
 
             # configurations initialization
             config_file_list = args.config_files.strip().split(' ') if args.config_files else None
-            with threadpoolctl.threadpool_limits(1,"blas"):  # Due to a warning that occurred while running the ALS algorithm, important line!
-                result = run_recbole_gnn(model=args.model, dataset=args.dataset, config_file_list=config_file_list)
+            result = run_recbole_gnn(model=args.model, dataset=args.dataset, config_file_list=config_file_list)
 
             # calculate dataset metrics
             test_res_dict = {"Model": model[0], "dataset": f"real-life-atomic-100000-{i}"}
@@ -78,6 +71,6 @@ if __name__ == "__main__":
             df = pd.DataFrame(combined_results)
 
             if model[0] == "AsymKNN":
-                df.to_csv(f'log/Benchmark/RO/{model[1]}-Benchmark-RO-143-176.csv', sep='\t', index=False)
+                df.to_csv(f'log/Benchmark/LO/{model[1]}-Benchmark-LO.csv', sep='\t', index=False)
             else:
-                df.to_csv(f'log/Benchmark/RO/{model[0]}-Benchmark-RO.csv', sep='\t', index=False)
+                df.to_csv(f'log/Benchmark/LO/{model[0]}-Benchmark-LO-120.csv', sep='\t', index=False)

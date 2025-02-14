@@ -293,6 +293,18 @@ class GraphDatasetEvaluator(GeneralGraphDataset):
         user_indices = self.inter_feat[self.uid_field].unique()
         item_indices = self.inter_feat[self.iid_field].unique()
 
+        # similar to ds
+        #row = self.inter_feat[self.uid_field]
+        #col = self.inter_feat[self.iid_field] + self.user_num
+
+        #row = self.inter_feat[self.uid_field]
+        #col = self.inter_feat[self.iid_field] + self.user_num
+        #edge_index1 = torch.stack([row, col])
+        #edge_index2 = torch.stack([col, row])
+        #edge_index = torch.cat([edge_index1, edge_index2], dim=1)
+        #edge_weight = torch.ones(edge_index.size(1))
+        #num_nodes = self.user_num + self.item_num
+
         user_indices = range(1, self.user_num)
         item_indices = range(self.user_num +1, self.user_num +  self.item_num)
 
