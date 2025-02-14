@@ -7,8 +7,7 @@ import os
 from setuptools import setup, find_packages
 
 install_requires = [
-    "torch-geometric>=2.0.4",
-    "torch>=1.7.0"
+    "tqdm>=4.48.2"
 ]
 
 setup_requires = []
@@ -37,7 +36,7 @@ if on_rtd:
 
 setup(
     name="recbole_gnn",
-    version="0.1.0",  # please remember to edit recbole/__init__.py in response, once updating the version
+    version="2025.17.2",  # please remember to edit recbole/__init__.py in response, once updating the version
     description="A unified, comprehensive and efficient recommendation library",
     long_description=long_description,
     long_description_content_type="text/markdown",
