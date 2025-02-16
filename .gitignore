@@ -3,7 +3,11 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Exclude for thesis distribution
 */plots/
+hyper/
+eval/
+asset/Evaluation
 
 # C extensions
 *.so

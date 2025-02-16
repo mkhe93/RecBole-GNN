@@ -1,16 +1,14 @@
 # Model and Dataset
-data_path: "C:/Users/s8347434/Documents/RecBole-GNN/asset/data"
-
 field_separator: "\t"
 USER_ID_FIELD: user_id
 ITEM_ID_FIELD: item_id
 TIME_FIELD: timestamp
-# user_inter_num_interval: "[20,inf)"
+user_inter_num_interval: "[20,inf)"
 load_col:
     inter: [user_id, item_id, timestamp]
 
 # Evaluation
-eval_args:                      # (dict) 4 keys: group_by, order, split, and mode
+eval_args:
   #split: {'LK': ['test_only', 10]}   # (dict) The splitting strategy ranging in ['RS','LS'].{'RS':[0.8,0.1,0.1]}, valid_and_test, test_only, valid_only
   #split: { 'LS': 'test_only' }   # (dict) The splitting strategy ranging in ['RS','LS'].{'RS':[0.8,0.1,0.1]}
   split: { 'RS':[0.7,0.1,0.2] }   # (dict) The splitting strategy ranging in ['RS','LS'].{'RS':[0.8,0.1,0.1]}
@@ -18,36 +16,24 @@ eval_args:                      # (dict) 4 keys: group_by, order, split, and mod
   order: RO                     # (str) The ordering strategy ranging in ['RO', 'TO'].
   mode: full
 
-# permanent
+# Permanent
 shuffle: False
-layer_evaluation: False
-num_threads: 12
-eval_batch_size: 2048           # (int) The training batch size.
-train_batch_size: 2048          # (int) The training batch size.
-learner: adam                   # (str) The name of used optimizer.
+eval_batch_size: 2048
+train_batch_size: 2048
+learner: adam
 save_step: 5
-train_stage: "pretrain"
 show_progress: True
 valid_metric: "ndcg@10"
 eval_step: 5
 stopping_step: 10
-goodness_type: "pool-square-mean"
-pool_type: "add"
-pool_dim: 1
+epochs: 100
 
-# tuning parameters
+# often shared parameters
 embedding_size: 64
-lgcn_dim: 128
 n_layers: 2
-reg_weight: 1e-05               # (float) The L2 regularization weight.
-learning_rate: 0.01             # (float) Learning rate.
-theta: 2.0
-gnn_type: 'GCN'
-forward_learning_type: 'FF'
-pretrain_epochs: 20
+reg_weight: 1e-05
+learning_rate: 0.01
 
-# for finetuning aggregation layer
-epochs: 1
 
 #train_neg_sample_args: ~
 
@@ -58,22 +44,73 @@ train_neg_sample_args:          # (dict) Negative sampling configuration for mod
   dynamic: False                # (bool) Whether to use dynamic negative sampling.
   candidate_num: 1              # (int) The number of candidate negative items when dynamic negative sampling.
 repeatable: False
-
-dropout: 0.1
-lambda1: 1e-07
-lambda2: 0.0001
-temp: 0.5
-
-embedding_dim: 64
-w1: 1e-4
-w2: 1
-w3: 1e-6
-w4: 1
-negative_weight: 300
-negative_num: 10
-gamma: 1e-4
-lambda: 5e-2
-ii_neighbor_num: 10
-initial_weight: 1e-4
-
 topUser: 10
+
+########## Optimal Settings for Models ###########
+#### For AsymUserkNN
+#knn_method: 'user'
+#alpha: 0.5
+#beta: 0.5
+#k: 500
+#q: 3
+
+#### For AsymItemkNN
+#knn_method: 'item'
+#alpha: 0.4
+#beta: 0.6
+#k: 60
+#q: 1
+
+#### For LightGCN
+#epochs: 200
+#embedding_size: 64
+#n_layers: 4
+#learning_rate: 0.01
+#reg_weight: 0.0001
+
+#### For UltraGCN
+#epochs: 150
+#embedding_size: 64
+#learning_rate: 0.001
+lambda: 0.05
+gamma: 0.0001
+ii_neighbor_num: 10
+initial_weight: 0.0001
+negative_num: 500
+negative_weight: 200
+w1: 0.000001
+w2: 1.0
+w3: 0.00001
+w4: 1.0
+
+#### For ALS
+#embedding_size: 96
+#epochs: 50
+#regularization: 0.08
+#alpha: 2.75
+
+#### For BPR
+#embedding_size: 1024
+#epochs: 150
+#learning_rate: 0.0004
+
+#### For SGL
+#epochs: 90
+#embedding_size: 64
+#n_layers: 4
+#learning_rate: 0.005
+#reg_weight: 0.00001
+#drop_ratio: 0.3
+#ssl_tau: 0.2
+#ssl_weight: 0.05
+
+#### For XSimGCL
+#epochs: 125
+#embedding_size: 64
+#n_layers: 3
+#learning_rate: 0.002
+#reg_weight: 0.0000010
+#eps: 0.5
+#lambda: 0.1
+#temperature: 0.2
+#layer_cl: 1

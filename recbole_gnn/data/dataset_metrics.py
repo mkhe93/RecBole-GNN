@@ -13,12 +13,10 @@ except ImportError:
     is_sparse = False
 
 from recbole.utils.logger import set_color
-import matplotlib.pyplot as plt
 import numpy as np
 
 import networkx
 from networkx.algorithms import bipartite
-from networkx.algorithms.community import louvain_communities
 from sklearn.cluster import KMeans
 from sklearn.metrics import silhouette_score
 
@@ -125,17 +123,7 @@ class GraphDatasetEvaluator(GeneralGraphDataset):
         return average_degree
 
     def calculate_average_clustering(self, method, nodes, precomputed_clustering, log=False):
-        """
-        Calculate the average clustering coefficient for a subset of nodes.
 
-        Parameters:
-            method (str): The clustering method ('dot', 'min', 'max').
-            nodes (list): Subset of nodes for which to calculate the average.
-            precomputed_clustering (dict): Precomputed clustering coefficients.
-
-        Returns:
-            float: The average clustering coefficient for the subset of nodes.
-        """
         clustering_values = precomputed_clustering[method]
         subset_clustering = [clustering_values[node] for node in nodes]
         average_clustering = sum(subset_clustering) / len(subset_clustering)
@@ -151,107 +139,6 @@ class GraphDatasetEvaluator(GeneralGraphDataset):
 
     def clustering(self, mode='dot', nodes=None):
         return bipartite.clustering(self.bipartite_graph, mode=mode, nodes=nodes)
-
-    def find_optimal_clusters(self, min_clusters=2, max_clusters=10, nodes=None):
-        """
-        Findet die optimale Anzahl von Clustern basierend auf der Elbow-Methode und dem Silhouetten-Score.
-        Gibt die optimale Anzahl der Cluster zurück.
-        """
-        if nodes:
-            clustering_coefficients = {
-                node: self.precomputed_clustering['dot'][node]
-                for node in nodes
-            }
-        else:
-            clustering_coefficients = self.precomputed_clustering['dot']
-
-        values = np.array(list(clustering_coefficients.values())).reshape(-1, 1)
-
-        inertia = []
-        silhouette_scores = []
-        k_values = range(min_clusters, max_clusters + 1)
-
-        for k in k_values:
-            kmeans = KMeans(n_clusters=k, random_state=42)
-            kmeans.fit(values)
-            inertia.append(kmeans.inertia_)
-            silhouette_scores.append(silhouette_score(values, kmeans.labels_))
-
-        # Elbow-Methode plotten
-        #plt.plot(k_values, inertia, marker='o')
-        #plt.title('Elbow-Methode')
-        #plt.xlabel('Anzahl der Cluster')
-        #plt.ylabel('Inertia')
-        #plt.show()
-
-        # Silhouetten-Score plotten
-        #plt.plot(k_values, silhouette_scores, marker='o')
-        #plt.title('Silhouetten-Score')
-        #plt.xlabel('Anzahl der Cluster')
-        #plt.ylabel('Score')
-        #plt.show()
-
-        # Optimalen Wert auswählen (hier z. B. der maximale Silhouetten-Score)
-        optimal_k = k_values[np.argmax(silhouette_scores)]
-        return optimal_k
-
-    def assign_clusters(self, n_clusters, nodes=None):
-        """
-        Ordnet die Knoten basierend auf den Cluster-Koeffizienten und der angegebenen Anzahl von Clustern zu.
-        Gibt ein Dictionary mit den Knoten und ihren zugeordneten Clustern zurück.
-        """
-        if nodes:
-            clustering_coefficients = {
-                node: self.precomputed_clustering['dot'][node]
-                for node in nodes
-            }
-        else:
-            clustering_coefficients = self.precomputed_clustering['dot']
-
-        values = np.array(list(clustering_coefficients.values())).reshape(-1, 1)
-
-        kmeans = KMeans(n_clusters=n_clusters, random_state=42)
-        labels = kmeans.fit_predict(values)
-
-        # Knoten den Clustern zuordnen
-        cluster_assignments = dict(zip(clustering_coefficients.keys(), labels))
-        return cluster_assignments
-
-    def plot_clusters(self, cluster_assignments, nodes, graph=None, highlight_nodes=None):
-        """
-        Plottet nur die Benutzerknoten (user_nodes) in einem zweidimensionalen Raum.
-        Optional kann ein Graph angegeben werden, um Knotengrade für die y-Achse zu verwenden.
-        Optional können spezifische Knoten hervorgehoben werden.
-        """
-        clustering_coefficients = self.precomputed_clustering['dot']
-        values = np.array([clustering_coefficients[node] for node in nodes])
-
-        # Farben basierend auf Cluster-Zuordnung
-        labels = np.array([cluster_assignments[node] for node in nodes])
-
-        # Bestimme y-Werte basierend auf Knotengrad, falls Graph vorhanden
-        if graph:
-            y_values = np.array([graph.degree(node) for node in nodes])
-        else:
-            y_values = labels  # Falls kein Graph, Cluster als y-Wert nehmen
-
-        plt.figure(figsize=(8, 6))
-        scatter = plt.scatter(values, y_values, c=labels, cmap='viridis', s=100, alpha=0.7)
-        plt.title('Cluster-Zuordnungen der Benutzerknoten')
-        plt.xlabel('Cluster-Koeffizient')
-        plt.ylabel('Knotengrad (y-Wert)')
-        plt.colorbar(scatter, label='Cluster')
-
-        # Bestimmte Knoten hervorheben
-        if highlight_nodes:
-            for node in highlight_nodes:
-                if node in nodes:
-                    idx = list(nodes).index(node)
-                    plt.scatter(values[idx], y_values[idx], color='red', edgecolor='black', s=150,
-                                label=f'Hervorgehoben: {node}')
-
-        plt.legend()
-        plt.show()
 
     def get_norm_adj_mat(self, enable_sparse=False):
         self.is_sparse = is_sparse
@@ -289,22 +176,8 @@ class GraphDatasetEvaluator(GeneralGraphDataset):
         # build undirected and bipartite graph with networkx
         # print(f'{self.__class__.__name__}: building a bipartite graph with networkx')
         graph = networkx.Graph()
+
         # Get unique user and item indices
-        user_indices = self.inter_feat[self.uid_field].unique()
-        item_indices = self.inter_feat[self.iid_field].unique()
-
-        # similar to ds
-        #row = self.inter_feat[self.uid_field]
-        #col = self.inter_feat[self.iid_field] + self.user_num
-
-        #row = self.inter_feat[self.uid_field]
-        #col = self.inter_feat[self.iid_field] + self.user_num
-        #edge_index1 = torch.stack([row, col])
-        #edge_index2 = torch.stack([col, row])
-        #edge_index = torch.cat([edge_index1, edge_index2], dim=1)
-        #edge_weight = torch.ones(edge_index.size(1))
-        #num_nodes = self.user_num + self.item_num
-
         user_indices = range(1, self.user_num)
         item_indices = range(self.user_num +1, self.user_num +  self.item_num)
 
@@ -362,10 +235,6 @@ class GraphDatasetEvaluator(GeneralGraphDataset):
         # filter out users and items
         inter_feat = self.inter_feat[
             self.inter_feat[self.uid_field].isin(user_nodes) & self.inter_feat[self.iid_field].isin(item_nodes)]
-        #assert user_nodes == set(self.inter_feat[self.uid_field].unique()), f'{self.__class__.__name__}:' \
-        #                                                                 f' a problem occurred during dataset filtering'
-        #assert item_nodes == set(self.inter_feat[self.iid_field].unique()), f'{self.__class__.__name__}:' \
-        #                                                                 f' a problem occurred during dataset filtering'
 
         print(f'{self.__class__.__name__}: {n_old_users - inter_feat[self.uid_field].nunique()} users removed')
         print(f'{self.__class__.__name__}: {n_old_items - inter_feat[self.iid_field].nunique()} items removed')
